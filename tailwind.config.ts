@@ -9,11 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        cream: '#0f0f10', // Adjust as necessary
-        creamOrange: '#0f0f10', // Adjust as necessary
-        darkGreen: '#006400', // Adjust as necessary
-        softBlue: '#AEDFF7', // Adjust as necessary
-        dark: '#0f0f10', // Adjust as necessary
+        light: '#cad2c5',
+        midlight: '#84a98c',
+        mid: '#52796f',
+        middark: '#354f52',
+        dark: '#2f3e46',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
