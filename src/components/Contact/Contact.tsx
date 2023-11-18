@@ -7,7 +7,7 @@ function Contact() {
             {/* Zigzag Bordasdasdaser */}
             <div className="absolute top-0 left-0 w-full h-6 bg-no-repeat bg-top border-t-8"></div>
 
-            <h2 className="text-2xl font-bold pt-6">Get in touch:</h2>
+            <h2 className="text-2xl font-bold text-green-500 pt-6">Get in touch:</h2>
 
 
             <div className="space-y-1">
