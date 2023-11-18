@@ -17,7 +17,7 @@ const experiences = [
         date: "May 2023 - Aug 2023",
         location: "Savvas Learning Company (EdTech), Phoenix, AZ",
         details: [
-            "Engineered accessibility solutions for a K-12 edtech platform using Angular 16, GraphQL, and other technologies.",
+            "Engineered accessibility solutions for a K-12 edtech platform using Angular 16 MFEs, GraphQL, Spring, Gradle, and AWS cloud services.",
             "Addressed 14 high-impact accessibility issues, aligning with WCAG 2.1 standards.",
             "Led hackathon projects, including API testing enhancements and a student analysis dashboard, winning the hackathon."
         ]
