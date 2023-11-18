@@ -45,8 +45,8 @@ const blogData: BlogPost[] = [
     },
 
     {
-        title: "Understanding Async/Await in JavaScript",
-        Introduction: "My journey towards mastering async/await in JavaScript.",
+        title: "Understanding Concurrency and Parallelism in the context of JS' Async/Await",
+        Introduction: "(Re)Introducing yourself to asynchronous web development through the lens of concurrency and parallelism.",
         mainContent: `
         <p class="text-base mb-4">Async/await in JavaScript can initially appear daunting. My journey towards understanding and effectively utilizing this powerful feature was marked by various challenges and learning experiences across multiple projects.</p>
         <p class="text-base mb-4">In this post, I aim to demystify async/await, sharing not just my own experiences but also providing educational insights into how you can leverage this feature to write cleaner, more efficient asynchronous code.</p>
