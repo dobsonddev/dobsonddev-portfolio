@@ -5,11 +5,11 @@ const experiences = [
     {
         title: "Robotics/Machine Learning Co-Op",
         date: "Sep 2023 - Current",
-        location: "Mercedes-Benz Vans/College of Charleston, Ladson, SC",
+        location: "Mercedes-Benz Vans x College of Charleston (Ladson, SC)",
         details: [
-            "Developed a large-scale, autonomous inventory system integrating machine learning, industrial sensors, and AWS cloud services.",
-            "Focused on optimized, secure, real-time data streaming.",
-            "Prototyped solutions to enhance inventory accuracy and reduce manual errors."
+            "Developing a large-scale, autonomous inventory system using a multi-layered machine learning system, industrial sensors, and AWS cloud services.",
+            "Leading a team of 5 students under 2 professors, directly with Mercedes-Benz Vans' plant leadership.",
+            "Initial prototype displayed significant improvement of efficiency, accuracy and real-time awareness of high-value inventory."
         ]
     },
     {
@@ -86,13 +86,12 @@ const AboutMeTree = () => {
         <div ref={containerRef} className="container mx-auto h-full pt-2 pb-44">
             <div>
                 <motion.div
-                    className="text-3xl text-center mb-20"
+                    className="text-3xl text-center mb-28"
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 2, y: 0 }}
                     transition={{ delay: 0.9 }}
                 >
-                    {/* Mission Statement */}
-                    Delivering seamless solutions through collaboration and innovation.
+                    Delivering seamless, optimized solutions through collaboration and innovation.
                 </motion.div>
             </div>
             <div className="relative pt-24" style={{ height: `${experiences.length * verticalSpacing}px` }}>
@@ -110,13 +109,13 @@ const AboutMeTree = () => {
                         <div className="w-6 h-6 bg-gray-200 rounded-full"></div>
 
                         <div
-                            className={`absolute text-box-style p-2 bg-white shadow-lg rounded max-w-4xl ${index % 2 === 0 ? 'right-1/2 mr-14' : 'left-1/2 ml-14'}`}
+                            className={`absolute text-box-style p-2 shadow-lg rounded max-w-4xl ${index % 2 === 0 ? 'right-1/2 mr-14' : 'left-1/2 ml-14'}`}
                         >
-                            <h3 className="font-bold text-lg text-dark pb-1">{exp.title} <span className="text-sm text-gray-400">({exp.date})</span></h3>
-                            <p className="text-amber-600 text-sm space-x-1 pb-2">{exp.location}</p>
-                            <ul className="list-disc bg-gray-400 rounded pl-6">
+                            <h3 className="font-bold text-lg text-white">{exp.title} <span className="text-sm text-gray-400">({exp.date})</span></h3>
+                            <p className="text-orange-500 text-sm space-x-1 pb-2 pl-4">{exp.location}</p>
+                            <ul className="list-disc text-light rounded pl-6">
                                 {exp.details.map((detail, detailIndex) => (
-                                    <li key={detailIndex} className="text-gray-700 mb-4 p-0.5 ">{detail}</li>
+                                    <li key={detailIndex} className="text-white mb-4 p-0.5 ">{detail}</li>
                                 ))}
                             </ul>
                         </div>

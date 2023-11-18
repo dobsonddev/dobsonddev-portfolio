@@ -6,8 +6,8 @@ function Resume() {
     const resumeIMGPath = '/resumeimg.png';
 
     return (
-        <div className="flex flex-col items-center bg-darkGreen text-white p-4 px-4">
-            <h2 className="text-4xl font-bold underline mb-4 z-0">Resume</h2> {/* Enlarged and underlined title */}
+        <div className="flex flex-col items-center bg-darkGreen text-white p-4 pb-16 px-4 border-t-8 border-custom-orange">
+            <h2 className="text-5xl font-bold underline mb-4 z-0">Resume</h2> {/* Enlarged and underlined title */}
             <div className="self-end sticky top-20 pr-12 z-10"> {/* Sticky download button container */}
                 <a
                     href={resumePDFPath}

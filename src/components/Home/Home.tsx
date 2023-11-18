@@ -39,14 +39,16 @@ function Home() {
                 <Typed
                     strings={[
                         "A software engineer",
-                        "A problem solver",
+                        "A persistent problem solver",
                         "A collaborative teammate",
-                        "A hungry mind",
+                        "Agile minded",
+                        "A continuous learner",
                         "A drummer",
-                        "An outdoors person",
-                        "A continuous learner"]}
-                    typeSpeed={100}
-                    backSpeed={70}
+                        "A lover of the outdoors",
+                        "A tater tot connoisseur",
+                        ]}
+                    typeSpeed={95}
+                    backSpeed={50}
                     loop
                 />
             </div>

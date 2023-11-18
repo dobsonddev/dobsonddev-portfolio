@@ -5,7 +5,8 @@ import Resume from '../components/Resume/Resume';
 import Projects from '../components/Projects/Projects';
 import Blog from '../components/Blog/Blog';
 import Contact from '../components/Contact/Contact';
-import AboutMe from '../components/AboutMe/AboutMe';
+import AboutMe from '../components/AboutMe/Experiences';
+import Experiences from "../components/AboutMe/Experiences";
 
 const IndexPage = () => {
     const [isScrollingUp, setIsScrollingUp] = useState(true); // Set initial value to true
@@ -40,9 +41,9 @@ const IndexPage = () => {
                 </div>
                 <div className="flex space-x-2 pr-5">
                     <a href="#home" className="hover:text-dark hover:bg-light px-4 py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Home</a>
-                    <a href="#aboutme" className="hover:text-dark hover:bg-light px-4 py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">About Me</a>
+                    <a href="#experiences" className="hover:text-dark hover:bg-light px-4 py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Experiences</a>
                     <a href="#resume" className="hover:text-dark hover:bg-light px-4 py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Resume</a>
-                    <a href="#projects" className="hover:text-dark hover:bg-light px-4 py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Projects</a>
+                    {/*<a href="#projects" className="hover:text-dark hover:bg-light px-4 py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Projects</a>*/}
                     <a href="#blog" className="hover:text-dark hover:bg-light px-4 py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Blog</a>
                 </div>
             </nav>
@@ -52,17 +53,17 @@ const IndexPage = () => {
                     <Home />
                 </section>
 
-                <section  id="aboutme" className="w-full">
-                    <AboutMe />
+                <section  id="experiences" className="w-full">
+                    <Experiences />
                 </section>
 
                 <section id="resume" className="w-full">
                     <Resume />
                 </section>
 
-                <section id="projects" className="w-full">
-                    <Projects />
-                </section>
+                {/*<section id="projects" className="w-full">*/}
+                {/*    <Projects />*/}
+                {/*</section>*/}
 
                 <section id="blog" className="w-full">
                     <Blog />
