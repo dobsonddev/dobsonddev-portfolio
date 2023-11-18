@@ -87,7 +87,7 @@ const AboutMeTree = () => {
             <div>
                 <motion.div
                     className="text-3xl text-center mb-28"
-                    initial={{ opacity: 0, y: -35 }}
+                    initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 2, y: 0 }}
                     transition={{ delay: 0.8, duration: 2 }}                >
                     Delivering seamless, optimized solutions through collaboration and innovation.
@@ -104,7 +104,7 @@ const AboutMeTree = () => {
                         initial="initial"
                         animate={nodeVisibility[index] ? 'visible' : 'exit'} // Updated to use the new visibility state
                         style={{ top: `${index * verticalSpacing}px` }}
-                        transition={{ delay: index * 0.8, duration: 2.5  }}
+                        transition={{ delay: index * 0.4, duration: 2.5  }}
                     >
                         <div className="w-6 h-6 bg-gray-200 rounded-full"></div>
 
