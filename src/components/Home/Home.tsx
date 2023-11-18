@@ -26,19 +26,20 @@ function Home() {
     }, []);
 
     return (
-        <div className="relative min-h-screen bg-gradient-to-b from-creamOrange to-softBlue grid grid-flow-row auto-rows-auto items-center justify-items-center">
-            <div className="text-center mt-12">
-                <h1 className="text-8xl font-extrabold tracking-wider text-light">
+        <div className="relative min-h-screen bg-gradient-to-b from-creamOrange to-softBlue grid grid-flow-row auto-rows-auto items-center justify-items-center px-4">
+            <div className="text-center mt-12 mx-auto">
+                <h1 className="text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-wider text-light">
                     Hi, <br />
                     {/* eslint-disable-next-line react/no-unescaped-entities */}
                     I'm Dobson
                 </h1>
             </div>
 
-            <div className="bg-black text-3xl text-light p-2 rounded mb-10">
+            <div className="bg-black text-xl md:text-2xl lg:text-3xl text-light p-2 rounded mb-10 mx-auto">
                 <Typed
                     strings={[
-                        "A software engineer",
+                        "A full-stack developer",
+                        "A data engineer",
                         "A persistent problem solver",
                         "A collaborative teammate",
                         "Agile minded",
@@ -46,7 +47,7 @@ function Home() {
                         "A drummer",
                         "A lover of the outdoors",
                         "A tater tot connoisseur",
-                        ]}
+                    ]}
                     typeSpeed={95}
                     backSpeed={50}
                     loop

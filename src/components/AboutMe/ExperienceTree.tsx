@@ -29,7 +29,7 @@ const experiences = [
         details: [
             "Assisted in transition from a monolithic desktop app to a microserviced, serverless webapp, leveraging React, Django, and AWS.",
             "Performed API rework, assessing existing API call performance while implementing query and data handling optimizations.",
-            "Containerized various data flows to separate concerns and minimize single point of failure situations."
+            "Containerized various data flows to separate concerns and minimize/mitigate single point of failure situations."
         ]
     },
     {
@@ -44,7 +44,7 @@ const experiences = [
     }
 ];
 
-const AboutMeTree = () => {
+const ExperienceTree = () => {
     const [nodeVisibility, setNodeVisibility] = useState(Array(experiences.length).fill(false));
     const [textBoxVisible, setTextBoxVisible] = useState(false);
     const containerRef = useRef<HTMLDivElement>(null);
@@ -93,11 +93,11 @@ const AboutMeTree = () => {
     const verticalSpacing = 200;
 
     return (
-        <div ref={containerRef} className="container mx-auto h-full pt-4 pb-44">
+        <div ref={containerRef} className="container mx-auto h-full pt-4 pb-44 px-4 md:px-8">
             <div>
                 <motion.div
                     ref={textBoxRef}
-                    className="text-3xl text-center mx-auto w-11/12 mb-24 bg-blend-multiply border-2 pt-1 pb-1 rounded-lg"
+                    className="text-xl md:text-2xl lg:text-3xl text-center mx-auto w-full md:w-11/12 lg:w-9/12 mb-24 bg-blend-multiply border-2 p-2 rounded-lg"
                     initial={{ opacity: 0, y: -45 }}
                     animate={textBoxVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -45 }}
                     transition={{ duration: 3.5 }}
@@ -106,28 +106,28 @@ const AboutMeTree = () => {
                 </motion.div>
             </div>
             <div className="relative pt-24" style={{ height: `${experiences.length * verticalSpacing}px` }}>
-                <div className="absolute left-1/2 h-full border-r-4 border-gray-200 transform -translate-x-1/2" style={{ height: '100%' }}></div>
+                <div className="absolute left-1/2 h-full border-r-4 border-gray-200 transform -translate-x-1/2"></div>
 
                 {experiences.map((exp, index) => (
                     <motion.div
                         key={index}
-                        className="flex justify-center items-center mb-52"
+                        className="flex justify-center items-center mb-12 md:mb-24 lg:mb-52"
                         variants={nodeAnimation}
                         initial="initial"
-                        animate={nodeVisibility[index] ? 'visible' : 'exit'} // Updated to use the new visibility state
+                        animate={nodeVisibility[index] ? 'visible' : 'exit'}
                         style={{ top: `${index * verticalSpacing}px` }}
-                        transition={{ delay: index * 0.4, duration: 3  }}
+                        transition={{ delay: index * 0.4, duration: 3 }}
                     >
                         <div className="w-6 h-6 bg-gray-200 rounded-full"></div>
 
                         <div
-                            className={`absolute text-box-style p-2 shadow-lg rounded max-w-4xl ${index % 2 === 0 ? 'right-1/2 mr-14' : 'left-1/2 ml-14'}`}
+                            className={`absolute text-box-style p-2 shadow-lg rounded max-w-xs sm:max-w-sm md:max-w-md lg:max-w-4xl ${index % 2 === 0 ? 'right-1/2 mr-6 md:mr-14' : 'left-1/2 ml-6 md:ml-14'}`}
                         >
-                            <h3 className="font-bold text-lg text-white">{exp.title} <span className="text-sm text-gray-400">({exp.date})</span></h3>
+                            <h3 className="font-bold text-md md:text-lg text-white">{exp.title} <span className="text-xs md:text-sm text-gray-400">({exp.date})</span></h3>
                             <p className="text-orange-500 text-sm space-x-1 pb-2 pl-4">{exp.location}</p>
                             <ul className="list-disc text-light rounded pl-6">
                                 {exp.details.map((detail, detailIndex) => (
-                                    <li key={detailIndex} className="text-white mb-4 p-0.5 ">{detail}</li>
+                                    <li key={detailIndex} className="text-white mb-4 p-0.5">{detail}</li>
                                 ))}
                             </ul>
                         </div>
@@ -138,4 +138,4 @@ const AboutMeTree = () => {
     );
 };
 
-export default AboutMeTree;
+export default ExperienceTree;
