@@ -87,7 +87,7 @@ const AboutMeTree = () => {
             <div>
                 <motion.div
                     className="text-3xl text-center mb-28"
-                    initial={{ opacity: 0, y: -20 }}
+                    initial={{ opacity: 0, y: -35 }}
                     animate={{ opacity: 2, y: 0 }}
                     transition={{ delay: 0.8, duration: 2 }}                >
                     Delivering seamless, optimized solutions through collaboration and innovation.
