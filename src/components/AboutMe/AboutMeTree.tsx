@@ -83,14 +83,13 @@ const AboutMeTree = () => {
     const verticalSpacing = 200;
 
     return (
-        <div ref={containerRef} className="container mx-auto h-full pt-2 pb-44">
+        <div ref={containerRef} className="container mx-auto h-full pt-4 pb-44">
             <div>
                 <motion.div
                     className="text-3xl text-center mb-28"
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 2, y: 0 }}
-                    transition={{ delay: 0.9 }}
-                >
+                    transition={{ delay: 0.8, duration: 2 }}                >
                     Delivering seamless, optimized solutions through collaboration and innovation.
                 </motion.div>
             </div>
@@ -105,6 +104,7 @@ const AboutMeTree = () => {
                         initial="initial"
                         animate={nodeVisibility[index] ? 'visible' : 'exit'} // Updated to use the new visibility state
                         style={{ top: `${index * verticalSpacing}px` }}
+                        transition={{ delay: index * 0.8, duration: 2.5  }}
                     >
                         <div className="w-6 h-6 bg-gray-200 rounded-full"></div>
 
