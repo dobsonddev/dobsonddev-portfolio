@@ -7,8 +7,8 @@ const experiences = [
         date: "Sep 2023 - Current",
         location: "Mercedes-Benz Vans x College of Charleston (Ladson, SC)",
         details: [
-            "Developing a large-scale, autonomous inventory system using a multi-layered machine learning system, industrial sensors, and AWS cloud services.",
-            "Leading a team of 5 students under 2 professors, directly with Mercedes-Benz Vans' plant leadership.",
+            "Developing a large-scale, autonomous inventory system using a multi-layered machine learning system, robotics, and AWS cloud services.",
+            "Leading a team of 4 students under 2 professors, in direct collaboration with Mercedes-Benz Vans stakeholders.",
             "Initial prototype displayed significant improvement of efficiency, accuracy and real-time awareness of high-value inventory."
         ]
     },
@@ -46,28 +46,38 @@ const experiences = [
 
 const AboutMeTree = () => {
     const [nodeVisibility, setNodeVisibility] = useState(Array(experiences.length).fill(false));
+    const [textBoxVisible, setTextBoxVisible] = useState(false);
     const containerRef = useRef<HTMLDivElement>(null);
+    const textBoxRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const handleScroll = () => {
             const container = containerRef.current;
-            if (!container) return;
+            const textBox = textBoxRef.current;
+            if (!container || !textBox) return;
 
             const containerBounds = container.getBoundingClientRect();
+            const textBoxBounds = textBox.getBoundingClientRect();
+
+            // For the experiences nodes
             const containerTop = containerBounds.top + window.scrollY;
             const containerHeight = containerBounds.height;
             const windowHeight = window.innerHeight;
-
             const scrollY = window.scrollY;
             const relativeScrollY = scrollY - containerTop + windowHeight / 2;
 
-            // Update logic to set node visibility
+            // For the text box
+            const textBoxTop = textBoxBounds.top + window.scrollY;
+            const textBoxInView = textBoxTop < (scrollY + windowHeight) && textBoxTop > scrollY;
+
+            // Update node visibility
             const newVisibility = nodeVisibility.map((isVisible, index) => {
                 const nodeTop = index * verticalSpacing;
                 return isVisible || relativeScrollY >= nodeTop;
             });
 
             setNodeVisibility(newVisibility);
+            setTextBoxVisible(textBoxInView); // Update text box visibility
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -86,10 +96,12 @@ const AboutMeTree = () => {
         <div ref={containerRef} className="container mx-auto h-full pt-4 pb-44">
             <div>
                 <motion.div
-                    className="text-3xl text-center mb-28"
-                    initial={{ opacity: 0, y: -50 }}
-                    animate={{ opacity: 2, y: 0 }}
-                    transition={{ delay: 0.8, duration: 2 }}                >
+                    ref={textBoxRef}
+                    className="text-3xl text-center mx-auto w-11/12 mb-24 bg-blend-multiply border-2 pt-1 pb-1 rounded-lg"
+                    initial={{ opacity: 0, y: -45 }}
+                    animate={textBoxVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -45 }}
+                    transition={{ duration: 3.5 }}
+                >
                     Delivering seamless, optimized solutions through collaboration and innovation.
                 </motion.div>
             </div>
@@ -104,7 +116,7 @@ const AboutMeTree = () => {
                         initial="initial"
                         animate={nodeVisibility[index] ? 'visible' : 'exit'} // Updated to use the new visibility state
                         style={{ top: `${index * verticalSpacing}px` }}
-                        transition={{ delay: index * 0.4, duration: 2.5  }}
+                        transition={{ delay: index * 0.4, duration: 3  }}
                     >
                         <div className="w-6 h-6 bg-gray-200 rounded-full"></div>
 

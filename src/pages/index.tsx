@@ -37,7 +37,7 @@ const IndexPage = () => {
                 <div className="flex space-x-2 pl-5">
                     <a href="https://www.linkedin.com/in/dobson-dunavant/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-1 transition-all duration-3000 hover:animate-wiggle"><FaLinkedin size="1.5em" /></a>
                     <a href="https://github.com/dobsonddev" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-2 transition-all duration-500 hover:animate-wiggle"><FaGithub size="1.5em" /></a>
-                    <a href="#contact" className="hover:text-dark hover:bg-light px-4 py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Contact Me</a>
+                    <a href="#contact" className="hover:text-dark hover:bg-custom-orange px-4 py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Get in touch</a>
                 </div>
                 <div className="flex space-x-2 pr-5">
                     <a href="#home" className="hover:text-dark hover:bg-light px-4 py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Home</a>
