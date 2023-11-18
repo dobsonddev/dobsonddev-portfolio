@@ -46,9 +46,9 @@ const blogData: BlogPost[] = [
 
     {
         title: "Understanding Async/Await in JavaScript",
-        Introduction: "My journey to mastering async/await in JavaScript.",
+        Introduction: "My journey towards mastering async/await in JavaScript.",
         mainContent: `
-        <p class="text-base mb-4">Async/await in JavaScript can initially appear daunting. My journey to understanding and effectively utilizing this powerful feature was marked by various challenges and learning experiences across multiple projects.</p>
+        <p class="text-base mb-4">Async/await in JavaScript can initially appear daunting. My journey towards understanding and effectively utilizing this powerful feature was marked by various challenges and learning experiences across multiple projects.</p>
         <p class="text-base mb-4">In this post, I aim to demystify async/await, sharing not just my own experiences but also providing educational insights into how you can leverage this feature to write cleaner, more efficient asynchronous code.</p>
     `,
         imageUrl: "https://yourimageurl.com/async-await.jpg",
@@ -56,8 +56,8 @@ const blogData: BlogPost[] = [
     },
 
     {
-        title: "A Dive into Angular's Module Federation",
-        Introduction: "Exploring the intricacies of Angular's Module Federation at Savvas.",
+        title: "A Dive into Webpack's Module Federation",
+        Introduction: "Exploring Webpack's Module Federation and it's usage/importance in Micro Front-End (MFE) architectures.",
         mainContent: `
         <p class="text-base mb-4">At Savvas Learning Company, my engagement with Angular's Module Federation was both deep and insightful. Leveraging Webpack for our main platform, I discovered the power and flexibility of this approach.</p>
         <p class="text-base mb-4">This article shares my experiences and learning, offering a detailed understanding of Module Federation and how it can be applied to create scalable, maintainable, and efficient applications.</p>
@@ -65,6 +65,8 @@ const blogData: BlogPost[] = [
         imageUrl: "https://yourimageurl.com/module-federation.jpg",
         publicationDate: "2023-08-23"
     },
+
+    //other topics to consider: Working in industrial environemtns, machine learning stuff, robotics stuff, stuff from other experineces and tying those expereinces to the blog posts.
 
 
 ];
