@@ -40,29 +40,49 @@ const IndexPage = () => {
     return (
         <div className="bg-mid text-light">
             <Head>
+
                 <title>Dobson Dunavant - Full-Stack Software Engineer, Personal Portfolio Website</title>
-                <meta name="description" content="My homemade personal website, showcasing my experiences thus far." />
+
+                <meta name="description" content="My personal website, showcasing my experiences and skillsets thus far." />
+
                 <meta name="keywords" content="Software Engineer, Frontend, backend, cloud, devops, developer, application, react, angular, aws, django, python, opencv, machine learning, ai, api, graphql, postgresql, docker, firebase, apache, data engineering" />
+
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
                 <meta name="robots" content="index, follow" />
-                <meta name="theme-color" content="#your_color_code" />
+
+                <meta name="theme-color" content="#52796f" />
+
                 <meta name="author" content="Dobson Dunavant" />
+
                 <meta name="image" content="https://dobsond.dev/DDlogo.png" />
-                <html lang="en" />
+
                 <meta name="geo.region" content="US" />
 
+
                 <meta property="og:title" content="Dobson Dunavant - Personal Portfolio Website" />
-                <meta property="og:description" content="My homemade personal website, showcasing my experiences thus far." />
+
+                <meta property="og:description" content="My personal website, showcasing my experiences and skillsets thus far." />
+
                 <meta property="og:type" content="website" />
+
                 <meta property="og:url" content="https://dobsond.dev/" />
+
                 <meta property="og:image" content="https://dobsond.dev/DDlogo.png" />
+
                 <link rel="canonical" href="https://dobsond.dev/" />
 
+
                 <meta name="twitter:card" content="summary_large_image" />
+
                 <meta name="twitter:title" content="Dobson Dunavant - Personal Portfolio Website" />
-                <meta name="twitter:description" content="My homemade personal website, showcasing my experiences thus far." />
+
+                <meta name="twitter:description" content="My personal website, showcasing my experiences and skillsets thus far." />
+
                 <meta name="twitter:image" content="https://dobsond.dev/DDlogo.png" />
+
             </Head>
+
             <nav style={{ top: isScrollingUp ? '0' : '-100%' }} className="z-20 text-light w-full flex items-center bg-dark transition-all duration-1000 fixed py-2 px-4 md:px-8">
                 <div className="flex-1 flex items-center justify-start">
                     <a href="https://www.linkedin.com/in/dobson-dunavant/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-1 transition-all duration-500 hover:animate-wiggle"><FaLinkedin size="1.6em" /></a>
