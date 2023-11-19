@@ -1,40 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This project was made by Dobson Dunavant - https://github.com/dobsonddev
+
+It is a Typescript [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), using TailwindCSS and OpenAI's `Assistant API` speaking with a custom Assistant.
 
 ## Getting Started
 
-First, run the development server:
+1. Clone this repo
+2. Run npm install --legacy-peer-deps to install all dependencies
+   1. This is because of a version issue between react-typed and the next.js version used in this project.
+3. Run npm run dev to start the development server
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun run dev
-```
+### Please note: If you do not want to use the chatbot, you need to remove/comment out the chat-bot component from the index.tsx file.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### (Optional) Chat-bot Setup
+1. Have a premium account with OpenAI.
+2. Create a new OpenAI project.
+3. Create a new API key.
+4. Create a new .env.local file in the root directory of your cloned project.
+5. In this .env.local file, add the following line: `OPENAI_API_KEY=YOUR_API_KEY_HERE`
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Want to deploy? I suggest using Vercel, or GitHub Pages.
+- #### Vercel was great for me because it was easy to deploy and I could use my custom domain name. Also it automatically redeployed when I merge to my "main" branch from my development branch.
+- "The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js."
+- Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

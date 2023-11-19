@@ -28,9 +28,8 @@ function Home() {
     return (
         <div className="relative min-h-screen bg-gradient-to-b from-creamOrange to-softBlue grid grid-flow-row auto-rows-auto items-center justify-items-center px-4">
             <div className="text-center mt-12 mx-auto">
-                <h1 className="text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-wider text-light">
-                    Hi, <br />
-                    I'm Dobson
+                <h1 className="text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-wider text-light leading-loose" style={{ lineHeight: '1.3' }}>
+                    &nbsp;Hi, <br /> I'm Dobson
                 </h1>
             </div>
 

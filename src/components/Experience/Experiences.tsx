@@ -1,5 +1,5 @@
 import React from "react";
-import ExperienceTree from "@/components/AboutMe/ExperienceTree";
+import ExperienceTree from "@/components/Experience/ExperienceTree";
 
 function Experiences() {
     return (

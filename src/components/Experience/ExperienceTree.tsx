@@ -90,10 +90,10 @@ const ExperienceTree = () => {
         exit: { opacity: 0 },
     };
 
-    const verticalSpacing = 200;
+    const verticalSpacing = window.innerWidth < 640 ? 150 : 200; // example values, adjust as needed
 
     return (
-        <div ref={containerRef} className="container mx-auto h-full pt-4 pb-44 px-4 md:px-8">
+        <div ref={containerRef} className="container mx-auto h-full pt-4 pb-64 px-4 md:px-8">
             <div>
                 <motion.div
                     ref={textBoxRef}
@@ -105,7 +105,7 @@ const ExperienceTree = () => {
                     Delivering seamless, optimized solutions through collaboration and innovation.
                 </motion.div>
             </div>
-            <div className="relative pt-24" style={{ height: `${experiences.length * verticalSpacing}px` }}>
+            <div className="relative pt-36" style={{ height: `${experiences.length * verticalSpacing}px` }}>
                 <div className="absolute left-1/2 h-full border-r-4 border-gray-200 transform -translate-x-1/2"></div>
 
                 {experiences.map((exp, index) => (
