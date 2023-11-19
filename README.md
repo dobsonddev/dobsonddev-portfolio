@@ -27,3 +27,47 @@ Stack:
 - #### Vercel was great for me because it was easy to deploy and I could use my custom domain name. Also it automatically redeployed when I merge to my "main" branch from my development branch.
 - "The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js."
 - Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+<Head>
+
+                <title>Dobson Dunavant - Full-Stack Software Engineer, Personal Portfolio Website</title>
+
+                <meta name="description" content="My homemade personal website, showcasing my experiences thus far." />
+
+                <meta name="keywords" content="Software Engineer, Frontend, backend, cloud, devops, developer, application, react, angular, aws, django, python, opencv, machine learning, ai, api, graphql, postgresql, docker, firebase, apache, data engineering" />
+
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+                <meta name="robots" content="index, follow" />
+
+                <meta name="theme-color" content="#your_color_code" />
+
+                <meta name="author" content="Dobson Dunavant" />
+
+                <meta name="image" content="https://dobsond.dev/DDlogo.png" />
+
+                <meta name="geo.region" content="US" />
+
+
+                <meta property="og:title" content="Dobson Dunavant - Personal Portfolio Website" />
+
+                <meta property="og:description" content="My homemade personal website, showcasing my experiences thus far." />
+
+                <meta property="og:type" content="website" />
+
+                <meta property="og:url" content="https://dobsond.dev/" />
+
+                <meta property="og:image" content="https://dobsond.dev/DDlogo.png" />
+
+                <link rel="canonical" href="https://dobsond.dev/" />
+
+
+                <meta name="twitter:card" content="summary_large_image" />
+
+                <meta name="twitter:title" content="Dobson Dunavant - Personal Portfolio Website" />
+
+                <meta name="twitter:description" content="My homemade personal website, showcasing my experiences thus far." />
+
+                <meta name="twitter:image" content="https://dobsond.dev/DDlogo.png" />
+
+            </Head>
