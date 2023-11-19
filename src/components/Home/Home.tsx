@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Typed from 'react-typed';
 import { FaArrowDown } from 'react-icons/fa'; // Ensure react-icons is installed
+import Head from 'next/head';
 
 function Home() {
     const [showScrollPrompt, setShowScrollPrompt] = useState(false);
