@@ -30,7 +30,6 @@ function Home() {
             <div className="text-center mt-12 mx-auto">
                 <h1 className="text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-wider text-light">
                     Hi, <br />
-                    {/* eslint-disable-next-line react/no-unescaped-entities */}
                     I'm Dobson
                 </h1>
             </div>
