@@ -8,6 +8,8 @@ import Experiences from "@/components/Experience/Experiences";
 import ChatbotButton from "@/components/Chatbot/ChatbotButton";
 import Chatbot from "@/components/Chatbot/Chatbot";
 import Head from "next/head";
+import DDlogo from "../public/images/DDlogo.png";
+
 const IndexPage = () => {
     const [isChatModalOpen, setIsChatModalOpen] = useState(false);
     const [isScrollingUp, setIsScrollingUp] = useState(true); // Set initial value to true
@@ -44,6 +46,8 @@ const IndexPage = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta name="robots" content="index, follow" />
                 <meta name="theme-color" content="#your_color_code" />
+                <meta name="author" content="Dobson Dunavant" />
+                <meta name="image" content="../public/images/DDlogo.png" />
                 <html lang="en" />
                 <meta name="geo.region" content="US" />
 
@@ -51,13 +55,13 @@ const IndexPage = () => {
                 <meta property="og:description" content="Dobson Dunavant's portfolio showcasing skills and experiences as a Fullstack Developer." />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://dobsond.dev/" />
-                <meta property="og:image" content="https://your-website-url.com/og-image.jpg" />
+                <meta property="og:image" content="../public/images/DDlogo.png" />
                 <link rel="canonical" href="https://dobsond.dev/" />
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Dobson Dunavant - Personal Portfolio Website" />
                 <meta name="twitter:description" content="Dobson Dunavant's portfolio showcasing skills and experiences as a Fullstack Developer." />
-                <meta name="twitter:image" content="https://your-website-url.com/twitter-image.jpg" />
+                <meta name="twitter:image" content="../public/images/DDlogo.png" />
             </Head>
             <nav style={{ top: isScrollingUp ? '0' : '-100%' }} className="z-20 text-light w-full flex items-center bg-dark transition-all duration-1000 fixed py-2 px-4 md:px-8">
                 <div className="flex-1 flex items-center justify-start">
