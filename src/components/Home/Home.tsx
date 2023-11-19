@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Typed from 'react-typed';
+import Typewriter from 'typewriter-effect';
 import { FaArrowDown } from 'react-icons/fa'; // Ensure react-icons is installed
-import Head from 'next/head';
 
 function Home() {
     const [showScrollPrompt, setShowScrollPrompt] = useState(false);
@@ -34,23 +33,22 @@ function Home() {
                     &nbsp;Hi, <br /> I'm Dobson
                 </h1>
             </div>
-
             <div className="bg-black text-xl md:text-2xl lg:text-3xl text-light p-2 rounded mb-10 mx-auto">
-                <Typed
-                    strings={[
-                        "A full-stack developer",
-                        "A data engineer",
-                        "A persistent problem solver",
-                        "A collaborative teammate",
-                        "Agile minded",
-                        "A continuous learner",
-                        "A drummer",
-                        "A lover of the outdoors",
-                        "A tater tot connoisseur",
-                    ]}
-                    typeSpeed={95}
-                    backSpeed={50}
-                    loop
+                <Typewriter
+                    options={{
+                        strings: [
+                            "A full-stack developer",
+                            "A data engineer",
+                            "A persistent problem solver",
+                            "A collaborative teammate",
+                            "Agile minded",
+                            "A continuous learner",
+                            "A drummer",
+                            "A lover of the outdoors",
+                            "A tater tot connoisseur",],
+                        autoStart: true,
+                        loop: true,
+                    }}
                 />
             </div>
 
