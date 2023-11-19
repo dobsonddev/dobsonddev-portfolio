@@ -15,8 +15,9 @@ const blogData: BlogPost[] = [
         mainContent: `
     <p class="text-base mb-4">Going into my first internship, I had a million questions, and admittedly, a lot of intimidation. What would my day-to-day look like? How am I going to learn this entire stack, from scratch, while making impactful contributions?</p>
     <p class="text-base mb-4">How much different will working in tech be, compared to my expectations?...As I began to work, I realized that I had a lot to learn, but I also realized that I had a lot to offer. What was once intimidation quickly evolved into excitement and drive.</p>
-    <p class="text-base mb-4">I'll never forget my first PR. Although it was a minor change, it was to hit the UI of a several-thousand-users UI. I saw it in nightly, a week before the production release, which gave me a swift dose of excitement and nerves. Finally, I received an automated message that it was successfully deployed into production, and I was absolutely elated. Admittedly, negative emotions still exist at times, but have largely been replaced by a growing confidence, excitement to collaborate and learn from great minds and the drive to contribute optimized, healthy solutions.</p>
-    <p class="text-base mb-4">I've been able to carve out and self-start opportunities for myself within my experiences, and contribute to organizations in ways that neither of us expected. It's wild to put myself in my mental shoes from 2 years ago compared to now. I'm forever grateful to have been able to learn so, so much in such a short period of time, from some incredible mentors and peers.</p>
+    <p class="text-base mb-4">I'll never forget my first PR. Although it was a minor change, it was a minor 'on-hover' change to a several-thousand-user feature. I saw it in nightly, a week before the production release, which gave me a swift dose of both excitement and nerves. Finally upon prod release, I received an automated message that it was successfully deployed. I was absolutely elated. These negative emotions still exist at times, but have largely been replaced by growing confidence, excitement to collaborate with and learn from great minds and foremost, the drive to create optimized, seamless solutions.</p>
+    <p class="text-base mb-4">Over my diverse experiences thus far, I've been able to self-start different opportunities for myself within these experiences, and contribute to organizations in ways that neither of us expected. Whether its creating a comprehensive, all-in-one knowledge-base that the team can refernce for both on-boarding and deeper knowledge, or leading hackathon projects to design and implement real, effective enhancements for an organization.</p>
+    <p class="text-base mb-4">It is quite a trip to put myself in my mental shoes from 2 years ago, compared to now. I'm forever grateful to have been able to learn so, so much in such a short period of time, from incredible mentors and peers.</p>
     <p class="text-base mb-4">I'm excited to continue to learn and grow, and see where my journey takes me as I seek to invest myself in new, more challenging and impactful experiences.</p>
 `,
         imageUrl: "https://yourimageurl.com/react-hooks.jpg",
@@ -24,7 +25,7 @@ const blogData: BlogPost[] = [
     },
     {
         title: "The Value of Sequence Diagrams for Early Software Engineers",
-        Introduction: "How creating sequence diagrams at Savvas enhanced my understanding of complex systems.",
+        Introduction: "How creating sequence diagrams helps me understand large, complex, enterprise systems.",
         mainContent: `
         <p class="text-base mb-4">During my internship at Savvas, I was tasked with creating detailed sequence diagrams. These diagrams were crucial in tracing the journey of massive API calls across our tech stack, which included Angular 16 MFEs, GraphQL, and SpringBoot, connected to a PostgreSQL database.</p>
         <p class="text-base mb-4">The process of visualizing the flow of data and understanding the interactions between different components was not just about documentation. It was a valuable learning experience that deepened my understanding of how large-scale applications operate in a cohesive manner.</p>
@@ -34,8 +35,8 @@ const blogData: BlogPost[] = [
     },
 
     {
-        title: "Exploring React and Angular's Hooks",
-        Introduction: "A comparative study of React and Angular hooks based on my hands-on experience.",
+        title: "Zoomed out, then Zoomed In - 'Hooks' in Web Development",
+        Introduction: "A brief history of the evolution of 'Hooks' in programming, and how they fit into modern web development (React, Angular, Vue)",
         mainContent: `
         <p class="text-base mb-4">Having extensively used Angular hooks at Savvas and React hooks in various other projects, I've gained a unique perspective on how both frameworks approach the concept of hooks.</p>
         <p class="text-base mb-4">In this article, I delve into the design philosophies and implementation details of hooks in both React and Angular, drawing from my diverse experiences as detailed in my resume.</p>
@@ -45,7 +46,7 @@ const blogData: BlogPost[] = [
     },
 
     {
-        title: "Understanding Concurrency and Parallelism in the context of JS' Async/Await",
+        title: "Understanding JS' Async/Await in the context of Concurrency and Parallelism",
         Introduction: "(Re)Introducing yourself to asynchronous web development through the lens of concurrency and parallelism.",
         mainContent: `
         <p class="text-base mb-4">Async/await in JavaScript can initially appear daunting. My journey towards understanding and effectively utilizing this powerful feature was marked by various challenges and learning experiences across multiple projects.</p>

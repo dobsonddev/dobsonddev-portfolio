@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import Home from '@/components/Home/Home';
 import Resume from '../components/Resume/Resume';
-import Projects from '../components/Projects/Projects';
 import Blog from '../components/Blog/Blog';
 import Contact from '../components/Contact/Contact';
-import AboutMe from '../components/AboutMe/Experiences';
-import Experiences from "../components/AboutMe/Experiences";
+import Experiences from "@/components/Experience/Experiences";
+// import Chatbot from '../components/Chatbot/Chatbot';
 
 const IndexPage = () => {
+    const [isChatModalOpen, setIsChatModalOpen] = useState(false);
     const [isScrollingUp, setIsScrollingUp] = useState(true); // Set initial value to true
 
     useEffect(() => {
@@ -30,25 +30,29 @@ const IndexPage = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-
     return (
         <div className="bg-mid text-light">
-            <nav style={{top: isScrollingUp ? '0' : '-100%'}} className="z-20 text-light w-full flex justify-between bg-dark transition-all duration-1000 fixed py-2">
-                <div className="flex space-x-2 pl-5">
-                    <a href="https://www.linkedin.com/in/dobson-dunavant/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-1 transition-all duration-3000 hover:animate-wiggle"><FaLinkedin size="1.5em" /></a>
-                    <a href="https://github.com/dobsonddev" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-2 transition-all duration-500 hover:animate-wiggle"><FaGithub size="1.5em" /></a>
-                    <a href="#contact" className="hover:text-dark hover:bg-custom-orange px-4 py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Get in touch</a>
+            <nav style={{ top: isScrollingUp ? '0' : '-100%' }} className="z-20 text-light w-full flex items-center bg-dark transition-all duration-1000 fixed py-2 px-4 md:px-8">
+                <div className="flex-1 flex items-center justify-start">
+                    <a href="https://www.linkedin.com/in/dobson-dunavant/" target="_blank" rel="noopener noreferrer" className="inline-flex items-cznter px-1 transition-all duration-500 hover:animate-wiggle"><FaLinkedin size="1.6em" /></a>
+                    <a href="https://github.com/dobsonddev" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-3 transition-all duration-500 hover:animate-wiggle"><FaGithub size="1.6em" /></a>
+                    <a href="#contact" className="hidden md:inline-flex hover:text-dark hover:bg-custom-orange px-4 py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Get in touch</a>
                 </div>
-                <div className="flex space-x-2 pr-5">
+                <div className="flex-1 flex justify-center">
+                    <a href="#chat" className="hover:text-dark bg-custom-orange hover:bg-light px-4 py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Chat about me</a>
+                </div>
+                <div className="flex-1 flex items-center justify-end">
                     <a href="#home" className="hover:text-dark hover:bg-light px-4 py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Home</a>
                     <a href="#experiences" className="hover:text-dark hover:bg-light px-4 py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Experiences</a>
                     <a href="#resume" className="hover:text-dark hover:bg-light px-4 py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Resume</a>
                     {/*<a href="#projects" className="hover:text-dark hover:bg-light px-4 py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Projects</a>*/}
-                    <a href="#blog" className="hover:text-dark hover:bg-light px-4 py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Blog</a>
+                    <a href="#blog" className="hover:text-dark text-dark bg-gray-400 hover:bg-light px-4 py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Blog</a>
                 </div>
+                {/* Mobile menu button here for smaller screens */}
             </nav>
 
             <div className="flex flex-col items-center">
+                {/*<Chatbot isOpen={isChatModalOpen} setIsOpen={setIsChatModalOpen} />*/}
                 <section id="home" className="w-full">
                     <Home />
                 </section>

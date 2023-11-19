@@ -22,27 +22,27 @@ function ProjectCard({ project }: ProjectCardProps) {
         <div className="min-h-screen bg-softBlue flex items-center justify-center">
             <div className="w-80 h-full border-black border-2 rounded-md bg-white transition-all duration-300 hover:-translate-y-2 hover:shadow-[10px_10px_0px_rgba(0,0,0,1)]">
                 <a href={project.githubLink} className="block cursor-pointer">
-                <article className="w-full h-full">
-                    <figure className="w-full h-1/2 border-black border-b-2">
-                        <img
-                            src={project.imageUrl}
-                            alt={project.name}
-                            className="w-full h-full object-cover"
-                        />
-                    </figure>
-                    <div className="px-6 py-5 text-left h-full">
-                        <h1 className="text-[32px] mb-4">{project.name}</h1>
-                        <p className="text-xs mb-4 line-clamp-4">
-                            {project.description}
-                        </p>
-                        <div className="mb-4">
-                            {project.tags.map((tag, index) => (
-                                <span key={index} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{tag}</span>
-                            ))}
+                    <article className="w-full h-full">
+                        <figure className="w-full h-1/2 border-black border-b-2">
+                            <img
+                                src={project.imageUrl}
+                                alt={project.name}
+                                className="w-full h-full object-cover"
+                            />
+                        </figure>
+                        <div className="px-6 py-5 text-left h-full">
+                            <h1 className="text-[32px] mb-4">{project.name}</h1>
+                            <p className="text-xs mb-4 line-clamp-4">
+                                {project.description}
+                            </p>
+                            <div className="mb-4">
+                                {project.tags.map((tag, index) => (
+                                    <span key={index} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{tag}</span>
+                                ))}
+                            </div>
+                            <button onClick={toggleModal} className="font-bold">Read More</button>
                         </div>
-                        <button onClick={toggleModal} className="font-bold">Read More</button>
-                    </div>
-                </article>
+                    </article>
                 </a>
             </div>
 
