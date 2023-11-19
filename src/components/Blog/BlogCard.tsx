@@ -35,7 +35,7 @@ function BlogCard({ post }: BlogCardProps) {
                             {post.Introduction}
                         </p>
                     </div>
-                    <button onClick={toggleModal} className="absolute bottom-0 right-0 font-bold rounded hover:bg-mid hover:text-light duration-300 hover:-translate-y-1 p-2">See full post</button>
+                    <button onClick={toggleModal} className="absolute bottom-0 right-0 font-bold rounded hover:bg-mid hover:text-white duration-300 hover:-translate-y-1 p-2">See full post</button>
                 </article>
             </div>
 
