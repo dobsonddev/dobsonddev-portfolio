@@ -42,7 +42,7 @@ const blogData: BlogPost[] = [
         <p class="text-base mb-4">In this article, I delve into the design philosophies and implementation details of hooks in both React and Angular, drawing from my diverse experiences as detailed in my resume.</p>
     `,
         imageUrl: "https://yourimageurl.com/react-angular-hooks.jpg",
-        publicationDate: "2023-10-15"
+        publicationDate: "Coming soon"
     },
 
     {
