@@ -49,6 +49,7 @@ const ExperienceTree = () => {
     const [textBoxVisible, setTextBoxVisible] = useState(false);
     const containerRef = useRef<HTMLDivElement>(null);
     const textBoxRef = useRef<HTMLDivElement>(null);
+    const [verticalSpacing, setVerticalSpacing] = useState(200); // default value
 
     useEffect(() => {
         const handleScroll = () => {
@@ -90,7 +91,20 @@ const ExperienceTree = () => {
         exit: { opacity: 0 },
     };
 
-    const verticalSpacing = window.innerWidth < 640 ? 150 : 200; // example values, adjust as needed
+    useEffect(() => {
+        // Function to update the vertical spacing based on window width
+        const updateVerticalSpacing = () => {
+            const spacing = window.innerWidth < 640 ? 150 : 200;
+            setVerticalSpacing(spacing);
+        };
+
+        // Update vertical spacing on mount and window resize
+        updateVerticalSpacing();
+        window.addEventListener('resize', updateVerticalSpacing);
+
+        // Cleanup listener
+        return () => window.removeEventListener('resize', updateVerticalSpacing);
+    }, []);
 
     return (
         <div ref={containerRef} className="container mx-auto h-full pt-4 pb-64 px-4 md:px-8">
@@ -116,7 +130,7 @@ const ExperienceTree = () => {
                         initial="initial"
                         animate={nodeVisibility[index] ? 'visible' : 'exit'}
                         style={{ top: `${index * verticalSpacing}px` }}
-                        transition={{ delay: index * 0.4, duration: 3 }}
+                        transition={{ delay: index * 0.4, duration: 3.5 }}
                     >
                         <div className="w-6 h-6 bg-gray-200 rounded-full"></div>
 
