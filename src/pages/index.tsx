@@ -5,12 +5,15 @@ import Resume from '../components/Resume/Resume';
 import Blog from '../components/Blog/Blog';
 import Contact from '../components/Contact/Contact';
 import Experiences from "@/components/Experience/Experiences";
-// import Chatbot from '../components/Chatbot/Chatbot';
-
+import ChatbotButton from "@/components/Chatbot/ChatbotButton";
+import Chatbot from "@/components/Chatbot/Chatbot";
 const IndexPage = () => {
     const [isChatModalOpen, setIsChatModalOpen] = useState(false);
     const [isScrollingUp, setIsScrollingUp] = useState(true); // Set initial value to true
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const toggleChatModal = () => {
+        setIsChatModalOpen(!isChatModalOpen);
+    };
 
     useEffect(() => {
         let lastScrollTop = 0;
@@ -40,7 +43,9 @@ const IndexPage = () => {
                     <a href="#contact" className="hover:text-dark hover:bg-light px-4 py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Contact Me</a>
                 </div>
                 <div className="flex-1 flex items-center justify-center">
-                    <a href="#chat" className="hover:text-dark bg-custom-orange hover:bg-light px-4 py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Chat with my buddy</a>
+                    <button onClick={toggleChatModal} className="hover:text-dark bg-custom-orange hover:bg-light px-4 py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">
+                        Learn about me
+                    </button>
                 </div>
 
                 {/* Hamburger Menu Icon */}
@@ -71,7 +76,10 @@ const IndexPage = () => {
 
 
             <div className="flex flex-col items-center">
-                {/*<Chatbot isOpen={isChatModalOpen} setIsOpen={setIsChatModalOpen} />*/}
+
+                <ChatbotButton isOpen={isChatModalOpen} setIsOpen={setIsChatModalOpen} />
+                <Chatbot isOpen={isChatModalOpen} setIsOpen={setIsChatModalOpen} />
+
                 <section id="home" className="w-full">
                     <Home />
                 </section>
