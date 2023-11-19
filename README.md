@@ -1,6 +1,10 @@
 This project was made by Dobson Dunavant - https://github.com/dobsonddev
 
-It is a Typescript [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), using TailwindCSS and OpenAI's `Assistant API` speaking with a custom Assistant.
+Stack:
+- Typescript [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
+- TailwindCSS
+- OpenAI's `Assistant API` speaking with a custom Assistant that I made.
+- Multiple 3rd party UI/UX libraries
 
 ## Getting Started
 
