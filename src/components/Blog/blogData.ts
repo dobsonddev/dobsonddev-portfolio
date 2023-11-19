@@ -21,7 +21,7 @@ const blogData: BlogPost[] = [
     <p class="text-base mb-4">I'm excited to continue to learn and grow, and see where my journey takes me as I seek to invest myself in new, more challenging and impactful experiences.</p>
 `,
         imageUrl: "https://yourimageurl.com/react-hooks.jpg",
-        publicationDate: "2023-11-17"
+        publicationDate: "2023-11-13"
     },
     {
         title: "The Value of Sequence Diagrams for Early Software Engineers",
@@ -31,7 +31,7 @@ const blogData: BlogPost[] = [
         <p class="text-base mb-4">The process of visualizing the flow of data and understanding the interactions between different components was not just about documentation. It was a valuable learning experience that deepened my understanding of how large-scale applications operate in a cohesive manner.</p>
     `,
         imageUrl: "https://yourimageurl.com/sequence-diagrams.jpg",
-        publicationDate: "2023-09-20"
+        publicationDate: "Coming soon"
     },
 
     {
@@ -53,7 +53,7 @@ const blogData: BlogPost[] = [
         <p class="text-base mb-4">In this post, I aim to demystify async/await, sharing not just my own experiences but also providing educational insights into how you can leverage this feature to write cleaner, more efficient asynchronous code.</p>
     `,
         imageUrl: "https://yourimageurl.com/async-await.jpg",
-        publicationDate: "2023-11-03"
+        publicationDate: "Coming soon"
     },
 
     {
@@ -64,7 +64,7 @@ const blogData: BlogPost[] = [
         <p class="text-base mb-4">This article shares my experiences and learning, offering a detailed understanding of Module Federation and how it can be applied to create scalable, maintainable, and efficient applications.</p>
     `,
         imageUrl: "https://yourimageurl.com/module-federation.jpg",
-        publicationDate: "2023-08-23"
+        publicationDate: "Coming soon"
     },
 
     //other topics to consider: Working in industrial environemtns, machine learning stuff, robotics stuff, stuff from other experineces and tying those expereinces to the blog posts.

@@ -21,7 +21,7 @@ function Chatbot({ isOpen, setIsOpen }: ChatbotProps) {
         setUserMessage('');
 
         // Replace this with your actual chatbot API call logic
-        const mockReply = "This is a mock reply from the chatbot.";
+        const mockReply = "Chatbot under construction, coming soon.";
         setChatHistory(prev => [...prev, { role: 'assistant', content: mockReply }]);
     };
 

@@ -41,8 +41,8 @@ const IndexPage = () => {
         <div className="bg-mid text-light">
             <Head>
                 <title>Dobson Dunavant - Full-Stack Software Engineer, Personal Portfolio Website</title>
-                <meta name="description" content="Dobson Dunavant's full-stack software engineer personal portfolio showcasing skills in web development, data engineering, and more." />
-                <meta name="keywords" content="My personal website, portfolio showcasing my skills and experiences as a Fullstack Developer." />
+                <meta name="description" content="My homemade personal website, showcasing my experiences thus far." />
+                <meta name="keywords" content="Software Engineer, Frontend, backend, cloud, devops, developer, application, react, angular, aws, django, python, opencv, machine learning, ai, api, graphql, postgresql, docker, firebase, apache, data engineering" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta name="robots" content="index, follow" />
                 <meta name="theme-color" content="#your_color_code" />
@@ -52,7 +52,7 @@ const IndexPage = () => {
                 <meta name="geo.region" content="US" />
 
                 <meta property="og:title" content="Dobson Dunavant - Personal Portfolio Website" />
-                <meta property="og:description" content="My personal website, showcasing my skills and experiences as a Fullstack Developer." />
+                <meta property="og:description" content="My homemade personal website, showcasing my experiences thus far." />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://dobsond.dev/" />
                 <meta property="og:image" content="https://dobsond.dev/DDlogo.png" />
@@ -60,7 +60,7 @@ const IndexPage = () => {
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Dobson Dunavant - Personal Portfolio Website" />
-                <meta name="twitter:description" content="My personal website, showcasing my skills and experiences as a Fullstack Developer." />
+                <meta name="twitter:description" content="My homemade personal website, showcasing my experiences thus far." />
                 <meta name="twitter:image" content="https://dobsond.dev/DDlogo.png" />
             </Head>
             <nav style={{ top: isScrollingUp ? '0' : '-100%' }} className="z-20 text-light w-full flex items-center bg-dark transition-all duration-1000 fixed py-2 px-4 md:px-8">
