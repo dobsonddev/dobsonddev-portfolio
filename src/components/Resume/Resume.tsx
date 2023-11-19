@@ -12,7 +12,7 @@ function Resume() {
                 <a
                     href={resumePDFPath}
                     download="John_Dobson_Dunavant_Jr_Resume.pdf"
-                    className="bg-amber-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-lg md:text-xl"
+                    className="bg-custom-orange hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-lg md:text-xl"
                     title="Download Resume as PDF"
                 >
                     Download as PDF

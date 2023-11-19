@@ -9,10 +9,6 @@ function Chatbot({ isOpen, setIsOpen }: ChatbotProps) {
     const [userMessage, setUserMessage] = useState('');
     const [chatHistory, setChatHistory] = useState<{ role: string; content: string; }[]>([]);
 
-    const toggleModal = () => {
-        setIsOpen(!isOpen);
-    };
-
     const handleUserMessageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setUserMessage(e.target.value);
     };
@@ -20,52 +16,44 @@ function Chatbot({ isOpen, setIsOpen }: ChatbotProps) {
     const handleSendMessage = async () => {
         if (!userMessage) return;
 
-        setChatHistory([...chatHistory, { role: 'user', content: userMessage }]);
+        // Adding the user's message to chat history
+        setChatHistory(prev => [...prev, { role: 'user', content: userMessage }]);
         setUserMessage('');
 
-        // Send the user's message to your server for processing
-        const response = await fetch('/api/chatbot', {
-            method: 'POST',
-            body: JSON.stringify({ message: userMessage }),
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
+        // Replace this with your actual chatbot API call logic
+        const mockReply = "This is a mock reply from the chatbot.";
+        setChatHistory(prev => [...prev, { role: 'assistant', content: mockReply }]);
+    };
 
-        if (response.ok) {
-            const responseData = await response.json();
-            const assistantMessage = responseData?.choices?.[0]?.message?.content || "I'm sorry, I couldn't understand your request.";
-            setChatHistory([...chatHistory, { role: 'assistant', content: assistantMessage }]);
+    const handleKeyPress = (e: React.KeyboardEvent) => {
+        if (e.key === 'Enter' && userMessage.trim()) {
+            handleSendMessage();
         }
     };
 
-    useEffect(() => {
-        if (isOpen) {
-            // You can add logic here to focus on the input field when the chatbox opens
-        }
-    }, [isOpen]);
-
     return (
-        <div>
-            <button onClick={toggleModal} className={`fixed bottom-0 right-0 p-4 z-50 ${isOpen ? 'hidden' : ''}`}>Open Chat</button>
-            <div className={`fixed bottom-0 right-0 z-50 ${isOpen ? '' : 'hidden'}`}>
-                <div className="bg-white p-4 rounded-lg shadow-md w-80">
-                    <div className="chat-history">
-                        {chatHistory.map((message, index) => (
-                            <div key={index} className={`message ${message.role}`}>
-                                {message.content}
-                            </div>
-                        ))}
-                    </div>
-                    <div className="input-area">
-                        <input
-                            type="text"
-                            placeholder="Type your message..."
-                            value={userMessage}
-                            onChange={handleUserMessageChange}
-                        />
-                        <button onClick={handleSendMessage}>Send</button>
-                    </div>
+        <div className={`fixed inset-0 bg-black bg-opacity-50 p-4 z-50 ${isOpen ? '' : 'hidden'}`}>
+            <div className="fixed right-1 bottom-1 bg-black border-light border-2 p-4 rounded shadow-md max-w-md mx-auto w-full">
+                <button onClick={() => setIsOpen(false)} className="absolute top-0 right-0 mt-1 text-md mr-1 bg-gray-300 px-2 py-0.5 rounded text-black">X</button>
+                <div className="chat-history overflow-y-auto h-80 mb-2 pt-5">
+                    {chatHistory.map((message, index) => (
+                        <div key={index} className={`message p-2 mb-1 flex rounded ${message.role === 'user' ? 'bg-blue-100 text-black ml-auto justify-end' : 'bg-gray-200 text-blue-800'}`}>
+                            {message.content}
+                        </div>
+                    ))}
+                </div>
+                <div className="input-area flex">
+                    <input
+                        type="text"
+                        placeholder="Ask a question about Dobson..."
+                        value={userMessage}
+                        onChange={handleUserMessageChange}
+                        onKeyPress={handleKeyPress}  // Added key press handler here
+                        className="flex-grow p-2 border border-gray-300 rounded-l-md"
+                    />
+                    <button onClick={handleSendMessage} className="bg-custom-orange text-white p-2 rounded-r-md">
+                        Send
+                    </button>
                 </div>
             </div>
         </div>
