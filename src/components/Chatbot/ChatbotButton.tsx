@@ -16,7 +16,7 @@ const ChatbotButton = ({ isOpen, setIsOpen }: ChatbotProps) => {
 
 return (
     <div>
-        <button onClick={toggleModal} className={`fixed bottom-3 right-3 p-2 rounded bg-custom-orange z-50 ${isOpen ? 'hidden' : ''}`}>Chat w/ DobsonAI</button>
+        <button onClick={toggleModal} className={`fixed bottom-3 right-3 p-2 rounded bg-custom-orange z-50 ${isOpen ? 'hidden' : ''}`}>Chat w/ MomoAI</button>
     </div>
 )
 }
