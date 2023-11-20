@@ -94,8 +94,13 @@ const ExperienceTree = () => {
     useEffect(() => {
         // Function to update the vertical spacing based on window width
         const updateVerticalSpacing = () => {
-            const spacing = window.innerWidth < 640 ? 150 : 200;
-            setVerticalSpacing(spacing);
+            if (window.innerWidth < 640) {
+                setVerticalSpacing(150); // Smaller screens
+            } else if (window.innerWidth >= 640 && window.innerWidth < 1024) {
+                setVerticalSpacing(250); // Medium-small screens
+            } else {
+                setVerticalSpacing(300); // Larger screens
+            }
         };
 
         // Update vertical spacing on mount and window resize
@@ -107,7 +112,7 @@ const ExperienceTree = () => {
     }, []);
 
     return (
-        <div ref={containerRef} className="container mx-auto h-auto pt-6 px-4 md:px-8 sm:pb-56 md:pb-96 lg:pb-80">
+        <div ref={containerRef} className="container mx-auto h-auto pt-6 px-4 md:px-8 sm:pb-56 md:pb-96 lg:pb-40">
             <div>
                 <motion.div
                     ref={textBoxRef}
@@ -122,13 +127,13 @@ const ExperienceTree = () => {
 
 
             {/* Desktop and Tablet Version */}
-            <div className="hidden sm:block relative pt-36 md:pt-52 md:mb-60" style={{ height: `${experiences.length * verticalSpacing}px` }}>
+            <div className="hidden sm:block relative pt-36 md:pt-52 md:mb-60 lg:mb-20" style={{ height: `${experiences.length * verticalSpacing}px` }}>
                 <div className="absolute left-1/2 h-full border-r-4 border-gray-200 rounded transform -translate-x-1/2"></div>
 
                 {experiences.map((exp, index) => (
                     <motion.div
                         key={index}
-                        className="flex justify-center justify-evenly items-center sm:mb-20 md:mb-64 lg:mb-56"
+                        className="flex justify-center items-center sm:mb-20 md:mb-72 lg:mb-72"
                         variants={nodeAnimation}
                         initial="initial"
                         animate={nodeVisibility[index] ? 'visible' : 'exit'}
