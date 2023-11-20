@@ -119,7 +119,7 @@ const ExperienceTree = () => {
                     Delivering seamless, optimized solutions through collaboration and innovation.
                 </motion.div>
             </div>
-            <div className="relative pt-36" style={{ height: `${experiences.length * verticalSpacing}px` }}>
+            <div className="hidden md:block relative pt-36" style={{ height: `${experiences.length * verticalSpacing}px` }}>
                 <div className="absolute left-1/2 h-full border-r-4 border-gray-200 transform -translate-x-1/2"></div>
 
                 {experiences.map((exp, index) => (
@@ -142,6 +142,29 @@ const ExperienceTree = () => {
                             <ul className="list-disc text-light rounded pl-6">
                                 {exp.details.map((detail, detailIndex) => (
                                     <li key={detailIndex} className="text-white mb-4 p-0.5">{detail}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    </motion.div>
+                ))}
+            </div>
+            <div className="md:hidden">
+                {experiences.map((exp, index) => (
+                    <motion.div
+                        key={index}
+                        className="flex flex-col items-center mb-12"
+                        variants={nodeAnimation}
+                        initial="initial"
+                        animate={nodeVisibility[index] ? 'visible' : 'exit'}
+                        transition={{ delay: index * 0.4, duration: 3.5 }}
+                    >
+                        <div className="w-6 h-6 bg-gray-200 rounded-full mb-4"></div>
+                        <div className="text-box-style p-2 shadow-lg rounded max-w-xs">
+                            <h3 className="font-bold text-md text-white">{exp.title} <span className="text-xs text-gray-400">({exp.date})</span></h3>
+                            <p className="text-orange-500 text-sm pb-2">{exp.location}</p>
+                            <ul className="list-disc text-light rounded pl-4">
+                                {exp.details.map((detail, detailIndex) => (
+                                    <li key={detailIndex} className="text-white mb-4">{detail}</li>
                                 ))}
                             </ul>
                         </div>

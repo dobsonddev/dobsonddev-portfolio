@@ -8,7 +8,6 @@ import Experiences from "@/components/Experience/Experiences";
 import ChatbotButton from "@/components/Chatbot/ChatbotButton";
 import ChatbotModal from "@/components/Chatbot/ChatbotModal";
 import Head from "next/head";
-import DDlogo from "../public/images/DDlogo.png";
 
 const IndexPage = () => {
     const [isChatModalOpen, setIsChatModalOpen] = useState(false);
@@ -84,14 +83,17 @@ const IndexPage = () => {
             </Head>
 
             <nav style={{ top: isScrollingUp ? '0' : '-100%' }} className="z-20 text-light w-full flex items-center bg-dark transition-all duration-1000 fixed py-2 px-4 md:px-8">
+                {/* Left part of the navbar */}
                 <div className="flex-1 flex items-center justify-start">
                     <a href="https://www.linkedin.com/in/dobson-dunavant/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-1 transition-all duration-500 hover:animate-wiggle"><FaLinkedin size="1.6em" /></a>
                     <a href="https://github.com/dobsonddev" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-3 transition-all duration-500 hover:animate-wiggle"><FaGithub size="1.6em" /></a>
-                    <a href="#contact" className="hover:text-dark hover:bg-light px-4 py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Contact Me</a>
+                    <a href="#contact" className="hover:text-dark hover:bg-light text-xs md:text-sm lg:text-base py-1 px-2 md:py-2 md:px-4 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Contact Me</a>
                 </div>
+
+                {/* Center part of the navbar */}
                 <div className="flex-1 flex items-center justify-center">
-                    <button onClick={toggleChatModal} className="hover:text-dark bg-custom-orange hover:bg-light px-4 py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">
-                        Learn about me
+                    <button onClick={toggleChatModal} className="hover:text-dark bg-custom-orange hover:bg-light text-xs md:text-sm lg:text-base py-1 px-2 md:py-2 md:px-4 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">
+                        Chat with Momo
                     </button>
                 </div>
 
