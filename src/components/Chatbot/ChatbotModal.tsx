@@ -76,9 +76,9 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
 
     return (
         <div className={`fixed inset-0 bg-black bg-opacity-50 p-4 z-50 ${isOpen ? '' : 'hidden'}`}>
-            <div className="fixed right-1 bottom-1 bg-black border-light border-2 p-4 rounded shadow-md max-w-md mx-auto w-full">
+            <div className="fixed inset-x-0 bottom-0 mx-auto max-w-md w-full bg-black border-light border-2 p-4 rounded-t-md shadow-md md:rounded md:right-1 md:bottom-1">
                 <button onClick={() => setIsOpen(false)} className="absolute top-0 right-0 mt-1 text-md mr-1 bg-gray-300 px-2 py-0.5 rounded text-black">X</button>
-                <div className="chat-history overflow-y-auto h-80 mb-2 pt-5">
+                <div className="chat-history overflow-y-auto mb-2 pt-5" style={{ maxHeight: '70vh' }}>
                     {messages.map((message, index) => (
                         <div key={index} className={`mb-1 flex p-1 rounded-lg ${message.sender === 'user' ? 'bg-blue-500 text-black justify-end' : 'bg-gray-300 text-black self-start'}`}>
                             {message.text}
@@ -95,9 +95,9 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
                         className="flex-grow p-2 mr-1 border border-gray-300 rounded-l-md text-black"
                     />
                     {isProcessing ? (
-                        <div className="w-4 h-4 md:w-3 md:h-6 bg-white rounded-full animate-spin ml-2"></div>
+                        <div className="loader w-4 h-4 bg-white rounded-full ml-2"></div>
                     ) : (
-                        <button onClick={handleSendMessage} className="bg-custom-orange text-white p-2 rounded-r-md">
+                        <button onClick={handleSendMessage} className="bg-custom-orange text-white p-1 md:p-2 rounded-r-md">
                             Ask
                         </button>
                     )}

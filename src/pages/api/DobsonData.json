@@ -1,7 +1,9 @@
 {
   "Name": "Dobson Dunavant",
   "PersonalInformation": {
-    "Location": "Charleston, SC",
+    "CurrentLocation": "Charleston, SC",
+    "Birthplace": "Memphis, TN",
+    "Fan": "Grizzlies, Memphis Tigers, Liverpool FC, Borussia Dortmund",
     "Phone": "(901) 356-4309",
     "Email": "jdobsond3@gmail.com",
     "Citizenship": "U.S. Citizen",
@@ -11,7 +13,7 @@
     {
       "Institution": "College of Charleston",
       "Degree": "Bachelor in Computer Science",
-      "GPA": 3.7,
+      "Major GPA": 3.7,
       "Period": "May 2022 - May 2024 (expected)"
     },
     {
@@ -239,15 +241,17 @@
   },
   "HobbiesAndInterests": {
     "Activities": [
+      "Concerts",
       "Soccer",
       "Fishing",
       "Camping",
-      "Woodworking",
+      "Running",
+      "Hiking",
+      "Working Out",
       "Drumming",
       "Gaming",
       "Skiing",
-      "Sporting Events",
-      "Concerts"
+      "Watching Sports"
     ],
     "Music": {
       "BandRole": "Drummer",
@@ -258,7 +262,7 @@
       "Rank": "#7 in North America in Overwatch 1"
     },
     "Sports": {
-      "Soccer": "Played club soccer within premier leagues for all of my life up until high-school, winning a few state club championships and going to national tournaments in Florida and Texas. Re-Founded the College of Charleston club soccer team, serving as captain and president for 2 years.",
+      "Soccer": "Played competitive club soccer at some of the highest levels for all of my life thru college, winning a couple state championships and going to national tournaments in Florida and Texas. Re-Founded the College of Charleston club soccer team, serving as captain and president for 2 years.",
       "Tennis": "Played up until high-school, was ranked #3 in the state of Tennessee for my age group for a few years.",
       "FantasyFootball": "Enthusiast"
     }
