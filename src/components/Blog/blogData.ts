@@ -11,15 +11,44 @@ export interface BlogPost {
 const blogData: BlogPost[] = [
     {
         title: "How did I navigate my early experiences in tech?",
-        Introduction: "My evolution from my first experience in tech, to where I am now.",
+        Introduction: "Some anecdotes on my first experiences in tech, and how I navigated them.",
         mainContent: `
-    <p class="text-base mb-4">Going into my first internship, I had a million questions, and admittedly, a lot of intimidation. What would my day-to-day look like? How am I going to learn this entire stack, from scratch, while making impactful contributions?</p>
-    <p class="text-base mb-4">How much different will working in tech be, compared to my expectations?...As I began to work, I realized that I had a lot to learn, but I also realized that I had a lot to offer. What was once intimidation quickly evolved into excitement and drive.</p>
-    <p class="text-base mb-4">I'll never forget my first PR. Although it was a minor change, it was a minor 'on-hover' change to a several-thousand-user feature. I saw it in nightly, a week before the production release, which gave me a swift dose of both excitement and nerves. Finally upon prod release, I received an automated message that it was successfully deployed. I was absolutely elated. These negative emotions still exist at times, but have largely been replaced by growing confidence, excitement to collaborate with and learn from great minds and foremost, the drive to create optimized, seamless solutions.</p>
-    <p class="text-base mb-4">Over my diverse experiences thus far, I've been able to self-start different opportunities for myself within these experiences, and contribute to organizations in ways that neither of us expected. Whether its creating a comprehensive, all-in-one knowledge-base that the team can refernce for both on-boarding and deeper knowledge, or leading hackathon projects to design and implement real, effective enhancements for an organization.</p>
-    <p class="text-base mb-4">It is quite a trip to put myself in my mental shoes from 2 years ago, compared to now. I'm forever grateful to have been able to learn so, so much in such a short period of time, from incredible mentors and peers.</p>
-    <p class="text-base mb-4">I'm excited to continue to learn and grow, and see where my journey takes me as I seek to invest myself in new, more challenging and impactful experiences.</p>
-`,
+<p class="text-gray-700 mb-4">
+        It's nice to take a moment to reflect on how far you've come, and appreciate what has moved you closer to your goals. Imposter syndrome is a real beast, so I think a bit of reflection on your progress can go a long way.
+    </p>
+    
+<p class="text-gray-700 mb-4">
+        Going into my first real technical role as a Data Engineering Intern, back in mid 2022, I had a million questions, and admittedly, a lot of intimidation. 
+        What would my day-to-day look like? How was I going to learn this entire stack, from scratch, 
+        while making impactful contributions? What is this 'memoization' thing I've read about? Did they just spell memorization wrong?
+    </p>
+    <p class="text-gray-700 mb-4">
+        As I began to work, I realized that although I had a lot to learn, I had a lot to offer too. I began breaking this massive enterprise system into smaller, more approachable pieces, relevant to my domain. The first 2 months flew by, but I got to look back and be amazed at how my mental landscape had evolved. I really enjoyed the semi-structured nature of it all. I was able to learn from my peers, and also learn on my own, in ways that were most effective for me. Essentially "learning how to learn" in a professional tech environment.
+        What was once intimidation and daunt had evolved into discovery and drive. I'd made myself knowledgeable on a few pieces of the stack that no one else was especially knowledgeable about, providing some unique insights here and there to devs and stakeholders much, much smarter and more experienced than me.
+    </p>
+    <p class="text-gray-700 mb-4">
+        I'll never forget my first PR. Just a minor change toan 'on-hover' feature. But it was a feature 
+        used by several thousand users. I saw it in nightly, a week before the production release, which 
+        gave me a swift dose of both excitement and nerves. After that long week, the automated production release email had my bugfix in the patch notes. An audible exhale and a little smile, it was a good moment. I've made a sort of internal decision that none of us know everything. We're all constantly learning on-the-go. It's teh ability to do that while still outputing value that makes a great engineer (unless you are a genius, then I think the bar may be a bit higher).
+          These negative 
+        emotions absolutely still exist at times but have largely been replaced by excitement 
+        to collaborate with and learn from great minds while delivering seamless, 
+        impactful solutions.
+    </p>
+    <p class="text-gray-700 mb-4">
+        Over my diverse experiences thus far, I've been able to self-start different opportunities within 
+        these experiences and contribute to organizations in ways that neither of us expected. From creating an all-in-one knowledge base that both the veterans and new-hires reference for 
+        onboarding or deeper knowledge, to leading hackathon projects which designed and implemented real, 
+        effective enhancements to an organization. I've realized value opportunities exist everywhere, and seizing them is a way to make real, unique impacts.
+    </p>
+    <p class="text-gray-700 mb-4">
+        It is quite a trip to put myself in my mental shoes from 2 years ago, compared to now. I'm forever 
+        grateful to have been able to learn so much in such a short period of time, from incredible mentors 
+        and peers.
+    </p>
+    <p class="text-gray-700">
+        I'm excited to continue to grow and learn as I seek to invest myself in new, more challenging and impactful experiences.
+    </p>`,
         imageUrl: "https://yourimageurl.com/react-hooks.jpg",
         publicationDate: "2023-11-13"
     },
