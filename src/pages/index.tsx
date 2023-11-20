@@ -6,7 +6,7 @@ import Blog from '../components/Blog/Blog';
 import Contact from '../components/Contact/Contact';
 import Experiences from "@/components/Experience/Experiences";
 import ChatbotButton from "@/components/Chatbot/ChatbotButton";
-import Chatbot from "@/components/Chatbot/Chatbot";
+import ChatbotModal from "@/components/Chatbot/ChatbotModal";
 import Head from "next/head";
 import DDlogo from "../public/images/DDlogo.png";
 
@@ -125,7 +125,7 @@ const IndexPage = () => {
             <div className="flex flex-col items-center">
 
                 <ChatbotButton isOpen={isChatModalOpen} setIsOpen={setIsChatModalOpen} />
-                <Chatbot isOpen={isChatModalOpen} setIsOpen={setIsChatModalOpen} />
+                <ChatbotModal isOpen={isChatModalOpen} setIsOpen={setIsChatModalOpen} />
 
                 <section id="home" className="w-full">
                     <Home />
