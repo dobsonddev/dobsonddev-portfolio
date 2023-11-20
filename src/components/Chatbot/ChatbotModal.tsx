@@ -80,7 +80,7 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
                 <button onClick={() => setIsOpen(false)} className="absolute top-0 right-0 mt-1 text-md mr-1 bg-gray-300 px-2 py-0.5 rounded text-black">X</button>
                 <div className="chat-history overflow-y-auto mb-2 pt-5" style={{ maxHeight: '70vh' }}>
                     {messages.map((message, index) => (
-                        <div key={index} className={`mb-1 flex p-1 rounded-lg ${message.sender === 'user' ? 'bg-blue-500 text-black justify-end' : 'bg-gray-300 text-black self-start'}`}>
+                        <div key={index} className={`mb-1 flex p-1 rounded-lg ${message.sender === 'user' ? 'bg-midlight text-black justify-end' : 'bg-gray-300 text-black self-start'}`}>
                             {message.text}
                         </div>
                     ))}
@@ -95,7 +95,7 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
                         className="flex-grow p-2 mr-1 border border-gray-300 rounded-l-md text-black"
                     />
                     {isProcessing ? (
-                        <div className="loader w-4 h-4 bg-white rounded-full ml-2"></div>
+                        <div className="w-3 h-6 ml-2 md:w-3 md:h-6 bg-white rounded-full animate-spin"></div>
                     ) : (
                         <button onClick={handleSendMessage} className="bg-custom-orange text-white p-1 md:p-2 rounded-r-md">
                             Ask
