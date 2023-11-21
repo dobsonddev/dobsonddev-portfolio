@@ -19,7 +19,7 @@ const experiences = [
         details: [
             "Engineered accessibility solutions for a K-12 edtech platform using Angular 16 MFEs, GraphQL, Spring, Gradle, and AWS cloud services.",
             "Addressed 14 high-impact accessibility issues, aligning with WCAG 2.1 standards.",
-            "Led hackathon projects, including API testing enhancements and a student analysis dashboard, winning the hackathon."
+            "Self-started a full knowledgebase development, resulting in an all-in-on confluence knowledge hub for both new hires and experienced devs to reference."
         ]
     },
     {
@@ -94,8 +94,13 @@ const ExperienceTree = () => {
     useEffect(() => {
         // Function to update the vertical spacing based on window width
         const updateVerticalSpacing = () => {
-            const spacing = window.innerWidth < 640 ? 150 : 200;
-            setVerticalSpacing(spacing);
+            if (window.innerWidth < 640) {
+                setVerticalSpacing(150); // Smaller screens
+            } else if (window.innerWidth >= 640 && window.innerWidth < 1024) {
+                setVerticalSpacing(250); // Medium-small screens
+            } else {
+                setVerticalSpacing(300); // Larger screens
+            }
         };
 
         // Update vertical spacing on mount and window resize
@@ -107,7 +112,7 @@ const ExperienceTree = () => {
     }, []);
 
     return (
-        <div ref={containerRef} className="container mx-auto h-full pt-4 pb-64 px-4 md:px-8">
+        <div ref={containerRef} className="container mx-auto h-auto pt-6 px-4 md:px-8 sm:pb-56 md:pb-96 lg:pb-40">
             <div>
                 <motion.div
                     ref={textBoxRef}
@@ -119,13 +124,16 @@ const ExperienceTree = () => {
                     Delivering seamless, optimized solutions through collaboration and innovation.
                 </motion.div>
             </div>
-            <div className="hidden md:block relative pt-36" style={{ height: `${experiences.length * verticalSpacing}px` }}>
-                <div className="absolute left-1/2 h-full border-r-4 border-gray-200 transform -translate-x-1/2"></div>
+
+
+            {/* Desktop and Tablet Version */}
+            <div className="hidden sm:block relative pt-36 md:pt-52 md:mb-60 lg:mb-20" style={{ height: `${experiences.length * verticalSpacing}px` }}>
+                <div className="absolute left-1/2 h-full border-r-4 border-gray-200 rounded transform -translate-x-1/2"></div>
 
                 {experiences.map((exp, index) => (
                     <motion.div
                         key={index}
-                        className="flex justify-center items-center mb-12 md:mb-24 lg:mb-52"
+                        className="flex justify-center items-center sm:mb-20 md:mb-72 lg:mb-72"
                         variants={nodeAnimation}
                         initial="initial"
                         animate={nodeVisibility[index] ? 'visible' : 'exit'}
@@ -135,9 +143,9 @@ const ExperienceTree = () => {
                         <div className="w-6 h-6 bg-gray-200 rounded-full"></div>
 
                         <div
-                            className={`absolute text-box-style p-2 shadow-lg rounded max-w-xs sm:max-w-sm md:max-w-md lg:max-w-4xl ${index % 2 === 0 ? 'right-1/2 mr-6 md:mr-14' : 'left-1/2 ml-6 md:ml-14'}`}
+                            className={`absolute text-box-style p-2 shadow-lg rounded max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg ${index % 2 === 0 ? 'right-1/2 mr-4 sm:mr-6 md:mr-8 lg:mr-14' : 'left-1/2 ml-4 sm:ml-6 md:ml-8 lg:ml-14'}`}
                         >
-                            <h3 className="font-bold text-md md:text-lg text-white">{exp.title} <span className="text-xs md:text-sm text-gray-400">({exp.date})</span></h3>
+                            <h3 className="font-bold text-md text-white">{exp.title} <span className="text-xs text-gray-400">({exp.date})</span></h3>
                             <p className="text-orange-500 text-sm space-x-1 pb-2 pl-4">{exp.location}</p>
                             <ul className="list-disc text-light rounded pl-6">
                                 {exp.details.map((detail, detailIndex) => (
@@ -148,6 +156,8 @@ const ExperienceTree = () => {
                     </motion.div>
                 ))}
             </div>
+
+            {/* Mobile Version */}
             <div className="md:hidden">
                 {experiences.map((exp, index) => (
                     <motion.div
