@@ -19,7 +19,7 @@ const experiences = [
         details: [
             "Engineered accessibility solutions for a K-12 edtech platform using Angular 16 MFEs, GraphQL, Spring, Gradle, and AWS cloud services.",
             "Addressed 14 high-impact accessibility issues, aligning with WCAG 2.1 standards.",
-            "Led hackathon projects, including API testing enhancements and a student analysis dashboard, winning the hackathon."
+            "Self-started a full knowledgebase development, resulting in an all-in-on confluence knowledge hub for both new hires and experienced devs to reference."
         ]
     },
     {

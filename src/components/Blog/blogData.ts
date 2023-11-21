@@ -96,9 +96,20 @@ const blogData: BlogPost[] = [
         publicationDate: "Coming soon"
     },
 
+    {
+        title: "AI/ML in EdTech, an equalizer or a divider of educational inequality?",
+        Introduction: "In this article, I explore the role of AI/ML in EdTech, and how it can be leveraged to bridge the educational inequality gap.",
+        mainContent: `
+        <p class="text-base mb-4"></p>
+        <p class="text-base mb-4">Sources
+            <ul class="list-disc list-inside"></ul>
+        </p>`
+        ,
+        imageUrl: "",
+        publicationDate: "Coming soon"
+    },
+
     //other topics to consider: Working in industrial environemtns, machine learning stuff, robotics stuff, stuff from other experineces and tying those expereinces to the blog posts.
-
-
 ];
 
 export default blogData;
