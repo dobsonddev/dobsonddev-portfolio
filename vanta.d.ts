@@ -1,4 +1,5 @@
-// vanta.d.ts
+declare module 'vanta/dist/vanta.waves.min.js';
+
 interface VantaEffectOptions {
     el: HTMLElement;
     mouseControls: boolean;

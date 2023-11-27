@@ -138,7 +138,7 @@ const ExperienceTree = () => {
                         initial="initial"
                         animate={nodeVisibility[index] ? 'visible' : 'exit'}
                         style={{ top: `${index * verticalSpacing}px` }}
-                        transition={{ delay: index * 0.4, duration: 3.5 }}
+                        transition={{ delay: index * 0.2, duration: 2.9 }}
                     >
                         <div className="w-6 h-6 bg-gray-200 rounded-full"></div>
 

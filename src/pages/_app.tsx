@@ -1,47 +1,33 @@
 // pages/_app.tsx
-import '../styles/globals.css';
-import Script from 'next/script';
-import { AppProps } from 'next/app';
-import { useEffect } from 'react';
+import { useEffect } from 'react'
+import { AppProps } from 'next/app'
+import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  useEffect(() => {
-    let vantaEffect: { destroy: () => void } | null = null;
+    useEffect(() => {
+        const script = document.createElement('script')
+        script.innerHTML = `
+      VANTA.WAVES({
+        el: '#my-background',
+        color: 0x000000,
+        waveHeight: 20,
+        shininess: 50,
+        waveSpeed: 1.5,
+        zoom: 0.75
+      })
+    `
+        document.body.appendChild(script)
 
-    const setVanta = () => {
-      if (window.VANTA) {
-        vantaEffect = window.VANTA.WAVES({
-          el: document.querySelector('#vanta-bg')!,
-          mouseControls: false,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 200.00,
-          minWidth: 200.00,
-          scale: 1.00,
-          shininess: 13.00,
-          scaleMobile: 1.00,
-          color: 0x90c0f
-        });
-      }
-    };
+        return () => {
+            document.body.removeChild(script)
+        }
+    }, [])
 
-    if (typeof window !== 'undefined') {
-      setVanta();
-    }
-
-    return () => {
-      if (vantaEffect) vantaEffect.destroy();
-    };
-  }, []);
-
-  return (
-      <div id="vanta-bg" className="min-h-screen">
-        <Component {...pageProps} />
-        {/* Suppress ESLint warning if necessary or move to _document.js */}
-        <Script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js" strategy="beforeInteractive" />
-        <Script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js" strategy="beforeInteractive" />
-      </div>
-  );
+    return (
+        <div id="my-background" className="h-screen">
+            <Component {...pageProps} />
+        </div>
+    )
 }
 
-export default MyApp;
+export default MyApp
