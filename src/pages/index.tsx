@@ -37,7 +37,7 @@ const IndexPage = () => {
     }, []);
 
     return (
-        <div className="bg-mid text-light">
+        <div className="text-light">
             <Head>
 
                 <title>Dobson Dunavant - Full-Stack Software Engineer, Personal Portfolio Website</title>
@@ -82,7 +82,7 @@ const IndexPage = () => {
 
             </Head>
 
-            <nav style={{ top: isScrollingUp ? '0' : '-100%' }} className="z-20 text-light w-full flex items-center bg-dark transition-all duration-1000 fixed py-2 px-4 md:px-8">
+            <nav style={{ top: isScrollingUp ? '0' : '-100%' }} className="z-20 text-light w-full flex items-center bg-dark bg-opacity-75 transition-all duration-1000 fixed py-2 px-4 md:px-8">
                 {/* Left part of the navbar */}
                 <div className="flex-1 flex items-center justify-start">
                     <a href="https://www.linkedin.com/in/dobson-dunavant/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-1 transition-all duration-500 hover:animate-wiggle"><FaLinkedin size="1.6em" /></a>
