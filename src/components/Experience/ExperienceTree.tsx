@@ -143,7 +143,7 @@ const ExperienceTree = () => {
                         <div className="w-6 h-6 bg-gray-200 rounded-full"></div>
 
                         <div
-                            className={`absolute text-box-style p-2 shadow-lg rounded max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg ${index % 2 === 0 ? 'right-1/2 mr-4 sm:mr-6 md:mr-8 lg:mr-14' : 'left-1/2 ml-4 sm:ml-6 md:ml-8 lg:ml-14'}`}
+                            className={`absolute text-box-style p-2 shadow-lg rounded ${index % 2 === 0 ? 'right-1/2 md:mr-4 lg:mr-6 xl:mr-8 2xl:mr-14' : 'left-1/2 md:ml-4 lg:ml-6 xl:ml-8 2xl:ml-14'}`}
                         >
                             <h3 className="font-bold text-md text-white">{exp.title} <span className="text-xs text-gray-400">({exp.date})</span></h3>
                             <p className="text-orange-500 text-sm space-x-1 pb-2 pl-4">{exp.location}</p>
@@ -170,8 +170,7 @@ const ExperienceTree = () => {
                     >
                         <div className="w-6 h-6 bg-gray-200 rounded-full mb-4"></div>
                         <div className="text-box-style p-2 shadow-lg rounded max-w-xs">
-                            <h3 className="font-bold text-md text-white">{exp.title} <span className="text-xs text-gray-400">({exp.date})</span></h3>
-                            <p className="text-orange-500 text-sm pb-2">{exp.location}</p>
+                            <h3 className="font-bold text-md text-white whitespace-nowrap sm:whitespace-normal truncate">{exp.title} <span className="text-xs text-gray-400">({exp.date})</span></h3>                            <p className="text-orange-500 text-sm pb-2">{exp.location}</p>
                             <ul className="list-disc text-light rounded pl-4">
                                 {exp.details.map((detail, detailIndex) => (
                                     <li key={detailIndex} className="text-white mb-4">{detail}</li>

@@ -9,13 +9,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         script.innerHTML = `
       VANTA.WAVES({
         el: '#my-background',
-        color: 0x000000,
+        color: 0x90c0f,
         waveHeight: 20,
-        shininess: 50,
-        waveSpeed: 1.5,
-        zoom: 0.75
-      })
-    `
+        shininess: 17,
+        waveSpeed: 0.8,
+        zoom: 1
+      })`
         document.body.appendChild(script)
 
         return () => {

@@ -37,8 +37,8 @@ function Home() {
                 <Typewriter
                     options={{
                         strings: [
-                            "A full-stack developer",
-                            "A data engineer",
+                            "A full-stack engineer",
+                            "A hungry mind",
                             "A persistent problem solver",
                             "A collaborative teammate",
                             "Agile minded",
@@ -48,6 +48,10 @@ function Home() {
                             "A tater tot connoisseur",],
                         autoStart: true,
                         loop: true,
+                        delay: 75,
+                        deleteSpeed: 50,
+                        pauseFor: 2200,
+
                     }}
                 />
             </div>
