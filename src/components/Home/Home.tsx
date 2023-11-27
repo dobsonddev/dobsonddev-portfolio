@@ -36,6 +36,7 @@ function Home() {
             <div className="bg-black text-xl md:text-2xl lg:text-3xl text-light p-2 rounded mb-10 mx-auto">
                 <Typewriter
                     options={{
+                        // @ts-ignore
                         strings: [
                             "A full-stack engineer",
                             "A hungry mind",
@@ -51,8 +52,7 @@ function Home() {
                         delay: 75,
                         deleteSpeed: 50,
                         pauseFor: 2200,
-
-                    }}
+                    } as any}
                 />
             </div>
 
