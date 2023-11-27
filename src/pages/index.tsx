@@ -116,8 +116,9 @@ const IndexPage = () => {
 
                 {/* Center part of the navbar */}
                 <div className="flex-1 flex items-center justify-center">
-                    <button onClick={toggleChatModal} className="hover:text-dark bg-custom-orange hover:bg-light text-xs md:text-sm lg:text-base py-1 px-2 md:py-2 md:px-4 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">
+                    <button onClick={toggleChatModal} className="flex flex-row hover:text-dark bg-custom-orange hover:bg-light text-xs md:text-sm lg:text-base py-1 px-2 md:py-2 md:px-4 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">
                         Chat with Momo
+                        <img src="/lemur.svg" alt="Momo" className="ml-4" style={{ height: '25px' }} />
                     </button>
                 </div>
 
