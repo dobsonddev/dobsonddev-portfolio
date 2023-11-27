@@ -13,23 +13,42 @@ const IndexPage = () => {
     const [isChatModalOpen, setIsChatModalOpen] = useState(false);
     const [isScrollingUp, setIsScrollingUp] = useState(true); // Set initial value to true
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [navbarBackground, setNavbarBackground] = useState('');
+    const [prevScrollPosition, setPrevScrollPosition] = useState(0);
+
     const toggleChatModal = () => {
         setIsChatModalOpen(!isChatModalOpen);
     };
 
     useEffect(() => {
         let lastScrollTop = 0;
+        let ticking = false;
 
         const handleScroll = () => {
-            const st = window.scrollY;
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const st = window.scrollY;
+                    setIsScrollingUp(st < lastScrollTop || st <= 0);
+                    lastScrollTop = st;
+                    ticking = false;
 
-            if (st > lastScrollTop) {
-                setIsScrollingUp(false); // Scrolling down
-            } else if (st < lastScrollTop) {
-                setIsScrollingUp(true); // Scrolling up, immediate response
+                    // Check scroll direction
+                    const scrollDown = st > prevScrollPosition;
+
+                    // Update the previous scroll position
+                    setPrevScrollPosition(st);
+
+                    // Update the navbar background based on scroll direction
+                    if (scrollDown && st > 0) {
+                        setNavbarBackground('bg-black');
+                    } else {
+                        setNavbarBackground('');
+                    }
+
+                });
+
+                ticking = true;
             }
-
-            lastScrollTop = st <= 0 ? 0 : st;
         };
 
         window.addEventListener('scroll', handleScroll, { passive: true });
@@ -37,7 +56,7 @@ const IndexPage = () => {
     }, []);
 
     return (
-        <div className="bg-mid text-light">
+        <div className="text-light">
             <Head>
 
                 <title>Dobson Dunavant - Full-Stack Software Engineer, Personal Portfolio Website</title>
@@ -82,7 +101,12 @@ const IndexPage = () => {
 
             </Head>
 
-            <nav style={{ top: isScrollingUp ? '0' : '-100%' }} className="z-20 text-light w-full flex items-center bg-dark transition-all duration-1000 fixed py-2 px-4 md:px-8">
+            <nav
+                style={{ top: isScrollingUp ? '0' : '-100%' }}
+                className={`z-20 text-light w-full flex items-center transition-all duration-1000 fixed py-2 px-4 md:px-8 ${isScrollingUp ? 'bg-black' : ''} ${navbarBackground}`}
+            >
+
+
                 {/* Left part of the navbar */}
                 <div className="flex-1 flex items-center justify-start">
                     <a href="https://www.linkedin.com/in/dobson-dunavant/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-1 transition-all duration-500 hover:animate-wiggle"><FaLinkedin size="1.6em" /></a>
@@ -137,7 +161,7 @@ const IndexPage = () => {
                     <Experiences />
                 </section>
 
-                <section id="resume" className="w-full">
+                <section id="resume" className="w-full bg-mid">
                     <Resume />
                 </section>
 
@@ -149,7 +173,7 @@ const IndexPage = () => {
                     <Blog />
                 </section>
 
-                <section id="contact" className="w-full">
+                <section id="contact" className="w-full bg-middark">
                     <Contact />
                 </section>
             </div>

@@ -26,3 +26,10 @@ const config: Config = {
   plugins: [],
 }
 export default config
+
+//light (#cad2c5): RGB(202, 210, 197)
+// midlight (#84a98c): RGB(132, 169, 140)
+// mid (#52796f): RGB(82, 121, 111)
+// middark (#354f52): RGB(53, 79, 82)
+// dark (#2f3e46): RGB(47, 62, 70)
+// custom-orange (#E27D60): RGB(226, 125, 96) ​
