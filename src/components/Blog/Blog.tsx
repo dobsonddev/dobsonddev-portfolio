@@ -1,7 +1,7 @@
 // Blog.tsx
 import React from 'react';
 import BlogCard from './BlogCard';
-import blogData from './blogData';
+import blogData from './BlogData';
 
 function Blog() {
     return (

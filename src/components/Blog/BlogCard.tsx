@@ -1,6 +1,6 @@
 // BlogCard.tsx
 import React, { useState } from 'react';
-import { BlogPost } from './blogData'; // Ensure this path is correct
+import { BlogPost } from './BlogData'; // Ensure this path is correct
 
 interface BlogCardProps {
     post: BlogPost;

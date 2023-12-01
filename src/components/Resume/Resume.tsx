@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image'; // Import Next.js Image component
+import Image from "next/legacy/image"; // Import Next.js Image component
 
 function Resume() {
     const resumePDFPath = '/resumepdf.pdf';

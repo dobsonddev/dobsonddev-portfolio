@@ -121,7 +121,7 @@ const ExperienceTree = () => {
                     animate={textBoxVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -45 }}
                     transition={{ duration: 3.5 }}
                 >
-                    Delivering seamless, optimized solutions through collaboration and innovation.
+                    An aspiring full-stack software engineer with a proven history of delivering seamless, optimized solutions through collaboration and innovation. I thrive in dynamic environments where creative problem-solving drives impactful results.
                 </motion.div>
             </div>
 
