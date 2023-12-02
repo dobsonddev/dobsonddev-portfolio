@@ -63,7 +63,8 @@ const ExperienceTree = () => {
     return (
         <div ref={containerRef} className="container mx-auto h-auto pt-6 px-4 md:px-8 sm:pb-56 md:pb-96 lg:pb-40">
             {/* Desktop and Tablet Version */}
-            <div className="hidden sm:block relative pt-36 md:pt-52 md:mb-60 lg:mb-20" style={{ height: `${experiences.length * verticalSpacing}px` }}>                <div className="absolute left-1/2 h-full border-r-4 border-gray-200 rounded transform -translate-x-1/2"></div>
+            <div className="hidden sm:block relative pt-36 md:pt-52 md:mb-60 lg:mb-20" style={{ height: `${experiences.length * verticalSpacing}px` }}>
+                <div className="absolute left-1/2 h-full border-r-4 border-light text-light bg-light rounded transform -translate-x-1/2"></div>
 
                 {experiences.map((exp, index) => (
                     <motion.div
@@ -75,25 +76,21 @@ const ExperienceTree = () => {
                         style={{ top: `${index * verticalSpacing}px` }}
                         transition={{duration: 1 }}
                     >
-                        <div className="w-6 h-6 bg-gray-300 rounded-full"></div>
+                        <div className="w-6 h-6 border-light text-light bg-light rounded-full"></div>
 
-                        <div
-                            className={`absolute text-box-style p-2 shadow-lg bg-black bg-opacity-80 rounded ${index % 2 === 0 ? 'right-1/2 md:mr-4 lg:mr-6 xl:mr-8 2xl:mr-14' : 'left-1/2 md:ml-4 lg:ml-6 xl:ml-8 2xl:ml-14'}`}>
-
+                        <div className={`absolute text-box-style p-2 shadow-lg bg-black bg-opacity-80 rounded ${index % 2 === 0 ? 'right-1/2 md:mr-4 lg:mr-6 xl:mr-8 2xl:mr-14' : 'left-1/2 md:ml-4 lg:ml-6 xl:ml-8 2xl:ml-14'}`}>
                             <div className="flex justify-between items-center">
-
                                 <h3 className="font-bold text-xl text-white pb-1">
                                     {exp.title}
                                 </h3>
                                 <span className="text-sm text-gray-400 pl-2">{exp.date}</span>
-
                                 {/*<Image src={exp.logo} alt={exp.location} className="h-2 w-auto right-0" width={32} height={48}/>*/}
                             </div>
                             <div className="flex justify-between items-center pb-1">
                                 <p className="text-orange-500 text-md space-x-1 pb-2 pl-4">{exp.company}</p>
                                 <p className="text-orange-500 text-sm space-x-1 pb-2 pl-4">{exp.location}</p>
                             </div>
-                            <ul className="list-disc text-light rounded pl-6">
+                            <ul className="list-disc text-gray-300 rounded pl-6">
                                 {exp.details.map((detail, detailIndex) => (
                                     <li key={detailIndex} className="text-white mb-4 p-0.5">{detail}</li>
                                 ))}
