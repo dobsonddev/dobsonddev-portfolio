@@ -18,7 +18,7 @@ const experiences: Experience[] = [
         details: [
             "Developing a large-scale, autonomous inventory system using a multi-layered machine learning system, robotics, and AWS cloud services.",
             "Leading a team of 4 students under 2 professors, in direct collaboration with Mercedes-Benz Vans stakeholders.",
-            "Initial prototype displayed significant improvement of efficiency, accuracy and real-time awareness of high-value inventory."
+            "Initial prototype displayed significant improvement of efficiency, accuracy and real-time awareness of high-importance inventory."
         ],
         logo: '/mblogo.png'
     },
@@ -28,8 +28,8 @@ const experiences: Experience[] = [
         company: "Savvas Learning Company (EdTech)",
         location: "Phoenix, AZ",
         details: [
-            "Engineered accessibility solutions for a K-12 edtech platform using Angular 16 MFEs, GraphQL, Spring, Gradle, and AWS cloud services.",
-            "Addressed 14 high-impact accessibility issues, aligning with WCAG 2.1 standards.",
+            "Developed full-stack solutions for an industry-leading K-12 edtech platform using Angular 16 MFEs, Apollo, GraphQL, Spring, PostgreSQL, StencilJS, and Storybook in an Agile environment.",
+            "Resolved 14 Jira tickets across 12 sprints, as a member of an agile team.",
             "Self-started a full knowledgebase development, resulting in an all-in-on confluence knowledge hub for both new hires and experienced devs to reference."
         ],
         logo: '/savvaslogo.png'
@@ -41,8 +41,8 @@ const experiences: Experience[] = [
         location: "Charleston, SC",
         details: [
             "Assisted in transition from a monolithic desktop app to a microserviced, serverless webapp, leveraging React, Django, and AWS.",
-            "Performed API rework, assessing existing API call performance while implementing query and data handling optimizations.",
-            "Containerized various data flows to separate concerns and minimize/mitigate single point of failure situations."
+            "Performed API reworks, assessing existing API call performance while implementing query and data handling optimizations to reduce server-load and user wait times.",
+            "Containerized various data flows to separate concerns and minimize/mitigate single point of failure situations using Docker."
         ],
         logo: '/fiscallogo.png'
     },
