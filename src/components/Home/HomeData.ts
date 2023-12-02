@@ -3,7 +3,8 @@
 export interface HomeData {
     name: string;
     attributes: string[];
-    missionStatement: string;
+    missionStatementTop: string;
+    missionStatementBottom: string;
 }
 
 const homeData: HomeData = {
@@ -18,7 +19,9 @@ const homeData: HomeData = {
         "A drummer",
         "A lover of the outdoors",
         "A tater tot connoisseur",],
-    missionStatement: "An aspiring full-stack software engineer with a proven history of delivering seamless, optimized solutions through collaboration and innovation. I thrive in dynamic environments where creative problem-solving drives impactful results.",
+    missionStatementTop: "An aspiring full-stack software engineer with a proven history of delivering seamless, optimized solutions through collaboration and innovation.",
+    missionStatementBottom: "I thrive in dynamic environments where creative problem-solving drives impactful results.",
+
 };
 
 export default homeData;
