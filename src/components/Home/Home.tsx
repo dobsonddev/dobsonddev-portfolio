@@ -95,7 +95,14 @@ function Home() {
                     animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -30 }}
                     transition={{ duration: 1.5 }}
                 >
-                    {homeData.missionStatement}
+                    <div>
+                        <div className="pb-8">
+                            {homeData.missionStatementTop}
+                        </div>
+                        <div>
+                            {homeData.missionStatementBottom}
+                        </div>
+                    </div>
                 </motion.div>
             </div>
         </div>
