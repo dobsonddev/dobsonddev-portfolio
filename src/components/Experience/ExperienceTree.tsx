@@ -71,21 +71,24 @@ const ExperienceTree = () => {
                         style={{ top: `${index * verticalSpacing}px` }}
                         transition={{duration: 1 }}
                     >
-                        <div className="w-6 h-6 bg-gray-200 rounded-full"></div>
+                        <div className="w-6 h-6 bg-gray-300 rounded-full"></div>
 
                         <div
-                            className={`absolute text-box-style p-2 shadow-lg bg-black bg-opacity-75 rounded ${index % 2 === 0 ? 'right-1/2 md:mr-4 lg:mr-6 xl:mr-8 2xl:mr-14' : 'left-1/2 md:ml-4 lg:ml-6 xl:ml-8 2xl:ml-14'}`}>
+                            className={`absolute text-box-style p-2 shadow-lg bg-black bg-opacity-80 rounded ${index % 2 === 0 ? 'right-1/2 md:mr-4 lg:mr-6 xl:mr-8 2xl:mr-14' : 'left-1/2 md:ml-4 lg:ml-6 xl:ml-8 2xl:ml-14'}`}>
 
                             <div className="flex justify-between items-center">
 
-                                <h3 className="font-bold text-md text-white">
+                                <h3 className="font-bold text-xl text-white pb-1">
                                     {exp.title}
-                                    <span className="text-xs text-gray-400">({exp.date})</span>
                                 </h3>
+                                <span className="text-sm text-gray-400 pl-2">{exp.date}</span>
+
                                 {/*<Image src={exp.logo} alt={exp.location} className="h-2 w-auto right-0" width={32} height={48}/>*/}
                             </div>
-
-                            <p className="text-orange-500 text-sm space-x-1 pb-2 pl-4">{exp.location}</p>
+                            <div className="flex justify-between items-center pb-1">
+                                <p className="text-orange-500 text-md space-x-1 pb-2 pl-4">{exp.company}</p>
+                                <p className="text-orange-500 text-sm space-x-1 pb-2 pl-4">{exp.location}</p>
+                            </div>
                             <ul className="list-disc text-light rounded pl-6">
                                 {exp.details.map((detail, detailIndex) => (
                                     <li key={detailIndex} className="text-white mb-4 p-0.5">{detail}</li>

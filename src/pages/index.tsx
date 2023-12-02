@@ -23,9 +23,9 @@ const IndexPage = () => {
 
                 <title>Dobson Dunavant - Full-Stack Software Engineer, Personal Portfolio Website</title>
 
-                <meta name="description" content="My personal website, showcasing my experiences and skillsets thus far." />
+                <meta name="description" content="My personal website, showcasing my experiences and skillsets thus far as an aspiring software engineer." />
 
-                <meta name="keywords" content="Software Engineer, Frontend, backend, cloud, devops, developer, application, react, angular, aws, django, python, opencv, machine learning, ai, api, graphql, postgresql, docker, firebase, apache, data engineering" />
+                <meta name="keywords" content="Software Engineer, Frontend, backend, cloud, devops, developer, application, react, angular, aws, django, python, opencv, machine learning, ai, api, graphql, postgresql, docker, firebase, apache, data engineering, full-stack, CI/CD, tech, big tech, hiring, candidates" />
 
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -64,9 +64,7 @@ const IndexPage = () => {
             </Head>
 
             <Navbar toggleChatModal={toggleChatModal} />
-
             <div className="flex flex-col items-center">
-
                 <ChatbotButton isOpen={isChatModalOpen} setIsOpen={setIsChatModalOpen} />
                 <ChatbotModal isOpen={isChatModalOpen} setIsOpen={setIsChatModalOpen} />
 
@@ -78,7 +76,7 @@ const IndexPage = () => {
                     <Experiences />
                 </section>
 
-                <section id="resume" className="w-full bg-mid">
+                <section id="resume" className="w-full">
                     <Resume />
                 </section>
 
