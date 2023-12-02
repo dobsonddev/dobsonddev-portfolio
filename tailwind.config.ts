@@ -15,6 +15,7 @@ const config: Config = {
         middark: '#354f52',
         dark: '#2f3e46',
         'custom-orange': '#E27D60',
+        darkWave: '#90c0f',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

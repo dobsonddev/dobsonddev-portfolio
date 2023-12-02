@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         waveHeight: 20,
         shininess: 17,
         waveSpeed: 0.8,
-        zoom: 1
+        zoom: 0.5
       })`
         document.body.appendChild(script)
 
@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     }, [])
 
     return (
-        <div id="my-background" className="h-screen">
+        <div id="my-background" className="flex flex-col min-h-screen">
             <Component {...pageProps} />
         </div>
     )
