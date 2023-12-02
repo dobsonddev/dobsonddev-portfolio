@@ -8,6 +8,8 @@ import Experiences from "@/components/Experience/Experiences";
 import ChatbotButton from "@/components/Chatbot/ChatbotButton";
 import ChatbotModal from "@/components/Chatbot/ChatbotModal";
 import Head from "next/head";
+import Mission from '@/components/Mission/Mission';
+
 
 const IndexPage = () => {
     const [isChatModalOpen, setIsChatModalOpen] = useState(false);
@@ -156,6 +158,10 @@ const IndexPage = () => {
 
                 <section id="home" className="w-full">
                     <Home />
+                </section>
+
+                <section id="mission" className="w-full">
+                    <Mission  isVisible/>
                 </section>
 
                 <section  id="experiences" className="w-full">
