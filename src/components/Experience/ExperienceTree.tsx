@@ -1,38 +1,42 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import experiences from './ExperienceData';
 import Image from "next/legacy/image";
 
 const ExperienceTree = () => {
+
     const [nodeVisibility, setNodeVisibility] = useState(Array(experiences.length).fill(false));
     const containerRef = useRef(null);
     const [verticalSpacing, setVerticalSpacing] = useState(200); // default value
+    const lastScrollY = useRef(0); // store the last scrollY position
 
     // Function to calculate and update node visibility
-    const updateVisibility = () => {
+    const updateVisibility = useCallback(() => {
         const container = containerRef.current;
         if (!container) return;
-
-        const containerBounds = container.getBoundingClientRect();
+        const containerBounds = (container as any).getBoundingClientRect();
         const containerTop = containerBounds.top + window.scrollY;
         const windowHeight = window.innerHeight;
         const scrollY = window.scrollY;
         const relativeScrollY = scrollY - containerTop + windowHeight / 2;
 
-        // Update node visibility based on scroll position
-        const newVisibility = nodeVisibility.map((isVisible, index) => {
-            const nodeTop = index * verticalSpacing;
-            return isVisible || relativeScrollY >= nodeTop;
-        });
+        // Only update state if relativeScrollY has changed significantly (for example, more than 10 pixels)
+        if (Math.abs(relativeScrollY - lastScrollY.current) > 10) {
+            lastScrollY.current = relativeScrollY; // update the last scrollY position
+            const newVisibility = nodeVisibility.map((isVisible, index) => {
+                const nodeTop = index * verticalSpacing;
+                return isVisible || relativeScrollY >= nodeTop;
+            });
+            setNodeVisibility(newVisibility);
+        }
 
-        setNodeVisibility(newVisibility);
-    };
+    }, [nodeVisibility, verticalSpacing]);
 
     useEffect(() => {
         updateVisibility(); // Initial visibility calculation
         window.addEventListener('scroll', updateVisibility);
         return () => window.removeEventListener('scroll', updateVisibility);
-    }, [nodeVisibility, verticalSpacing]);
+    }, [updateVisibility]);
 
     const nodeAnimation = {
         initial: { opacity: 0 },
