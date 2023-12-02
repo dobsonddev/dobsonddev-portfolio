@@ -1,9 +1,39 @@
 import React, { useEffect, useState } from 'react';
 import Typewriter from 'typewriter-effect';
 import { FaArrowDown } from 'react-icons/fa'; // Ensure react-icons is installed
+import homeData from "@/components/Home/HomeData";
+import {motion} from "framer-motion";
+
 
 function Home() {
     const [showScrollPrompt, setShowScrollPrompt] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
+
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const missionElement = document.getElementById('mission');
+            if (!missionElement) return;
+
+            const position = missionElement.getBoundingClientRect();
+            const elementCenter = position.top + (position.height / 2);
+
+            // Check if the center of the element is within the viewport
+            if (elementCenter < window.innerHeight && elementCenter >= 0) {
+                setIsVisible(true);
+            } else {
+                setIsVisible(false);
+            }
+        };
+
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Initial check
+        handleScroll();
+
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     useEffect(() => {
         // Show the scroll prompt after a few seconds
@@ -26,27 +56,19 @@ function Home() {
     }, []);
 
     return (
-        <div className="relative min-h-screen grid grid-flow-row auto-rows-auto items-center justify-items-center px-4">
+        <div>
+            <div className="relative min-h-screen grid grid-flow-row auto-rows-auto items-center justify-items-center px-4">
             <div className="text-center mt-12 mx-auto">
                 <h1 className="text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-wider text-light leading-loose" style={{ lineHeight: '1.3' }}>
                     {/* eslint-disable-next-line react/no-unescaped-entities */}
-                    &nbsp;Hi, <br /> I'm Dobson
+                    &nbsp;Hi, <br /> I'm {homeData.name}
                 </h1>
             </div>
             <div className="bg-black text-xl md:text-2xl lg:text-3xl text-light p-2 rounded mb-10 mx-auto">
                 <Typewriter
                     options={{
                         // @ts-ignore
-                        strings: [
-                            "A full-stack engineer",
-                            "A hungry mind",
-                            "A persistent problem solver",
-                            "A collaborative teammate",
-                            "Agile minded",
-                            "A continuous learner",
-                            "A drummer",
-                            "A lover of the outdoors",
-                            "A tater tot connoisseur",],
+                        strings: homeData.attributes,
                         autoStart: true,
                         loop: true,
                         delay: 75,
@@ -64,6 +86,18 @@ function Home() {
                     </div>
                 </div>
             )}
+                </div>
+            <div className="relative h-1/4 py-8 grid grid-flow-row auto-rows-auto items-center justify-items-center px-4">
+                <motion.div
+                    id="mission"
+                    className="bg-black bg-opacity-50 backdrop-blur-md p-10 text-light text-xl md:text-2xl lg:text-3xl text-center mx-auto w-full md:w-11/12 lg:w-9/12 mb-24 border-2 p-2 rounded-lg"
+                    initial={{ opacity: 0, y: -45 }}
+                    animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -30 }}
+                    transition={{ duration: 1.5 }}
+                >
+                    {homeData.missionStatement}
+                </motion.div>
+            </div>
         </div>
     );
 }

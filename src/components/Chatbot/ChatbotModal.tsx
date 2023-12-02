@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import homeData from "@/components/Home/HomeData";
 
 interface ChatbotProps {
     isOpen: boolean;
@@ -12,7 +13,7 @@ interface Message {
 
 function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
     const defaultBotMessage: Message = {
-        text: "Hello! My name is Momo, I'm here to aid you in learning about Dobson. Ask away!",
+        text: `Hello! My name is Momo, I'm here to aid you in learning about ${homeData.name}. Ask away!`,
         sender: 'bot'
     };
 
