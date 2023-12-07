@@ -3,7 +3,7 @@ import ExperienceTree from "@/components/Experience/ExperienceTree";
 
 function Experiences() {
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center border-t-8 border-light px-4 md:px-8">
+        <div className="min-h-screen flex flex-col items-center justify-center px-4 md:px-8 bg-gray-800 bg-opacity-50">
             <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold text-light mb-10 pt-16 underline">Experiences</h2>
             <ExperienceTree/>
         </div>

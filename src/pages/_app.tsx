@@ -10,10 +10,10 @@ function MyApp({ Component, pageProps }: AppProps) {
       VANTA.WAVES({
         el: '#my-background',
         color: 0x90c0f,
-        waveHeight: 20,
-        shininess: 17,
+        waveHeight: 10,
+        shininess: 12,
         waveSpeed: 0.8,
-        zoom: 0.5
+        zoom: 1
       })`
         document.body.appendChild(script)
 
