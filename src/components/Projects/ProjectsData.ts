@@ -1,4 +1,4 @@
-// projectsData.ts
+// ProjectsData.ts
 
 interface Project {
     name: string;

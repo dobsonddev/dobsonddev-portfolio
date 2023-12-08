@@ -1,7 +1,7 @@
 import BlogCard from "@/components/Blog/BlogCard";
 import ProjectCard from "@/components/Projects/ProjectCard";
 import React from "react";
-import projects from "@/components/Projects/projectsData";
+import projects from "@/components/Projects/ProjectsData";
 
 
 function Projects() {

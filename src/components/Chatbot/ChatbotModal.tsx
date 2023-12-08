@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import homeData from "@/components/Home/HomeData";
 
 interface ChatbotProps {
     isOpen: boolean;
@@ -12,7 +13,7 @@ interface Message {
 
 function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
     const defaultBotMessage: Message = {
-        text: "Hello! My name is Momo, I'm here to aid you in learning about Dobson. Ask away!",
+        text: `Hello! My name is Momo, I'm here to aid you in learning about ${homeData.name}. Ask away!`,
         sender: 'bot'
     };
 
@@ -76,7 +77,7 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
 
     return (
         <div className={`fixed inset-0 bg-black bg-opacity-50 p-4 z-50 ${isOpen ? '' : 'hidden'}`}>
-            <div className="fixed inset-x-0 bottom-0 mx-auto max-w-md w-full bg-black border-light border-2 p-4 rounded-t-md shadow-md md:rounded md:right-1 md:bottom-1">
+            <div className="fixed inset-x-0 bottom-0 mx-auto max-w-md w-full bg-black border-light border-2 p-4 rounded-t-md shadow-md md:max-w-lg md:w-auto md:bottom-4 md:right-4 md:rounded md:inset-auto">
                 <button onClick={() => setIsOpen(false)} className="absolute top-0 right-0 mt-1 text-md mr-1 bg-gray-300 px-2 py-0.5 rounded text-black">X</button>
                 <div className="chat-history overflow-y-auto mb-4 pt-5" style={{ maxHeight: '70vh' }}>
                     {messages.map((message, index) => (

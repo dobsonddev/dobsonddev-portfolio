@@ -7,19 +7,22 @@
     "Phone": "(901) 356-4309",
     "Email": "jdobsond3@gmail.com",
     "Citizenship": "U.S. Citizen",
-    "LinkedIn": "linkedin.com/in/dobson-dunavant"
+    "LinkedIn": "linkedin.com/in/dobson-dunavant",
+    "Mission Statement": "Aspiring full-stack software engineer with a proven history of delivering seamless, optimized solutions through collaboration and innovation. I thrive in dynamic environments where creative problem-solving drives impactful results."
   },
   "Education": [
     {
       "Institution": "College of Charleston",
-      "Degree": "Bachelor in Computer Science",
+      "Degree": "Computer Science",
       "Major GPA": 3.7,
-      "Period": "May 2022 - May 2024 (expected)"
+      "Graduation": "May 2023 (expected)",
+      "Start": "May 2022"
     },
     {
       "Institution": "College of Charleston",
-      "Degree": "Bachelor in Accounting",
-      "Period": "August 2013 - December 2017"
+      "Degree": "Accounting",
+      "Graduation": "December 2017",
+      "Start": "August 2013"
     }
   ],
   "Skills": {
@@ -302,6 +305,12 @@
       {
         "Title": "Innovative Problem-Solving at a Hackathon",
         "Story": "Led development of 2 hackathon projects, Karate for API testing and PowerBI for a student analysis dashboard.\nBoosted API test coverage by 23% in 2 months through Karate integration into CI/CD pipeline (JaCoCo Metrics).\nWon hackathon with student dashboard project, now advancing towards a Q1 2024 production release."
+      }
+    ],
+    "Fun Facts": [
+      {
+        "Title": "Am the first recorded case of staph infection from a Guinea Pig bite",
+        "Story": "Snowball the guinea pig decided one day to bite me, and I got a staph infection from it. I was the first recorded case of this happening in the world. I was in the hospital for two weeks as multiple medical professionals flew in to perform tests and gather data on the incident. Snowball was a sweet lil guinea pig who probably thought that for a moment my arm was a carrot, I swear."
       }
     ]
   },

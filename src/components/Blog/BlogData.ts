@@ -1,4 +1,4 @@
-// blogData.ts
+// BlogData.ts
 
 export interface BlogPost {
     title: string;

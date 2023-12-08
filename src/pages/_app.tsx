@@ -10,8 +10,8 @@ function MyApp({ Component, pageProps }: AppProps) {
       VANTA.WAVES({
         el: '#my-background',
         color: 0x90c0f,
-        waveHeight: 20,
-        shininess: 17,
+        waveHeight: 10,
+        shininess: 12,
         waveSpeed: 0.8,
         zoom: 1
       })`
@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     }, [])
 
     return (
-        <div id="my-background" className="h-screen">
+        <div id="my-background" className="flex flex-col min-h-screen">
             <Component {...pageProps} />
         </div>
     )
