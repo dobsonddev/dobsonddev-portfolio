@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import experiences from './ExperienceData';
-import Image from "next/legacy/image";
 
 const ExperienceTree = () => {
 
