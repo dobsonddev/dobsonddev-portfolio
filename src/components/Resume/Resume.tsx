@@ -3,7 +3,7 @@ import Image from "next/legacy/image"; // Import Next.js Image component
 
 function Resume() {
     const resumePDFPath = '/resumepdf.pdf';
-    const resumeIMGPath = '/resumeimg.png';
+    const resumeIMGPath = '/resumeimg2.png';
 
     return (
         <div className="flex flex-col min-h-screen items-center text-white py-16 px-4 border-t-4 border-custom-orange bg-gray-900 bg-opacity-80">
