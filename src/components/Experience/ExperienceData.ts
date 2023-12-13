@@ -11,14 +11,14 @@ export interface Experience {
 
 const experiences: Experience[] = [
     {
-        title: "Robotics/Machine Learning Co-Op",
+        title: "Robotics & Machine Learning Co-Op",
         date: "Sep 2023 - Current",
         company: "Mercedes-Benz x College of Charleston",
         location: "Ladson, SC",
         details: [
-            "Developing a large-scale, autonomous inventory system using a multi-layered machine learning system, robotics, and AWS cloud services.",
-            "Leading a team of 4 students under 2 professors, in direct collaboration with Mercedes-Benz Vans stakeholders.",
-            "Initial prototype displayed significant improvement of efficiency, accuracy and real-time awareness of high-importance inventory."
+            "Developed a real-time, autonomous inventory scanning system using a multi-layered machine learning system deployed onto Raspberry Pi edge devices that communicate with AWS and SAP via WebSocket connections",
+            "Leading a team of four students under two professors, in direct collaboration with Mercedes-Benz Vans stakeholders.",
+            "Demonstrated significant improvement in accuracy and real-time awareness of high-importance inventory during the initial system implementation",
         ],
         logo: '/mblogo.png'
     },
@@ -28,9 +28,9 @@ const experiences: Experience[] = [
         company: "Savvas Learning Company (EdTech)",
         location: "Phoenix, AZ",
         details: [
-            "Developed full-stack solutions for an industry-leading K-12 edtech platform using Angular 16 MFEs, Apollo, GraphQL, Spring, PostgreSQL, StencilJS, and Storybook in an Agile environment.",
-            "Resolved 14 Jira tickets across 12 sprints, as a member of an agile team.",
-            "Self-started a full knowledgebase development, resulting in an all-in-on confluence knowledge hub for both new hires and experienced devs to reference."
+            "Developed full-stack solutions for an industry-leading K-12 ed-tech platform across an Angular 16 MFE, Apollo, GraphQL, RxJS, Spring, PostgreSQL, and Jest tech stack",
+            "Resolved nine Jira tickets across  sprints as a member of an Agile team",
+            "Self-started a full knowledge-base development, resulting in an all-in-on confluence knowledge hub for both new hires and experienced devs to reference during their onboarding and development processes, respectively"
         ],
         logo: '/savvaslogo.png'
     },
@@ -40,21 +40,21 @@ const experiences: Experience[] = [
         company: "Fiscal Spreading & Tracking (FinTech)",
         location: "Charleston, SC",
         details: [
-            "Assisted in transition from a monolithic desktop app to a microserviced, serverless webapp, leveraging React, Django, and AWS.",
-            "Performed API reworks, assessing existing API call performance while implementing query and data handling optimizations to reduce server-load and user wait times.",
-            "Containerized various data flows to separate concerns and minimize/mitigate single point of failure situations using Docker."
+            "Performed transition from a monolithic desktop app to a microserviced, serverless web app, utilizing React, Django, PostgreSQL, and multiple AWS cloud services such as Lambda, S3, and RDS",
+            "Optimized API calls, assessed existing API performance, then refactored for improved query and data handling, reducing server load and user wait times",
+            "Containerized various data tasks to separate concerns and minimize/mitigate single-point-of-failure situations using Docker containers"
         ],
         logo: '/fiscallogo.png'
     },
     {
-        title: "Data Analyst / Scrum Master",
+        title: "Sales Engineer & Scrum Master",
         date: "March 2018 - March 2021",
         company: "Ceterus (FinTech startup)",
         location: "Charleston, SC",
         details: [
-            "Developed and analyzed financial data sets for a fintech app that enhances small-business' financial insights.",
-            "Met with small-business owners on a weekly basis to discuss financial performance and provide recommendations for improvement.",
-            "Led a Scrum team, achieving significant reductions in project lead time and increases in story point velocity."
+            "Engineered technical solutions for over 125 clients by translating complex technical features into tangible business benefits, leading to increased sales and enhanced customer engagement",
+            "Fostered these client relationships, resulting in enhanced product adoption and customer satisfaction/retention\n",
+            "Achieved a 21% reduction in time blocked within six months by addressing common blockers while facilitating knowledge-sharing between interdependent teams for more educated spring planning and execution"
         ],
         logo: '/ceteruslogo.png'
     }
