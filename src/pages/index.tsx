@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTheme } from 'next-themes';
 import Home from '@/components/Home/Home';
 import Resume from '../components/Resume/Resume';
 import Blog from '../components/Blog/Blog';
@@ -9,16 +10,29 @@ import ChatbotModal from "@/components/Chatbot/ChatbotModal";
 import Head from "next/head";
 import Navbar from "@/components/Navbar/Navbar";
 
-
 const IndexPage = () => {
     const [isChatModalOpen, setIsChatModalOpen] = useState(false);
+    const { theme } = useTheme();
 
     const toggleChatModal = () => {
         setIsChatModalOpen(!isChatModalOpen);
     };
 
+    const themeClassNames = {
+        light: 'bg-light text-dark',
+        forest: 'bg-forest-bg text-forest-text',
+        fractal: 'bg-fractal-bg text-fractal-text',
+        vector: 'bg-vector-bg text-vector-text',
+    };
+
+    // Background for resume section
+    const floralBackground = theme === 'forest' ? 'bg-floral-bg' : '';
+
+    const woodsBackground = theme === 'forest' ? 'bg-woods-bg' : '';
+
+
     return (
-        <div className="text-light">
+        <div className={themeClassNames[theme] || themeClassNames.light}>
             <Head>
 
                 <title>Dobson Dunavant - Full-Stack Software Engineer, Portfolio Website</title>
@@ -73,27 +87,23 @@ const IndexPage = () => {
                 <ChatbotButton isOpen={isChatModalOpen} setIsOpen={setIsChatModalOpen} />
                 <ChatbotModal isOpen={isChatModalOpen} setIsOpen={setIsChatModalOpen} />
 
-                <section id="home" className="w-full">
+                <section id="home" className={`w-full ${woodsBackground}`}>
                     <Home />
                 </section>
 
-                <section  id="experiences" className="w-full">
+                <section id="experiences" className={`w-full ${woodsBackground}`}>
                     <Experiences />
                 </section>
 
-                <section id="resume" className="w-full min-h-screen">
+                <section id="resume" className={`w-full min-h-screen ${woodsBackground}`}>
                     <Resume />
                 </section>
 
-                {/*<section id="projects" className="w-full">*/}
-                {/*    <Projects />*/}
-                {/*</section>*/}
-
-                <section id="blog" className="w-full">
+                <section id="blog" className={`w-full ${floralBackground}`}>
                     <Blog />
                 </section>
 
-                <section id="contact" className="w-full bg-middark">
+                <section id="contact" className="w-full">
                     <Contact />
                 </section>
             </div>

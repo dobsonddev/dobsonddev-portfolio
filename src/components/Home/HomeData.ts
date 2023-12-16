@@ -10,17 +10,18 @@ export interface HomeData {
 const homeData: HomeData = {
     name: "Dobson",
     attributes: [
-        "A full-stack software engineer",
-        "A hungry mind",
-        "A persistent problem solver",
-        "A collaborative teammate",
-        "Agile minded",
-        "A continuous learner",
-        "A drummer",
-        "A lover of the outdoors",
-        "A tater tot connoisseur",],
-    missionStatementTop: "An aspiring full-stack software engineer with a proven history of delivering optimized solutions through collaboration and innovation.",
-    missionStatementBottom: "I ensure my technical work seamlessly integrates into the overall solution for an organization while remaining adaptive in dynamic environments.",
+        "A full-stack software engineer 💻",
+        "A hungry mind 🧠",
+        "A persistent problem solver 🔍",
+        "A collaborative teammate 👥",
+        "Agile minded 🏃‍♂️",
+        "A continuous learner 📚",
+        "A drummer 🥁",
+        "A lover of the outdoors 🌳",
+        "A tater tot connoisseur 🥔",
+    ],
+    missionStatementTop: "An aspiring full-stack software engineer with a proven ability to continually learn while delivering solutions that seamlessly integrate into an organization's existing goals.",
+    missionStatementBottom: "",
 
 };
 
