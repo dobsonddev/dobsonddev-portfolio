@@ -33,9 +33,9 @@ const ThemeSwitch = () => {
                     <button onClick={() => changeTheme('forest')} className="flex items-center p-2 hover:bg-gray-100">
                         <FaTree className="mr-2" /> Forest
                     </button>
-                    <button onClick={() => changeTheme('fractal')} className="flex items-center p-2 hover:bg-gray-100">
-                        <FaWater className="mr-2" /> Waves
-                    </button>
+                    {/*<button onClick={() => changeTheme('fractal')} className="flex items-center p-2 hover:bg-gray-100">*/}
+                    {/*    <FaWater className="mr-2" /> Waves*/}
+                    {/*</button>*/}
                     <button onClick={() => changeTheme('vector')} className="flex items-center p-2 hover:bg-gray-100">
                         <TbVectorTriangle className="mr-2" /> Vector
                     </button>
