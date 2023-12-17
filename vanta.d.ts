@@ -1,4 +1,7 @@
+//vanta.d.ts
+
 declare module 'vanta/dist/vanta.waves.min.js';
+declare module 'vanta/dist/vanta.net.min.js';
 
 interface VantaEffectOptions {
     el: HTMLElement;
@@ -20,5 +23,6 @@ interface VantaEffect {
 interface Window {
     VANTA?: {
         WAVES: VantaEffect;
+        NET: VantaEffect;
     };
 }

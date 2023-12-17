@@ -59,12 +59,12 @@ function Home() {
         <div>
             <div className="relative min-h-screen grid grid-flow-row auto-rows-auto items-center justify-items-center px-4">
             <div className="text-center mx-auto">
-                <h1 className="text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-wider text-light leading-loose" style={{ lineHeight: '1.4' }}>
+                <h1 className=" bg-light rounded text-dark p-4 text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-wider leading-loose" style={{ lineHeight: '1.4' }}>
                     {/* eslint-disable-next-line react/no-unescaped-entities */}
                     &nbsp;Hi, <br /> I'm {homeData.name}
                 </h1>
             </div>
-            <div className="bg-black text-xl md:text-2xl lg:text-4xl text-light p-2 rounded mx-auto">
+            <div className="bg-light text-dark text-xl md:text-2xl lg:text-4xl p-2 rounded mx-auto">
                 <Typewriter
                     options={{
                         // @ts-ignore
@@ -90,7 +90,7 @@ function Home() {
             <div className="relative h-1/4 py-2 grid grid-flow-row auto-rows-auto items-center justify-items-center px-4">
                 <motion.div
                     id="mission"
-                    className="bg-black bg-opacity-50 backdrop-blur-md p-8 text-light text-xl md:text-2xl lg:text-4xl text-center mx-auto w-full md:w-11/12 lg:w-9/12 mb-24 border-2 rounded-lg"
+                    className="bg-light bg-opacity-70 backdrop-blur-md p-8 text-dark text-xl md:text-2xl lg:text-4xl text-center mx-auto w-full md:w-11/12 lg:w-9/12 mb-24 border-2 rounded"
                     initial={{ opacity: 0, y: -35 }}
                     animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -30 }}
                     transition={{ duration: 1 }}
