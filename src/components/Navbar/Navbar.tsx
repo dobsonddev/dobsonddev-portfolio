@@ -42,8 +42,8 @@ const Navbar: React.FC<NavbarProps> = ({ toggleChatModal }) => {
         >
             {/* Left part of the navbar */}
             <div className="flex-1 flex items-center justify-start">
-                <a href="https://www.linkedin.com/in/dobson-dunavant/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-1 transition-all duration-500 hover:animate-wiggle"><FaLinkedin size="1.6em" /></a>
-                <a href="https://github.com/dobsonddev" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-3 transition-all duration-500 hover:animate-wiggle"><FaGithub size="1.6em" /></a>
+                <a href="https://www.linkedin.com/in/dobson-dunavant/" aria-label="Dobson's LinkedIn Profile" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-1 transition-all duration-500 hover:animate-wiggle"><FaLinkedin size="1.6em" /></a>
+                <a href="https://github.com/dobsonddev" aria-label="Dobson's GitHub Profile" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-3 transition-all duration-500 hover:animate-wiggle"><FaGithub size="1.6em" /></a>
                 <a href="#contact" className="hover:text-dark hover:bg-light text-xs md:text-sm lg:text-base py-1 px-2 md:py-2 md:px-4 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Contact Me</a>
             </div>
 
