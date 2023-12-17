@@ -36,8 +36,8 @@ const config: Config = {
 
         // Vector theme
         'vector-bg': '#354f52',
-        'vector-text': '#84a98c',
-        'vector-accent': '#90c0f',
+        'vector-text': '#cad2c5',
+        'vector-accent': '#e06a48',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
