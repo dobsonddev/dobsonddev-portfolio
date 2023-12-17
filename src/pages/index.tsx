@@ -13,7 +13,7 @@ import Navbar from "@/components/Navbar/Navbar";
 
 const IndexPage = () => {
     const [isChatModalOpen, setIsChatModalOpen] = useState(false);
-    const { theme } = useTheme();
+    const { theme = 'light' } = useTheme();
     const vantaRef = useRef(null);
     let vantaEffect = useRef<{ destroy: () => void } | null>(null);
 
@@ -86,7 +86,8 @@ const IndexPage = () => {
     const woodsBackground = theme === 'forest' ? 'bg-woods-bg' : '';
 
     return (
-        <div className={themeClassNames[theme] || themeClassNames.light}>
+        // @ts-ignore
+        <div className={themeClassNames[theme]}>
             <div ref={vantaRef} className="fixed w-full h-full"></div>
             <Head>
 
