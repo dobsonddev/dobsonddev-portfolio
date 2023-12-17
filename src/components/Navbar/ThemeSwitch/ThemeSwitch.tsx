@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTheme } from 'next-themes';
-import { FaTree, FaSun, FaWater, FaNetworkWired, FaPalette } from 'react-icons/fa';
+import { FaTree, FaSun, FaPalette } from 'react-icons/fa';
 import { TbVectorTriangle } from "react-icons/tb";
 
 const ThemeSwitch = () => {
@@ -16,7 +16,7 @@ const ThemeSwitch = () => {
         <div>
             <button
                 className="text-dark rounded text-xs md:text-sm lg:text-base py-1 px-1 md:py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle
-                bg-transparent sm:bg-white" // Add bg-white class for medium screens and above
+                bg-transparent sm:bg-white"
                 onClick={() => setModalOpen(!modalOpen)}
             >
                 <div className="flex items-center">
@@ -28,16 +28,16 @@ const ThemeSwitch = () => {
             {modalOpen && (
                 <div className="absolute bg-white text-dark rounded shadow-lg">
                     <button onClick={() => changeTheme('light')} className="flex items-center p-2 hover:bg-gray-100">
-                        <FaSun className="mr-2" /> Light
+                        <FaSun />
+                        <span className="hidden md:inline ml-2">Light</span> {/* Hide text on small screens */}
                     </button>
                     <button onClick={() => changeTheme('forest')} className="flex items-center p-2 hover:bg-gray-100">
-                        <FaTree className="mr-2" /> Forest
+                        <FaTree />
+                        <span className="hidden md:inline ml-2">Forest</span> {/* Hide text on small screens */}
                     </button>
-                    {/*<button onClick={() => changeTheme('fractal')} className="flex items-center p-2 hover:bg-gray-100">*/}
-                    {/*    <FaWater className="mr-2" /> Waves*/}
-                    {/*</button>*/}
                     <button onClick={() => changeTheme('vector')} className="flex items-center p-2 hover:bg-gray-100">
-                        <TbVectorTriangle className="mr-2" /> Vector
+                        <TbVectorTriangle />
+                        <span className="hidden md:inline ml-2">Vector</span> {/* Hide text on small screens */}
                     </button>
                 </div>
             )}
