@@ -80,7 +80,7 @@ const ExperienceTree = () => {
                     >
                         <div className="w-6 h-6 border-light text-light bg-light rounded-full"></div>
 
-                        <div className={`absolute w-1/2 p-8 text-box-style shadow-lg bg-gray-800 bg-opacity-95 rounded ${index % 2 === 0 ? 'right-1/2 md:mr-4 lg:mr-6 xl:mr-8 2xl:mr-14' : 'left-1/2 md:ml-4 lg:ml-6 xl:ml-8 2xl:ml-14'}`}>                            <div className="flex justify-between items-center">
+                        <div className={`absolute w-1/2 p-8 text-box-style shadow-lg bg-gray-900 bg-opacity-95 rounded ${index % 2 === 0 ? 'right-1/2 md:mr-4 lg:mr-6 xl:mr-8 2xl:mr-14' : 'left-1/2 md:ml-4 lg:ml-6 xl:ml-8 2xl:ml-14'}`}>                            <div className="flex justify-between items-center">
                                 <h3 className="font-bold text-xl text-white pb-1">
                                     {exp.title}
                                 </h3>

@@ -14,15 +14,14 @@ const homeData: HomeData = {
         "A hungry mind 🧠",
         "A persistent problem solver 🔍",
         "A collaborative teammate 👥",
-        "Agile minded 🏃‍♂️",
+        "Agile minded ⚡",
         "A continuous learner 📚",
         "A drummer 🥁",
-        "A lover of the outdoors 🌳",
+        "A lover of the outdoors 🌲",
         "A tater tot connoisseur 🥔",
     ],
-    missionStatementTop: "An aspiring full-stack software engineer with a proven ability to continually learn while delivering solutions that seamlessly integrate into an organization's existing goals.",
-    missionStatementBottom: "",
-
+    missionStatementTop: "An aspiring full-stack software engineer with the proven ability to deliver seamless solutions for organizations through innovation and collaboration.",
+    missionStatementBottom: "I thrive in technically-challenging environments where creative problem-solving drives impactful results.",
 };
 
 export default homeData;
