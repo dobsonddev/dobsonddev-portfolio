@@ -49,7 +49,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleChatModal }) => {
 
             {/* Center part of the navbar */}
             <div className="flex-1 flex items-center justify-center gap-2">
-                <button onClick={toggleChatModal} className="flex flex-row hover:text-dark bg-custom-orange hover:bg-light rounded
+                <button onClick={toggleChatModal} className="flex flex-row items-center justify-center hover:text-dark bg-custom-orange hover:bg-light rounded
                  text-xs md:text-sm lg:text-base py-1 px-2 md:py-2 md:px-4 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">
                     Chat with Momo
                     <img src="/lemur.svg" alt="Momo" className="ml-4" style={{ height: '25px' }} />
@@ -59,6 +59,9 @@ const Navbar: React.FC<NavbarProps> = ({ toggleChatModal }) => {
 
             {/* Hamburger Menu Icon */}
             <div className="md:hidden flex items-center">
+                <div className="p-4">
+                    <ThemeSwitch />
+                </div>
                 <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
@@ -66,7 +69,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleChatModal }) => {
 
             {/* Mobile Menu */}
             {isMobileMenuOpen && (
-                <div className="absolute top-full right-0 bg-dark w-full md:hidden">
+                <div className="absolute top-full bg-light text-dark right-0 w-full md:hidden">
                     <a href="#home" className="block hover:text-dark hover:bg-light p-4">Home</a>
                     <a href="#experiences" className="block hover:text-dark hover:bg-light p-4">Experiences</a>
                     <a href="#resume" className="block hover:text-dark hover:bg-light p-4">Resume</a>
