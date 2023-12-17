@@ -113,8 +113,9 @@
       "Location": "Boston, MA",
       "Period": "May 2023 - August 2023",
       "Details": [
-        "Developed accessibility solutions for Savvas Realize, an industry-leading ed-tech platform using Angular 16 MFEs, Apollo, GraphQL, PostgreSQL, StencilJS, and Storybook in an Agile Scrum environment.",
-        "Resolved 11 high-impact accessibility issues before major deadlines, meeting web accessibility (WCAG 2.1) standards.",
+        "Developed full-stack solutions for an industry-leading K-12 ed-tech platform across an Angular 16 MFE, Apollo, GraphQL, RxJS, Spring, PostgreSQL, and Jest tech stack",
+        "Resolved 11 Jira tickets across  sprints as a member of an Agile team",
+        "Self-started a full knowledge-base development, resulting in an all-in-on confluence knowledge hub for both new hires and experienced devs to reference during their onboarding and development processes, respectively",
         "Founded and led intern development of 2 company hackathon ideas: Cucumber-JVM Karate implementation for improved API testing and a PowerBI dashboard for comprehensive student data analysis.",
         "The Karate integration enabled API test coverage to increase by 19% within 2 months.",
         "The dashboard won the hackathon, is now being fully developed with a Q4 release target."
@@ -138,9 +139,9 @@
       "Location": "Charleston, SC",
       "Period": "September 2022 - January 2023",
       "Details": [
-        "Aided in an agile, full-stack re-architecture of a monolithic desktop app to a modern, serverless web application using React, AWS Lambda, and AWS RDS, in order to improve scalability and responsiveness.",
-        "Contributed to the redesign then migration of a SQL Server database to AWS RDS, improved query performance by 27%.",
-        "Overhauled multiple existing API calls and database queries for reduced server-load and client response times."
+        "Performed transition from a monolithic desktop app to a microserviced, serverless web app, utilizing React, Django, PostgreSQL, and multiple AWS cloud services such as Lambda, S3, and RDS",
+        "Optimized API calls, assessed existing API performance, then refactored for improved query and data handling, reducing server load and user wait times",
+        "Containerized various data tasks to separate concerns and minimize/mitigate single-point-of-failure situations using Docker containers"
       ],
       "SkillsUsedAndLearned": [
         "React.js",
@@ -155,13 +156,14 @@
       ]
     },
     {
-      "Role": "Data Analyst / Scrum Master",
+      "Role": "Sales Engineer / Scrum Master",
       "Company": "Ceterus (FinTech startup)",
       "Location": "Charleston, SC",
       "Period": "March 2018 - March 2021",
       "Details": [
-        "Led an agile Scrum team as Scrum Master and Data Analyst, utilizing data-driven retrospectives and value stream mappings to reduce project lead time by 21% and increase story point velocity by 19% within a 6-month period.",
-        "Validated multi-sourced financial data pipelines and sets, for use in a robust fintech app designed to empower small-business owners with financial awareness and insights."
+        "Engineered technical solutions for over 125 clients by translating complex technical features into tangible business benefits, leading to increased sales and enhanced customer engagement",
+        "Fostered these client relationships, resulting in enhanced product adoption and customer satisfaction/retention",
+        "Achieved a 21% reduction in time blocked within six months by addressing common blockers while facilitating knowledge-sharing between interdependent teams for more educated spring planning and execution"
       ],
       "SkillsUsedAndLearned": [
         "2-week sprints",

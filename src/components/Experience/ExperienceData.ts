@@ -16,10 +16,11 @@ const experiences: Experience[] = [
         company: "Mercedes-Benz x College of Charleston",
         location: "Ladson, SC",
         details: [
-            "Developed a real-time, autonomous inventory scanning system using a multi-layered machine learning system deployed onto Raspberry Pi edge devices that communicate with AWS and SAP via WebSocket connections",
-            "Leading a team of four students under two professors, in direct collaboration with Mercedes-Benz Vans stakeholders.",
-            "Demonstrated significant improvement in accuracy and real-time awareness of high-importance inventory during the initial system implementation",
-        ],
+            "Led team of 4 to develop an autonomous drone inventory system using Tesseract OCR and YOLOv8 for real-time, small-part tracking in industrial settings to enable inventory awareness and supply-chain analytics",
+        "Implemented onboard edge computing on Raspberry Pi drones, enabling autonomous inventory management with WebSocket connections to AWS and SAP",
+        "Authored SRS and feasibility reports, clearly defining functional and non-functional requirements",
+        "Achieved 98% inventory accuracy and SAP integration, delivering a fully end-to-end solution, significantly surpassing the existing accuracy and efficiency benchmarks"
+    ],
         logo: '/mblogo.png'
     },
     {
@@ -28,10 +29,10 @@ const experiences: Experience[] = [
         company: "Savvas Learning Company (EdTech)",
         location: "Phoenix, AZ",
         details: [
-            "Developed full-stack solutions for an industry-leading K-12 ed-tech platform across an Angular 16 MFE, Apollo, GraphQL, RxJS, Spring, PostgreSQL, and Jest tech stack",
-            "Resolved nine Jira tickets across  sprints as a member of an Agile team",
-            "Self-started a full knowledge-base development, resulting in an all-in-on confluence knowledge hub for both new hires and experienced devs to reference during their onboarding and development processes, respectively"
-        ],
+            "Developed full-stack solutions for Savvas Realize, an industry-leading K-12 ed-tech platform using Angular 16 MFEs, Apollo, GraphQL, RxJS, Spring, PostgreSQL, and Jest",
+            "Resolved 11 high-priority Jira tickets, contributing to sprint goals as part of an Agile team",
+            "Created a comprehensive, all-in-one Confluence knowledge hub, covering content from day 1 new-dev onboarding guides to custom micro-frontend build steps, improving knowledge access and autonomy for both new and seasoned developers"
+],
         logo: '/savvaslogo.png'
     },
     {
@@ -40,9 +41,9 @@ const experiences: Experience[] = [
         company: "Fiscal Spreading & Tracking (FinTech)",
         location: "Charleston, SC",
         details: [
-            "Performed transition from a monolithic desktop app to a microserviced, serverless web app, utilizing React, Django, PostgreSQL, and multiple AWS cloud services such as Lambda, S3, and RDS",
-            "Optimized API calls, assessed existing API performance, then refactored for improved query and data handling, reducing server load and user wait times",
-            "Containerized various data tasks to separate concerns and minimize/mitigate single-point-of-failure situations using Docker containers"
+            "Transitioned from a monolithic desktop app to a serverless microservice web app using React, Django, PostgreSQL, and AWS services (Lambda, S3, RDS), enhancing system efficiency and scalability",
+            "Reduced server load by 17% through optimizing and refactoring APIs, streamlining query logic, and data caching",
+            "Containerized key data processing tasks with Docker, including ETL operations and credit scoring algorithms, to segregate responsibilities and mitigate single-point failures, thereby increasing system reliability"
         ],
         logo: '/fiscallogo.png'
     },
