@@ -7,7 +7,7 @@ function Resume() {
 
     return (
         <div className="flex flex-col min-h-screen items-center text-white py-16 px-4 border-t-4 border-custom-orange bg-gray-900 bg-opacity-80">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-light underline mb-4 z-0">Resume</h2>
+            <h2 className="p-2 text-3xl md:text-4xl lg:text-5xl font-bold underline mb-4 z-0">Resume</h2>
             <div className="self-end sticky top-20 pr-4 md:pr-12 z-10"> {/* Sticky download button container */}
                 <a
                     href={resumePDFPath}
