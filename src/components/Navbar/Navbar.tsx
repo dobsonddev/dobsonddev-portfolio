@@ -1,14 +1,14 @@
 // Navbar.tsx
-
 import React, { useState, useEffect } from 'react';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import ThemeSwitch from './ThemeSwitch/ThemeSwitch';
 
 interface NavbarProps {
     toggleChatModal: () => void;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ toggleChatModal }) => {
-    const [isScrollingUp, setIsScrollingUp] = useState(true); // Navbar visible by default
+    const [isScrollingUp, setIsScrollingUp] = useState(true);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [navbarBackground, setNavbarBackground] = useState('');
     const [prevScrollPosition, setPrevScrollPosition] = useState(0);
@@ -22,9 +22,8 @@ const Navbar: React.FC<NavbarProps> = ({ toggleChatModal }) => {
 
             setIsScrollingUp(!isScrollingDown);
 
-            // Apply black background when scrolling up after having scrolled down
             if (!isScrollingDown && currentScrollPos > 100) {
-                setNavbarBackground('bg-black');
+                setNavbarBackground('bg-black text-light');
             } else if (currentScrollPos <= 100) {
                 setNavbarBackground('');
             }
@@ -39,7 +38,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleChatModal }) => {
     return (
         <nav
             style={{ top: isScrollingUp ? '0' : '-100%' }}
-            className={`z-20 text-light w-full flex items-center transition-all duration-1000 fixed py-2 px-4 md:px-8 ${navbarBackground}`}
+            className={`z-20 w-full flex items-center transition-all duration-1000 fixed py-2 px-2 md:px-6 ${navbarBackground}`}
         >
             {/* Left part of the navbar */}
             <div className="flex-1 flex items-center justify-start">
@@ -49,12 +48,14 @@ const Navbar: React.FC<NavbarProps> = ({ toggleChatModal }) => {
             </div>
 
             {/* Center part of the navbar */}
-            <div className="flex-1 flex items-center justify-center">
-                <button onClick={toggleChatModal} className="flex flex-row hover:text-dark bg-custom-orange hover:bg-light text-xs md:text-sm lg:text-base py-1 px-2 md:py-2 md:px-4 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">
+            <div className="flex-1 flex items-center justify-center gap-2">
+                <button onClick={toggleChatModal} className="flex flex-row hover:text-dark bg-custom-orange hover:bg-light rounded
+                 text-xs md:text-sm lg:text-base py-1 px-2 md:py-2 md:px-4 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">
                     Chat with Momo
                     <img src="/lemur.svg" alt="Momo" className="ml-4" style={{ height: '25px' }} />
                 </button>
             </div>
+
 
             {/* Hamburger Menu Icon */}
             <div className="md:hidden flex items-center">
@@ -78,7 +79,10 @@ const Navbar: React.FC<NavbarProps> = ({ toggleChatModal }) => {
                 <a href="#home" className="hover:text-dark hover:bg-light px-4 py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Home</a>
                 <a href="#experiences" className="hover:text-dark hover:bg-light px-4 py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Experiences</a>
                 <a href="#resume" className="hover:text-dark hover:bg-light px-4 py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Resume</a>
-                <a href="#blog" className="hover:text-dark text-dark bg-gray-400 hover:bg-light px-4 py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Blog</a>
+                <a href="#blog" className="hover:text-dark hover:bg-light px-4 py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Blog</a>
+                <div>
+                    <ThemeSwitch />
+                </div>
             </div>
         </nav>
     );
