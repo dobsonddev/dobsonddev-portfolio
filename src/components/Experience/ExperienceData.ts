@@ -54,8 +54,8 @@ const experiences: Experience[] = [
         location: "Charleston, SC",
         details: [
             "Engineered technical solutions for over 125 clients by translating complex technical features into tangible business benefits, leading to increased sales and enhanced customer engagement",
-            "Fostered these client relationships, resulting in enhanced product adoption and customer satisfaction/retention\n",
-            "Achieved a 21% reduction in time blocked within six months by addressing common blockers while facilitating knowledge-sharing between interdependent teams for more educated spring planning and execution"
+            "Achieved a domain-high 23% year-over-year increase in customer retention by conducting regular feedback sessions and personalized follow-ups, leading to stronger client relationships and improved service satisfaction",
+            "Achieved a 21% reduction in time blocked within six months by addressing common blockers while facilitating knowledge-sharing between interdependent teams for more efficient sprint planning and execution"
         ],
         logo: '/ceteruslogo.png'
     }
