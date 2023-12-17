@@ -23,7 +23,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleChatModal }) => {
             setIsScrollingUp(!isScrollingDown);
 
             if (!isScrollingDown && currentScrollPos > 100) {
-                setNavbarBackground('bg-black');
+                setNavbarBackground('bg-black text-light');
             } else if (currentScrollPos <= 100) {
                 setNavbarBackground('');
             }
