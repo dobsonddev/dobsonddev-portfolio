@@ -14,8 +14,8 @@
     {
       "Institution": "College of Charleston",
       "Degree": "Computer Science",
-      "Major GPA": 3.7,
-      "Graduation": "May 2023 (expected)",
+      "Major GPA": 3.8,
+      "Graduation": "May 2024 (expected)",
       "Start": "May 2022"
     },
     {
@@ -113,7 +113,7 @@
       "Location": "Boston, MA",
       "Period": "May 2023 - August 2023",
       "Details": [
-        "Developed accessibility solutions for an industry-leading edtech platform using Angular 16 MFEs, Apollo, GraphQL, PostgreSQL, StencilJS, and Storybook in an Agile Scrum environment.",
+        "Developed accessibility solutions for Savvas Realize, an industry-leading ed-tech platform using Angular 16 MFEs, Apollo, GraphQL, PostgreSQL, StencilJS, and Storybook in an Agile Scrum environment.",
         "Resolved 11 high-impact accessibility issues before major deadlines, meeting web accessibility (WCAG 2.1) standards.",
         "Founded and led intern development of 2 company hackathon ideas: Cucumber-JVM Karate implementation for improved API testing and a PowerBI dashboard for comprehensive student data analysis.",
         "The Karate integration enabled API test coverage to increase by 19% within 2 months.",
@@ -145,11 +145,13 @@
       "SkillsUsedAndLearned": [
         "React.js",
         "JavaScript",
+        "GraphQL",
+        "PostgreSQL",
+        "SQL",
         "AWS Lambda",
         "AWS RDS",
-        "SQL Server",
-        "SQL",
-        "AWS EC2"
+        "AWS S3",
+        "Docker Containers"
       ]
     },
     {

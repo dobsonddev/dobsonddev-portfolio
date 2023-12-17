@@ -10,6 +10,8 @@ import ChatbotButton from "@/components/Chatbot/ChatbotButton";
 import ChatbotModal from "@/components/Chatbot/ChatbotModal";
 import Head from "next/head";
 import Navbar from "@/components/Navbar/Navbar";
+import structuredData from '../../content/structuredData.json';
+
 
 const IndexPage = () => {
     const [isChatModalOpen, setIsChatModalOpen] = useState(false);
@@ -18,7 +20,7 @@ const IndexPage = () => {
     let vantaEffect = useRef<{ destroy: () => void } | null>(null);
 
     useEffect(() => {
-        console.log('Theme changed:', theme);
+        // console.log('Theme changed:', theme);
         if (typeof window !== 'undefined') {
             const THREE = require('three');
             window.THREE = THREE; // Ensure THREE is available for Vanta.js
@@ -90,6 +92,11 @@ const IndexPage = () => {
         <div className={themeClassNames[theme]}>
             <div ref={vantaRef} className="fixed w-full h-full"></div>
             <Head>
+
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+                />
 
                 <title>Dobson Dunavant - Full-Stack Software Engineer, Portfolio Website</title>
 
