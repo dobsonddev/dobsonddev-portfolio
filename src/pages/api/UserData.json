@@ -277,87 +277,25 @@
   "VolunteerExperience": {
     "Activities": [
       {
-        "Role": "Tech Mentor",
-        "Organization": "Local Youth Coding Camp",
-        "Description": "Mentoring high school students in coding and technology projects."
+        "Role": "Meals on Wheels Volunteer",
+        "Organization": "MIFA (Metropolitan Inter-Faith Association)",
+        "Description": "Volunteer for Meals on Wheels in Memphis, TN - Delivering food to handicapped individuals around the city."
       },
       {
         "Role": "Big Brother",
         "Organization": "Big Brothers Big Sisters - Memphis, TN",
-        "Description": "Mentoring grade school inner city students after school, being there for them and helping them with their homework."
+        "Description": "Provided after-school tutoring and mentorship to at-risk children in Memphis, TN - Whether it be helping with math homework or talking through tough situations."
+      },
+      {
+        "Role": "Founder",
+        "Organization": "Cleats4Charity - Memphis, TN",
+        "Description": "Founded and managed Cleats4Charity - Performing city-wide sports equipment drives. The donations were then shipped to children across West Africa by L.A.C.E.S. I identified the absolutely massive seasonal turnover rate and waste of sports equipment, and positioned our organization to collect all of this unused sports equipment to give to kids who are in need. The joy it brought children and young adults in 3rd world situations was absolutely incredible.\n\nI partnered the organization with L.A.C.E.S, who provides the infrastructure to effectively distribute sports equipment to kids in need, as handling all of the logistics and distribution was far, far out of my scope. They really allowed me to make the idea a reality. https://www.laces.org/\n\nOur first year totaled: 3 tons (6613 lbs) of cleats, soccer balls, socks, shin guards, etc... distributed to many villages across West Africa."
       }
     ]
   },
   "FutureGoals": {
     "ShortTerm": "Develop a cutting-edge tech project that combines AI and cloud computing. Software and networking in quantitative trading is also a focus.",
     "LongTerm": "Lead a major tech initiative that makes a significant, positive impact on the industry and people's lives."
-  },
-  "FAQSection": {
-    "Questions": [
-      {
-        "Question": "What drives your passion in technology?",
-        "Answer": "The ability to create and innovate, solving complex problems, and making a tangible impact."
-      },
-      {
-        "Question": "How do you balance work and personal interests?",
-        "Answer": "By prioritizing time management, keeping a healthy work-life balance, and staying active in both tech and personal pursuits. A diverse range of interests and activities keeps me motivated and engaged, as well as spending quality time with friends and family"
-      }
-    ]
-  },
-  "PersonalAnecdotes": {
-    "Stories": [
-      {
-        "Title": "Innovative Problem-Solving at a Hackathon",
-        "Story": "Led development of 2 hackathon projects, Karate for API testing and PowerBI for a student analysis dashboard.\nBoosted API test coverage by 23% in 2 months through Karate integration into CI/CD pipeline (JaCoCo Metrics).\nWon hackathon with student dashboard project, now advancing towards a Q1 2024 production release."
-      }
-    ],
-    "Fun Facts": [
-      {
-        "Title": "Am the first recorded case of staph infection from a Guinea Pig bite",
-        "Story": "Snowball the guinea pig decided one day to bite me, and I got a staph infection from it. I was the first recorded case of this happening in the world. I was in the hospital for two weeks as multiple medical professionals flew in to perform tests and gather data on the incident. Snowball was a sweet lil guinea pig who probably thought that for a moment my arm was a carrot, I swear."
-      }
-    ]
-  },
-  "ProfessionalMemberships": {
-    "Memberships": [
-      "Association for Computing Machinery (ACM)",
-      "IEEE Computer Society"
-    ]
-  },
-  "LanguagesSpoken": {
-    "Languages": ["English", "Spanish (Conversational)"]
-  },
-  "AccessibilityInclusivityInitiatives": {
-    "Involvements": [
-      {
-        "Event": "Global Accessibility Awareness Day",
-        "Role": "Speaker",
-        "Topic": "Incorporating Accessibility in Tech Projects"
-      }
-    ]
-  },
-  "ProfessionalAchievements": {
-    "Milestones": [
-      {
-        "Year": 2021,
-        "Achievement": "Led a team to develop a real-world, autonomous inventory management system for Mercedes-Benz, using advanced machine learning techniques and a real client-developer relationship."
-      },
-      {
-        "Year": 2020,
-        "Achievement": "Presented at a local tech conference on the possibilities and ethical impacts of integration of AI in edtech."
-      }
-    ]
-  },
-  "WorkPhilosophy": {
-    "Approach": "I believe in blending agile methodologies with strong planning and documentation to create robust, adaptable solutions in technology. Balancing innovation with practical execution is key. Not over-tooling and creating bloat. Making sure the approach fits the problem."
-  },
-  "TechBlogging": {
-    "Articles": [
-      {
-        "Response": "My blog articles are in the blog section at the bottom of this website.",
-        "Link": "https://dobsond.dev/#blog"
-      }
-    ]
   },
   "OutdoorAdventures": {
     "Experiences": [
@@ -375,7 +313,7 @@
     "BandAchievements": [
       {
         "Year": 2023,
-        "Achievement": "Made a band with some friends, mainly just as an outlet and for passion. Big influences are Smashing pumpkins, turnstile, Alice in chains, Men I trust, Bon Iver, Good Tiger, Half Moon Run, Local Natives, Foals, Soundgarden."
+        "Achievement": "I play drums. Made a band with some friends, mainly just as an outlet and for passion. Big influences are Smashing pumpkins, turnstile, Alice in chains, Men I trust, Bon Iver, Good Tiger, Half Moon Run, Local Natives, Foals, Soundgarden."
       }
     ]
   },
@@ -398,9 +336,6 @@
       "Name": "Salamander Catering",
       "Specialty": "Specializing in asian x mexican x american street food fusion, balancing creativity with accessibility through powerful flavors."
     }
-  },
-  "FitnessRoutine": {
-    "CurrentFocus": "Combining calisthenics with functional workouts, tailored to enhance performance in soccer and skiing."
   },
   "TechCommunityInvolvement": {
     "Events": [
