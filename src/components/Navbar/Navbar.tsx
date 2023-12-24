@@ -47,14 +47,14 @@ const Navbar: React.FC<NavbarProps> = ({ toggleChatModal }) => {
                 <a href="#contact" className="hover:text-dark hover:bg-light text-xs md:text-sm lg:text-base py-1 px-2 md:py-2 md:px-4 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Contact Me</a>
             </div>
 
-            {/* Center part of the navbar */}
-            <div className="flex-1 flex items-center justify-center gap-2">
-                <button onClick={toggleChatModal} className="flex flex-row items-center justify-center hover:text-dark bg-custom-orange hover:bg-light rounded
-                 text-xs md:text-sm lg:text-base py-1 px-2 md:py-2 md:px-4 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">
-                    Chat with Momo
-                    <img src="/lemur.svg" alt="Momo" className="ml-4" style={{ height: '25px' }} />
-                </button>
-            </div>
+            {/*/!* Center part of the navbar *!/*/}
+            {/*<div className="flex-1 flex items-center justify-center gap-2">*/}
+            {/*    <button onClick={toggleChatModal} className="flex flex-row items-center justify-center hover:text-dark bg-custom-orange hover:bg-light rounded*/}
+            {/*     text-xs md:text-sm lg:text-base py-1 px-2 md:py-2 md:px-4 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">*/}
+            {/*        Chat with Momo*/}
+            {/*        <img src="/lemur.svg" alt="Momo" className="ml-4" style={{ height: '25px' }} />*/}
+            {/*    </button>*/}
+            {/*</div>*/}
 
 
             {/* Hamburger Menu Icon */}
