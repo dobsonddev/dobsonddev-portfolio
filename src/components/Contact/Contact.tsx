@@ -3,7 +3,7 @@ import React from 'react';
 
 function Contact() {
     return (
-        <div className="h-auto md:h-44 bg-light text-dark p-2 flex flex-col items-center justify-center space-y-4 relative py-6">
+        <div className="h-auto md:h-44 bg-gray-800 text-light p-2 flex flex-col items-center justify-center space-y-4 relative py-6">
             {/* Zigzag Border */}
             <div className="absolute top-0 left-0 w-full h-6 bg-no-repeat bg-top border-t-8"></div>
 

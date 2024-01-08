@@ -79,10 +79,10 @@ function Home() {
             </div>
 
             {showScrollPrompt && (
-                <div className="fixed inset-x-0 bottom-10 flex justify-start pl-12 items-center z-50">
+                <div className="fixed inset-x-0 bottom-10 flex justify-start pl-12 items-center z-70">
                     <div className="animate-bounce flex flex-col items-center">
-                        <span className="text-light text-xl mb-2">Scroll Down</span>
-                        <FaArrowDown className="text-light" size={24} />
+                        <span className=" text-xl mb-2">Scroll Down</span>
+                        <FaArrowDown size={24} />
                     </div>
                 </div>
             )}
@@ -90,7 +90,7 @@ function Home() {
             <div className="relative h-1/4 py-2 grid grid-flow-row auto-rows-auto items-center justify-items-center px-4">
                 <motion.div
                     id="mission"
-                    className="bg-light p-8 text-dark text-xl md:text-2xl lg:text-4xl text-center mx-auto w-full md:w-11/12 lg:w-9/12 mb-24 border-2 rounded"
+                    className="bg-dark p-8 text-light text-xl md:text-2xl lg:text-4xl text-center mx-auto w-full md:w-11/12 lg:w-9/12 mb-24 border-2 rounded"
                     initial={{ opacity: 0, y: -35 }}
                     animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -30 }}
                     transition={{ duration: 1 }}
