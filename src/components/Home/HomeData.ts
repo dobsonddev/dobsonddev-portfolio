@@ -20,7 +20,7 @@ const homeData: HomeData = {
         "A lover of the outdoors 🌲",
         "A tater tot connoisseur 🥔",
     ],
-    missionStatementTop: "An aspiring full-stack software engineer with the proven ability to deliver seamless solutions for organizations through innovation and collaboration.",
+    missionStatementTop: "An aspiring software engineer with the proven ability to deliver seamless solutions for organizations through collaboration and innovation.",
     missionStatementBottom: "I thrive in dynamic environments where technical problem-solving drives impactful results.",
 };
 
