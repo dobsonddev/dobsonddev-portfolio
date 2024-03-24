@@ -20,8 +20,8 @@ const homeData: HomeData = {
         "An outdoorsman 🏕️",
         "A tater tot connoisseur 🥔",
     ],
-    missionStatementTop: "An aspiring software engineer with the proven ability to deliver seamless solutions for organizations through collaboration and innovation.",
-    missionStatementBottom: "I thrive in dynamic environments where technical problem-solving drives impactful results.",
+    missionStatementTop: "Welcome! I'm a tech enthusiast who loves to build seamless, optimized solutions within large systems. I have experience across the stack and truly enjoy areas from UI/UX design to building data pipelines.",
+    missionStatementBottom: "I thrive in dynamic, collaborative environments.",
 };
 
 export default homeData;
