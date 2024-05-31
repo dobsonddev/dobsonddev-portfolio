@@ -9,7 +9,7 @@ function Resume() {
     return (
         <div className="flex flex-col pb-12 min-h-screen items-center text-white px-4 border-t-4 border-custom-orange bg-gray-900 bg-opacity-80">
             <h2 className="p-2 text-3xl md:text-4xl lg:text-5xl py-6 font-bold underline z-0">Resume</h2>
-            <div className="self-end sticky top-10 pr-4 md:pr-12 z-10"> {/* Sticky download button container */}
+            <div className="self-end sticky top-10 pr-4 md:pr-12 z-10 py-2"> {/* Sticky download button container */}
                 <a
                     href={resumePDFPath}
                     download="John_Dobson_Dunavant_Jr_Resume.pdf"
