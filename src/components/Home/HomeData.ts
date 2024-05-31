@@ -20,8 +20,8 @@ const homeData: HomeData = {
         "An outdoorsman 🏕️",
         "A tater tot connoisseur 🥔",
     ],
-    missionStatementTop: "Welcome! I'm a full-stack software developer who enjoys building generalized, optimized solutions to real-world problems. I have the ability to adapt and deliver at a high level due to my wide array of tech experiences from AI/ML + robotics to enterprise-level, full-stack application development. Scroll down to learn more!",
-    missionStatementBottom: "I thrive in dynamic, collaborative environments.",
+    missionStatementTop: "Hello! I'm a full-stack software developer with a passion for building solid, optimized solutions to real-world problems. I adapt and deliver at a high level as a result of a wide array of experience and skills, from AI/ML + robotics to enterprise-level, full-stack application development. I thrive in dynamic, collaborative environments.",
+    missionStatementBottom: "Scroll down to learn more!",
 };
 
 export default homeData;

@@ -112,8 +112,8 @@ const ExperienceTree = () => {
                         animate={nodeVisibility[index] ? 'visible' : 'exit'}
                         transition={{ delay: index * 0.4, duration: 3.5 }}
                     >
-                        <div className="w-6 h-6 bg-gray-200 rounded-full mb-4"></div>
-                        <div className="text-box-style p-2 shadow-lg rounded max-w-xs">
+                        <div className="w-6 h-6 bg-gray-900 rounded-full mb-4"></div>
+                        <div className="text-box-style p-2 shadow-lg bg-gray-900 rounded max-w-xs">
                             <h3 className="font-bold text-md text-white whitespace-nowrap sm:whitespace-normal truncate">{exp.title} <span className="text-xs text-gray-400">({exp.date})</span></h3>                            <p className="text-orange-500 text-sm pb-2">{exp.location}</p>
                             <ul className="list-disc text-light rounded pl-4">
                                 {exp.details.map((detail, detailIndex) => (
