@@ -13,167 +13,111 @@
   "Education": [
     {
       "Institution": "College of Charleston",
-      "Degree": "Computer Science",
-      "Major GPA": 3.8,
-      "Graduation": "May 2024 (expected)",
-      "Start": "May 2022"
+      "Degree": "Bachelor in Computer Science",
+      "GPA": 3.8,
+      "Graduation": "May 2024"
     },
     {
       "Institution": "College of Charleston",
-      "Degree": "Accounting",
-      "Graduation": "December 2017",
-      "Start": "August 2013"
+      "Degree": "Bachelor in Accounting",
+      "Graduation": "December 2018",
+      "AdditionalInfo": "D1 Soccer Player"
     }
   ],
   "Skills": {
-    "ProgrammingLanguages": [
+    "Languages": [
+      "Python",
+      "Java",
       "TypeScript",
       "JavaScript",
-      "Python",
-      "SQL",
-      "Java",
-      "Dart",
       "HTML",
       "CSS"
     ],
-    "FrameworksAndLibraries": [
-      "Angular",
-      "React.js",
-      "Flutter",
+    "Frameworks": [
       "Next.js",
-      "Node.js",
-      "Express.js",
-      "SpringBoot",
+      "Angular",
+      "React",
+      "Spring",
       "Django",
-      "Pandas",
-      "NumPy"
+      "Flask",
+      "Express.js",
+      "Node.js"
     ],
-    "ToolsAndCloudServices": [
-      "AWS",
-      "Firebase",
-      "Git",
-      "Jira",
-      "Docker",
-      "REST APIs",
-      "GraphQL",
-      "Prisma",
-      "Postman",
+    "Libraries": [
+      "Apollo",
       "Axios",
-      "Apollo Power BI",
-      "PostgreSQL",
-      "SQL Server",
-      "Figma",
-      "BigQuery",
-      "Apache Spark",
-      "Jest",
+      "Prisma",
+      "ZBar",
       "OpenCV",
-      "Tesseract",
-      "YOLOv5",
-      "Kivy",
-      "PyZbar",
-      "AWS S3",
-      "OAuth2.0",
-      "AWS Lambda",
-      "AWS RDS",
-      "AWS EC2"
+      "YOLOv8",
+      "PyTorch",
+      "pandas",
+      "PowerBI",
+      "Tableau"
+    ],
+    "Databases": [
+      "PostgreSQL",
+      "SQLite",
+      "MySQL",
+      "MongoDB"
+    ],
+    "CloudServicesAndDeveloperTools": [
+      "AWS (EC2, Lambda, S3, Athena, ElastiCache, SQS, RDS)",
+      "Firebase (Auth, Realtime DB)",
+      "Docker",
+      "WebSocket",
+      "GraphQL",
+      "OAuth 2.0",
+      "Git",
+      "Insomnia",
+      "Postman",
+      "JaCoCo",
+      "Karate",
+      "Jest"
     ]
   },
   "Experiences": [
     {
-      "Role": "Robotics/Machine Learning Co-Op",
-      "Company": "College of Charleston/Mercedes-Benz Vans",
-      "Location": "Ladson, SC",
-      "Period": "September 2023 - current",
+      "Role": "Machine Learning and Robotics Co-Op",
+      "Company": "Mercedes-Benz, IFA Group",
+      "Location": "Charleston, SC",
+      "Period": "August 2023 – May 2024",
       "Details": [
-        "Developing a large-scale, autonomous inventory system through a multi-layered machine learning system, industrial sensors, and multiple AWS cloud services to enable optimized, secure, real-time data streaming.",
-        "Gathering and specifying stakeholder requirements for effective and minimally invasive system designs.",
-        "Early prototypes significantly improve inventory accuracy and operational efficiencies, reducing manual errors."
-      ],
-      "SkillsUsedAndLearned": [
-        "Python",
-        "Machine Learning",
-        "AWS",
-        "Docker",
-        "Java",
-        "OpenCV",
-        "Tesseract",
-        "YOLOv5",
-        "Kivy",
-        "PyZbar",
-        "AWS S3",
-        "OAuth2.0",
-        "AWS Lambda",
-        "AWS RDS",
-        "AWS EC2"
+        "Led team of 4 to deliver a 99% accurate, end-to-end inventory scanning system within 8 month deadline using React, Flask, PostgreSQL, AWS (EC2, S3, Athena), PyTorch, OpenCV, a DJI Matrice drone, and DJI’s Mobile SDK",
+        "Designed and implemented a portable Jetson Nano-based inventory scanning station for use in industrial settings using Django, OpenCV, Yolov8, Tesseract and restful HTTPS communications via AWS API Gateway to SAP APIs",
+        "Generalized the drone system at IFA beginning in Dec 2023 by using V-SLAM for localization and navigation with a custom 3D A* algorithm for dynamic, safe pathfinding during inventory scans"
       ]
     },
     {
       "Role": "Software Engineering Intern",
-      "Company": "Savvas Learning Company (EdTech)",
-      "Location": "Boston, MA",
-      "Period": "May 2023 - August 2023",
+      "Company": "Savvas Learning Company",
+      "Location": "Phoenix, AZ",
+      "Period": "May 2023 – August 2023",
       "Details": [
-        "Developed full-stack solutions for an industry-leading K-12 ed-tech platform across an Angular 16 MFE, Apollo, GraphQL, RxJS, Spring, PostgreSQL, and Jest tech stack",
-        "Resolved 11 Jira tickets across  sprints as a member of an Agile team",
-        "Self-started a full knowledge-base development, resulting in an all-in-on confluence knowledge hub for both new hires and experienced devs to reference during their onboarding and development processes, respectively",
-        "Founded and led intern development of 2 company hackathon ideas: Cucumber-JVM Karate implementation for improved API testing and a PowerBI dashboard for comprehensive student data analysis.",
-        "The Karate integration enabled API test coverage to increase by 19% within 2 months.",
-        "The dashboard won the hackathon, is now being fully developed with a Q4 release target."
-      ],
-      "SkillsUsedAndLearned": [
-        "Angular",
-        "TypeScript",
-        "GraphQL",
-        "Apollo",
-        "PostgreSQL",
-        "JavaScript",
-        "HTML",
-        "CSS",
-        "Power BI",
-        "OAuth2.0"
+        "Developed full-stack solutions for Savvas Realize, a large-scale K-12 ed-tech platform, using Angular 16 micro front-ends, Apollo, GraphQL, RxJS, Spring, PostgreSQL, and Jest",
+        "Resolved 11 tickets across Agile sprints, such as optimizing GraphQL resolvers for batch data fetching and fixing accessibility issues within Angular UI components to meet WCAG 2.1 accessibility standards",
+        "Built an all-in-one Confluence knowledge hub, from new-dev onboarding guides to API sequence diagrams, improving team knowledge access and autonomy"
       ]
     },
     {
       "Role": "Data Engineering Intern",
-      "Company": "Fiscal Tracking and Spreading (FinTech)",
+      "Company": "Vision Software Solutions",
       "Location": "Charleston, SC",
-      "Period": "September 2022 - January 2023",
+      "Period": "September 2022 – January 2023",
       "Details": [
-        "Performed transition from a monolithic desktop app to a microserviced, serverless web app, utilizing React, Django, PostgreSQL, and multiple AWS cloud services such as Lambda, S3, and RDS",
-        "Optimized API calls, assessed existing API performance, then refactored for improved query and data handling, reducing server load and user wait times",
-        "Containerized various data tasks to separate concerns and minimize/mitigate single-point-of-failure situations using Docker containers"
-      ],
-      "SkillsUsedAndLearned": [
-        "React.js",
-        "JavaScript",
-        "GraphQL",
-        "PostgreSQL",
-        "SQL",
-        "AWS Lambda",
-        "AWS RDS",
-        "AWS S3",
-        "Docker Containers"
+        "Transitioned from a monolithic desktop app to a microservice web app using React, Django, PostgreSQL, and AWS services (EC2, Lambda, S3, Athena), enhancing system efficiency and scalability",
+        "Optimized API and query logic, utilizing AWS ElastiCache with in-memory data store for real-time data caching, reducing user load time by 23% (measured by AWS CloudWatch)",
+        "Containerized Python ETL tasks and credit scoring algorithms using Docker Containers, encapsulating isolated processes and minimizing single-point failures"
       ]
     },
     {
-      "Role": "Sales Engineer / Scrum Master",
-      "Company": "Ceterus (FinTech startup)",
+      "Role": "Solutions Engineer / Scrum Master",
+      "Company": "Ceterus",
       "Location": "Charleston, SC",
-      "Period": "March 2018 - March 2021",
+      "Period": "March 2018 – March 2021",
       "Details": [
-        "Engineered technical solutions for over 125 clients by translating complex technical features into tangible business benefits, leading to increased sales and enhanced customer engagement",
-        "Fostered these client relationships, resulting in enhanced product adoption and customer satisfaction/retention",
-        "Achieved a 21% reduction in time blocked within six months by addressing common blockers while facilitating knowledge-sharing between interdependent teams for more educated spring planning and execution"
-      ],
-      "SkillsUsedAndLearned": [
-        "2-week sprints",
-        "retrospectives",
-        "agile metrics",
-        "other agile instruments and stuff",
-        "powerbi",
-        "tableau",
-        "quickbooks online",
-        "multiple POS systems"
+        "Managed technical relationships with over 125 clients by translating technical features into tangible business benefits, leading to increased sales and enhanced customer engagement",
+        "Achieved a domain-high 23% year-over-year increase in customer retention by regular feedback sessions and personalized follow-ups, leading to stronger client relationships and satisfaction"
       ]
     }
   ],
@@ -232,10 +176,10 @@
       "Database Design",
       "UI/UX Design",
       "Robotics",
-      "Low Level c++ algo programming",
-      "quantitative trading and technologies",
-      "real-time data streaming",
-      "websockets"
+      "Low Level C++ Algo Programming",
+      "Quantitative Trading and Technologies",
+      "Real-Time Data Streaming",
+      "Websockets"
     ]
   },
   "SoftSkills": {
@@ -269,8 +213,8 @@
       "Rank": "#7 in North America in Overwatch 1"
     },
     "Sports": {
-      "Soccer": "Played competitive club soccer at some of the highest levels for all of my life thru college, winning a couple state championships and going to national tournaments in Florida and Texas. Re-Founded the College of Charleston club soccer team, serving as captain and president for 2 years.",
-      "Tennis": "Played up until high-school, was ranked #3 in the state of Tennessee for my age group for a few years.",
+      "Soccer": "Played competitive club soccer at some of the highest levels for all of my life through college, winning a couple state championships and going to national tournaments in Florida and Texas. Re-Founded the College of Charleston club soccer team, serving as captain and president for 2 years.",
+      "Tennis": "Played up until high school, was ranked #3 in the state of Tennessee for my age group for a few years.",
       "FantasyFootball": "Enthusiast"
     }
   },
@@ -313,7 +257,7 @@
     "BandAchievements": [
       {
         "Year": 2023,
-        "Achievement": "I play drums. Made a band with some friends, mainly just as an outlet and for passion. Big influences are Smashing pumpkins, turnstile, Alice in chains, Men I trust, Bon Iver, Good Tiger, Half Moon Run, Local Natives, Foals, Soundgarden."
+        "Achievement": "I play drums. Made a band with some friends, mainly just as an outlet and for passion. Big influences are Smashing Pumpkins, Turnstile, Alice in Chains, Men I Trust, Bon Iver, Good Tiger, Half Moon Run, Local Natives, Foals, Soundgarden."
       }
     ]
   },
@@ -334,7 +278,7 @@
   "CulinaryPassion": {
     "CateringCompany": {
       "Name": "Salamander Catering",
-      "Specialty": "Specializing in asian x mexican x american street food fusion, balancing creativity with accessibility through powerful flavors."
+      "Specialty": "Specializing in Asian x Mexican x American street food fusion, balancing creativity with accessibility through powerful flavors."
     }
   },
   "TechCommunityInvolvement": {
@@ -355,38 +299,39 @@
   },
   "Articles": [
     {
-      "title": "How did I navigate my early experiences in tech?",
+      "Title": "How did I navigate my early experiences in tech?",
       "Introduction": "My evolution from my first experience in tech, to where I am now.",
-      "mainContent": "Various paragraphs describing the experience in tech.",
-      "imageUrl": "https://yourimageurl.com/react-hooks.jpg",
-      "publicationDate": "2023-11-12"
+      "MainContent": "Various paragraphs describing the experience in tech.",
+      "ImageUrl": "https://yourimageurl.com/react-hooks.jpg",
+      "PublicationDate": "2023-11-12"
     },
     {
-      "title": "The Value of Sequence Diagrams for Early Software Engineers",
+      "Title": "The Value of Sequence Diagrams for Early Software Engineers",
       "Introduction": "How creating sequence diagrams helps me understand large, complex, enterprise systems.",
-      "mainContent": "Description of experience with sequence diagrams.",
-      "imageUrl": "https://yourimageurl.com/sequence-diagrams.jpg",
-      "publicationDate": "Coming soon"
+      "MainContent": "Description of experience with sequence diagrams.",
+      "ImageUrl": "https://yourimageurl.com/sequence-diagrams.jpg",
+      "PublicationDate": "Coming soon"
     },
     {
-      "title": "Zoomed out, then Zoomed In - 'Hooks' in Web Development",
+      "Title": "Zoomed out, then Zoomed In - 'Hooks' in Web Development",
       "Introduction": "A brief history of the evolution of 'Hooks' in programming, and how they fit into modern web development (React, Angular, Vue)",
-      "mainContent": "Insights on hooks in web development.",
-      "imageUrl": "https://yourimageurl.com/react-angular-hooks.jpg",
-      "publicationDate": "Coming soon"
+      "MainContent": "Insights on hooks in web development.",
+      "ImageUrl": "https://yourimageurl.com/react-angular-hooks.jpg",
+      "PublicationDate": "Coming soon"
     },
     {
-      "title": "Understanding JS' Async/Await in the context of Concurrency and Parallelism",
+      "Title": "Understanding JS' Async/Await in the context of Concurrency and Parallelism",
       "Introduction": "(Re)Introducing yourself to asynchronous web development through the lens of concurrency and parallelism.",
-      "mainContent": "Discussion on async/await in JavaScript.",
-      "imageUrl": "https://yourimageurl.com/async-await.jpg",
-      "publicationDate": "Coming soon"
+      "MainContent": "Discussion on async/await in JavaScript.",
+      "ImageUrl": "https://yourimageurl.com/async-await.jpg",
+      "PublicationDate": "Coming soon"
     },
     {
-      "title": "A Dive into Webpack's Module Federation",
+      "Title": "A Dive into Webpack's Module Federation",
       "Introduction": "Exploring Webpack's Module Federation, and its usage/importance in Micro Front-End (MFE) architectures.",
-      "mainContent": "Experiences with Webpack's Module Federation.",
-      "imageUrl": "https://yourimageurl.com/module-federation.jpg",
-      "publicationDate": "Coming soon"
-    }]}
-
+      "MainContent": "Experiences with Webpack's Module Federation.",
+      "ImageUrl": "https://yourimageurl.com/module-federation.jpg",
+      "PublicationDate": "Coming soon"
+    }
+  ]
+}
