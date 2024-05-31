@@ -20,7 +20,7 @@ const homeData: HomeData = {
         "An outdoorsman 🏕️",
         "A tater tot connoisseur 🥔",
     ],
-    missionStatementTop: "Welcome! I'm a tech enthusiast who loves to build seamless, optimized solutions within large systems. I have experience across the stack and truly enjoy areas from UI/UX design to building data pipelines.",
+    missionStatementTop: "Welcome! I'm a full-stack software developer who enjoys building generalized, optimized solutions to real-world problems. I have the ability to adapt and deliver at a high level due to my wide array of tech experiences from AI/ML + robotics to enterprise-level, full-stack application development. Scroll down to learn more!",
     missionStatementBottom: "I thrive in dynamic, collaborative environments.",
 };
 
