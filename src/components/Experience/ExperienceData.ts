@@ -11,9 +11,9 @@ export interface Experience {
 
 const experiences: Experience[] = [
     {
-        title: "Robotics & Machine Learning Co-Op",
-        date: "Sep 2023 - Current",
-        company: "Mercedes-Benz x College of Charleston",
+        title: "Machine Learning & Cloud Engineering Co-Op",
+        date: "Sep 2023 - May 2024",
+        company: "Mercedes-Benz & IFA Group",
         location: "Ladson, SC",
         details: [
             "Led team of 4 to develop an autonomous drone inventory system using Tesseract OCR and YOLOv8 for real-time, small-part tracking in industrial settings to enable inventory awareness and supply-chain analytics",
