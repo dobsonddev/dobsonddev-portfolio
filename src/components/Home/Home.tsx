@@ -3,6 +3,7 @@ import Typewriter from 'typewriter-effect';
 import { FaArrowDown } from 'react-icons/fa'; // Ensure react-icons is installed
 import homeData from "@/components/Home/HomeData";
 import {motion} from "framer-motion";
+import { renderToStaticMarkup } from 'react-dom/server';
 
 
 function Home() {
@@ -58,25 +59,25 @@ function Home() {
     return (
         <div>
             <div className="relative min-h-screen grid grid-flow-row auto-rows-auto items-center justify-items-center px-4">
-            <div className="text-center mx-auto">
+            <div className="text-center py-24 mx-auto">
                 <h1 className=" bg-light rounded text-dark p-4 text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-wider leading-loose" style={{ lineHeight: '1.4' }}>
                     {/* eslint-disable-next-line react/no-unescaped-entities */}
                     &nbsp;Hi, <br /> I'm {homeData.name}
                 </h1>
             </div>
-            <div className="bg-light text-dark text-xl md:text-2xl lg:text-4xl p-2 rounded mx-auto">
-                <Typewriter
-                    options={{
-                        // @ts-ignore
-                        strings: homeData.attributes,
-                        autoStart: true,
-                        loop: true,
-                        delay: 75,
-                        deleteSpeed: 50,
-                        pauseFor: 2200,
-                    } as any}
-                />
-            </div>
+                <div className="bg-light text-dark text-xl md:text-2xl lg:text-4xl p-2 rounded mx-auto -mt-96">
+                    <Typewriter
+                        options={{
+                            strings: homeData.attributes,
+                            autoStart: true,
+                            loop: true,
+                            delay: 75,
+                            deleteSpeed: 50,
+                            pauseFor: 2200,
+                            skipAddStyles: true,
+                        }}
+                    />
+                </div>
 
             {showScrollPrompt && (
                 <div className="fixed inset-x-0 bottom-10 flex justify-start pl-12 items-center z-70">

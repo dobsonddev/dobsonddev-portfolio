@@ -6,8 +6,6 @@ import Resume from '../components/Resume/Resume';
 import Blog from '../components/Blog/Blog';
 import Contact from '../components/Contact/Contact';
 import Experiences from "@/components/Experience/Experiences";
-// import ChatbotButton from "@/components/Chatbot/ChatbotButton";
-// import ChatbotModal from "@/components/Chatbot/ChatbotModal";
 import Head from "next/head";
 import Navbar from "@/components/Navbar/Navbar";
 import structuredData from '../../content/structuredData.json';

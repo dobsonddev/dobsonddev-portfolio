@@ -82,7 +82,6 @@ const Navbar: React.FC<NavbarProps> = ({ toggleChatModal }) => {
                     </div>
                 </div>
             </nav>
-
             <ChatbotModal isOpen={isChatbotOpen} setIsOpen={setIsChatbotOpen} />
         </>
     );

@@ -15,12 +15,12 @@ const ThemeSwitch = () => {
     return (
         <div>
             <button
-                className="text-dark rounded text-xs md:text-sm lg:text-base py-1 px-1 md:py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle
-                bg-transparent sm:bg-white"
+                className="rounded text-xs md:text-sm lg:text-base py-1 px-1 md:py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle
+                "
                 onClick={() => setModalOpen(!modalOpen)}
             >
                 <div className="flex items-center">
-                    <FaPalette className="mr-1" />
+                    <FaPalette className="mr-2  h-4 w-4" />
                     {/* Conditional rendering based on screen size */}
                     <span className="hidden md:inline">Theme</span>
                 </div>
