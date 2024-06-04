@@ -56,6 +56,7 @@ function Home() {
         };
     }, []);
 
+    // @ts-ignore
     return (
         <div>
             <div className="relative min-h-screen grid grid-flow-row auto-rows-auto items-center justify-items-center px-4">
