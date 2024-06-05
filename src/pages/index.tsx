@@ -1,4 +1,3 @@
-// pages/index.tsx
 import React, { useEffect, useRef, useState } from 'react';
 import { useTheme } from 'next-themes';
 import Home from '@/components/Home/Home';
@@ -72,11 +71,11 @@ const IndexPage = () => {
         setIsChatModalOpen(!isChatModalOpen);
     };
 
-    const themeClassNames = {
+    const themeClassNames: Record<string, string> = {
         light: 'bg-light text-dark',
         forest: 'bg-forest-bg text-forest-text',
         vector: 'text-vector-text',
-        globe: 'text-vector-text',
+        dots: 'bg-light text-dark',
     };
 
     // Background for resume section
@@ -84,7 +83,7 @@ const IndexPage = () => {
     const woodsBackground = theme === 'forest' ? 'bg-woods-bg' : '';
 
     return (
-        <div className={themeClassNames[theme]}>
+        <div className={themeClassNames[theme] || themeClassNames['light']}>
             <div ref={vantaRef} className="fixed top-0 left-0 w-full h-full -z-10"></div>
             <Head>
                 <script
