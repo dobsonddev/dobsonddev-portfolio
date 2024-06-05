@@ -7,6 +7,7 @@ export interface Experience {
     location: string;
     details: string[];
     logo: string;
+    technologies: string[];
 }
 
 const experiences: Experience[] = [
@@ -21,19 +22,23 @@ const experiences: Experience[] = [
         "Authored SRS and feasibility reports, clearly defining functional and non-functional requirements",
         "Achieved 98% inventory accuracy and SAP integration, delivering a fully end-to-end solution, significantly surpassing the existing accuracy and efficiency benchmarks"
     ],
-        logo: '/mblogo.png'
+        logo: '/mblogo.png',
+        technologies: ['React', 'Flask', 'PostgreSQL', 'AWS', 'OpenCV'],
     },
+
     {
         title: "Software Engineering Intern",
         date: "May 2023 - Aug 2023",
         company: "Savvas Learning Company (EdTech)",
         location: "Phoenix, AZ",
         details: [
-            "Developed full-stack solutions for Savvas Realize, an industry-leading K-12 ed-tech platform using Angular 16 MFEs, Apollo, GraphQL, RxJS, Spring, PostgreSQL, and Jest",
-            "Resolved 11 high-priority Jira tickets, contributing to sprint goals as part of an Agile team",
-            "Created a comprehensive, all-in-one Confluence knowledge hub, covering content from day 1 new-dev onboarding guides to custom micro-frontend build steps, improving knowledge access and autonomy for both new and seasoned developers"
+            "Developed full-stack solutions for Savvas Realize, an industry-leading K-12 ed-tech platform, using Angular 16 MFEs, Apollo, GraphQL, RxJS, Spring, PostgreSQL, and Jest",
+            "Resolved 11 high-priority Jira tickets, contributing to sprint goals within an Agile team",
+            "Built a comprehensive, all-in-one Confluence knowledge hub, covering content from day 1 new-dev onboarding guides to custom micro-frontend build steps, reducing redundant knowledge-sharing and improving dev autonomy/efficiency."
 ],
-        logo: '/savvaslogo.png'
+        logo: '/savvaslogo.png',
+        technologies: ['Angular', 'GraphQL', 'Spring', 'PostgreSQL', 'Jest', 'StoryBook'],
+
     },
     {
         title: "Data Engineering Intern",
@@ -43,9 +48,11 @@ const experiences: Experience[] = [
         details: [
             "Transitioned from a monolithic desktop app to a serverless microservice web app using React, Django, PostgreSQL, and AWS services (Lambda, S3, RDS), enhancing system efficiency and scalability",
             "Reduced server load by 17% through optimizing and refactoring APIs, streamlining query logic, and data caching",
-            "Containerized key data processing tasks with Docker, including ETL operations and credit scoring algorithms, to segregate responsibilities and mitigate single-point failures, thereby increasing system reliability"
+            "Containerized key data processing tasks with Docker, including ETL operations and credit scoring algorithms, to separate responsibilities and mitigate single-point failures, thereby increasing system reliability"
         ],
-        logo: '/fiscallogo.png'
+        logo: '/fiscallogo.png',
+        technologies: ['React', 'Django', 'PostgreSQL', 'AWS', 'Docker'],
+
     },
     {
         title: "Sales Engineer & Scrum Master",
@@ -57,7 +64,9 @@ const experiences: Experience[] = [
             "Achieved a domain-high 23% year-over-year increase in customer retention by conducting regular feedback sessions and personalized follow-ups, leading to stronger client relationships and improved service satisfaction",
             "Achieved a 21% reduction in time blocked within six months by addressing common blockers while facilitating knowledge-sharing between interdependent teams for more efficient sprint planning and execution"
         ],
-        logo: '/ceteruslogo.png'
+        logo: '/ceteruslogo.png',
+        technologies: ['Jira', 'Excel', 'QuickBooks'],
+
     }
 ];
 

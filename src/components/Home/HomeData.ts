@@ -21,7 +21,7 @@ const homeData: HomeData = {
         "tater tot connoisseur \u{1F954}",
     ],
     missionStatementTop:
-        "Hi there! I'm a versatile full-stack developer who loves tackling complex challenges. With a diverse background spanning cloud, data, AI/ML, and enterprise-level web development, I bring a unique perspective to building efficient, scalable solutions.",
+        "Hello! I'm a versatile full-stack developer who loves tackling complex challenges. With a diverse background spanning cloud, data, AI/ML, and enterprise-level web development, I bring a unique perspective to building efficient, scalable solutions.",
     missionStatementBottom:
         "I'm driven by curiosity, collaboration, and a desire to make a real impact. Scroll down to see how I can contribute to your team!",
 };

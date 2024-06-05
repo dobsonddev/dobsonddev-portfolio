@@ -10,7 +10,6 @@ import Head from "next/head";
 import Navbar from "@/components/Navbar/Navbar";
 import structuredData from '../../content/structuredData.json';
 
-
 const IndexPage = () => {
     const [isChatModalOpen, setIsChatModalOpen] = useState(false);
     const { theme = 'light' } = useTheme();
@@ -18,19 +17,35 @@ const IndexPage = () => {
     let vantaEffect = useRef<{ destroy: () => void } | null>(null);
 
     useEffect(() => {
-        // console.log('Theme changed:', theme);
         if (typeof window !== 'undefined') {
             const THREE = require('three');
             window.THREE = THREE; // Ensure THREE is available for Vanta.js
-            const WAVES = require('vanta/dist/vanta.waves.min.js').default;
             const NET = require('vanta/dist/vanta.net.min.js').default;
+            const DOTS = require('vanta/dist/vanta.dots.min.js').default;
 
             if (vantaEffect.current) vantaEffect.current.destroy();
 
             switch(theme) {
-                case 'fractal':
-                    vantaEffect.current = WAVES({
-                        el: document.body,
+                case 'vector':
+                    vantaEffect.current = NET({
+                        el: vantaRef.current,
+                        minHeight: 200.00,
+                        minWidth: 200.00,
+                        scale: 1.00,
+                        scaleMobile: 1.00,
+                        color: '#D9185A',
+                        backgroundColor: '#21143C',
+                        maxDistance: 20.00,
+                        spacing: 20.00,
+                        mouseControls: false,
+                        vertexColors: true, // Ensure this is a boolean
+                        size: 100.0
+                    });
+                    break;
+                case 'dots':
+                    vantaEffect.current = DOTS({
+                        el: vantaRef.current,
+                        backgroundColor: '#ebe2e2',
                         mouseControls: true,
                         touchControls: true,
                         gyroControls: false,
@@ -38,26 +53,10 @@ const IndexPage = () => {
                         minWidth: 200.00,
                         scale: 1.00,
                         scaleMobile: 1.00,
-                        color: 0x11c2f,
-                        zoom: 0.81
-                    });
-                    break;
-                case 'vector':
-                    vantaEffect.current = NET({
-                        el: document.body,
-                        minHeight: 200.00,
-                        minWidth: 200.00,
-                        scale: 1.00,
-                        scaleMobile: 1.00,
-                        color: 0xD9185A,  // Corrected color value
-                        backgroundColor: 0x21143C,
-                        maxDistance: 20.00,
-                        spacing: 20.00,
-                        mouseControls: false,
-                        vertexColors: true,
-                    });
-                    break;
+                        showLines: false
 
+                    });
+                    break;
                 default:
                     if (vantaEffect.current) vantaEffect.current.destroy();
                     break;
@@ -69,7 +68,6 @@ const IndexPage = () => {
         };
     }, [theme]);
 
-
     const toggleChatModal = () => {
         setIsChatModalOpen(!isChatModalOpen);
     };
@@ -77,8 +75,8 @@ const IndexPage = () => {
     const themeClassNames = {
         light: 'bg-light text-dark',
         forest: 'bg-forest-bg text-forest-text',
-        fractal: 'text-fractal-text',
         vector: 'text-vector-text',
+        globe: 'text-vector-text',
     };
 
     // Background for resume section
@@ -86,11 +84,9 @@ const IndexPage = () => {
     const woodsBackground = theme === 'forest' ? 'bg-woods-bg' : '';
 
     return (
-        // @ts-ignore
         <div className={themeClassNames[theme]}>
-            <div ref={vantaRef} className="fixed w-full h-full"></div>
+            <div ref={vantaRef} className="fixed top-0 left-0 w-full h-full -z-10"></div>
             <Head>
-
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -119,7 +115,6 @@ const IndexPage = () => {
 
                 <meta name="geo.region" content="US" />
 
-
                 <meta property="og:title" content="Dobson Dunavant - Personal Portfolio Website" />
 
                 <meta property="og:description" content="My personal website, showcasing my experiences and skillsets thus far." />
@@ -132,7 +127,6 @@ const IndexPage = () => {
 
                 <link rel="canonical" href="https://dobsond.dev/" />
 
-
                 <meta name="twitter:card" content="summary_large_image" />
 
                 <meta name="twitter:title" content="Dobson Dunavant - Personal Portfolio Website" />
@@ -140,21 +134,16 @@ const IndexPage = () => {
                 <meta name="twitter:description" content="My personal website, showcasing my experiences and skillsets thus far." />
 
                 <meta name="twitter:image" content="https://dobsond.dev/DDlogo.png" />
-
             </Head>
 
-            {/*<Navbar toggleChatModal={toggleChatModal} />*/}
             <Navbar toggleChatModal={toggleChatModal} />
 
             <div className="flex flex-col items-center">
-                {/*<ChatbotButton isOpen={isChatModalOpen} setIsOpen={setIsChatModalOpen} />*/}
-                {/*<ChatbotModal isOpen={isChatModalOpen} setIsOpen={setIsChatModalOpen} />*/}
-
-                <section id="home" className={`w-full ${woodsBackground}`}>
+                <section id="home" className={`w-full min-h-screen ${woodsBackground}`}>
                     <Home />
                 </section>
 
-                <section id="experiences" className={`w-full ${woodsBackground}`}>
+                <section id="experiences" className={`w-full min-h-screen ${woodsBackground}`}>
                     <Experiences />
                 </section>
 
@@ -162,15 +151,14 @@ const IndexPage = () => {
                     <Resume />
                 </section>
 
-                <section id="blog" className={`w-full ${floralBackground}`}>
+                <section id="blog" className={`w-full min-h-screen ${floralBackground}`}>
                     <Blog />
                 </section>
 
-                <section id="contact" className="w-full">
+                <section id="contact" className="w-full min-h-screen">
                     <Contact />
                 </section>
             </div>
-
         </div>
     );
 };

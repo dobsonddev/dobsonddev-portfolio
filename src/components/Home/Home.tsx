@@ -1,14 +1,29 @@
-import React, { useEffect, useState } from 'react';
-import Typewriter from 'typewriter-effect';
-import { FaArrowDown } from 'react-icons/fa'; // Ensure react-icons is installed
+import React, { useEffect, useState, useRef } from 'react';
+import { FaArrowDown } from 'react-icons/fa';
 import homeData from "@/components/Home/HomeData";
-import {motion} from "framer-motion";
-import { renderToStaticMarkup } from 'react-dom/server';
-
+import { motion } from "framer-motion";
+import Typed from 'typed.js';
 
 function Home() {
     const [showScrollPrompt, setShowScrollPrompt] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
+
+    const typedRef = useRef<HTMLSpanElement>(null);
+
+    useEffect(() => {
+        if (typedRef.current) {
+            const typed = new Typed(typedRef.current, {
+                strings: homeData.attributes,
+                typeSpeed: 60,
+                backSpeed: 20,
+                loop: true,
+            });
+
+            return () => {
+                typed.destroy();
+            };
+        }
+    }, []);
 
 
     useEffect(() => {
@@ -67,16 +82,7 @@ function Home() {
                 </h1>
             </div>
                 <div className="bg-light text-dark text-xl md:text-2xl lg:text-4xl p-2 rounded mx-auto -mt-96">
-                    <Typewriter
-                        options={{
-                            strings: homeData.attributes,
-                            autoStart: true,
-                            loop: true,
-                            delay: 75,
-                            deleteSpeed: 50,
-                            skipAddStyles: true,
-                        }}
-                    />
+                    <span ref={typedRef}></span>
                 </div>
 
             {showScrollPrompt && (

@@ -14,36 +14,39 @@ const blogData: BlogPost[] = [
         Introduction: "Some anecdotes on my first experiences in tech, and how I navigated them.",
         mainContent: `
 <p class="text-gray-700 mb-4">
-        It's nice to take a moment to reflect on how far you've come, and appreciate what has moved you closer to your goals. Imposter syndrome is a real beast, so I think a bit of reflection on your progress can go a long way.
+        Modern life is faaaaast paced. It can be nice to take a step back to appreciate where you currently are, and what has brought you here. Imposter syndrome is a real beast, so I think a bit of reflection and appreciation towards just far you've come, can go a long way in combating it.
     </p>
     
 <p class="text-gray-700 mb-4">
-        Going into my first real technical role as a Data Engineering Intern, back in mid 2022, I had a million questions, and admittedly, a lot of intimidation. 
+        Going into my first real technical role as a Data Engineering Intern, back in mid 2022, I had a million questions, and was admittedly, very intimidated. 
         What would my day-to-day look like? How was I going to learn this entire stack, from scratch, 
-        while making impactful contributions? What is this 'memoization' thing I've read about? Did they just spell memorization wrong?
+        while making impactful contributions? What is this 'memoization' thing I've read about? Did they just spell memorization wrong? Do I know enough yet??
     </p>
     <p class="text-gray-700 mb-4">
-        As I began to work, I realized that although I had a lot to learn, I had a lot to offer too. I began breaking this massive enterprise system into smaller, more approachable pieces, relevant to my domain. The first 2 months flew by, but I got to look back and be amazed at how my mental landscape had evolved. I really enjoyed the semi-structured nature of it all. I was able to learn from my peers, and also learn on my own, in ways that were most effective for me. Essentially "learning how to learn" in a professional tech environment.
-        What was once intimidation and daunt had evolved into discovery and drive. I'd made myself knowledgeable on a few pieces of the stack that no one else was especially knowledgeable about, providing some unique insights here and there to devs and stakeholders much, much smarter and more experienced than me.
+        As I began to work, I realized that although I had a lot to learn, I had a lot to offer too. And I'm not saying this to self-praise, I am saying that I came to the realization that there is much more you can bring to an organization and dev team, other than code.
+        Slowly but (not so) surely, I began breaking this massive enterprise codebase into smaller, more approachable pieces, relevant to my domain. The first 2 months absolutely flew by, but when I finally gave myself a moment to look back, I was pretty amazed at how my mental landscape and the way I felt when opening up a new file had evolved. I began to greatly enjoy the semi-structured nature of it all - learning about X, Y, and Z through various means, all to do task B. I was able to learn from my seniors, but also on my own - essentially "learning how to learn" within a professional development. There's a zillion relevant youtube videos, hundreds of ways I *could* ingest relevant knowledge, but which methods are the most effective and efficient, for me?
+        What was once intimidation and daunt had evolved into discovery and drive. I'd made myself knowledgeable on a few pieces of the stack that no one else was especially knowledgeable about, carving out some unique value within the team to provide insights here and there to devs and stakeholders exponentially more experienced than I.
     </p>
     <p class="text-gray-700 mb-4">
-        I'll never forget my first PR. Just a minor change toan 'on-hover' feature. But it was a feature 
-        used by several thousand users. I saw it in nightly, a week before the production release, which 
-        gave me a swift dose of both excitement and nerves. After that long week, the automated production release email had my bugfix in the patch notes. An audible exhale and a little smile, it was a good moment. I've made a sort of internal decision that none of us know everything. We're all constantly learning on-the-go. It's teh ability to do that while still outputing value that makes a great engineer (unless you are a genius, then I think the bar may be a bit higher).
-          These negative 
-        emotions absolutely still exist at times but have largely been replaced by excitement 
-        to collaborate with and learn from great minds while delivering seamless, 
-        impactful solutions.
+        I'll never forget my first PR. Just a minor change to an 'on-hover' feature. But it was a feature 
+        used by several thousand users. Eventually, I was able to test it in nightly (our development environment), a week before the production release, which 
+        gave me a swift dose of both excitement and nerves. After that loooooong week, the automated production release email had my bugfix in the patch notes. An audible exhale and a little smile, it was a good moment.
     </p>
     <p class="text-gray-700 mb-4">
-        Over my diverse experiences thus far, I've been able to self-start different opportunities within 
-        these experiences and contribute to organizations in ways that neither of us expected. From creating an all-in-one knowledge base that both the veterans and new-hires reference for 
-        onboarding or deeper knowledge, to leading hackathon projects which designed and implemented real, 
-        effective enhancements to an organization. I've realized value opportunities exist everywhere, and seizing them is a way to make real, unique impacts.
+        I'm a competitive person. I grew up playing sports at high levels year-round, absolutely disdained losing. This created a mental framework that conflicted with the infinite breadth and depth of knowledge that exists in tech. There is no scoreboard, no tangible benchmarks or moment of "okay I have proven I am now elite at X". 
+        This industry experience was immensely helpful in evolving this mental dynamic that was making my day-to-day as frustrating as it was intimidating. I got to see firsthand that it's truly okay, and expected, to not know it all, even at senior levels. Instead, we're collectively learning and growing on-the-go. We're the team. We're getting better together. It wasn't destroying my competitive nature - just reframing it.
+        Previously, my natural reaction to those "better" than me at something wasn't always...healthy. Rather than seeing them as an opportunity to learn and appreciate a tremendous amount of hard work and ingenuity, I would take a more...competitive route. But seeing the collaboration and true nature of this dynamic, in-person, I was able to see that this dynamic is something to embrace - not fight.
+        It's the ability to do that while still outputting solid value that makes a great engineer (unless you're a genius, then the bar may be a bit higher).
+        I'll still get frustrated at the fruitless "not being good enough" + imposter syndrome emotions, but they took a big blow when I shifted to a more constructive, collaborative, and appreciative mental approach.
+    </p>
+    <p class="text-gray-700 mb-4">
+        Over my experiences thus far, I've been fortunate to have the opportunity to self-start different opportunities within 
+        these experiences to contribute to my organizations in ways that neither of us expected. From creating much needed knowledge bases, to leading hackathon projects which designed and implemented real, 
+        effective enhancements to an organization. I've realized that if you keep your head up, valuable opportunities exist everywhere, and seizing them is a way to make real, unique impacts. If you are an intern or a junior dev - I highly suggest seeking out the opportunities. They can be a great way to differentiate yourself and improve your spheres.
     </p>
     <p class="text-gray-700 mb-4">
         It is quite a trip to put myself in my mental shoes from 2 years ago, compared to now. I'm forever 
-        grateful to have been able to learn so much in such a short period of time, from incredible mentors 
+        grateful to have been able to learn so much in such a short period of time, from many incredible mentors 
         and peers.
     </p>
     <p class="text-gray-700">
