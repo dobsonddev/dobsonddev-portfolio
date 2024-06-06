@@ -53,7 +53,7 @@ const blogData: BlogPost[] = [
         I'm excited to continue to grow and learn as I seek to invest myself in new, more challenging and impactful experiences.
     </p>`,
         imageUrl: "https://yourimageurl.com/react-hooks.jpg",
-        publicationDate: "2023-11-13"
+        publicationDate: "Updated: 2024-05-04"
     },
     {
         title: "The Value of Sequence Diagrams for Early Software Engineers",
@@ -67,10 +67,10 @@ const blogData: BlogPost[] = [
     },
 
     {
-        title: "Zoomed out, then Zoomed In - 'Hooks' in Web Development",
-        Introduction: "A brief history of the evolution of 'Hooks' in programming, and how they fit into modern web development (React, Angular, Vue)",
+        title: "Zoomed out, then Zoomed In - Evolution of 'Hooks' in Web Development",
+        Introduction: "How did we manage state before hooks? How did Hooks emerge and evolve into what we see across modern frontend frameworks today (React, Angular, Vue)?",
         mainContent: `
-        <p class="text-base mb-4">Having extensively used Angular hooks at Savvas and React hooks in various other projects, I've gained a unique perspective on how both frameworks approach the concept of hooks.</p>
+        <p class="text-base mb-4">Having used various flavors of "hooks" across various frameworks and contexts in my personal, professional, and educational projects, I decided to do a deeper dive into their history. How was the problem they solve handled before their existence? How did they evolve to what we see today? We do we see today?</p>
         <p class="text-base mb-4">In this article, I delve into the design philosophies and implementation details of hooks in both React and Angular, drawing from my diverse experiences as detailed in my resume.</p>
     `,
         imageUrl: "https://yourimageurl.com/react-angular-hooks.jpg",

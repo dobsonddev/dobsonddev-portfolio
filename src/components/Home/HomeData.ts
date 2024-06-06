@@ -14,8 +14,8 @@ const homeData: HomeData = {
         'agile minded <span class="icon-placeholder" data-icon="/icons/agile.svg"></span>',
         'tater tot connoisseur <span class="icon-placeholder" data-icon="/icons/tatertot.svg"></span>',
         'loves: building stuff <span class="icon-placeholder" data-icon="/icons/project.svg"></span>',
+        'loves: learning new skills and topics <span class="icon-placeholder" data-icon="/icons/project.svg"></span>',
         'loves: outdoors <span class="icon-placeholder" data-icon="/icons/outdoors.svg"></span>',
-        'loves: collaborating <span class="icon-placeholder" data-icon="/icons/collaboration.svg"></span>',
         'loves: music <span class="icon-placeholder" data-icon="/icons/music.svg"></span>',
         'loves: drums <span class="icon-placeholder" data-icon="/icons/drummer.svg"></span>',
         'loves: soccer <span class="icon-placeholder" data-icon="/icons/soccer.svg"></span>',
@@ -33,7 +33,7 @@ const homeData: HomeData = {
         'Tater tot icon',
     ],
     missionStatementTop:
-        "Welcome! I'm a versatile full-stack developer with a passion for building solutions that seamlessly align with an organization / team's goals.",
+        "Welcome! I'm a full-stack developer with a passion for tackling real-world problems with optimized, seamless solutions.",
     missionStatementBottom:
         "I'm driven by curiosity, collaboration, and the desire to build awesome things, with awesome people.",
 };

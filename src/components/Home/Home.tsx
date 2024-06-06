@@ -88,7 +88,7 @@ function Home() {
         };
     }, []);
 
-    const missionClass = theme === 'vector' || theme === 'dots' ? 'bg-light text-dark' : 'bg-dark text-light';
+    const missionClass = theme === 'vector' || theme === 'dots' ? 'bg-dark text-light' : 'bg-dark text-light';
     const typedTextBackgroundClass = theme === 'light' ? 'bg-dark text-light' : theme === 'vector' || theme === 'dots' ? 'bg-dark text-light' : 'bg-light text-dark';
     const heroTextBackgroundClass = theme === 'vector' ? 'bg-dark text-light' : theme === 'dots' ? 'bg-none text-dark' : 'bg-light text-dark';
 

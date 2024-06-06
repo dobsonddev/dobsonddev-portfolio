@@ -1,7 +1,8 @@
 // pages/_app.tsx
 import { ThemeProvider, useTheme } from 'next-themes';
 import { AppProps } from 'next/app';
-import '../styles/globals.css';
+import '@/styles/globals.css';
+import '@/styles/birds.css';
 import { Analytics } from '@vercel/analytics/react';
 
 
