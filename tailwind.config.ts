@@ -1,3 +1,5 @@
+// tailwind.config.js
+
 import type { Config } from 'tailwindcss';
 const defaultTheme = require('tailwindcss/defaultTheme');
 
@@ -42,9 +44,7 @@ const config: Config = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'floral-bg': 'url("/floral_background.svg")', // add this line
-        'woods-bg': 'url("/woods_background.svg")', // add this line
-
+        'forest-bg': 'url("/woods_background.svg")', // add this line
       },
     },
   },

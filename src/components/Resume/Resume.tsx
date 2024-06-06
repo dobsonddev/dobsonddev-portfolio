@@ -7,17 +7,17 @@ function Resume() {
     const resumeIMGPath = '/Dobson_Dunavant_Resume.webp';
 
     return (
-        <div className="flex flex-col py-6 min-h-screen items-center text-white px-4 border-t-4 border-custom-orange bg-gray-900 bg-opacity-80">
-            <h2 className="p-2 text-3xl md:text-4xl lg:text-5xl py-6 font-bold underline z-0">Resume</h2>
-            <div className="self-end sticky top-20 pr-4 md:pr-12 z-10 py-2"> {/* Sticky download button container */}
+        <div className="flex flex-col pb-12 min-h-screen items-center text-white px-4 border-t-4 border-custom-orange bg-gray-900 bg-opacity-80">
+            <div className="relative w-full flex justify-center py-6">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold underline z-0">Resume</h2>
                 <a
                     href={resumePDFPath}
                     download="Dobson_Dunavant_Resume.pdf"
-                    className="bg-custom-orange hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-lg md:text-xl flex items-center justify-center"
+                    className="absolute right-0 bg-custom-orange hover:bg-blue-700 text-white font-bold rounded text-lg md:text-xl px-4 py-2 flex items-center"
                     title="Download Resume as PDF"
                 >
-                    <FaDownload className="md:hidden" /> {/* Show icon only on small screens */}
-                    <span className="hidden md:inline">Download PDF</span> {/* Show text on medium screens and larger */}
+                    <FaDownload className="inline-block mr-1" />
+                    <span className="hidden md:inline">Download PDF</span>
                 </a>
             </div>
             <div className="w-full flex justify-center">

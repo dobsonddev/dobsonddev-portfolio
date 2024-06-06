@@ -28,12 +28,12 @@ const IndexPage = () => {
                 case 'vector':
                     vantaEffect.current = NET({
                         el: vantaRef.current,
-                        mouseControls: true,
-                        touchControls: true,
+                        mouseControls: false,
+                        touchControls: false,
                         gyroControls: false,
                         minHeight: 20.00,
                         minWidth: 20.00,
-                        scale: 1.50,
+                        scale: 0.50,
                         scaleMobile: 1.50,
                         points: 6.00,
                         maxDistance: 29.00,
@@ -48,8 +48,8 @@ const IndexPage = () => {
                     vantaEffect.current = DOTS({
                         el: vantaRef.current,
                         backgroundColor: '#ebe2e2',
-                        mouseControls: true,
-                        touchControls: true,
+                        mouseControls: false,
+                        touchControls: false,
                         gyroControls: false,
                         minHeight: 200.00,
                         minWidth: 200.00,
@@ -80,13 +80,28 @@ const IndexPage = () => {
         dots: 'text-dark',
     };
 
-    // Background for resume section
-    const floralBackground = theme === 'forest' ? 'bg-floral-bg' : '';
-    const woodsBackground = theme === 'forest' ? 'bg-woods-bg' : '';
-
     return (
         <div className={themeClassNames[theme] || themeClassNames['light']}>
+            {theme === 'forest' && (
+                <div className="fixed top-0 left-0 w-full h-full bg-forest-bg bg-cover bg-center"></div>
+            )}
             <div ref={vantaRef} className="fixed top-0 left-0 w-full h-full -z-10"></div>
+            {theme === 'forest' && (
+                <div className="fixed top-0 left-0 w-full h-full pointer-events-none">
+                <div className="bird-container bird-container--one">
+                        <div className="bird bird--one"></div>
+                    </div>
+                    <div className="bird-container bird-container--two">
+                        <div className="bird bird--two"></div>
+                    </div>
+                    <div className="bird-container bird-container--three">
+                        <div className="bird bird--three"></div>
+                    </div>
+                    <div className="bird-container bird-container--four">
+                        <div className="bird bird--four"></div>
+                    </div>
+                </div>
+            )}
             <Head>
                 <script
                     type="application/ld+json"
@@ -139,20 +154,20 @@ const IndexPage = () => {
 
             <Navbar toggleChatModal={toggleChatModal} />
 
-            <div className="flex flex-col items-center">
-                <section id="home" className={`w-full min-h-screen ${woodsBackground}`}>
+            <div className="relative z-10 bg-none">
+                <section id="home" className={`w-full min-h-screen`}>
                     <Home />
                 </section>
 
-                <section id="experiences" className={`w-full min-h-screen ${woodsBackground}`}>
+                <section id="experiences" className={`w-full min-h-screen`}>
                     <Experiences />
                 </section>
 
-                <section id="resume" className={`w-full min-h-screen ${woodsBackground}`}>
+                <section id="resume" className={`w-full min-h-screen`}>
                     <Resume />
                 </section>
 
-                <section id="blog" className={`w-full min-h-screen ${floralBackground}`}>
+                <section id="blog" className={`w-full min-h-screen`}>
                     <Blog />
                 </section>
 
