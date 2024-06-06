@@ -9,12 +9,13 @@ interface ChatbotProps {
 interface Message {
     text: string;
     sender: 'user' | 'bot';
+    timestamp?: string;
 }
 
 function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
     const defaultBotMessage: Message = {
-        text: `Hello! My name is Momo, I'm here to aid you in learning about ${homeData.name}. Ask away!`,
-        sender: 'bot'
+        text: `Hello! My name is Momo, ${homeData.name}'s portfolio helper. Curious about anything? Ask away!`,
+        sender: 'bot',
     };
 
     const [messages, setMessages] = useState<Message[]>([defaultBotMessage]);
@@ -26,6 +27,11 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
     useEffect(() => {
         const storedCount = parseInt(localStorage.getItem('questionCount') || '0', 10);
         setQuestionCount(storedCount);
+
+        // Set the timestamp for the default message on the client side
+        setMessages((prevMessages) => prevMessages.map((msg, index) =>
+            index === 0 ? { ...msg, timestamp: new Date().toLocaleString() } : msg
+        ));
     }, []);
 
     const updateQuestionCount = (newCount: number) => {
@@ -51,7 +57,11 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
 
         setIsProcessing(true); // Start processing
 
-        const userMessage: Message = { text: input, sender: 'user' };
+        const userMessage: Message = {
+            text: input,
+            sender: 'user',
+            timestamp: new Date().toLocaleString(),
+        };
         try {
             const response = await fetch('/api/chat', {
                 method: 'POST',
@@ -59,7 +69,11 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
                 body: JSON.stringify({ message: input }),
             });
             const data = await response.json();
-            const botMessage: Message = { text: data.message.content, sender: 'bot' };
+            const botMessage: Message = {
+                text: data.message.content,
+                sender: 'bot',
+                timestamp: new Date().toLocaleString(),
+            };
 
             setMessages((prevMessages) => [...prevMessages, userMessage, botMessage]);
             setInput('');
@@ -83,8 +97,22 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
                 <button onClick={() => setIsOpen(false)} className="absolute top-0 right-0 mt-1 text-lg mr-1 bg-red-500 px-3 py-1 rounded text-light hover:text-dark" aria-label="Close chat">X</button>
                 <div className="chat-history overflow-y-auto mb-4 pt-5" style={{ maxHeight: '70vh' }}>
                     {messages.map((message, index) => (
-                        <div key={index} className={`mb-1 flex p-1 rounded-lg ${message.sender === 'user' ? 'bg-midlight text-white self-end max-w-xs' : 'bg-gray-300 text-black self-start'}`} style={{ maxWidth: 'fit-content' }}>
-                            {message.text}
+                        <div key={index} className={`mb-2 ${message.sender === 'user' ? 'flex flex-col items-end' : 'flex flex-col items-start'}`}>
+                            <div className={`text-sm text-light ${message.sender === 'user' ? 'text-right' : ''}`}>
+                                {message.sender === 'user' ? (
+                                    <>
+                                        You - <span className="ml-1">{message.timestamp}</span>
+                                    </>
+                                ) : (
+                                    <div className="flex items-center">
+                                        <img src="/lemur.svg" alt="MomoAI Icon" style={{ height: '35px', marginRight: '8px' }} />
+                                        Momo - <span className="ml-1">{message.timestamp}</span>
+                                    </div>
+                                )}
+                            </div>
+                            <div className={`mt-1 p-2 rounded-lg ${message.sender === 'user' ? 'bg-midlight text-white self-end max-w-xs' : 'bg-gray-300 text-black self-start max-w-xs'}`}>
+                                {message.text}
+                            </div>
                         </div>
                     ))}
                 </div>
@@ -92,7 +120,7 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
                 <div className="input-area flex items-center">
                     <input
                         type="text"
-                        placeholder="Ask a question about Dobson..."
+                        placeholder="Ask a question!"
                         value={input}
                         onChange={handleUserMessageChange}
                         onKeyPress={handleKeyPress}
@@ -106,7 +134,6 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
                         </button>
                     )}
                     <span className="text-gray-500 text-sm ml-2">{input.length}/150</span>
-
                 </div>
             </div>
         </div>

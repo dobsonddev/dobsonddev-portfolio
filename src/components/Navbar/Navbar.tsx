@@ -3,6 +3,7 @@ import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 import ThemeSwitch from './ThemeSwitch/ThemeSwitch';
 import ChatbotButton from '@/components/Chatbot/ChatbotButton';
 import ChatbotModal from '@/components/Chatbot/ChatbotModal';
+import ChatbotNavbarButton from "@/components/Chatbot/ChatbotNavbarButton";
 
 interface NavbarProps {
     toggleChatModal: () => void;
@@ -46,11 +47,19 @@ const Navbar: React.FC<NavbarProps> = ({ toggleChatModal }) => {
                     <div className="flex gap-6 items-center justify-start">
                         <a href="https://www.linkedin.com/in/dobson-dunavant/" aria-label="Dobson's LinkedIn Profile" target="_blank" rel="noopener noreferrer" className="py-1 md:py-2 transition-all duration-500 transform hover:-translate-y-1"><FaLinkedin size="1.6em" /></a>
                         <a href="https://github.com/dobsonddev" aria-label="Dobson's GitHub Profile" target="_blank" rel="noopener noreferrer" className="py-1 md:py-2 transition-all duration-500 transform hover:-translate-y-1"><FaGithub size="1.6em" /></a>
-                        <a href="#contact" className="py-1 md:py-2 transition-all duration-500 transform hover:-translate-y-1"><FaEnvelope size="1.6em" /></a>
-                    </div>
+                        <a
+                            href="#"
+                            aria-label="Send an email to Dobson"
+                            className="py-1 md:py-2 transition-all duration-500 transform hover:-translate-y-1"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                window.open('mailto:jdobsond3@gmail.com', '_blank');
+                            }}
+                        >
+                            <FaEnvelope size="1.6em" />
+                        </a>
 
-                    <div className="flex items-center justify-center">
-                        <ChatbotButton isOpen={isChatbotOpen} setIsOpen={setIsChatbotOpen} />
+                        <ChatbotNavbarButton isOpen={isChatbotOpen} setIsOpen={setIsChatbotOpen} />
                     </div>
 
                     <div className="md:hidden flex items-center">
@@ -82,6 +91,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleChatModal }) => {
                     </div>
                 </div>
             </nav>
+            <ChatbotButton isOpen={isChatbotOpen} setIsOpen={setIsChatbotOpen} />
             <ChatbotModal isOpen={isChatbotOpen} setIsOpen={setIsChatbotOpen} />
         </>
     );

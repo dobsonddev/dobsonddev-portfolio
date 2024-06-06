@@ -26,20 +26,20 @@ const ThemeSwitch = () => {
                 </div>
             </button>
             {modalOpen && (
-                <div className="absolute bg-white text-dark rounded shadow-lg ">
-                    <button onClick={() => changeTheme('light')} className="flex items-center p-2 hover:bg-gray-100">
+                <div className="absolute bg-white text-dark rounded shadow-lg p-2 gap-2 flex flex-col">
+                    <button onClick={() => changeTheme('light')} className="flex items-center p-2 hover:bg-gray-100 rounded">
                         <FaSun />
                         <span className="hidden md:inline ml-2">Light</span> {/* Hide text on small screens */}
                     </button>
-                    <button onClick={() => changeTheme('forest')} className="flex items-center p-2 w-full bg-green-300">
+                    <button onClick={() => changeTheme('forest')} className="flex items-center p-2 w-full bg-green-300 rounded">
                         <FaTree />
                         <span className="hidden md:inline ml-2">Forest</span> {/* Hide text on small screens */}
                     </button>
-                    <button onClick={() => changeTheme('vector')} className="flex items-center p-2 bg-purple-700 text-light">
+                    <button onClick={() => changeTheme('vector')} className="flex items-center p-2 bg-purple-700 text-white rounded">
                         <TbVectorTriangle />
                         <span className="hidden md:inline ml-2">Vector</span> {/* Hide text on small screens */}
                     </button>
-                    <button onClick={() => changeTheme('dots')} className="flex items-center p-2 text-orange-500">
+                    <button onClick={() => changeTheme('dots')} className="flex items-center p-2 bg-gray-200 text-orange-500 rounded">
                         <TbGridDots />
                         <span className="hidden md:inline ml-2">Dots</span> {/* Hide text on small screens */}
                     </button>
