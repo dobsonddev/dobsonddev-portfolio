@@ -12,13 +12,13 @@ export interface Experience {
 
 const experiences: Experience[] = [
     {
-        title: "Machine Learning & Cloud Engineering Co-Op",
+        title: "Machine Learning & Application Co-Op",
         date: "Sep 2023 - May 2024",
         company: "Mercedes-Benz & IFA Group",
         location: "Ladson, SC",
         details: [
             "Led team of 4 to develop an autonomous inventory scanning system using React, Flask, AWS, PostgreSQL, OpenCV, Tesseract OCR and YOLOv8 for real-time, small-part tracking in industrial settings to enable inventory awareness and supply-chain analytics",
-            "Authored SRS and feasibility reports, gathering then defining functional and non-functional requirements by collaborating with project stakeholders",
+            "Authored Software Requirements & Design Specification documents (SRS and SDS), gathering then defining functional and non-functional requirements which were then used in system design.",
             "Designed and implemented restful HTTPS communications via AWS API Gateway to SAP APIs, enabling real-time, scalable inventory transactions",
         "Achieved 98% inventory accuracy and SAP integration, delivering a fully end-to-end solution, significantly surpassing the existing accuracy and efficiency benchmarks"
     ],

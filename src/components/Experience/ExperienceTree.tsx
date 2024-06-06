@@ -20,7 +20,7 @@ const ExperienceTree = () => {
         const scrollY = window.scrollY;
         const relativeScrollY = scrollY - containerTop + windowHeight / 2;
 
-        const visibilityOffset = 50; // Adjust this value to control when the animation starts
+        const visibilityOffset = 200; // Adjust this value to control when the animation starts
 
         // Only update state if relativeScrollY has changed significantly (for example, more than 10 pixels)
         if (Math.abs(relativeScrollY - lastScrollY.current) > 10) {
