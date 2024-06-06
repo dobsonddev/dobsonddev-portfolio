@@ -30,9 +30,17 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
 
         // Set the timestamp for the default message on the client side
         setMessages((prevMessages) => prevMessages.map((msg, index) =>
-            index === 0 ? { ...msg, timestamp: new Date().toLocaleString() } : msg
+            index === 0 ? { ...msg, timestamp: formatTime(new Date()) } : msg
         ));
     }, []);
+
+    const formatTime = (date: Date) => {
+        return date.toLocaleString('en-US', {
+            hour: 'numeric',
+            minute: 'numeric',
+            hour12: true
+        });
+    };
 
     const updateQuestionCount = (newCount: number) => {
         localStorage.setItem('questionCount', newCount.toString());
@@ -60,7 +68,7 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
         const userMessage: Message = {
             text: input,
             sender: 'user',
-            timestamp: new Date().toLocaleString(),
+            timestamp: formatTime(new Date()),
         };
         try {
             const response = await fetch('/api/chat', {
@@ -72,7 +80,7 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
             const botMessage: Message = {
                 text: data.message.content,
                 sender: 'bot',
-                timestamp: new Date().toLocaleString(),
+                timestamp: formatTime(new Date()),
             };
 
             setMessages((prevMessages) => [...prevMessages, userMessage, botMessage]);
@@ -93,7 +101,7 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
 
     return (
         <div className={`fixed inset-0 bg-black bg-opacity-50 p-4 z-50 ${isOpen ? '' : 'hidden'}`}>
-            <div className="fixed inset-x-0 bottom-0 mx-auto max-w-md w-full bg-black border-light border-2 p-6 rounded-t-md shadow-md md:max-w-lg md:w-auto md:bottom-4 md:right-4 md:rounded md:inset-auto">
+            <div className="fixed inset-x-0 bottom-0 mx-auto max-w-md w-full bg-dark border-light border-2 p-6 rounded-t-md shadow-md md:max-w-lg md:w-auto md:bottom-4 md:right-4 md:rounded md:inset-auto">
                 <button onClick={() => setIsOpen(false)} className="absolute top-0 right-0 mt-1 text-lg mr-1 bg-red-500 px-3 py-1 rounded text-light hover:text-dark" aria-label="Close chat">X</button>
                 <div className="chat-history overflow-y-auto mb-4 pt-5" style={{ maxHeight: '70vh' }}>
                     {messages.map((message, index) => (
@@ -105,7 +113,7 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
                                     </>
                                 ) : (
                                     <div className="flex items-center">
-                                        <img src="/lemur.svg" alt="MomoAI Icon" style={{ height: '35px', marginRight: '8px' }} />
+                                        <img src="/lemur.svg" alt="MomoAI Icon" style={{ height: '40px', marginRight: '8px', }} />
                                         Momo - <span className="ml-1">{message.timestamp}</span>
                                     </div>
                                 )}

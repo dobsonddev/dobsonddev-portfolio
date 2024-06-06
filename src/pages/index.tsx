@@ -31,16 +31,17 @@ const IndexPage = () => {
                         mouseControls: true,
                         touchControls: true,
                         gyroControls: false,
-                        minHeight: 200.00,
-                        minWidth: 200.00,
-                        scale: 1.00,
-                        scaleMobile: 1.00,
+                        minHeight: 20.00,
+                        minWidth: 20.00,
+                        scale: 1.50,
+                        scaleMobile: 1.50,
                         points: 6.00,
-                        maxDistance: 25.00,
+                        maxDistance: 29.00,
                         spacing: 25.00,
                         color: '#D9185A',
                         backgroundColor: '#21143C',
                         vertexColor: '#21143C',
+                        size: 5.00
                     });
                     break;
                 case 'dots':

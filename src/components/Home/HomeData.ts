@@ -10,20 +10,20 @@ export interface HomeData {
 const homeData: HomeData = {
     name: "Dobson",
     attributes: [
-        "full-stack software engineer \u{1F6E0}",
-        "persistent problem solver \u{1F575}",
-        "music lover \u{1F50A}",
-        "collaborative teammate \u{1F91D}",
-        "curiosity driven \u{1F9E0}",
-        "agile minded \u{1F501}",
-        "drummer \u{1F941}",
-        "outdoorsman \u{1F3D5}",
-        "tater tot connoisseur \u{1F954}",
+        'full-stack software engineer <span class="icon-placeholder" data-icon="/icons/dev.svg"></span>',
+        'persistent problem solver <span class="icon-placeholder" data-icon="/icons/puzzle.svg"></span>',
+        'music lover <span class="icon-placeholder" data-icon="/icons/music.svg"></span>',
+        'collaborative <span class="icon-placeholder" data-icon="/icons/collaboration.svg"></span>',
+        'curiosity driven <span class="icon-placeholder" data-icon="/icons/curious.svg"></span>',
+        'agile minded <span class="icon-placeholder" data-icon="/icons/agile.svg"></span>',
+        'drummer <span class="icon-placeholder" data-icon="/icons/drummer.svg"></span>',
+        'outdoorsman <span class="icon-placeholder" data-icon="/icons/outdoors.svg"></span>',
+        'tater tot connoisseur <span class="icon-placeholder" data-icon="/icons/tatertot.svg"></span>',
     ],
     missionStatementTop:
-        "Hello! I'm a versatile full-stack developer with a passion for tackling complex real-world problems through seamless solutions.",
+        "Welcome! I'm a versatile full-stack developer with a passion for building innovative solutions that seamlessly fit into an organization's overall goals.",
     missionStatementBottom:
-        "I'm driven by curiosity, collaboration, and the desire to build awesome things.",
+        "I'm driven by curiosity, collaboration, and the desire to build awesome things, with awesome people.",
 };
 
 export default homeData;

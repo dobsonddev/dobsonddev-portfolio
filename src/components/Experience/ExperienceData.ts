@@ -17,9 +17,9 @@ const experiences: Experience[] = [
         company: "Mercedes-Benz & IFA Group",
         location: "Ladson, SC",
         details: [
-            "Led team of 4 to develop an autonomous drone inventory system using Tesseract OCR and YOLOv8 for real-time, small-part tracking in industrial settings to enable inventory awareness and supply-chain analytics",
-        "Implemented onboard edge computing on Raspberry Pi drones, enabling autonomous inventory management with WebSocket connections to AWS and SAP",
-        "Authored SRS and feasibility reports, clearly defining functional and non-functional requirements",
+            "Led team of 4 to develop an autonomous inventory scanning system using React, Flask, AWS, PostgreSQL, OpenCV, Tesseract OCR and YOLOv8 for real-time, small-part tracking in industrial settings to enable inventory awareness and supply-chain analytics",
+            "Authored SRS and feasibility reports, gathering then defining functional and non-functional requirements by collaborating with project stakeholders",
+            "Designed and implemented restful HTTPS communications via AWS API Gateway to SAP APIs, enabling real-time, scalable inventory transactions",
         "Achieved 98% inventory accuracy and SAP integration, delivering a fully end-to-end solution, significantly surpassing the existing accuracy and efficiency benchmarks"
     ],
         logo: '/mblogo.png',
@@ -34,7 +34,8 @@ const experiences: Experience[] = [
         details: [
             "Developed full-stack solutions for Savvas Realize, an industry-leading K-12 ed-tech platform, using Angular 16 MFEs, Apollo, GraphQL, RxJS, Spring, PostgreSQL, and Jest",
             "Resolved 11 high-priority Jira tickets, contributing to sprint goals within an Agile team",
-            "Built a comprehensive, all-in-one Confluence knowledge hub, covering content from day 1 new-dev onboarding guides to custom micro-frontend build steps, reducing redundant knowledge-sharing and improving dev autonomy/efficiency."
+            "Designed API sequence diagrams, illustrating the end-to-end lifecycle across Angular micro-frontends, Apollo GraphQL, Spring services, and PostgreSQL, for use in understanding and optimizing within a module federation architecture",
+            "Built a comprehensive, all-in-one Confluence knowledge hub, covering content from day 1 new-dev onboarding guides to custom micro-frontend build steps, reducing redundant knowledge-sharing and improving developer autonomy/efficiency."
 ],
         logo: '/savvaslogo.png',
         technologies: ['Angular', 'GraphQL', 'Spring', 'PostgreSQL', 'Jest', 'StoryBook'],
@@ -43,12 +44,12 @@ const experiences: Experience[] = [
     {
         title: "Data Engineering Intern",
         date: "Sep 2022 - Jan 2023",
-        company: "Fiscal Spreading & Tracking (FinTech)",
+        company: "Vision Software Solutions (FinTech)",
         location: "Charleston, SC",
         details: [
-            "Transitioned from a monolithic desktop app to a serverless microservice web app using React, Django, PostgreSQL, and AWS services (Lambda, S3, RDS), enhancing system efficiency and scalability",
-            "Reduced server load by 17% through optimizing and refactoring APIs, streamlining query logic, and data caching",
-            "Containerized key data processing tasks with Docker, including ETL operations and credit scoring algorithms, to separate responsibilities and mitigate single-point failures, thereby increasing system reliability"
+            "Migrated from a monolithic desktop app to a microservice web app using React, Django, PostgreSQL, and AWS services (EC2, Lambda, S3, Athena), enhancing system efficiency and scalability",
+            "Optimized API and query logic, utilizing AWS ElastiCache with in-memory data store for real-time data caching, reducing user load time by 23\\% (measured by AWS CloudWatch)",
+            "Containerized Python ETL tasks and credit scoring algorithms using Docker Containers, encapsulating isolated processes and minimizing single-point failures"
         ],
         logo: '/fiscallogo.png',
         technologies: ['React', 'Django', 'PostgreSQL', 'AWS', 'Docker'],

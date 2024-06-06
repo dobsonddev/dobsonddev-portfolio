@@ -16,9 +16,12 @@ function Home() {
             const typed = new Typed(typedRef.current, {
                 strings: homeData.attributes,
                 typeSpeed: 55,
-                backSpeed: 20,
-                backDelay: 1000,
+                backSpeed: 30,
+                backDelay: 1700,
                 loop: true,
+                onStringTyped: () => {
+                    insertSVGIcons();
+                }
             });
 
             return () => {
@@ -26,6 +29,19 @@ function Home() {
             };
         }
     }, []);
+
+    const insertSVGIcons = () => {
+        const iconPlaceholders = document.querySelectorAll('.icon-placeholder');
+        iconPlaceholders.forEach(placeholder => {
+            const iconPath = placeholder.getAttribute('data-icon');
+            if (iconPath) {
+                const img = document.createElement('img');
+                img.src = iconPath;
+                img.className = 'w-12 h-12 inline-block -my-2';
+                placeholder.replaceWith(img);
+            }
+        });
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -71,7 +87,7 @@ function Home() {
         };
     }, []);
 
-    const missionClass = theme === 'vector' ||'dots' ? 'bg-light text-dark' : 'bg-dark text-light';
+    const missionClass = theme === 'vector' || theme === 'dots' ? 'bg-light text-dark' : 'bg-dark text-light';
 
     return (
         <div>
@@ -82,8 +98,8 @@ function Home() {
                         &nbsp;Hi, <br /> I'm {homeData.name}
                     </h1>
                 </div>
-                <div className="bg-light text-dark text-xl md:text-2xl lg:text-4xl p-2 rounded mx-auto -mt-96">
-                    <span ref={typedRef}></span>
+                <div className="bg-light text-dark text-xl md:text-2xl lg:text-4xl p-6 rounded mx-auto -mt-96">
+                    <span ref={typedRef} className="p-2"></span>
                 </div>
 
                 {showScrollPrompt && (

@@ -1,13 +1,14 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import experiences from './ExperienceData';
+import { useTheme } from 'next-themes';
 
 const ExperienceTree = () => {
-
     const [nodeVisibility, setNodeVisibility] = useState(Array(experiences.length).fill(false));
     const containerRef = useRef<HTMLDivElement>(null); // Explicitly defining the type of the ref
     const [verticalSpacing, setVerticalSpacing] = useState(200); // default value
     const lastScrollY = useRef(0); // store the last scrollY position
+    const { theme } = useTheme(); // Get the current theme
 
     // Function to calculate and update node visibility
     const updateVisibility = useCallback(() => {
@@ -30,7 +31,6 @@ const ExperienceTree = () => {
             });
             setNodeVisibility(newVisibility);
         }
-
     }, [nodeVisibility, verticalSpacing]);
 
     useEffect(() => {
@@ -65,11 +65,14 @@ const ExperienceTree = () => {
         hover: { y: -5, scale: 1.1 },
     };
 
+    const borderClass = theme === 'vector' ? 'border-light' : 'border-dark';
+    const bgClass = theme === 'vector' ? 'bg-light' : 'bg-dark';
+
     return (
         <div ref={containerRef} className="container mx-auto h-auto pt-6 px-4 md:px-8 sm:pb-56 md:pb-96 lg:pb-40">
             {/* Desktop Version */}
             <div className="hidden lg:block relative pt-36 md:pt-52 md:mb-60 lg:mb-20" style={{ height: `${experiences.length * verticalSpacing}px` }}>
-                <div className="absolute left-1/2 h-full border-r-4 border-dark rounded transform -translate-x-1/2"></div>
+                <div className={`absolute left-1/2 h-4/5 border-r-4 ${borderClass} rounded transform -translate-x-1/2`}></div>
 
                 {experiences.map((exp, index) => (
                     <motion.div
@@ -81,7 +84,7 @@ const ExperienceTree = () => {
                         style={{ top: `${index * verticalSpacing}px` }}
                         transition={{ duration: 1 }}
                     >
-                        <div className="w-6 h-6 border-dark bg-dark rounded-full"></div>
+                        <div className={`w-6 h-6 ${borderClass} ${bgClass} rounded-full`}></div>
 
                         <div className={`absolute w-1/2 p-8 text-box-style shadow-lg bg-gray-900 rounded ${index % 2 === 0 ? 'right-1/2 md:mr-4 lg:mr-6 xl:mr-8 2xl:mr-14' : 'left-1/2 md:ml-4 lg:ml-6 xl:ml-8 2xl:ml-14'}`}>
                             <div className="flex justify-between items-center">
