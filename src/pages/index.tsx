@@ -88,10 +88,12 @@ const IndexPage = () => {
         dots: 'text-dark',
     };
 
+    const themeClass = theme ? themeClassNames[theme] : themeClassNames['light'];
+
     return (
-        <div className={themeClassNames[theme] || themeClassNames['light']}>
+        <div className={themeClass}>
             {theme === 'forest' && (
-                <div className="fixed top-0 left-0 w-full h-full bg-forest-bg bg-cover bg-center"></div>
+                <div className="fixed top-0 left-0 w-full h-full bg-forest-bg bg-cover bg-center -z-10"></div>
             )}
             <div ref={vantaRef} className="fixed top-0 left-0 w-full h-full -z-10"></div>
             {theme === 'forest' && (
