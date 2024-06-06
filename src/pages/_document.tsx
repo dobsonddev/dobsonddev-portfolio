@@ -9,7 +9,6 @@ class MyDocument extends Document {
             <Html lang="en">
                 <Head>
                     <meta charSet="UTF-8" />
-                    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet" />
                 </Head>
                 <body>
                 <Main />

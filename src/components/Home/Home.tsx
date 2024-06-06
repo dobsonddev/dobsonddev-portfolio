@@ -15,9 +15,9 @@ function Home() {
         if (typedRef.current) {
             const typed = new Typed(typedRef.current, {
                 strings: homeData.attributes,
-                typeSpeed: 55,
+                typeSpeed: 50,
                 backSpeed: 30,
-                backDelay: 1700,
+                backDelay: 2000,
                 loop: true,
                 onStringTyped: () => {
                     insertSVGIcons();
@@ -32,12 +32,13 @@ function Home() {
 
     const insertSVGIcons = () => {
         const iconPlaceholders = document.querySelectorAll('.icon-placeholder');
-        iconPlaceholders.forEach(placeholder => {
+        iconPlaceholders.forEach((placeholder, index) => {
             const iconPath = placeholder.getAttribute('data-icon');
             if (iconPath) {
                 const img = document.createElement('img');
                 img.src = iconPath;
-                img.className = 'w-12 h-12 inline-block -my-2';
+                img.alt = homeData.iconAlts[index] || 'Icon'; // Use alt text from homeData
+                img.className = 'w-12 h-12 inline-block align-bottom -mt-2';
                 placeholder.replaceWith(img);
             }
         });
@@ -88,17 +89,19 @@ function Home() {
     }, []);
 
     const missionClass = theme === 'vector' || theme === 'dots' ? 'bg-light text-dark' : 'bg-dark text-light';
+    const typedTextBackgroundClass = theme === 'light' ? 'bg-dark text-light' : theme === 'vector' || theme === 'dots' ? 'bg-dark text-light' : 'bg-light text-dark';
+    const heroTextBackgroundClass = theme === 'vector' ? 'bg-dark text-light' : theme === 'dots' ? 'bg-none text-dark' : 'bg-light text-dark';
 
     return (
         <div>
             <div className="relative min-h-screen grid grid-flow-row auto-rows-auto items-center justify-items-center px-4">
                 <div className="text-center py-24 mx-auto">
-                    <h1 className="bg-light rounded text-dark p-4 text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-wider leading-loose" style={{ lineHeight: '1.4' }}>
+                    <h1 className={`${heroTextBackgroundClass} rounded p-4 text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-wider leading-loose`} style={{ lineHeight: '1.4' }}>
                         {/* eslint-disable-next-line react/no-unescaped-entities */}
                         &nbsp;Hi, <br /> I'm {homeData.name}
                     </h1>
                 </div>
-                <div className="bg-light text-dark text-xl md:text-2xl lg:text-4xl p-6 rounded mx-auto -mt-96">
+                <div className={`${typedTextBackgroundClass} text-xl md:text-2xl lg:text-4xl px-4 py-6 rounded mx-auto -mt-96`}>
                     <span ref={typedRef} className="p-2"></span>
                 </div>
 
@@ -116,7 +119,7 @@ function Home() {
                     id="mission"
                     className={`${missionClass} p-8 text-xl md:text-2xl lg:text-4xl text-center mx-auto w-full md:w-11/12 lg:w-9/12 mb-24 border-2 rounded`}
                     initial={{ opacity: 0, y: -35 }}
-                    animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -30 }}
+                    animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
                     transition={{ duration: 1 }}
                 >
                     <div>

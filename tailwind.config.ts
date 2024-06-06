@@ -46,9 +46,6 @@ const config: Config = {
         'woods-bg': 'url("/woods_background.svg")', // add this line
 
       },
-      fontFamily: {
-        'sans': ['"Proxima Nova"', ...defaultTheme.fontFamily.sans],
-      },
     },
   },
   plugins: [],

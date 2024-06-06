@@ -58,7 +58,7 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
             setError('Please limit your message to 150 characters or less.');
             return;
         }
-        if (questionCount >= 10) {
+        if (questionCount >= 15) {
             setError('You have reached the maximum number of questions.');
             return;
         }
@@ -101,11 +101,11 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
 
     return (
         <div className={`fixed inset-0 bg-black bg-opacity-50 p-4 z-50 ${isOpen ? '' : 'hidden'}`}>
-            <div className="fixed inset-x-0 bottom-0 mx-auto max-w-md w-full bg-dark border-light border-2 p-6 rounded-t-md shadow-md md:max-w-lg md:w-auto md:bottom-4 md:right-4 md:rounded md:inset-auto">
-                <button onClick={() => setIsOpen(false)} className="absolute top-0 right-0 mt-1 text-lg mr-1 bg-red-500 px-3 py-1 rounded text-light hover:text-dark" aria-label="Close chat">X</button>
-                <div className="chat-history overflow-y-auto mb-4 pt-5" style={{ maxHeight: '70vh' }}>
+            <div className="fixed inset-x-0 bottom-0 mx-auto max-w-md w-full bg-dark border-light border-2 p-4 rounded-t-md shadow-md md:max-w-lg md:w-auto md:bottom-4 md:right-4 md:rounded md:inset-auto">
+                <button onClick={() => setIsOpen(false)} className="absolute -top-12 right-0 mt-1 text-lg mr-1 bg-red-500 px-3 py-1 rounded text-light hover:text-dark" aria-label="Close chat modal">X</button>
+                <div className="chat-history overflow-y-auto pr-3 mb-4 pt-2" style={{ maxHeight: '70vh' }}>
                     {messages.map((message, index) => (
-                        <div key={index} className={`mb-2 ${message.sender === 'user' ? 'flex flex-col items-end' : 'flex flex-col items-start'}`}>
+                        <div key={index} className={` ${message.sender === 'user' ? 'flex flex-col items-end' : 'flex flex-col items-start'}`}>
                             <div className={`text-sm text-light ${message.sender === 'user' ? 'text-right' : ''}`}>
                                 {message.sender === 'user' ? (
                                     <>
@@ -113,12 +113,12 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
                                     </>
                                 ) : (
                                     <div className="flex items-center">
-                                        <img src="/lemur.svg" alt="MomoAI Icon" style={{ height: '40px', marginRight: '8px', }} />
+                                        <img src="/lemur.svg" alt="MomoAI Icon" style={{ height: '35px', marginRight: '8px', }} />
                                         Momo - <span className="ml-1">{message.timestamp}</span>
                                     </div>
                                 )}
                             </div>
-                            <div className={`mt-1 p-2 rounded-lg ${message.sender === 'user' ? 'bg-midlight text-white self-end max-w-xs' : 'bg-gray-300 text-black self-start max-w-xs'}`}>
+                            <div className={`my-2 p-2 rounded-lg ${message.sender === 'user' ? 'bg-midlight text-white self-end max-w-xs -mb-4' : 'bg-gray-300 text-black self-start max-w-xs'}`}>
                                 {message.text}
                             </div>
                         </div>
@@ -132,17 +132,19 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
                         value={input}
                         onChange={handleUserMessageChange}
                         onKeyPress={handleKeyPress}
-                        className="flex-grow p-2 mr-1 border border-gray-300 rounded-l-md text-black"
+                        className={`flex-grow p-2 mr-1 border border-gray-300 rounded-l-md text-black ${isProcessing ? 'bg-gray-300 cursor-not-allowed' : 'bg-white'}`}
+                        disabled={isProcessing}
                     />
                     {isProcessing ? (
-                        <div className="w-3 h-6 ml-2 md:w-3 md:h-6 bg-white rounded-full animate-spin"></div>
+                        <div className="w-3 h-6 ml-2 md:w-3 md:h-6 bg-white rounded-full animate-spin mr-1"></div>
                     ) : (
-                        <button onClick={handleSendMessage} className="bg-custom-orange text-white p-2 rounded-r-md">
+                        <button onClick={handleSendMessage} className="bg-custom-orange text-white p-2 rounded-r-md mr-1">
                             Ask
                         </button>
                     )}
-                    <span className="text-gray-500 text-sm ml-2">{input.length}/150</span>
+                    <span className="text-light text-sm ml-1">{input.length}/150</span>
                 </div>
+
             </div>
         </div>
     );
