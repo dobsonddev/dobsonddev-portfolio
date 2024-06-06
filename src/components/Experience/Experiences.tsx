@@ -8,8 +8,8 @@ function Experiences() {
                 style={{ width: "95%" }}
                 className="flex flex-col items-center align-middle justify-center rounded-lg bg-opacity-90"
             >
-                <div className="min-h-12 flex flex-col justify-end flex-grow"> {/* Added flex-grow class */}
-                    <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-10 py-14 px-8 underline">
+                <div className="min-h-12 flex flex-col justify-end flex-grow pb-28"> {/* Added flex-grow class */}
+                    <h2 className="text-3xl rounded md:text-4xl lg:text-6xl font-bold p-4 underline">
                         Experiences
                     </h2>
                 </div>

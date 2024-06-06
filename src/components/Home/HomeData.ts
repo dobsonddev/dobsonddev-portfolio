@@ -33,7 +33,7 @@ const homeData: HomeData = {
         'Tater tot icon',
     ],
     missionStatementTop:
-        "Welcome! I'm a full-stack developer with a passion for contributing optimal solutions that seamlessly align with an organization / team's goals.",
+        "Welcome! I'm a full-stack developer with a passion for tackling real-world problems with optimized, seamless solutions.",
     missionStatementBottom:
         "I'm driven by curiosity, collaboration, and the desire to build awesome things, with awesome people.",
 };

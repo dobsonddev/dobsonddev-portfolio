@@ -16,7 +16,7 @@ const config: Config = {
         midlight: '#84a98c',
         mid: '#52796f',
         middark: '#354f52',
-        dark: '#2f3e46',
+        dark: '#111827',
         'custom-orange': '#e06a48',
         darkWave: '#90c0f',
 

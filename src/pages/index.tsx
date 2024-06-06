@@ -28,7 +28,7 @@ const IndexPage = () => {
                 case 'vector':
                     vantaEffect.current = NET({
                         el: vantaRef.current,
-                        mouseControls: false,
+                        mouseControls: true,
                         touchControls: false,
                         gyroControls: false,
                         minHeight: 20.00,
@@ -48,7 +48,7 @@ const IndexPage = () => {
                     vantaEffect.current = DOTS({
                         el: vantaRef.current,
                         backgroundColor: '#ebe2e2',
-                        mouseControls: false,
+                        mouseControls: true,
                         touchControls: false,
                         gyroControls: false,
                         minHeight: 200.00,
