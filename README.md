@@ -1,20 +1,17 @@
 This project was made by Dobson Dunavant - https://github.com/dobsonddev
 
-Technologies:
-- Typescript [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
-- Next.js (pages router)
+## Technologies:
+- [Next.js (Typescript, Pages router)](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
 - TailwindCSS
 - next-themes
 - OpenAI's `Assistant API` speaking with a custom Assistant that I made.
 
-
 ## Getting Started
 
 1. Clone this repo
-2. Run npm install --legacy-peer-deps to install all dependencies
-   1. This is because of a version issue between react-typed and the next.js version used in this project.
-3. Run npm run dev to start the development server
-4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Run `npm install` to install all dependencies
+3. Run `npm run dev` to start the development server
+4. Open [http://localhost:3000](http://localhost:3000) within your browser to see the result.
 
 ## Core Changes to Make it Your Own
 
