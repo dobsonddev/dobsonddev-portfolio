@@ -42,7 +42,7 @@ function BlogCard({ post }: BlogCardProps) {
             {isModalOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-30">
                     <div className="relative bg-white p-5 rounded-md border-2 border-black max-h-[80vh] overflow-y-auto">
-                        <button onClick={toggleModal} className="absolute top-0 right-0 mt-2 mr-2 bg-gray-300 px-4 py-2 rounded text-black">X</button>
+                        <button onClick={toggleModal} className="absolute top-0 right-0 mt-2 mr-2 bg-red-500 text-light hover:text-dark px-4 py-2 rounded text-black">X</button>
                         <h2 className="text-xl md:text-2xl font-bold mb-3">{post.title}</h2>
                         <div className="prose prose-lg p-4 mt-10" dangerouslySetInnerHTML={{ __html: post.mainContent }} />
                     </div>

@@ -2,6 +2,8 @@
 import { ThemeProvider, useTheme } from 'next-themes';
 import { AppProps } from 'next/app';
 import '../styles/globals.css';
+import { Analytics } from '@vercel/analytics/react';
+
 
 function MyApp({ Component, pageProps }: AppProps) {
     const { theme } = useTheme();
@@ -10,6 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <ThemeProvider attribute="class" defaultTheme="light">
             <div className="flex flex-col min-h-screen">
                 <Component {...pageProps} />
+                <Analytics />
             </div>
         </ThemeProvider>
     );

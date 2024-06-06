@@ -7,44 +7,53 @@ export interface Experience {
     location: string;
     details: string[];
     logo: string;
+    technologies: string[];
 }
 
 const experiences: Experience[] = [
     {
-        title: "Robotics & Machine Learning Co-Op",
-        date: "Sep 2023 - Current",
-        company: "Mercedes-Benz x College of Charleston",
+        title: "Machine Learning & Cloud Engineering Co-Op",
+        date: "Sep 2023 - May 2024",
+        company: "Mercedes-Benz & IFA Group",
         location: "Ladson, SC",
         details: [
-            "Developed a real-time, autonomous inventory scanning system using a multi-layered machine learning system deployed onto Raspberry Pi edge devices that communicate with AWS and SAP via WebSocket connections",
-            "Leading a team of four students under two professors, in direct collaboration with Mercedes-Benz Vans stakeholders.",
-            "Demonstrated significant improvement in accuracy and real-time awareness of high-importance inventory during the initial system implementation",
-        ],
-        logo: '/mblogo.png'
+            "Led team of 4 to develop an autonomous inventory scanning system using React, Flask, AWS, PostgreSQL, OpenCV, Tesseract OCR and YOLOv8 for real-time, small-part tracking in industrial settings to enable inventory awareness and supply-chain analytics",
+            "Authored SRS and feasibility reports, gathering then defining functional and non-functional requirements by collaborating with project stakeholders",
+            "Designed and implemented restful HTTPS communications via AWS API Gateway to SAP APIs, enabling real-time, scalable inventory transactions",
+        "Achieved 98% inventory accuracy and SAP integration, delivering a fully end-to-end solution, significantly surpassing the existing accuracy and efficiency benchmarks"
+    ],
+        logo: '/mblogo.png',
+        technologies: ['React', 'Flask', 'PostgreSQL', 'AWS', 'OpenCV'],
     },
+
     {
         title: "Software Engineering Intern",
         date: "May 2023 - Aug 2023",
         company: "Savvas Learning Company (EdTech)",
         location: "Phoenix, AZ",
         details: [
-            "Developed full-stack solutions for an industry-leading K-12 ed-tech platform across an Angular 16 MFE, Apollo, GraphQL, RxJS, Spring, PostgreSQL, and Jest tech stack",
-            "Resolved nine Jira tickets across  sprints as a member of an Agile team",
-            "Self-started a full knowledge-base development, resulting in an all-in-on confluence knowledge hub for both new hires and experienced devs to reference during their onboarding and development processes, respectively"
-        ],
-        logo: '/savvaslogo.png'
+            "Developed full-stack solutions for Savvas Realize, an industry-leading K-12 ed-tech platform, using Angular 16 MFEs, Apollo, GraphQL, RxJS, Spring, PostgreSQL, and Jest",
+            "Resolved 11 high-priority Jira tickets, contributing to sprint goals within an Agile team",
+            "Designed API sequence diagrams, illustrating the end-to-end lifecycle across Angular micro-frontends, Apollo GraphQL, Spring services, and PostgreSQL, for use in understanding and optimizing within a module federation architecture",
+            "Built a comprehensive, all-in-one Confluence knowledge hub, covering content from day 1 new-dev onboarding guides to custom micro-frontend build steps, reducing redundant knowledge-sharing and improving developer autonomy/efficiency."
+],
+        logo: '/savvaslogo.png',
+        technologies: ['Angular', 'GraphQL', 'Spring', 'PostgreSQL', 'Jest', 'StoryBook'],
+
     },
     {
         title: "Data Engineering Intern",
         date: "Sep 2022 - Jan 2023",
-        company: "Fiscal Spreading & Tracking (FinTech)",
+        company: "Vision Software Solutions (FinTech)",
         location: "Charleston, SC",
         details: [
-            "Performed transition from a monolithic desktop app to a microserviced, serverless web app, utilizing React, Django, PostgreSQL, and multiple AWS cloud services such as Lambda, S3, and RDS",
-            "Optimized API calls, assessed existing API performance, then refactored for improved query and data handling, reducing server load and user wait times",
-            "Containerized various data tasks to separate concerns and minimize/mitigate single-point-of-failure situations using Docker containers"
+            "Migrated from a monolithic desktop app to a microservice web app using React, Django, PostgreSQL, and AWS services (EC2, Lambda, S3, Athena), enhancing system efficiency and scalability",
+            "Optimized API and query logic, utilizing AWS ElastiCache with in-memory data store for real-time data caching, reducing user load time by 23\\% (measured by AWS CloudWatch)",
+            "Containerized Python ETL tasks and credit scoring algorithms using Docker Containers, encapsulating isolated processes and minimizing single-point failures"
         ],
-        logo: '/fiscallogo.png'
+        logo: '/fiscallogo.png',
+        technologies: ['React', 'Django', 'PostgreSQL', 'AWS', 'Docker'],
+
     },
     {
         title: "Sales Engineer & Scrum Master",
@@ -53,10 +62,12 @@ const experiences: Experience[] = [
         location: "Charleston, SC",
         details: [
             "Engineered technical solutions for over 125 clients by translating complex technical features into tangible business benefits, leading to increased sales and enhanced customer engagement",
-            "Fostered these client relationships, resulting in enhanced product adoption and customer satisfaction/retention\n",
-            "Achieved a 21% reduction in time blocked within six months by addressing common blockers while facilitating knowledge-sharing between interdependent teams for more educated spring planning and execution"
+            "Achieved a domain-high 23% year-over-year increase in customer retention by conducting regular feedback sessions and personalized follow-ups, leading to stronger client relationships and improved service satisfaction",
+            "Achieved a 21% reduction in time blocked within six months by addressing common blockers while facilitating knowledge-sharing between interdependent teams for more efficient sprint planning and execution"
         ],
-        logo: '/ceteruslogo.png'
+        logo: '/ceteruslogo.png',
+        technologies: ['Jira', 'Excel', 'QuickBooks'],
+
     }
 ];
 

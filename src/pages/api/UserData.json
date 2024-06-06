@@ -13,165 +13,111 @@
   "Education": [
     {
       "Institution": "College of Charleston",
-      "Degree": "Computer Science",
-      "Major GPA": 3.8,
-      "Graduation": "May 2024 (expected)",
-      "Start": "May 2022"
+      "Degree": "Bachelor in Computer Science",
+      "GPA": 3.8,
+      "Graduation": "May 2024"
     },
     {
       "Institution": "College of Charleston",
-      "Degree": "Accounting",
-      "Graduation": "December 2017",
-      "Start": "August 2013"
+      "Degree": "Bachelor in Accounting",
+      "Graduation": "December 2018",
+      "AdditionalInfo": "D1 Soccer Player"
     }
   ],
   "Skills": {
-    "ProgrammingLanguages": [
+    "Languages": [
+      "Python",
+      "Java",
       "TypeScript",
       "JavaScript",
-      "Python",
-      "SQL",
-      "Java",
-      "Dart",
       "HTML",
       "CSS"
     ],
-    "FrameworksAndLibraries": [
-      "Angular",
-      "React.js",
-      "Flutter",
+    "Frameworks": [
       "Next.js",
-      "Node.js",
-      "Express.js",
-      "SpringBoot",
+      "Angular",
+      "React",
+      "Spring",
       "Django",
-      "Pandas",
-      "NumPy"
+      "Flask",
+      "Express.js",
+      "Node.js"
     ],
-    "ToolsAndCloudServices": [
-      "AWS",
-      "Firebase",
-      "Git",
-      "Jira",
-      "Docker",
-      "REST APIs",
-      "GraphQL",
-      "Prisma",
-      "Postman",
+    "Libraries": [
+      "Apollo",
       "Axios",
-      "Apollo Power BI",
-      "PostgreSQL",
-      "SQL Server",
-      "Figma",
-      "BigQuery",
-      "Apache Spark",
-      "Jest",
+      "Prisma",
+      "ZBar",
       "OpenCV",
-      "Tesseract",
-      "YOLOv5",
-      "Kivy",
-      "PyZbar",
-      "AWS S3",
-      "OAuth2.0",
-      "AWS Lambda",
-      "AWS RDS",
-      "AWS EC2"
+      "YOLOv8",
+      "PyTorch",
+      "pandas",
+      "PowerBI",
+      "Tableau"
+    ],
+    "Databases": [
+      "PostgreSQL",
+      "SQLite",
+      "MySQL",
+      "MongoDB"
+    ],
+    "CloudServicesAndDeveloperTools": [
+      "AWS (EC2, Lambda, S3, Athena, ElastiCache, SQS, RDS)",
+      "Firebase (Auth, Realtime DB)",
+      "Docker",
+      "WebSocket",
+      "GraphQL",
+      "OAuth 2.0",
+      "Git",
+      "Insomnia",
+      "Postman",
+      "JaCoCo",
+      "Karate",
+      "Jest"
     ]
   },
   "Experiences": [
     {
-      "Role": "Robotics/Machine Learning Co-Op",
-      "Company": "College of Charleston/Mercedes-Benz Vans",
-      "Location": "Ladson, SC",
-      "Period": "September 2023 - current",
+      "Role": "Machine Learning and Robotics Co-Op",
+      "Company": "Mercedes-Benz, IFA Group",
+      "Location": "Charleston, SC",
+      "Period": "August 2023 – May 2024",
       "Details": [
-        "Developing a large-scale, autonomous inventory system through a multi-layered machine learning system, industrial sensors, and multiple AWS cloud services to enable optimized, secure, real-time data streaming.",
-        "Gathering and specifying stakeholder requirements for effective and minimally invasive system designs.",
-        "Early prototypes significantly improve inventory accuracy and operational efficiencies, reducing manual errors."
-      ],
-      "SkillsUsedAndLearned": [
-        "Python",
-        "Machine Learning",
-        "AWS",
-        "Docker",
-        "Java",
-        "OpenCV",
-        "Tesseract",
-        "YOLOv5",
-        "Kivy",
-        "PyZbar",
-        "AWS S3",
-        "OAuth2.0",
-        "AWS Lambda",
-        "AWS RDS",
-        "AWS EC2"
+        "Led team of 4 to deliver a 99% accurate, end-to-end inventory scanning system within 8 month deadline using React, Flask, PostgreSQL, AWS (EC2, S3, Athena), PyTorch, OpenCV, a DJI Matrice drone, and DJI’s Mobile SDK",
+        "Designed and implemented a portable Jetson Nano-based inventory scanning station for use in industrial settings using Django, OpenCV, Yolov8, Tesseract and restful HTTPS communications via AWS API Gateway to SAP APIs",
+        "Generalized the drone system at IFA beginning in Dec 2023 by using V-SLAM for localization and navigation with a custom 3D A* algorithm for dynamic, safe pathfinding during inventory scans"
       ]
     },
     {
       "Role": "Software Engineering Intern",
-      "Company": "Savvas Learning Company (EdTech)",
-      "Location": "Boston, MA",
-      "Period": "May 2023 - August 2023",
+      "Company": "Savvas Learning Company",
+      "Location": "Phoenix, AZ",
+      "Period": "May 2023 – August 2023",
       "Details": [
-        "Developed accessibility solutions for Savvas Realize, an industry-leading ed-tech platform using Angular 16 MFEs, Apollo, GraphQL, PostgreSQL, StencilJS, and Storybook in an Agile Scrum environment.",
-        "Resolved 11 high-impact accessibility issues before major deadlines, meeting web accessibility (WCAG 2.1) standards.",
-        "Founded and led intern development of 2 company hackathon ideas: Cucumber-JVM Karate implementation for improved API testing and a PowerBI dashboard for comprehensive student data analysis.",
-        "The Karate integration enabled API test coverage to increase by 19% within 2 months.",
-        "The dashboard won the hackathon, is now being fully developed with a Q4 release target."
-      ],
-      "SkillsUsedAndLearned": [
-        "Angular",
-        "TypeScript",
-        "GraphQL",
-        "Apollo",
-        "PostgreSQL",
-        "JavaScript",
-        "HTML",
-        "CSS",
-        "Power BI",
-        "OAuth2.0"
+        "Developed full-stack solutions for Savvas Realize, a large-scale K-12 ed-tech platform, using Angular 16 micro front-ends, Apollo, GraphQL, RxJS, Spring, PostgreSQL, and Jest",
+        "Resolved 11 tickets across Agile sprints, such as optimizing GraphQL resolvers for batch data fetching and fixing accessibility issues within Angular UI components to meet WCAG 2.1 accessibility standards",
+        "Built an all-in-one Confluence knowledge hub, from new-dev onboarding guides to API sequence diagrams, improving team knowledge access and autonomy"
       ]
     },
     {
       "Role": "Data Engineering Intern",
-      "Company": "Fiscal Tracking and Spreading (FinTech)",
+      "Company": "Vision Software Solutions",
       "Location": "Charleston, SC",
-      "Period": "September 2022 - January 2023",
+      "Period": "September 2022 – January 2023",
       "Details": [
-        "Aided in an agile, full-stack re-architecture of a monolithic desktop app to a modern, serverless web application using React, AWS Lambda, and AWS RDS, in order to improve scalability and responsiveness.",
-        "Contributed to the redesign then migration of a SQL Server database to AWS RDS, improved query performance by 27%.",
-        "Overhauled multiple existing API calls and database queries for reduced server-load and client response times."
-      ],
-      "SkillsUsedAndLearned": [
-        "React.js",
-        "JavaScript",
-        "GraphQL",
-        "PostgreSQL",
-        "SQL",
-        "AWS Lambda",
-        "AWS RDS",
-        "AWS S3",
-        "Docker Containers"
+        "Transitioned from a monolithic desktop app to a microservice web app using React, Django, PostgreSQL, and AWS services (EC2, Lambda, S3, Athena), enhancing system efficiency and scalability",
+        "Optimized API and query logic, utilizing AWS ElastiCache with in-memory data store for real-time data caching, reducing user load time by 23% (measured by AWS CloudWatch)",
+        "Containerized Python ETL tasks and credit scoring algorithms using Docker Containers, encapsulating isolated processes and minimizing single-point failures"
       ]
     },
     {
-      "Role": "Data Analyst / Scrum Master",
-      "Company": "Ceterus (FinTech startup)",
+      "Role": "Solutions Engineer / Scrum Master",
+      "Company": "Ceterus",
       "Location": "Charleston, SC",
-      "Period": "March 2018 - March 2021",
+      "Period": "March 2018 – March 2021",
       "Details": [
-        "Led an agile Scrum team as Scrum Master and Data Analyst, utilizing data-driven retrospectives and value stream mappings to reduce project lead time by 21% and increase story point velocity by 19% within a 6-month period.",
-        "Validated multi-sourced financial data pipelines and sets, for use in a robust fintech app designed to empower small-business owners with financial awareness and insights."
-      ],
-      "SkillsUsedAndLearned": [
-        "2-week sprints",
-        "retrospectives",
-        "agile metrics",
-        "other agile instruments and stuff",
-        "powerbi",
-        "tableau",
-        "quickbooks online",
-        "multiple POS systems"
+        "Managed technical relationships with over 125 clients by translating technical features into tangible business benefits, leading to increased sales and enhanced customer engagement",
+        "Achieved a domain-high 23% year-over-year increase in customer retention by regular feedback sessions and personalized follow-ups, leading to stronger client relationships and satisfaction"
       ]
     }
   ],
@@ -230,10 +176,10 @@
       "Database Design",
       "UI/UX Design",
       "Robotics",
-      "Low Level c++ algo programming",
-      "quantitative trading and technologies",
-      "real-time data streaming",
-      "websockets"
+      "Low Level C++ Algo Programming",
+      "Quantitative Trading and Technologies",
+      "Real-Time Data Streaming",
+      "Websockets"
     ]
   },
   "SoftSkills": {
@@ -267,95 +213,33 @@
       "Rank": "#7 in North America in Overwatch 1"
     },
     "Sports": {
-      "Soccer": "Played competitive club soccer at some of the highest levels for all of my life thru college, winning a couple state championships and going to national tournaments in Florida and Texas. Re-Founded the College of Charleston club soccer team, serving as captain and president for 2 years.",
-      "Tennis": "Played up until high-school, was ranked #3 in the state of Tennessee for my age group for a few years.",
+      "Soccer": "Played competitive club soccer at some of the highest levels for all of my life through college, winning a couple state championships and going to national tournaments in Florida and Texas. Re-Founded the College of Charleston club soccer team, serving as captain and president for 2 years.",
+      "Tennis": "Played up until high school, was ranked #3 in the state of Tennessee for my age group for a few years.",
       "FantasyFootball": "Enthusiast"
     }
   },
   "VolunteerExperience": {
     "Activities": [
       {
-        "Role": "Tech Mentor",
-        "Organization": "Local Youth Coding Camp",
-        "Description": "Mentoring high school students in coding and technology projects."
+        "Role": "Meals on Wheels Volunteer",
+        "Organization": "MIFA (Metropolitan Inter-Faith Association)",
+        "Description": "Volunteer for Meals on Wheels in Memphis, TN - Delivering food to handicapped individuals around the city."
       },
       {
         "Role": "Big Brother",
         "Organization": "Big Brothers Big Sisters - Memphis, TN",
-        "Description": "Mentoring grade school inner city students after school, being there for them and helping them with their homework."
+        "Description": "Provided after-school tutoring and mentorship to at-risk children in Memphis, TN - Whether it be helping with math homework or talking through tough situations."
+      },
+      {
+        "Role": "Founder",
+        "Organization": "Cleats4Charity - Memphis, TN",
+        "Description": "Founded and managed Cleats4Charity - Performing city-wide sports equipment drives. The donations were then shipped to children across West Africa by L.A.C.E.S. I identified the absolutely massive seasonal turnover rate and waste of sports equipment, and positioned our organization to collect all of this unused sports equipment to give to kids who are in need. The joy it brought children and young adults in 3rd world situations was absolutely incredible.\n\nI partnered the organization with L.A.C.E.S, who provides the infrastructure to effectively distribute sports equipment to kids in need, as handling all of the logistics and distribution was far, far out of my scope. They really allowed me to make the idea a reality. https://www.laces.org/\n\nOur first year totaled: 3 tons (6613 lbs) of cleats, soccer balls, socks, shin guards, etc... distributed to many villages across West Africa."
       }
     ]
   },
   "FutureGoals": {
     "ShortTerm": "Develop a cutting-edge tech project that combines AI and cloud computing. Software and networking in quantitative trading is also a focus.",
     "LongTerm": "Lead a major tech initiative that makes a significant, positive impact on the industry and people's lives."
-  },
-  "FAQSection": {
-    "Questions": [
-      {
-        "Question": "What drives your passion in technology?",
-        "Answer": "The ability to create and innovate, solving complex problems, and making a tangible impact."
-      },
-      {
-        "Question": "How do you balance work and personal interests?",
-        "Answer": "By prioritizing time management, keeping a healthy work-life balance, and staying active in both tech and personal pursuits. A diverse range of interests and activities keeps me motivated and engaged, as well as spending quality time with friends and family"
-      }
-    ]
-  },
-  "PersonalAnecdotes": {
-    "Stories": [
-      {
-        "Title": "Innovative Problem-Solving at a Hackathon",
-        "Story": "Led development of 2 hackathon projects, Karate for API testing and PowerBI for a student analysis dashboard.\nBoosted API test coverage by 23% in 2 months through Karate integration into CI/CD pipeline (JaCoCo Metrics).\nWon hackathon with student dashboard project, now advancing towards a Q1 2024 production release."
-      }
-    ],
-    "Fun Facts": [
-      {
-        "Title": "Am the first recorded case of staph infection from a Guinea Pig bite",
-        "Story": "Snowball the guinea pig decided one day to bite me, and I got a staph infection from it. I was the first recorded case of this happening in the world. I was in the hospital for two weeks as multiple medical professionals flew in to perform tests and gather data on the incident. Snowball was a sweet lil guinea pig who probably thought that for a moment my arm was a carrot, I swear."
-      }
-    ]
-  },
-  "ProfessionalMemberships": {
-    "Memberships": [
-      "Association for Computing Machinery (ACM)",
-      "IEEE Computer Society"
-    ]
-  },
-  "LanguagesSpoken": {
-    "Languages": ["English", "Spanish (Conversational)"]
-  },
-  "AccessibilityInclusivityInitiatives": {
-    "Involvements": [
-      {
-        "Event": "Global Accessibility Awareness Day",
-        "Role": "Speaker",
-        "Topic": "Incorporating Accessibility in Tech Projects"
-      }
-    ]
-  },
-  "ProfessionalAchievements": {
-    "Milestones": [
-      {
-        "Year": 2021,
-        "Achievement": "Led a team to develop a real-world, autonomous inventory management system for Mercedes-Benz, using advanced machine learning techniques and a real client-developer relationship."
-      },
-      {
-        "Year": 2020,
-        "Achievement": "Presented at a local tech conference on the possibilities and ethical impacts of integration of AI in edtech."
-      }
-    ]
-  },
-  "WorkPhilosophy": {
-    "Approach": "I believe in blending agile methodologies with strong planning and documentation to create robust, adaptable solutions in technology. Balancing innovation with practical execution is key. Not over-tooling and creating bloat. Making sure the approach fits the problem."
-  },
-  "TechBlogging": {
-    "Articles": [
-      {
-        "Response": "My blog articles are in the blog section at the bottom of this website.",
-        "Link": "https://dobsond.dev/#blog"
-      }
-    ]
   },
   "OutdoorAdventures": {
     "Experiences": [
@@ -373,7 +257,7 @@
     "BandAchievements": [
       {
         "Year": 2023,
-        "Achievement": "Made a band with some friends, mainly just as an outlet and for passion. Big influences are Smashing pumpkins, turnstile, Alice in chains, Men I trust, Bon Iver, Good Tiger, Half Moon Run, Local Natives, Foals, Soundgarden."
+        "Achievement": "I play drums. Made a band with some friends, mainly just as an outlet and for passion. Big influences are Smashing Pumpkins, Turnstile, Alice in Chains, Men I Trust, Bon Iver, Good Tiger, Half Moon Run, Local Natives, Foals, Soundgarden."
       }
     ]
   },
@@ -394,11 +278,8 @@
   "CulinaryPassion": {
     "CateringCompany": {
       "Name": "Salamander Catering",
-      "Specialty": "Specializing in asian x mexican x american street food fusion, balancing creativity with accessibility through powerful flavors."
+      "Specialty": "Specializing in Asian x Mexican x American street food fusion, balancing creativity with accessibility through powerful flavors."
     }
-  },
-  "FitnessRoutine": {
-    "CurrentFocus": "Combining calisthenics with functional workouts, tailored to enhance performance in soccer and skiing."
   },
   "TechCommunityInvolvement": {
     "Events": [
@@ -418,38 +299,39 @@
   },
   "Articles": [
     {
-      "title": "How did I navigate my early experiences in tech?",
+      "Title": "How did I navigate my early experiences in tech?",
       "Introduction": "My evolution from my first experience in tech, to where I am now.",
-      "mainContent": "Various paragraphs describing the experience in tech.",
-      "imageUrl": "https://yourimageurl.com/react-hooks.jpg",
-      "publicationDate": "2023-11-12"
+      "MainContent": "Various paragraphs describing the experience in tech.",
+      "ImageUrl": "https://yourimageurl.com/react-hooks.jpg",
+      "PublicationDate": "Updated: 2024-05-05"
     },
     {
-      "title": "The Value of Sequence Diagrams for Early Software Engineers",
+      "Title": "The Value of Sequence Diagrams for Early Software Engineers",
       "Introduction": "How creating sequence diagrams helps me understand large, complex, enterprise systems.",
-      "mainContent": "Description of experience with sequence diagrams.",
-      "imageUrl": "https://yourimageurl.com/sequence-diagrams.jpg",
-      "publicationDate": "Coming soon"
+      "MainContent": "Description of experience with sequence diagrams.",
+      "ImageUrl": "https://yourimageurl.com/sequence-diagrams.jpg",
+      "PublicationDate": "Coming soon"
     },
     {
-      "title": "Zoomed out, then Zoomed In - 'Hooks' in Web Development",
+      "Title": "Zoomed out, then Zoomed In - 'Hooks' in Web Development",
       "Introduction": "A brief history of the evolution of 'Hooks' in programming, and how they fit into modern web development (React, Angular, Vue)",
-      "mainContent": "Insights on hooks in web development.",
-      "imageUrl": "https://yourimageurl.com/react-angular-hooks.jpg",
-      "publicationDate": "Coming soon"
+      "MainContent": "Insights on hooks in web development.",
+      "ImageUrl": "https://yourimageurl.com/react-angular-hooks.jpg",
+      "PublicationDate": "Coming soon"
     },
     {
-      "title": "Understanding JS' Async/Await in the context of Concurrency and Parallelism",
+      "Title": "Understanding JS' Async/Await in the context of Concurrency and Parallelism",
       "Introduction": "(Re)Introducing yourself to asynchronous web development through the lens of concurrency and parallelism.",
-      "mainContent": "Discussion on async/await in JavaScript.",
-      "imageUrl": "https://yourimageurl.com/async-await.jpg",
-      "publicationDate": "Coming soon"
+      "MainContent": "Discussion on async/await in JavaScript.",
+      "ImageUrl": "https://yourimageurl.com/async-await.jpg",
+      "PublicationDate": "Coming soon"
     },
     {
-      "title": "A Dive into Webpack's Module Federation",
+      "Title": "A Dive into Webpack's Module Federation",
       "Introduction": "Exploring Webpack's Module Federation, and its usage/importance in Micro Front-End (MFE) architectures.",
-      "mainContent": "Experiences with Webpack's Module Federation.",
-      "imageUrl": "https://yourimageurl.com/module-federation.jpg",
-      "publicationDate": "Coming soon"
-    }]}
-
+      "MainContent": "Experiences with Webpack's Module Federation.",
+      "ImageUrl": "https://yourimageurl.com/module-federation.jpg",
+      "PublicationDate": "Coming soon"
+    }
+  ]
+}
