@@ -11,9 +11,17 @@ import structuredData from '../../content/structuredData.json';
 
 const IndexPage = () => {
     const [isChatModalOpen, setIsChatModalOpen] = useState(false);
-    const { theme = 'light' } = useTheme();
+    const { theme, setTheme, resolvedTheme } = useTheme();
     const vantaRef = useRef(null);
     let vantaEffect = useRef<{ destroy: () => void } | null>(null);
+
+    useEffect(() => {
+        if (resolvedTheme) {
+            setTheme(resolvedTheme);
+        } else {
+            setTheme('forest');
+        }
+    }, [resolvedTheme, setTheme]);
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
@@ -24,7 +32,7 @@ const IndexPage = () => {
 
             if (vantaEffect.current) vantaEffect.current.destroy();
 
-            switch(theme) {
+            switch (theme) {
                 case 'vector':
                     vantaEffect.current = NET({
                         el: vantaRef.current,
@@ -88,7 +96,7 @@ const IndexPage = () => {
             <div ref={vantaRef} className="fixed top-0 left-0 w-full h-full -z-10"></div>
             {theme === 'forest' && (
                 <div className="fixed top-0 left-0 w-full h-full pointer-events-none">
-                <div className="bird-container bird-container--one">
+                    <div className="bird-container bird-container--one">
                         <div className="bird bird--one"></div>
                     </div>
                     <div className="bird-container bird-container--two">

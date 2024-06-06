@@ -14,7 +14,6 @@ const homeData: HomeData = {
         'agile minded <span class="icon-placeholder" data-icon="/icons/agile.svg"></span>',
         'tater tot connoisseur <span class="icon-placeholder" data-icon="/icons/tatertot.svg"></span>',
         'loves: building stuff <span class="icon-placeholder" data-icon="/icons/project.svg"></span>',
-        'loves: learning new skills and topics <span class="icon-placeholder" data-icon="/icons/project.svg"></span>',
         'loves: outdoors <span class="icon-placeholder" data-icon="/icons/outdoors.svg"></span>',
         'loves: music <span class="icon-placeholder" data-icon="/icons/music.svg"></span>',
         'loves: drums <span class="icon-placeholder" data-icon="/icons/drummer.svg"></span>',
