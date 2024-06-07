@@ -118,9 +118,9 @@ const IndexPage = () => {
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
                 />
 
-                <title>Dobson Dunavant - Full-Stack Software Engineer, Portfolio Website</title>
+                <title>Dobson Dunavant - Full-Stack Software Developer, Portfolio Website</title>
 
-                <meta name="description" content="My personal website, showcasing my experiences and skillsets thus far as an aspiring software engineer." />
+                <meta name="description" content="My personal website, showcasing my experiences and skillsets thus far as a full-stack software developer." />
 
                 <meta name="keywords" content="Software Engineer, Frontend, backend, cloud, devops, developer, application, react, angular, aws, django, python, opencv, machine learning, ai, api, graphql, postgresql, docker, firebase, apache, data engineering, full-stack, CI/CD, tech, big tech, hiring, candidates" />
 
