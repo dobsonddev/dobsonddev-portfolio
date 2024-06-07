@@ -118,7 +118,7 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
                                     </div>
                                 )}
                             </div>
-                            <div className={`my-2 p-2 rounded-lg ${message.sender === 'user' ? 'bg-midlight text-white self-end max-w-xs -mb-4' : 'bg-gray-300 text-black self-start max-w-xs'}`}>
+                            <div className={`my-2 p-2 rounded-lg ${message.sender === 'user' ? 'bg-midlight text-white self-end max-w-xs' : 'bg-gray-300 text-black self-start max-w-xs'}`}>
                                 {message.text}
                             </div>
                         </div>
