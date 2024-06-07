@@ -173,7 +173,7 @@ const IndexPage = () => {
                     <Experiences />
                 </section>
 
-                <section id="resume" className={`w-full min-h-screen`}>
+                <section id="resume" className={`w-full`}>
                     <Resume />
                 </section>
 

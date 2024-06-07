@@ -7,7 +7,7 @@ function Resume() {
     const resumeIMGPath = '/Dobson_Dunavant_Resume.webp';
 
     return (
-        <div className="flex flex-col pb-12 min-h-screen items-center text-white px-4 border-t-4 border-custom-orange bg-gray-900 bg-opacity-80">
+        <div className="flex flex-col sm:min-h-screen items-center text-white px-4 pb-12 bg-gray-900 bg-opacity-80">
             <div className="relative w-full flex justify-center py-6">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold underline z-0">Resume</h2>
                 <a
