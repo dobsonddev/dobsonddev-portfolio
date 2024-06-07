@@ -111,12 +111,12 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
 
     return (
         <div className={`fixed inset-0 bg-black bg-opacity-50 p-4 z-50 ${isOpen ? '' : 'hidden'}`}>
-            <div className="fixed inset-x-0 bottom-0 mx-auto max-w-md w-full bg-dark border-light border-2 p-4 rounded-t-md shadow-md md:max-w-lg md:w-auto md:bottom-4 md:right-4 md:rounded md:inset-auto">
+            <div className="fixed inset-x-0 bottom-0 mx-auto max-w-md w-full bg-dark border-light border-2 p-4 rounded-t-md shadow-md md:max-w-md md:bottom-4 md:right-4 md:rounded md:inset-auto">
                 <button onClick={() => setIsOpen(false)} className="absolute -top-12 right-0 mt-1 text-lg mr-1 bg-red-500 px-3 py-1 rounded text-light hover:text-dark" aria-label="Close chat modal">X</button>
                 <div ref={chatContainerRef} className="chat-history overflow-y-auto pr-3 mb-4 pt-2" style={{ maxHeight: '70vh' }}>
                     {messages.map((message, index) => (
                         <div key={index} className={` ${message.sender === 'user' ? 'flex flex-col items-end' : 'flex flex-col items-start'}`}>
-                            <div className={`text-sm text-light ${message.sender === 'user' ? 'text-right' : ''}`}>
+                            <div className={`text-sm mb-1 text-light ${message.sender === 'user' ? 'text-right' : ''}`}>
                                 {message.sender === 'user' ? (
                                     <>
                                         You - <span className="ml-1">{message.timestamp}</span>
@@ -128,13 +128,16 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
                                     </div>
                                 )}
                             </div>
-                            <div className={`my-2 p-2 rounded-lg ${message.sender === 'user' ? 'bg-midlight text-white self-end max-w-xs' : 'bg-gray-300 text-black self-start max-w-xs'}`}>
+                            <div className={`mb-3 p-2 rounded-lg ${message.sender === 'user' ? 'bg-midlight text-white self-end max-w-md' : 'bg-gray-300 text-black self-start max-w-md'}`}>
                                 {message.text}
                             </div>
                         </div>
                     ))}
                 </div>
-                {error && <div className="text-red-500 mb-2">{error}</div>}
+                <div className="">
+                    {error && <div className="text-red-500 mb-2">{error}</div>}
+
+                </div>
                 <div className="input-area flex items-center">
                     <input
                         type="text"
