@@ -69,7 +69,7 @@ const ExperienceTree = () => {
     const bgClass = theme === 'vector' ? 'bg-light' : 'bg-dark';
 
     return (
-        <div ref={containerRef} className="container mx-auto h-auto pt-6 px-4 md:px-8 sm:pb-56 md:pb-96 lg:pb-40">
+        <div ref={containerRef} className="container mx-auto h-auto pt-6 px-4 md:px-8 md:pb-96 lg:pb-64">
             {/* Desktop Version */}
             <div className="hidden lg:block relative pt-36 md:pt-52 md:mb-60 lg:mb-20" style={{ height: `${experiences.length * verticalSpacing}px` }}>
                 <div className={`absolute left-1/2 h-4/5 border-r-4 ${borderClass} rounded transform -translate-x-1/2`}></div>
