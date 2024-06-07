@@ -40,9 +40,9 @@
 
 .bird-container {
     position: absolute;
-    top: 10%;
+    top: 13%;
     left: -10%;
-    transform: scale(0) translateX(-10vw);
+    transform: scale(0) translateX(-15vw);
     will-change: transform;
     animation-name: fly-right-one;
     animation-timing-function: linear;
