@@ -11,7 +11,6 @@ const homeData: HomeData = {
     attributes: [
         'full-stack software developer <span class="icon-placeholder" data-icon="/icons/dev.svg"></span>',
         'persistent problem solver <span class="icon-placeholder" data-icon="/icons/problemsolve.svg"></span>',
-        'agile minded <span class="icon-placeholder" data-icon="/icons/agile.svg"></span>',
         'tater tot connoisseur <span class="icon-placeholder" data-icon="/icons/tatertot.svg"></span>',
         'things i like: the outdoors <span class="icon-placeholder" data-icon="/icons/outdoors.svg"></span>',
         'things i like: music <span class="icon-placeholder" data-icon="/icons/music.svg"></span>',
