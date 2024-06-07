@@ -141,9 +141,9 @@ const IndexPage = () => {
 
                 <meta name="geo.region" content="US" />
 
-                <meta property="og:title" content="Dobson Dunavant - Personal Portfolio Website" />
+                <meta property="og:title" content="Dobson Dunavant - Portfolio Website" />
 
-                <meta property="og:description" content="My personal website, showcasing my experiences and skillsets thus far." />
+                <meta property="og:description" content="My personal website, showcasing my experiences and projects thus far." />
 
                 <meta property="og:type" content="website" />
 
