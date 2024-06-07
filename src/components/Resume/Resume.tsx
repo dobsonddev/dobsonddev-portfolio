@@ -21,7 +21,7 @@ function Resume() {
                 </a>
             </div>
             <div className="w-full flex justify-center">
-                <div className="relative max-w-screen-sm md:max-w-screen-md w-full"> {/* Adjust max-width to match the image's width */}
+                <div className="relative max-w-6xl w-full"> {/* Adjust max-width to match the image's width */}
                     <Image src={resumeIMGPath} alt="Dobson's Resume" aria-label="Dobson's Resume" layout="responsive" width={700} height={900} objectFit="contain" />
                 </div>
             </div>
