@@ -12,7 +12,7 @@ export interface Experience {
 
 const experiences: Experience[] = [
     {
-        title: "Machine Learning & Application Co-Op",
+        title: "Full-Stack Software Engineering Co-Op",
         date: "Sep 2023 - May 2024",
         company: "Mercedes-Benz & IFA Group",
         location: "Ladson, SC",
