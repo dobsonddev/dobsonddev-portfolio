@@ -14,7 +14,7 @@ const ChatbotNavbarButton = ({ isOpen, setIsOpen }: ChatbotProps) => {
         <div>
             <button onClick={toggleModal} className={`flex items-center text-white px-2 py-1 rounded bg-custom-orange z-50 ${isOpen ? 'hidden' : ''}`}>
                 <span className="hidden lg:block">Chat with MomoAI</span>
-                <img src="/lemur.svg" alt="Momo" className=" lg:ml-3 w-8 h-8" />
+                <img src="/lemur.svg" alt="Momo" className=" lg:ml-3 w-6 h-6 md:w-8 md:h-8" />
             </button>
         </div>
     );

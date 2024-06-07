@@ -38,11 +38,12 @@ function Home() {
                 const img = document.createElement('img');
                 img.src = iconPath;
                 img.alt = homeData.iconAlts[index] || 'Icon'; // Use alt text from homeData
-                img.className = 'w-12 h-12 inline-block align-bottom -mt-2';
+                img.className = 'inline-block align-middle ml-1 -mt-2 w-6 h-6 md:w-10 md:h-10';
                 placeholder.replaceWith(img);
             }
         });
     };
+
 
     useEffect(() => {
         const handleScroll = () => {
@@ -101,7 +102,7 @@ function Home() {
                         &nbsp;Hi, <br /> I'm {homeData.name}
                     </h1>
                 </div>
-                <div className={`${typedTextBackgroundClass} text-xl md:text-2xl lg:text-4xl px-4 py-6 rounded mx-auto -mt-96`}>
+                <div className={`${typedTextBackgroundClass} text-sm md:text-2xl lg:text-4xl md:px-4 p-2 md:py-6 rounded mx-auto -mt-96`}>
                     <span ref={typedRef} className="p-2"></span>
                 </div>
 
@@ -109,10 +110,11 @@ function Home() {
                     <div className="fixed inset-x-0 bottom-10 flex justify-start pl-12 items-center z-70">
                         <div className="animate-bounce flex flex-col items-center">
                             <span className="text-xl mb-2">Scroll Down</span>
-                            <FaArrowDown size={24} />
+                            <FaArrowDown className="w-8 h-8  md:w-10 md:h-10" />
                         </div>
                     </div>
                 )}
+
             </div>
             <div className="relative h-1/4 py-2 grid grid-flow-row auto-rows-auto items-center justify-items-center px-4">
                 <motion.div

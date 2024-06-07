@@ -43,8 +43,8 @@ const Navbar: React.FC<NavbarProps> = ({ toggleChatModal }) => {
                 style={{ top: isScrollingUp ? '0' : '-100%' }}
                 className={`z-20 fixed w-full flex items-center justify-center transition-all duration-1000 py-4 px-2 md:px-6 ${navbarBackground}`}
             >
-                <div className="w-full max-w-7xl flex items-center justify-between px-8">
-                    <div className="flex gap-6 items-center justify-start">
+                <div className="w-full max-w-7xl flex items-center justify-between px-2">
+                    <div className="flex gap-4 md:gap-6 items-center justify-start">
                         <a href="https://www.linkedin.com/in/dobson-dunavant/" aria-label="Dobson's LinkedIn Profile" target="_blank" rel="noopener noreferrer" className="py-1 md:py-2 transition-all duration-500 transform hover:-translate-y-1"><FaLinkedin size="1.6em" /></a>
                         <a href="https://github.com/dobsonddev" aria-label="Dobson's GitHub Profile" target="_blank" rel="noopener noreferrer" className="py-1 md:py-2 transition-all duration-500 transform hover:-translate-y-1"><FaGithub size="1.6em" /></a>
                         <a
@@ -63,7 +63,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleChatModal }) => {
                     </div>
 
                     <div className="md:hidden flex items-center">
-                        <div className="p-4">
+                        <div>
                             <ThemeSwitch />
                         </div>
                         <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
