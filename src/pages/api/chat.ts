@@ -11,7 +11,7 @@ const openai = new OpenAI({
 const requestCache = new NodeCache({ stdTTL: 3600, checkperiod: 600 }); // Cache TTL of 1 hour
 
 // Set the rate limit
-const MAX_REQUESTS_PER_HOUR = 15;
+const MAX_REQUESTS_PER_HOUR = 16;
 
 const isAppropriateContent = (text: string): boolean => {
     const inappropriateWords = ["badword1", "badword2", "badword3"]; // Example inappropriate words
