@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import homeData from "@/components/Home/HomeData";
 
 interface ChatbotProps {
@@ -21,18 +21,25 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
     const [messages, setMessages] = useState<Message[]>([defaultBotMessage]);
     const [input, setInput] = useState('');
     const [error, setError] = useState('');
-    const [isProcessing, setIsProcessing] = useState(false); // Track if a message is being processed
+    const [isProcessing, setIsProcessing] = useState(false);
     const [questionCount, setQuestionCount] = useState(0);
+    const chatContainerRef = useRef<HTMLDivElement>(null);
+    const inputRef = useRef<HTMLInputElement>(null); // Reference to the input element
 
     useEffect(() => {
         const storedCount = parseInt(localStorage.getItem('questionCount') || '0', 10);
         setQuestionCount(storedCount);
 
-        // Set the timestamp for the default message on the client side
         setMessages((prevMessages) => prevMessages.map((msg, index) =>
             index === 0 ? { ...msg, timestamp: formatTime(new Date()) } : msg
         ));
     }, []);
+
+    useEffect(() => {
+        if (chatContainerRef.current) {
+            chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
+        }
+    }, [messages]);
 
     const formatTime = (date: Date) => {
         return date.toLocaleString('en-US', {
@@ -90,6 +97,9 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
             console.error('Error sending message:', error);
         } finally {
             setIsProcessing(false); // End processing
+            if (inputRef.current) {
+                inputRef.current.focus(); // Refocus the input element
+            }
         }
     };
 
@@ -103,7 +113,7 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
         <div className={`fixed inset-0 bg-black bg-opacity-50 p-4 z-50 ${isOpen ? '' : 'hidden'}`}>
             <div className="fixed inset-x-0 bottom-0 mx-auto max-w-md w-full bg-dark border-light border-2 p-4 rounded-t-md shadow-md md:max-w-lg md:w-auto md:bottom-4 md:right-4 md:rounded md:inset-auto">
                 <button onClick={() => setIsOpen(false)} className="absolute -top-12 right-0 mt-1 text-lg mr-1 bg-red-500 px-3 py-1 rounded text-light hover:text-dark" aria-label="Close chat modal">X</button>
-                <div className="chat-history overflow-y-auto pr-3 mb-4 pt-2" style={{ maxHeight: '70vh' }}>
+                <div ref={chatContainerRef} className="chat-history overflow-y-auto pr-3 mb-4 pt-2" style={{ maxHeight: '70vh' }}>
                     {messages.map((message, index) => (
                         <div key={index} className={` ${message.sender === 'user' ? 'flex flex-col items-end' : 'flex flex-col items-start'}`}>
                             <div className={`text-sm text-light ${message.sender === 'user' ? 'text-right' : ''}`}>
@@ -128,6 +138,7 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
                 <div className="input-area flex items-center">
                     <input
                         type="text"
+                        ref={inputRef} // Attach the ref to the input element
                         placeholder="Ask a question!"
                         value={input}
                         onChange={handleUserMessageChange}
