@@ -17,7 +17,7 @@ const experiences: Experience[] = [
         company: "Mercedes-Benz & IFA Group",
         location: "Ladson, SC",
         details: [
-            "Led team of 4 to develop an autonomous inventory scanning system using React, Flask, AWS, PostgreSQL, OpenCV, Tesseract OCR and YOLOv8 for real-time, small-part tracking in industrial settings to enable inventory awareness and supply-chain analytics",
+            "Led team of 4 to develop a portable inventory scanning system using React, Flask, AWS, PostgreSQL, OpenCV, Tesseract OCR and YOLOv8 for real-time, small-part tracking in industrial settings to enable inventory awareness and supply-chain analytics",
             "Authored Software Requirements & Design Specification documents (SRS and SDS), gathering then defining functional and non-functional requirements which were then used in system design.",
             "Designed and implemented restful HTTPS communications via AWS API Gateway to SAP APIs, enabling real-time, scalable inventory transactions",
         "Achieved 98% inventory accuracy and SAP integration, delivering a fully end-to-end solution, significantly surpassing the existing accuracy and efficiency benchmarks"
