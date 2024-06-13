@@ -4,6 +4,7 @@ import ThemeSwitch from './ThemeSwitch/ThemeSwitch';
 import ChatbotButton from '@/components/Chatbot/ChatbotButton';
 import ChatbotModal from '@/components/Chatbot/ChatbotModal';
 import ChatbotNavbarButton from "@/components/Chatbot/ChatbotNavbarButton";
+import SpotifyPlayer from './SpotifyPlayer/SpotifyPlayer';
 
 interface NavbarProps {
     toggleChatModal: () => void;
@@ -63,11 +64,10 @@ const Navbar: React.FC<NavbarProps> = ({ toggleChatModal }) => {
                     </div>
 
                     <div className="md:hidden flex items-center">
-                        <div>
                             <ThemeSwitch />
-                        </div>
+                        <SpotifyPlayer />
                         <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                            <svg className="w-6 h-6 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                         </button>
                     </div>
 
@@ -88,6 +88,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleChatModal }) => {
                         <div>
                             <ThemeSwitch />
                         </div>
+                        <SpotifyPlayer />
                     </div>
                 </div>
             </nav>
