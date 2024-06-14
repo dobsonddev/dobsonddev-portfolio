@@ -15,7 +15,7 @@ const homeData: HomeData = {
         'things i like: the outdoors <span class="icon-placeholder" data-icon="/icons/outdoors.svg"></span>',
         'things i like: music <span class="icon-placeholder" data-icon="/icons/music.svg"></span>',
         'things i like: soccer <span class="icon-placeholder" data-icon="/icons/soccer.svg"></span>',
-        'things i like: playing drums <span class="icon-placeholder" data-icon="/icons/drummer.svg"></span>',
+        'things i like: drumming <span class="icon-placeholder" data-icon="/icons/drummer.svg"></span>',
         'things i like: building stuff <span class="icon-placeholder" data-icon="/icons/project.svg"></span>',
         'things i like: gaming <span class="icon-placeholder" data-icon="/icons/gaming.svg"></span>',
     ],
