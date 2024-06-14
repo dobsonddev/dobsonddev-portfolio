@@ -20,13 +20,13 @@ const SpotifyPlayer: React.FC = () => {
                     <span className="hidden md:inline">{isOpen ? 'Music' : 'Music'}</span>
                 </div>
             </button>
-            <div className="fixed top-16 right-0 z-30">
+            <div className="fixed top-16 right-5 z-30">
                 <iframe
                     ref={iframeRef}
                     style={{ borderRadius: '16px', display: isOpen ? 'block' : 'none' }}
                     src="https://open.spotify.com/embed/playlist/0HrIRrRqoziosnjirLgBfD?utm_source=generator&theme=0"
                     width="100%"
-                    height="462"
+                    height="362"
                     frameBorder="0"
                     allowFullScreen
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"

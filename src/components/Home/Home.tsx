@@ -116,10 +116,10 @@ function Home() {
                 )}
 
             </div>
-            <div className="relative h-1/4 py-2 grid grid-flow-row auto-rows-auto items-center justify-items-center px-4">
+            <div className=" h-1/4 py-2 grid grid-flow-row auto-rows-auto items-center justify-items-center px-4">
                 <motion.div
                     id="mission"
-                    className={`${missionClass} p-8 text-xl md:text-2xl lg:text-4xl text-center mx-auto w-full md:w-11/12 lg:w-9/12 mb-24 border-2 rounded`}
+                    className={`${missionClass} p-8 md:text-2xl lg:text-4xl text-center mx-auto w-full md:w-11/12 lg:w-9/12 mb-24 border-2 rounded`}
                     initial={{ opacity: 0, y: -35 }}
                     animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
                     transition={{ duration: 1 }}
