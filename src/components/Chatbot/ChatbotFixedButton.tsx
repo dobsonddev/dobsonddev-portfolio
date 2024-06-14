@@ -1,4 +1,4 @@
-///Users/dobsond/Documents/GitHub/old-dobsonddev-portfolio2/src/components/Chatbot/ChatbotButton.tsx
+///Users/dobsond/Documents/GitHub/old-dobsonddev-portfolio2/src/components/Chatbot/ChatbotFixedButton.tsx
 
 import React from 'react';
 
@@ -8,7 +8,7 @@ interface ChatbotProps {
 }
 
 //continue
-const ChatbotButton = ({ isOpen, setIsOpen }: ChatbotProps) => {
+const ChatbotFixedButton = ({ isOpen, setIsOpen }: ChatbotProps) => {
 
     const toggleModal = () => {
         setIsOpen(!isOpen);
@@ -24,4 +24,4 @@ return (
 )
 }
 
-export default ChatbotButton;
+export default ChatbotFixedButton;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 import ThemeSwitch from './ThemeSwitch/ThemeSwitch';
-import ChatbotButton from '@/components/Chatbot/ChatbotButton';
+import ChatbotFixedButton from '@/components/Chatbot/ChatbotFixedButton';
 import ChatbotModal from '@/components/Chatbot/ChatbotModal';
 import ChatbotNavbarButton from "@/components/Chatbot/ChatbotNavbarButton";
 import SpotifyPlayer from './SpotifyPlayer/SpotifyPlayer';
@@ -92,7 +92,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleChatModal }) => {
                     </div>
                 </div>
             </nav>
-            <ChatbotButton isOpen={isChatbotOpen} setIsOpen={setIsChatbotOpen} />
+            <ChatbotFixedButton isOpen={isChatbotOpen} setIsOpen={setIsChatbotOpen} />
             <ChatbotModal isOpen={isChatbotOpen} setIsOpen={setIsChatbotOpen} />
         </>
     );

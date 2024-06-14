@@ -19,7 +19,7 @@ This project was made by Dobson Dunavant - https://github.com/dobsonddev
 2. You can change themes globally within the `tailwind.config.js` file.
 3. Vanta.js animated backgrounds can be finnicky, so be on your toes with source control as you work with them.
 
-### Please note: If you do not want to use the chatbot, you need to remove/comment-out the `ChatbotButton`, `ChatbotNavbarButton`, and `ChatbotModal` usages/imports in components/Navbar.tsx
+### Please note: If you do not want to use the chatbot, you need to remove/comment-out the `ChatbotFixedButton`, `ChatbotNavbarButton`, and `ChatbotModal` usages/imports in components/Navbar.tsx
 
 #### (Optional) Chat-bot Setup
 1. Have a premium OpenAI account with API access (I believe you have to request it, circa 2023).
