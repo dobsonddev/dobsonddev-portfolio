@@ -10,6 +10,7 @@ import SiteHead from "@/components/SEO/Head/SiteHead";
 import { siteConfig } from '@/components/SEO/SiteConfig';
 import { themeClassNames } from '@/utils/themeClassNames';
 import { applyVantaEffect } from '@/utils/vantaEffects';
+import Birds from "@/components/Birds/Birds";
 
 const IndexPage = () => {
     const [isChatModalOpen, setIsChatModalOpen] = useState(false);
@@ -42,22 +43,7 @@ const IndexPage = () => {
                 <div className="fixed top-0 left-0 w-full h-full bg-forest-bg bg-cover bg-center"></div>
             )}
             <div ref={vantaRef} className="fixed top-0 left-0 w-full h-full -z-10"></div>
-            {theme === 'forest' && (
-                <div className="fixed top-0 left-0 w-full h-full pointer-events-none">
-                    <div className="bird-container bird-container--one">
-                        <div className="bird bird--one"></div>
-                    </div>
-                    <div className="bird-container bird-container--two">
-                        <div className="bird bird--two"></div>
-                    </div>
-                    <div className="bird-container bird-container--three">
-                        <div className="bird bird--three"></div>
-                    </div>
-                    <div className="bird-container bird-container--four">
-                        <div className="bird bird--four"></div>
-                    </div>
-                </div>
-            )}
+            {theme === 'forest' && <Birds />}
             <SiteHead
                 title={siteConfig.title}
                 description={siteConfig.description}

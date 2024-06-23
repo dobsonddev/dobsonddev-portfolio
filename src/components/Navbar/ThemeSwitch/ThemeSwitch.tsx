@@ -36,12 +36,12 @@ const ThemeSwitch = () => {
                         <span className="hidden md:inline ml-2">Light</span>
                         {theme === 'light' && <FaCheck className="ml-2 text-green-500" />}
                     </button>
-                    <button onClick={() => changeTheme('forest')} className="flex items-center p-2 bg-green-300 text-dark hover:bg-gray-100 rounded">
+                    <button onClick={() => changeTheme('forest')} className="flex items-center p-2 bg-green-300 text-dark hover:bg-green-200 rounded">
                         <FaTree />
                         <span className="hidden md:inline ml-2">Forest</span>
                         {theme === 'forest' && <FaCheck className="ml-2 text-green-500" />}
                     </button>
-                    <button onClick={() => changeTheme('vector')} className="flex items-center p-2 bg-purple-500 text-white hover:bg-gray-100 rounded">
+                    <button onClick={() => changeTheme('vector')} className="flex items-center p-2 bg-purple-500 text-white hover:bg-purple-600 rounded">
                         <TbVectorTriangle />
                         <span className="hidden md:inline ml-2">Vector</span>
                         {theme === 'vector' && <FaCheck className="ml-2 text-green-500" />}
