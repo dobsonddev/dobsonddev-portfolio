@@ -1,20 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import React, {useState, useEffect} from 'react';
+import {FaLinkedin, FaGithub, FaEnvelope} from 'react-icons/fa';
 import ThemeSwitch from './ThemeSwitch/ThemeSwitch';
 import ChatbotFixedButton from '@/components/Chatbot/ChatbotFixedButton';
 import ChatbotModal from '@/components/Chatbot/ChatbotModal';
-import ChatbotNavbarButton from "@/components/Chatbot/ChatbotNavbarButton";
+import ChatbotNavbarButton from '@/components/Chatbot/ChatbotNavbarButton';
 import SpotifyPlayer from './SpotifyPlayer/SpotifyPlayer';
 
 interface NavbarProps {
     toggleChatModal: () => void;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ toggleChatModal }) => {
+const Navbar: React.FC<NavbarProps> = ({toggleChatModal}) => {
     const [isScrollingUp, setIsScrollingUp] = useState(true);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [navbarBackground, setNavbarBackground] = useState('');
     const [isChatbotOpen, setIsChatbotOpen] = useState(false);
+    const [openComponent, setOpenComponent] = useState<'theme' | 'music' | null>(null);
 
     useEffect(() => {
         let lastScrollTop = 0;
@@ -41,13 +42,29 @@ const Navbar: React.FC<NavbarProps> = ({ toggleChatModal }) => {
     return (
         <>
             <nav
-                style={{ top: isScrollingUp ? '0' : '-100%' }}
+                style={{top: isScrollingUp ? '0' : '-100%'}}
                 className={`z-20 fixed w-full flex items-center justify-center transition-all duration-1000 py-4 px-2 md:px-6 ${navbarBackground}`}
             >
                 <div className="w-full max-w-7xl flex items-center justify-between px-2">
                     <div className="flex gap-4 md:gap-6 items-center justify-start">
-                        <a href="https://www.linkedin.com/in/dobson-dunavant/" aria-label="Dobson's LinkedIn Profile" target="_blank" rel="noopener noreferrer" className="py-1 md:py-2 transition-all duration-500 transform hover:-translate-y-1"><FaLinkedin size="1.6em" /></a>
-                        <a href="https://github.com/dobsonddev" aria-label="Dobson's GitHub Profile" target="_blank" rel="noopener noreferrer" className="py-1 md:py-2 transition-all duration-500 transform hover:-translate-y-1"><FaGithub size="1.6em" /></a>
+                        <a
+                            href="https://www.linkedin.com/in/dobson-dunavant/"
+                            aria-label="Dobson's LinkedIn Profile"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 md:py-2 transition-all duration-500 transform hover:-translate-y-1"
+                        >
+                            <FaLinkedin size="1.6em"/>
+                        </a>
+                        <a
+                            href="https://github.com/dobsonddev"
+                            aria-label="Dobson's GitHub Profile"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="py-1 md:py-2 transition-all duration-500 transform hover:-translate-y-1"
+                        >
+                            <FaGithub size="1.6em"/>
+                        </a>
                         <a
                             href="#"
                             aria-label="Send an email to Dobson"
@@ -57,43 +74,63 @@ const Navbar: React.FC<NavbarProps> = ({ toggleChatModal }) => {
                                 window.open('mailto:jdobsond3@gmail.com', '_blank');
                             }}
                         >
-                            <FaEnvelope size="1.6em" />
+                            <FaEnvelope size="1.6em"/>
                         </a>
 
-                        <ChatbotNavbarButton isOpen={isChatbotOpen} setIsOpen={setIsChatbotOpen} />
+                        <ChatbotNavbarButton isOpen={isChatbotOpen} setIsOpen={setIsChatbotOpen}/>
                     </div>
 
                     <div className="md:hidden flex items-center">
-                            <ThemeSwitch />
-                        <SpotifyPlayer />
+                        <ThemeSwitch openComponent={openComponent} setOpenComponent={setOpenComponent}/>
+                        <SpotifyPlayer openComponent={openComponent} setOpenComponent={setOpenComponent}/>
                         <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-                            <svg className="w-6 h-6 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                            <svg
+                                className="w-6 h-6 ml-4"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    d="M4 6h16M4 12h16m-7 6h7"
+                                ></path>
+                            </svg>
                         </button>
                     </div>
 
                     {isMobileMenuOpen && (
                         <div className="absolute top-full bg-light text-dark right-0 w-full md:hidden">
-                            <a href="#home" className="block hover:text-dark hover:rounded  hover:bg-light p-4">Home</a>
-                            <a href="#experiences" className="block hover:text-dark hover:rounded hover:bg-light p-4">Experiences</a>
-                            <a href="#resume" className="block hover:text-dark hover:rounded hover:bg-light p-4">Resume</a>
+                            <a href="#home" className="block hover:text-dark hover:rounded hover:bg-light p-4">Home</a>
+                            <a href="#experiences"
+                               className="block hover:text-dark hover:rounded hover:bg-light p-4">Experiences</a>
+                            <a href="#resume"
+                               className="block hover:text-dark hover:rounded hover:bg-light p-4">Resume</a>
                             <a href="#blog" className="block hover:text-dark hover:rounded hover:bg-light p-4">Blog</a>
-                            <a href="#contact" className="block hover:text-dark hover:rounded hover:bg-light p-4">Contact</a>
+                            <a href="#contact"
+                               className="block hover:text-dark hover:rounded hover:bg-light p-4">Contact</a>
                         </div>
                     )}
                     <div className="hidden md:flex flex-1 items-center justify-end">
-                        <a href="#home" className="hover:text-dark hover:bg-light px-4 py-2 hover:rounded transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Home</a>
-                        <a href="#experiences" className="hover:text-dark hover:bg-light px-4 py-2 hover:rounded transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Experiences</a>
-                        <a href="#resume" className="hover:text-dark hover:bg-light px-4 py-2 hover:rounded transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Resume</a>
-                        <a href="#blog" className="hover:text-dark hover:bg-light px-4 py-2 hover:rounded transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Blog</a>
+                        <a href="#home"
+                           className="hover:text-dark hover:bg-light px-4 py-2 hover:rounded transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Home</a>
+                        <a href="#experiences"
+                           className="hover:text-dark hover:bg-light px-4 py-2 hover:rounded transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Experiences</a>
+                        <a href="#resume"
+                           className="hover:text-dark hover:bg-light px-4 py-2 hover:rounded transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Resume</a>
+                        <a href="#blog"
+                           className="hover:text-dark hover:bg-light px-4 py-2 hover:rounded transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Blog</a>
                         <div>
-                            <ThemeSwitch />
+                            <ThemeSwitch openComponent={openComponent} setOpenComponent={setOpenComponent}/>
                         </div>
-                        <SpotifyPlayer />
+                        <SpotifyPlayer openComponent={openComponent} setOpenComponent={setOpenComponent}/>
                     </div>
                 </div>
             </nav>
-            <ChatbotFixedButton isOpen={isChatbotOpen} setIsOpen={setIsChatbotOpen} />
-            <ChatbotModal isOpen={isChatbotOpen} setIsOpen={setIsChatbotOpen} />
+            <ChatbotFixedButton isOpen={isChatbotOpen} setIsOpen={setIsChatbotOpen}/>
+            <ChatbotModal isOpen={isChatbotOpen} setIsOpen={setIsChatbotOpen}/>
         </>
     );
 };

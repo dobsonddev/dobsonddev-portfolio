@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import { FaTree, FaSun, FaPalette, FaCheck } from 'react-icons/fa';
 import { TbVectorTriangle, TbGridDots } from "react-icons/tb";
 
-const ThemeSwitch = () => {
-    const [modalOpen, setModalOpen] = useState(false);
+interface ThemeSwitchProps {
+    openComponent: 'theme' | 'music' | null;
+    setOpenComponent: (component: 'theme' | 'music' | null) => void;
+}
+
+const ThemeSwitch: React.FC<ThemeSwitchProps> = ({ openComponent, setOpenComponent }) => {
     const { theme, setTheme, resolvedTheme } = useTheme();
 
     useEffect(() => {
@@ -15,21 +19,27 @@ const ThemeSwitch = () => {
 
     const changeTheme = (newTheme: string) => {
         setTheme(newTheme);
-        setModalOpen(false);
+        setOpenComponent(null);
+    };
+
+    const toggleModal = () => {
+        setOpenComponent(openComponent === 'theme' ? null : 'theme');
     };
 
     return (
         <div>
             <button
                 className="rounded text-xs md:text-sm lg:text-base py-1 px-1 mx-2 md:py-2 transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle"
-                onClick={() => setModalOpen(!modalOpen)}
+                onClick={toggleModal}
+                tabIndex={0}
+                aria-label="Select a theme"
             >
                 <div className="flex items-center">
                     <FaPalette size="1.6em" className="mr-2" />
                     <span className="hidden md:inline">Theme</span>
                 </div>
             </button>
-            {modalOpen && (
+            {openComponent === 'theme' && (
                 <div className="absolute bg-white text-dark rounded shadow-lg p-2 gap-2 flex flex-col">
                     <button onClick={() => changeTheme('light')} className="flex items-center p-2 hover:bg-gray-100 rounded">
                         <FaSun />
