@@ -2,7 +2,7 @@ import React from 'react';
 
 const Birds: React.FC = () => {
     return (
-        <div suppressHydrationWarning className="fixed top-0 left-0 w-full h-full pointer-events-none">
+        <div suppressHydrationWarning className="fixed -top-10 left-0 w-full h-full pointer-events-none">
             <div className="bird-container bird-container--one">
                 <div className="bird bird--one"></div>
             </div>

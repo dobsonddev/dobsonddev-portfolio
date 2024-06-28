@@ -12,10 +12,10 @@ const homeData: HomeData = {
         'full-stack software developer <span class="icon-placeholder" data-icon="/icons/dev.svg"></span>',
         'persistent problem solver <span class="icon-placeholder" data-icon="/icons/problemsolve.svg"></span>',
         'tater tot connoisseur <span class="icon-placeholder" data-icon="/icons/tatertot.svg"></span>',
-        'hobby: the outdoors <span class="icon-placeholder" data-icon="/icons/outdoors.svg"></span>',
         'hobby: music <span class="icon-placeholder" data-icon="/icons/music.svg"></span>',
         'hobby: soccer <span class="icon-placeholder" data-icon="/icons/soccer.svg"></span>',
         'hobby: drumming <span class="icon-placeholder" data-icon="/icons/drummer.svg"></span>',
+        'hobby: backpacking <span class="icon-placeholder" data-icon="/icons/outdoors.svg"></span>',
         'hobby: building stuff <span class="icon-placeholder" data-icon="/icons/project.svg"></span>',
         'hobby: gaming <span class="icon-placeholder" data-icon="/icons/gaming.svg"></span>',
     ],
@@ -31,9 +31,9 @@ const homeData: HomeData = {
         'Tater tot icon',
     ],
     missionStatementTop:
-        "Welcome! I'm a full-stack developer with a passion for tackling real-world problems with optimized, seamless solutions.",
+        "Welcome! I'm a full-stack software engineer with a passion for tackling real-world problems with generalized, long-term solutions.",
     missionStatementBottom:
-        "I'm driven by curiosity, collaboration, and the desire to build awesome things, with awesome people.",
+        "I'm driven by curiosity, collaboration, and building awesome things with awesome people.",
 };
 
 export default homeData;

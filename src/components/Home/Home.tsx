@@ -44,7 +44,6 @@ function Home() {
         });
     };
 
-
     useEffect(() => {
         const handleScroll = () => {
             const missionElement = document.getElementById('mission');
@@ -95,15 +94,17 @@ function Home() {
     const heroTextBackgroundClassNew = theme === 'forest' ? 'text-dark' : '';
 
     return (
-        <div>
-            <div className="relative  min-h-screen grid grid-flow-row auto-rows-auto items-center justify-items-center px-4">
-                <div className="text-center backdrop-blur-sm py-10 mx-auto">
-                    <h1 className={`${heroTextBackgroundClassNew} rounded p-4 text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-wider leading-loose`} style={{ lineHeight: '1.4' }}>
+        <div className="flex flex-col">
+            <div className="flex-grow flex flex-col items-center justify-center mx-4">
+                <div className="text-center backdrop-blur-md mt-52 mx-auto">
+                    <h1 className={`${heroTextBackgroundClassNew} rounded p-4 text-6xl lg:text-8xl font-extrabold tracking-wider leading-loose`}
+                        style={{lineHeight: '1.4'}}>
                         {/* eslint-disable-next-line react/no-unescaped-entities */}
-                        &nbsp;Hi, <br /> I'm {homeData.name}
+                        &nbsp;Hi, <br/> I'm {homeData.name}
                     </h1>
                 </div>
-                <div className={`${heroTextBackgroundClassNew} backdrop-blur-sm text-sm md:text-2xl lg:text-4xl md:px-4 p-2 md:py-6 rounded mx-auto -mt-96`}>
+                <div
+                    className={`${heroTextBackgroundClassNew} backdrop-blur-lg text-2xl lg:text-4xl mt-28 md:px-4 p-2 md:py-6 rounded mx-auto`}>
                     <span ref={typedRef} className="p-2"></span>
                 </div>
 
@@ -111,19 +112,27 @@ function Home() {
                     <div className="fixed inset-x-0 bottom-10 flex justify-start pl-12 items-center z-70">
                         <div className="animate-bounce flex flex-col items-center">
                             <span className="text-xl mb-2">Scroll Down</span>
-                            <FaArrowDown className="w-8 h-8  md:w-10 md:h-10" />
+                            <FaArrowDown className="w-8 h-8  md:w-10 md:h-10"/>
                         </div>
                     </div>
                 )}
-
             </div>
-            <div className=" h-1/4 py-2 grid grid-flow-row auto-rows-auto items-center justify-items-center px-4">
+
+            <div className="custom-shape-divider-bottom-1719604383">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                     preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        className="shape-fill"></path>
+                </svg>
+            </div>
+            <div className="py-2 mt-96 mb-36 grid grid-flow-row auto-rows-auto items-center justify-items-center px-4">
                 <motion.div
                     id="mission"
-                    className={`${missionClass} p-8 md:text-2xl lg:text-4xl text-center mx-auto w-full md:w-11/12 lg:w-9/12 mb-24 border-2 rounded`}
-                    initial={{ opacity: 0, y: -35 }}
-                    animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
-                    transition={{ duration: 1 }}
+                    className={`${missionClass} p-8 md:text-lg xl:text-2xl text-center max-w-4xl mb-24 border-2 rounded`}
+                    initial={{opacity: 0, y: -35}}
+                    animate={isVisible ? {opacity: 1, y: 0} : {opacity: 0, y: -50}}
+                    transition={{duration: 1}}
                 >
                     <div>
                         <div className="pb-8">

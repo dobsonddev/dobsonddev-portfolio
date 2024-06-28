@@ -12,21 +12,18 @@ export const applyVantaEffect = (theme: string, vantaRef: MutableRefObject<HTMLD
         switch (theme) {
             case 'vector':
                 vantaEffect.current = NET({
+
                     el: vantaRef.current,
                     mouseControls: true,
-                    touchControls: false,
+                    touchControls: true,
                     gyroControls: false,
-                    minHeight: 20.00,
-                    minWidth: 20.00,
-                    scale: 0.50,
-                    scaleMobile: 1.50,
-                    points: 6.00,
-                    maxDistance: 29.00,
+                    minHeight: 250.00,
+                    minWidth: 250.00,
+                    scale: 1.00,
+                    scaleMobile: 1.00,
+                    points: 3.50,
                     spacing: 25.00,
-                    color: '#D9185A',
-                    backgroundColor: '#21143C',
-                    vertexColor: '#21143C',
-                    size: 5.00
+                    maxDistance: 30,
                 });
                 break;
             case 'dots':
