@@ -88,7 +88,7 @@ const ExperienceTree = () => {
 
                         <div className={`absolute w-1/2 p-8 text-box-style shadow-lg bg-gray-900 rounded ${index % 2 === 0 ? 'right-1/2 md:mr-4 lg:mr-6 xl:mr-8 2xl:mr-14' : 'left-1/2 md:ml-4 lg:ml-6 xl:ml-8 2xl:ml-14'}`}>
                             <div className="flex justify-between items-center">
-                                <h3 className="font-bold text-xl text-white pb-1">{exp.title}</h3>
+                                <h3 className="font-bold text-xl text-light pb-1">{exp.title}</h3>
                                 <span className="text-sm text-gray-400 pl-2">{exp.date}</span>
                             </div>
                             <div className="flex justify-between items-center pb-1">
@@ -97,7 +97,7 @@ const ExperienceTree = () => {
                             </div>
                             <ul className="list-disc text-gray-300 rounded pl-6">
                                 {exp.details.map((detail, detailIndex) => (
-                                    <li key={detailIndex} className="text-white mb-4 p-0.5">{detail}</li>
+                                    <li key={detailIndex} className="text-light mb-4 p-0.5">{detail}</li>
                                 ))}
                             </ul>
                             <div className="flex justify-end mt-4">
@@ -114,7 +114,7 @@ const ExperienceTree = () => {
                                             className="w-12 h-12"
                                             variants={iconAnimation}
                                         />
-                                        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-sm px-2 py-1 rounded opacity-0 pointer-events-none transition-opacity duration-200 group-hover:opacity-100">
+                                        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-gray-800 text-light text-sm px-2 py-1 rounded opacity-0 pointer-events-none transition-opacity duration-200 group-hover:opacity-100">
                                             {tech}
                                         </div>
                                     </motion.div>
@@ -138,12 +138,12 @@ const ExperienceTree = () => {
                     >
                         <div className="w-6 h-6 bg-gray-900 rounded-full mb-4"></div>
                         <div className="text-box-style p-2 shadow-lg bg-gray-900 rounded max-w-2xl">
-                            <h3 className="font-bold text-md text-white whitespace-nowrap sm:whitespace-normal truncate">{exp.title}</h3>
+                            <h3 className="font-bold text-md text-light whitespace-nowrap sm:whitespace-normal truncate">{exp.title}</h3>
                             <h3 className="font-bold text-sm text-gray-400 whitespace-nowrap sm:whitespace-normal truncate">{exp.date}</h3>
                             <p className="text-orange-500 text-sm pb-2">{exp.company}</p>
                             <ul className="list-disc text-light rounded pl-4">
                                 {exp.details.map((detail, detailIndex) => (
-                                    <li key={detailIndex} className="text-white mb-4">{detail}</li>
+                                    <li key={detailIndex} className="text-light mb-4">{detail}</li>
                                 ))}
                             </ul>
                             <div className="flex justify-end mt-4">

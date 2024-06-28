@@ -79,7 +79,7 @@ const blogData: BlogPost[] = [
 
     {
         title: "Understanding JS' Async/Await in the context of Concurrency and Parallelism",
-        Introduction: "(Re)Introducing yourself to asynchronous web development through the lens of concurrency and parallelism.",
+        Introduction: "(Re)Introducing yourself to asynchronous web development, through the lens of concurrency and parallelism.",
         mainContent: `
         <p class="text-base mb-4">Async/await in JavaScript can initially appear daunting. My journey towards understanding and effectively utilizing this powerful feature was marked by various challenges and learning experiences across multiple projects.</p>
         <p class="text-base mb-4">In this post, I aim to demystify async/await, sharing not just my own experiences but also providing educational insights into how you can leverage this feature to write cleaner, more efficient asynchronous code.</p>
@@ -100,8 +100,8 @@ const blogData: BlogPost[] = [
     },
 
     {
-        title: "AI/ML in EdTech, an equalizer or a divider of educational inequality?",
-        Introduction: "In this article, I explore the role of AI/ML in EdTech, and how it can be leveraged to bridge the educational inequality gap.",
+        title: "AI in EdTech - Equalizer or divider for educational inequality?",
+        Introduction: "Some thoughts on how AI-powered solutions could either bridge or further divide educational inequalities.",
         mainContent: `
         <p class="text-base mb-4"></p>
         <p class="text-base mb-4">Sources

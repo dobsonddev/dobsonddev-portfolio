@@ -20,7 +20,7 @@ function ProjectCard({ project }: ProjectCardProps) {
 
     return (
         <div className="min-h-screen bg-softBlue flex items-center justify-center">
-            <div className="w-80 h-full border-black border-2 rounded-md bg-white transition-all duration-300 hover:-translate-y-2 hover:shadow-[10px_10px_0px_rgba(0,0,0,1)]">
+            <div className="w-80 h-full border-black border-2 rounded-md bg-light transition-all duration-300 hover:-translate-y-2 hover:shadow-[10px_10px_0px_rgba(0,0,0,1)]">
                 <a href={project.githubLink} className="block cursor-pointer">
                     <article className="w-full h-full">
                         <figure className="w-full h-1/2 border-black border-b-2">
@@ -48,7 +48,7 @@ function ProjectCard({ project }: ProjectCardProps) {
 
             {isModalOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                    <div className="bg-white p-5 rounded-md border-2 border-black">
+                    <div className="bg-light p-5 rounded-md border-2 border-black">
                         <h2 className="text-2xl font-bold mb-3">{project.name}</h2>
                         <p>{project.detailedDescription}</p>
                         <button onClick={toggleModal} className="mt-4 bg-gray-300 px-4 py-2 rounded text-black">Close</button>

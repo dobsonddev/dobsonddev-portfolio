@@ -92,17 +92,18 @@ function Home() {
     const missionClass = theme === 'vector' || theme === 'dots' ? 'bg-dark text-light' : 'bg-dark text-light';
     const typedTextBackgroundClass = theme === 'light' ? 'bg-dark text-light' : theme === 'vector' || theme === 'dots' ? 'bg-dark text-light' : 'bg-light text-dark';
     const heroTextBackgroundClass = theme === 'vector' ? 'bg-dark text-light' : theme === 'dots' ? 'bg-none text-dark' : 'bg-none text-dark';
+    const heroTextBackgroundClassNew = theme === 'forest' ? 'text-dark' : '';
 
     return (
         <div>
-            <div className="relative min-h-screen grid grid-flow-row auto-rows-auto items-center justify-items-center px-4">
-                <div className="text-center py-24 mx-auto">
-                    <h1 className={`${heroTextBackgroundClass} rounded p-4 text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-wider leading-loose`} style={{ lineHeight: '1.4' }}>
+            <div className="relative  min-h-screen grid grid-flow-row auto-rows-auto items-center justify-items-center px-4">
+                <div className="text-center backdrop-blur-sm py-10 mx-auto">
+                    <h1 className={`${heroTextBackgroundClassNew} rounded p-4 text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-wider leading-loose`} style={{ lineHeight: '1.4' }}>
                         {/* eslint-disable-next-line react/no-unescaped-entities */}
                         &nbsp;Hi, <br /> I'm {homeData.name}
                     </h1>
                 </div>
-                <div className={`${typedTextBackgroundClass} text-sm md:text-2xl lg:text-4xl md:px-4 p-2 md:py-6 rounded mx-auto -mt-96`}>
+                <div className={`${heroTextBackgroundClassNew} backdrop-blur-sm text-sm md:text-2xl lg:text-4xl md:px-4 p-2 md:py-6 rounded mx-auto -mt-96`}>
                     <span ref={typedRef} className="p-2"></span>
                 </div>
 

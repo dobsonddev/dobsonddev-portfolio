@@ -40,7 +40,7 @@ const ThemeSwitch: React.FC<ThemeSwitchProps> = ({ openComponent, setOpenCompone
                 </div>
             </button>
             {openComponent === 'theme' && (
-                <div className="absolute bg-white text-dark rounded shadow-lg p-2 gap-2 flex flex-col">
+                <div className="absolute bg-light text-dark rounded shadow-lg p-2 gap-2 flex flex-col">
                     <button onClick={() => changeTheme('light')} className="flex items-center p-2 hover:bg-gray-100 rounded">
                         <FaSun />
                         <span className="hidden md:inline ml-2">Light</span>
@@ -51,7 +51,7 @@ const ThemeSwitch: React.FC<ThemeSwitchProps> = ({ openComponent, setOpenCompone
                         <span className="hidden md:inline ml-2">Forest</span>
                         {theme === 'forest' && <FaCheck className="ml-2 text-green-500" />}
                     </button>
-                    <button onClick={() => changeTheme('vector')} className="flex items-center p-2 bg-purple-500 text-white hover:bg-purple-600 rounded">
+                    <button onClick={() => changeTheme('vector')} className="flex items-center p-2 bg-purple-500 text-light hover:bg-purple-600 rounded">
                         <TbVectorTriangle />
                         <span className="hidden md:inline ml-2">Vector</span>
                         {theme === 'vector' && <FaCheck className="ml-2 text-green-500" />}

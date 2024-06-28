@@ -16,7 +16,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        light: '#cad2c5',
+        light: '#e6e3dd',
         midlight: '#84a98c',
         mid: '#52796f',
         middark: '#354f52',
@@ -25,24 +25,24 @@ const config: Config = {
         darkWave: '#90c0f',
 
         // Light theme
-        'light-bg': '#cad2c5',
+        'light-bg': '#e6e3dd',
         'light-text': '#2f3e46',
         'light-accent': '#e06a48',
 
         // Forest theme
         'forest-bg': '#52796f',
-        'forest-text': '#cad2c5',
+        'forest-text': '#e6e3dd',
         'forest-accent': '#e06a48',
         'forest-floral-bg': 'url("/floral_background.svg")',
 
         // Fractal theme
         'fractal-bg': '#2f3e46',
-        'fractal-text': '#cad2c5',
+        'fractal-text': '#e6e3dd',
         'fractal-accent': '#e06a48',
 
         // Vector theme
         'vector-bg': '#354f52',
-        'vector-text': '#cad2c5',
+        'vector-text': '#e6e3dd',
         'vector-accent': '#e06a48',
       },
       backgroundImage: {

@@ -128,7 +128,7 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
                                     </div>
                                 )}
                             </div>
-                            <div className={`mb-3 p-2 rounded-lg ${message.sender === 'user' ? 'bg-midlight text-white self-end max-w-md' : 'bg-gray-300 text-black self-start max-w-md'}`}>
+                            <div className={`mb-3 p-2 rounded-lg ${message.sender === 'user' ? 'bg-midlight text-light self-end max-w-md' : 'bg-gray-300 text-black self-start max-w-md'}`}>
                                 {message.text}
                             </div>
                         </div>
@@ -146,13 +146,13 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
                         value={input}
                         onChange={handleUserMessageChange}
                         onKeyPress={handleKeyPress}
-                        className={`flex-grow p-2 mr-1 border border-gray-300 rounded-l-md text-black ${isProcessing ? 'bg-gray-300 cursor-not-allowed' : 'bg-white'}`}
+                        className={`flex-grow p-2 mr-1 border border-gray-300 rounded-l-md text-black ${isProcessing ? 'bg-gray-300 cursor-not-allowed' : 'bg-light'}`}
                         disabled={isProcessing}
                     />
                     {isProcessing ? (
-                        <div className="w-3 h-6 ml-2 md:w-3 md:h-6 bg-white rounded-full animate-spin mr-1"></div>
+                        <div className="w-3 h-6 ml-2 md:w-3 md:h-6 bg-light rounded-full animate-spin mr-1"></div>
                     ) : (
-                        <button onClick={handleSendMessage} className="bg-custom-orange text-white p-2 rounded-r-md mr-1">
+                        <button onClick={handleSendMessage} className="bg-custom-orange text-light p-2 rounded-r-md mr-1">
                             Ask
                         </button>
                     )}

@@ -7,13 +7,13 @@ function Resume() {
     const resumeIMGPath = '/Dobson_Dunavant_Resume.webp';
 
     return (
-        <div className="flex flex-col sm:min-h-screen items-center text-white px-4 pb-12 bg-gray-900 bg-opacity-80">
+        <div className="flex flex-col sm:min-h-screen items-center text-light px-4 pb-12 bg-gray-900 bg-opacity-80">
             <div className="relative w-full flex justify-center py-6">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold underline z-0">Resume</h2>
                 <a
                     href={resumePDFPath}
                     download="Dobson_Dunavant_Resume.pdf"
-                    className="absolute right-0 bg-custom-orange hover:bg-blue-700 text-white font-bold rounded text-lg md:text-xl px-4 py-2 flex items-center"
+                    className="absolute right-0 bg-custom-orange hover:bg-blue-700 text-light font-bold rounded text-lg md:text-xl px-4 py-2 flex items-center"
                     title="Download Resume as PDF"
                 >
                     <FaDownload className="inline-block mr-1" />

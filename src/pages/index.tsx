@@ -3,7 +3,7 @@ import { useTheme } from 'next-themes';
 import Home from '@/components/Home/Home';
 import Resume from '../components/Resume/Resume';
 import Blog from '../components/Blog/Blog';
-import Contact from '../components/Contact/Contact';
+import Footer from '@/components/Footer/Footer';
 import Experiences from "@/components/Experience/Experiences";
 import Navbar from "@/components/Navbar/Navbar";
 import SiteHead from "@/components/SEO/Head/SiteHead";
@@ -73,7 +73,7 @@ const IndexPage = () => {
                 </section>
 
                 <section id="contact" className="w-full">
-                    <Contact />
+                    <Footer />
                 </section>
             </div>
         </div>
