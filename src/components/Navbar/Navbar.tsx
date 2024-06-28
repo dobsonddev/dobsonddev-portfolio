@@ -45,7 +45,7 @@ const Navbar: React.FC<NavbarProps> = ({toggleChatModal}) => {
                 style={{top: isScrollingUp ? '0' : '-100%'}}
                 className={`z-20 fixed w-full flex items-center justify-center transition-all backdrop-blur-sm duration-1000 py-4 px-2 md:px-6 ${navbarBackground}`}
             >
-                <div className="w-full max-w-7xl flex items-center justify-bfetween px-2">
+                <div className="w-full max-w-7xl flex items-center justify-between px-2">
                     <div className="flex gap-4 md:gap-6 items-center justify-start">
                         <a
                             href="https://www.linkedin.com/in/dobson-dunavant/"
