@@ -5,7 +5,7 @@ import ChatbotNavbarButton from "@/components/Chatbot/ChatbotNavbarButton";
 
 function Footer() {
     return (
-        <div className="h-auto md:h-44 backdrop-blur-sm p-2 flex flex-col items-center justify-center space-y-4 relative py-6">
+        <div className="h-auto md:h-44 p-2 flex flex-col items-center justify-center space-y-4 relative py-6">
             {/* Zigzag Border */}
 
             <h2 className="text-2xl md:text-4xl font-bold pt-1">Contact Me!</h2>

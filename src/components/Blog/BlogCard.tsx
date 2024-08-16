@@ -22,7 +22,7 @@ function BlogCard({ post }: BlogCardProps) {
     };
     return (
         <div className="w-full md:w-1/2 p-4">
-            <div className="min-h-[250px] border-black border-2 p-3 rounded-md backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[10px_10px_0px_rgba(0,0,0,1)] h-full flex flex-col">
+            <div className="min-h-[250px] border-black border-2 p-3 rounded-md backdrop-blur-xl bg-neutral-200 bg-opacity-40 transition-all duration-300 hover:-translate-y-2 hover:shadow-[10px_10px_0px_rgba(0,0,0,1)] h-full flex flex-col">
                 <article className="relative flex flex-col justify-between h-full">
                     <figure className="w-full border-black border-b-2">
                         <div>

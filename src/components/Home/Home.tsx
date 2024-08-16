@@ -96,7 +96,7 @@ function Home() {
     return (
         <div className="flex flex-col">
             <div className="flex-grow flex flex-col items-center justify-center mx-4">
-                <div className="text-center backdrop-blur-md mt-52 mx-auto">
+                <div className="text-center mt-52 mx-auto">
                     <h1 className={`${heroTextBackgroundClassNew} rounded p-4 text-6xl lg:text-8xl font-extrabold tracking-wider leading-loose`}
                         style={{lineHeight: '1.4'}}>
                         {/* eslint-disable-next-line react/no-unescaped-entities */}

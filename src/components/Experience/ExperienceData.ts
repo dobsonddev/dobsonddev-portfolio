@@ -12,6 +12,22 @@ export interface Experience {
 
 const experiences: Experience[] = [
     {
+        title: "Full-Stack Software Engineer",
+        date: "June 2024 - present",
+        company: "Savvas Learning Company (EdTech)",
+        location: "Boston, MA (remote)",
+        details: [
+            "Developing full-stack solutions for Outlier.org, an industry-leading dual-enrollment ed-tech platform, using React, Node.js, PostgreSQL, Jest, and AWS within an Agile workflow",
+            "Leading WCAG2.2AA accessibility audit across each of the 5 React frontends, ensuring the platform is accessible to all users, regardless of disability.",
+            "Containerizing development environments, allowing devs to run a single command to handle end-to-end environment setup, thereby improving developer and onboarding efficiency",
+            "Contributing towards planning for various upcoming Google Cloud to AWS infrastructure migrations"
+
+        ],
+        logo: '/savvaslogo.png',
+        technologies: ['React', 'Node_js', 'PostgreSQL', 'AWS', 'Google_Cloud','Docker'],
+
+    },
+    {
         title: "Full-Stack Software Engineering Co-Op",
         date: "Sep 2023 - May 2024",
         company: "Mercedes-Benz & IFA Group",
@@ -20,7 +36,7 @@ const experiences: Experience[] = [
             "Led team of 4 to develop a portable inventory scanning system using React, Flask, AWS, PostgreSQL, OpenCV, Tesseract OCR and YOLOv8 for real-time, small-part tracking in industrial settings to enable inventory awareness and supply-chain analytics",
             "Authored Software Requirements & Design Specification documents (SRS and SDS), gathering then defining functional and non-functional requirements which were then used in system design.",
             "Designed and implemented restful HTTPS communications via AWS API Gateway to SAP APIs, enabling real-time, scalable inventory transactions",
-        "Achieved 98% inventory accuracy and SAP integration, delivering a fully end-to-end solution, significantly surpassing the existing accuracy and efficiency benchmarks"
+            "Achieved 98% inventory accuracy and SAP integration, delivering a fully end-to-end solution, significantly surpassing the existing accuracy and efficiency benchmarks"
     ],
         logo: '/mblogo.png',
         technologies: ['React', 'Flask', 'PostgreSQL', 'AWS', 'OpenCV'],

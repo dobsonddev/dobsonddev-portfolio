@@ -72,7 +72,7 @@ const ExperienceTree = () => {
         <div ref={containerRef} className="container mx-auto h-auto pt-6 px-4 md:px-8 mb-36 lg:pb-64">
             {/* Desktop Version */}
             <div className="hidden lg:block relative pt-36 md:pt-52 md:mb-60 lg:mb-20" style={{ height: `${experiences.length * verticalSpacing}px` }}>
-                <div className={`absolute left-1/2 h-4/5 border-r-4 ${borderClass} rounded transform -translate-x-1/2`}></div>
+                <div className={`absolute left-1/2 h-[84%] border-r-4 ${borderClass} rounded transform -translate-x-1/2`}></div>
 
                 {experiences.map((exp, index) => (
                     <motion.div
@@ -140,12 +140,13 @@ const ExperienceTree = () => {
                         <div className="text-box-style p-2 shadow-lg bg-gray-900 rounded max-w-2xl">
                             <h3 className="font-bold text-md text-light whitespace-nowrap sm:whitespace-normal truncate">{exp.title}</h3>
                             <h3 className="font-bold text-sm text-gray-400 whitespace-nowrap sm:whitespace-normal truncate">{exp.date}</h3>
-                            <p className="text-orange-500 text-sm pb-2">{exp.company}</p>
+                            <p className="text-orange-500 text-sm pb-2">{exp.company} yes</p>
                             <ul className="list-disc text-light rounded pl-4">
                                 {exp.details.map((detail, detailIndex) => (
                                     <li key={detailIndex} className="text-light mb-4">{detail}</li>
                                 ))}
                             </ul>
+
                             <div className="flex justify-end mt-4">
                                 {exp.technologies.map((tech, techIndex) => (
                                     <motion.div
@@ -160,7 +161,8 @@ const ExperienceTree = () => {
                                             className="w-12 h-12"
                                             variants={iconAnimation}
                                         />
-                                        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-dark text-light text-sm px-2 py-1 rounded opacity-0 pointer-events-none transition-opacity duration-200 group-hover:opacity-100">
+                                        <div
+                                            className="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-dark text-light text-sm px-2 py-1 rounded opacity-0 pointer-events-none transition-opacity duration-200 group-hover:opacity-100">
                                             {tech}
                                         </div>
                                     </motion.div>
