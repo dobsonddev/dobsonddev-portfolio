@@ -3,7 +3,7 @@
     "@type": "Person",
     "name": "Dobson Dunavant",
     "url": "https://dobsond.dev",
-    "image": "https://dobsond.dev/profile-image.jpg",
+    "image": "https://www.dobsond.dev/profile-image.jpg",
     "jobTitle": "Full-Stack Software Engineer",
     "alumniOf": [
         {
@@ -107,7 +107,7 @@
         "encodingFormat": "application/pdf",
         "contentUrl": "https://www.dobsond.dev/Dobson_Dunavant_Resume.pdf",
         "sameAs": [
-            "https://www.linkedin.com/in/dobson-dunavant",
+            "https://www.linkedin.com/in/dobson-dunavant/",
             "https://github.com/dobsonddev"
         ]
 

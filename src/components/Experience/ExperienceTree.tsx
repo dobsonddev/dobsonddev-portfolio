@@ -86,7 +86,8 @@ const ExperienceTree = () => {
                     >
                         <div className={`w-6 h-6 ${borderClass} ${bgClass} rounded-full`}></div>
 
-                        <div className={`absolute w-1/2 p-8 text-box-style shadow-lg bg-gray-900 rounded ${index % 2 === 0 ? 'right-1/2 md:mr-4 lg:mr-6 xl:mr-8 2xl:mr-14' : 'left-1/2 md:ml-4 lg:ml-6 xl:ml-8 2xl:ml-14'}`}>
+                        <div
+                            className={`absolute w-1/2 p-8 text-box-style shadow-lg bg-gray-900 rounded ${index % 2 === 0 ? 'right-1/2 md:mr-4 lg:mr-6 xl:mr-8 2xl:mr-14' : 'left-1/2 md:ml-4 lg:ml-6 xl:ml-8 2xl:ml-14'}`}>
                             <div className="flex justify-between items-center">
                                 <h3 className="font-bold text-xl text-light pb-1">{exp.title}</h3>
                                 <span className="text-sm text-gray-400 pl-2">{exp.date}</span>
@@ -112,9 +113,12 @@ const ExperienceTree = () => {
                                             src={`/icons/${tech.toLowerCase()}.svg`}
                                             alt={tech}
                                             className="w-12 h-12"
+                                            width={48} // Set width in pixels (corresponds to w-12)
+                                            height={48} // Set height in pixels (corresponds to h-12)
                                             variants={iconAnimation}
                                         />
-                                        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-gray-800 text-light text-sm px-2 py-1 rounded opacity-0 pointer-events-none transition-opacity duration-200 group-hover:opacity-100">
+                                        <div
+                                            className="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-gray-800 text-light text-sm px-2 py-1 rounded opacity-0 pointer-events-none transition-opacity duration-200 group-hover:opacity-100">
                                             {tech}
                                         </div>
                                     </motion.div>
@@ -134,7 +138,7 @@ const ExperienceTree = () => {
                         variants={nodeAnimation}
                         initial="initial"
                         animate={nodeVisibility[index] ? 'visible' : 'exit'}
-                        transition={{ delay: index * 0.4, duration: 3.5 }}
+                        transition={{delay: index * 0.4, duration: 3.5}}
                     >
                         <div className="w-6 h-6 bg-gray-900 rounded-full mb-4"></div>
                         <div className="text-box-style p-2 shadow-lg bg-gray-900 rounded max-w-2xl">
