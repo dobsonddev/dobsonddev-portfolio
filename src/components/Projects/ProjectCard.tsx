@@ -31,7 +31,7 @@ function ProjectCard({ project }: ProjectCardProps) {
                             />
                         </figure>
                         <div className="px-6 py-5 text-left h-full">
-                            <h1 className="text-[32px] mb-4">{project.name}</h1>
+                            <h2 className="text-[32px] mb-4">{project.name}</h2>
                             <p className="text-xs mb-4 line-clamp-4">
                                 {project.description}
                             </p>

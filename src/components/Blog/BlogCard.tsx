@@ -30,7 +30,7 @@ function BlogCard({ post }: BlogCardProps) {
                         </div>
                     </figure>
                     <div className="px-6 py-5 text-left flex-grow">
-                        <h1 className="text-lg md:text-xl lg:text-2xl rounded end-auto mb-4 pl-2">{post.title}</h1>
+                        <h2 className="text-lg md:text-xl lg:text-2xl rounded end-auto mb-4 pl-2">{post.title}</h2>
                         <p className="text-sm mb-2 line-clamp-4 p-2 pl-4 lg:text-lg">
                             {post.Introduction}
                         </p>
