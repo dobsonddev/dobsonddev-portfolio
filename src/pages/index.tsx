@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useTheme } from 'next-themes';
 import Home from '@/components/Home/Home';
-import Resume from '../components/Resume/Resume';
-import Blog from '../components/Blog/Blog';
+import Resume from '@/components/Resume/Resume';
+import Blog from '@/components/Blog/Blog';
 import Footer from '@/components/Footer/Footer';
 import Experiences from "@/components/Experience/Experiences";
 import Navbar from "@/components/Navbar/Navbar";
@@ -14,28 +14,24 @@ import Birds from "@/components/Birds/Birds";
 
 const IndexPage = () => {
     const [isChatModalOpen, setIsChatModalOpen] = useState(false);
-    const { theme, setTheme, resolvedTheme } = useTheme();
+    const { theme, setTheme } = useTheme();
     const vantaRef = useRef(null);
     let vantaEffect = useRef<{ destroy: () => void } | null>(null);
 
     useEffect(() => {
-        if (resolvedTheme) {
-            setTheme(resolvedTheme);
-        } else {
-            setTheme('forest');
-        }
-    }, [resolvedTheme, setTheme]);
+        const storedTheme = localStorage.getItem('theme') || 'forest';
+        setTheme(storedTheme);
 
-    useEffect(() => {
+        // Apply the Vanta effect
         // @ts-ignore
-        return applyVantaEffect(theme, vantaRef, vantaEffect);
-    }, [theme]);
+        return applyVantaEffect(storedTheme, vantaRef, vantaEffect);
+    }, [setTheme]);
 
     const toggleChatModal = () => {
         setIsChatModalOpen(!isChatModalOpen);
     };
 
-    const themeClass = theme ? themeClassNames[theme] : themeClassNames['light'];
+    const themeClass = theme ? themeClassNames[theme] : themeClassNames['forest'];
 
     return (
         <div className={themeClass}>
@@ -55,7 +51,7 @@ const IndexPage = () => {
             />
             <Navbar toggleChatModal={toggleChatModal} />
 
-            <div className="relative z-10 bg-none">
+            <div className="relative z-10 space-y-24 bg-none">
                 <section id="home" className={`w-full min-h-screen`}>
                     <Home />
                 </section>

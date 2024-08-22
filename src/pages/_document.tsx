@@ -1,7 +1,4 @@
-// pages/_document.tsx
-/* eslint-disable @next/next/no-sync-scripts */
-
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 class MyDocument extends Document {
     render() {
@@ -11,12 +8,22 @@ class MyDocument extends Document {
                     <meta charSet="UTF-8" />
                 </Head>
                 <body>
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                (function() {
+                  const theme = localStorage.getItem('theme') || 'forest';
+                  document.documentElement.classList.add(theme);
+                })();
+              `,
+                    }}
+                />
                 <Main />
                 <NextScript />
                 </body>
             </Html>
-        )
+        );
     }
 }
 
-export default MyDocument
+export default MyDocument;

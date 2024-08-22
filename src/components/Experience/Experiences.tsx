@@ -3,7 +3,7 @@ import ExperienceTree from "@/components/Experience/ExperienceTree";
 
 function Experiences() {
     return (
-        <div className="py-8 min-h-screen flex justify-center">
+        <div className="min-h-screen flex justify-center">
             <div
                 style={{ width: "95%" }}
                 className="flex flex-col items-center align-middle justify-center rounded-lg bg-opacity-90"

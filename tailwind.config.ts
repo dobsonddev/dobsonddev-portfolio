@@ -54,6 +54,7 @@ const config: Config = {
   },
   plugins: [
     addVariablesForColors, // Added this line for the new component
+    require('@tailwindcss/typography'), // Add this line to include the Typography plugin
   ],
 };
 

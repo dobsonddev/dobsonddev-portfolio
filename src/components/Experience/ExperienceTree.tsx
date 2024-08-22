@@ -141,10 +141,10 @@ const ExperienceTree = () => {
                         transition={{delay: index * 0.4, duration: 3.5}}
                     >
                         <div className="w-6 h-6 bg-gray-900 rounded-full mb-4"></div>
-                        <div className="text-box-style p-2 shadow-lg bg-gray-900 rounded max-w-2xl">
+                        <div className="text-box-style p-2 shadow-lg bg-gray-900 border border-light rounded max-w-2xl">
                             <h3 className="font-bold text-md text-light whitespace-nowrap sm:whitespace-normal truncate">{exp.title}</h3>
                             <h3 className="font-bold text-sm text-gray-400 whitespace-nowrap sm:whitespace-normal truncate">{exp.date}</h3>
-                            <p className="text-orange-500 text-sm pb-2">{exp.company} yes</p>
+                            <p className="text-orange-500 text-sm pb-2">{exp.company}</p>
                             <ul className="list-disc text-light rounded pl-4">
                                 {exp.details.map((detail, detailIndex) => (
                                     <li key={detailIndex} className="text-light mb-4">{detail}</li>

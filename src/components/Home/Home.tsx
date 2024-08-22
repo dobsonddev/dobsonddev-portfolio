@@ -126,7 +126,7 @@ function Home() {
                         className="shape-fill"></path>
                 </svg>
             </div>
-            <div className="py-2 mt-96 mb-36 grid grid-flow-row auto-rows-auto items-center justify-items-center px-4">
+            <div className="py-2 mt-96 grid grid-flow-row auto-rows-auto items-center justify-items-center px-4">
                 <motion.div
                     id="mission"
                     className={`${missionClass} p-8 md:text-lg xl:text-2xl text-center max-w-4xl mb-24 border-2 rounded`}
