@@ -48,37 +48,47 @@
     "hasOccupation": [
         {
             "@type": "Occupation",
-            "name": "Robotics/Machine Learning Co-Op",
-            "organization": "College of Charleston/Mercedes-Benz Vans",
-            "description": "Developing a large-scale, autonomous inventory system using machine learning and AWS cloud services."
+            "name": "Software Engineer",
+            "organization": "Savvas Learning Company",
+            "startDate": "2024-05",
+            "description": "Developing full-stack solutions for Outlier.org, an online college course platform, using React, Node.js, PostgreSQL, Jest, and AWS in an Agile environment. Implemented caching solutions using Redis, significantly improving user load times in data-heavy UIs. Led WCAG2.2AA accessibility audit across React frontends, enhancing platform accessibility for all users. Contributed to planning and design of Google Cloud to AWS service migrations."
+        },
+        {
+            "@type": "Occupation",
+            "name": "Software Engineering Co-Op",
+            "organization": "Mercedes-Benz, IFA Group",
+            "startDate": "2023-08",
+            "endDate": "2024-05",
+            "description": "Led a team to develop a portable warehouse inventory scanning system using React, Flask, AWS, PostgreSQL, OpenCV, Tesseract OCR, and YOLOv8 to accurately track inventory movements in real-time. Authored System Requirements and Design Specification documents by collaborating with warehouse stakeholders, leading to effective planning and execution. Delivered an end-to-end system within 6 months, including real-time updates via RESTful API communications to SAP API endpoints, leading to previously non-existent inventory awareness."
         },
         {
             "@type": "Occupation",
             "name": "Software Engineering Intern",
             "organization": "Savvas Learning Company",
-            "description": "Developed accessibility solutions for ed-tech platform, enhanced API test coverage, and led hackathon projects."
+            "startDate": "2023-05",
+            "endDate": "2023-08",
+            "description": "Developed full-stack solutions for Savvas Realize, a large-scale K-12 ed-tech platform, using Angular micro-frontends, GraphQL, RxJS, Spring Boot, PostgreSQL, Storybook, and Jest. Optimized GraphQL API calls by minimizing over-fetching data and streamlining query logic. Won summer hackathon by leading the development of a PowerBI student insights dashboard. Improved API test coverage by 19% by integrating Karate CI/CD, measured by JaCoCo metrics. Built an all-in-one team Confluence knowledge base to improve developer autonomy."
         },
         {
             "@type": "Occupation",
             "name": "Data Engineering Intern",
-            "organization": "Fiscal Tracking and Spreading",
-            "description": "Assisted in full-stack re-architecture of a desktop app to a web application using React, AWS Lambda, and AWS RDS."
-        },
-        {
-            "@type": "Occupation",
-            "name": "Data Analyst / Scrum Master",
-            "organization": "Ceterus",
-            "description": "Led agile Scrum team, improved project lead time, and validated financial data pipelines."
+            "organization": "Vision Software Solutions",
+            "startDate": "2022-09",
+            "endDate": "2023-01",
+            "description": "Migrated credit scoring ETL tasks into a microservices architecture using Docker, Terraform, and Azure (Functions, Data Factory, Cosmos DB). Optimized Azure Functions APIs and Cosmos DB SQL queries by fine-tuning parameters and caching, reducing user load times by 9%. Dockerized credit scoring ETL tasks within Azure Data Factory, enhancing scalability, reliability, and deployment speed while improving data processing efficiency."
         }
     ],
     "worksFor": {
         "@type": "Organization",
-        "name": "Self-employed",
+        "name": "Savvas Learning Company",
+        "url": "https://www.savvas.com",
+        "description": "Savvas Learning Company is an educational platform offering innovative solutions for K-12 and higher education. Dobson Dunavant is an experienced full-stack software engineer contributing to the development of cutting-edge educational tools.",
         "employee": {
             "@type": "Person",
             "name": "Dobson Dunavant"
         }
     },
+
     "makesOffer": {
         "@type": "Offer",
         "itemOffered": {
@@ -87,5 +97,19 @@
             "description": "Offering full-stack software development and data analysis services, specializing in modern technologies."
         }
     },
-    "description": "Aspiring full-stack software engineer with a proven history of delivering seamless, optimized solutions. I thrive in dynamic environments where creative problem-solving drives impactful results."
+    "description": "Aspiring full-stack software engineer with a proven history of delivering seamless, optimized solutions. I thrive in dynamic environments where creative problem-solving drives impactful results.",
+
+    "mainEntity": {
+        "@type": "CreativeWork",
+        "name": "Dobson Dunavant Resume",
+        "url": "https://www.dobsond.dev/Dobson_Dunavant_Resume.pdf",
+        "description": "Resume of Dobson Dunavant, Full-Stack Software Engineer",
+        "encodingFormat": "application/pdf",
+        "contentUrl": "https://www.dobsond.dev/Dobson_Dunavant_Resume.pdf",
+        "sameAs": [
+            "https://www.linkedin.com/in/dobson-dunavant",
+            "https://github.com/dobsonddev"
+        ]
+
+    }
 }
