@@ -2,7 +2,7 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Dobson Dunavant",
-    "url": "https://dobsond.dev",
+    "url": "https://www.dobsond.dev",
     "image": "https://www.dobsond.dev/profile-image.jpg",
     "jobTitle": "Full-Stack Software Engineer",
     "alumniOf": [
