@@ -14,24 +14,28 @@ import Birds from "@/components/Birds/Birds";
 
 const IndexPage = () => {
     const [isChatModalOpen, setIsChatModalOpen] = useState(false);
-    const { theme, setTheme } = useTheme();
+    const { theme, setTheme, resolvedTheme } = useTheme();
     const vantaRef = useRef(null);
     let vantaEffect = useRef<{ destroy: () => void } | null>(null);
 
     useEffect(() => {
-        const storedTheme = localStorage.getItem('theme') || 'forest';
-        setTheme(storedTheme);
+        if (resolvedTheme) {
+            setTheme(resolvedTheme);
+        } else {
+            setTheme('forest');
+        }
+    }, [resolvedTheme, setTheme]);
 
-        // Apply the Vanta effect
+    useEffect(() => {
         // @ts-ignore
-        return applyVantaEffect(storedTheme, vantaRef, vantaEffect);
-    }, [setTheme]);
+        return applyVantaEffect(theme, vantaRef, vantaEffect);
+    }, [theme]);
 
     const toggleChatModal = () => {
         setIsChatModalOpen(!isChatModalOpen);
     };
 
-    const themeClass = theme ? themeClassNames[theme] : themeClassNames['forest'];
+    const themeClass = theme ? themeClassNames[theme] : themeClassNames['light'];
 
     return (
         <div className={themeClass}>
