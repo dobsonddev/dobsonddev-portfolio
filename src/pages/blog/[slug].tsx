@@ -5,6 +5,7 @@ import matter from 'gray-matter';
 import { MDXRemote } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';
 
+// @ts-ignore
 export default function BlogPost({ frontMatter, mdxSource }) {
     return (
         <div className="p-8">
