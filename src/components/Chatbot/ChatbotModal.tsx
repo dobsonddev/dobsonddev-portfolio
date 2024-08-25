@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import ReactMarkdown from 'react-markdown';
 import homeData from "@/components/Home/HomeData";
 
 interface ChatbotProps {
@@ -24,7 +25,7 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
     const [isProcessing, setIsProcessing] = useState(false);
     const [questionCount, setQuestionCount] = useState(0);
     const chatContainerRef = useRef<HTMLDivElement>(null);
-    const inputRef = useRef<HTMLInputElement>(null); // Reference to the input element
+    const inputRef = useRef<HTMLInputElement>(null);
 
     useEffect(() => {
         const storedCount = parseInt(localStorage.getItem('questionCount') || '0', 10);
@@ -56,7 +57,7 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
 
     const handleUserMessageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setInput(e.target.value);
-        setError(''); // Clear error message on input change
+        setError('');
     };
 
     const handleSendMessage = async () => {
@@ -70,7 +71,7 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
             return;
         }
 
-        setIsProcessing(true); // Start processing
+        setIsProcessing(true);
 
         const userMessage: Message = {
             text: input,
@@ -96,9 +97,9 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
         } catch (error) {
             console.error('Error sending message:', error);
         } finally {
-            setIsProcessing(false); // End processing
+            setIsProcessing(false);
             if (inputRef.current) {
-                inputRef.current.focus(); // Refocus the input element
+                inputRef.current.focus();
             }
         }
     };
@@ -128,20 +129,24 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
                                     </div>
                                 )}
                             </div>
-                            <div className={`mb-3 p-2 rounded-lg ${message.sender === 'user' ? 'bg-midlight text-light self-end max-w-md' : 'bg-gray-300 text-black self-start max-w-md'}`}>
-                                {message.text}
+                            <div className={`mb-3 p-2 rounded-lg ${message.sender === 'user' ? ' ml-4 bg-midlight text-white self-end max-w-md w-fit prose prose-sm prose-headings:mt-4 prose-p:mb-4 prose-ul:ml-6 prose-li:mb-2 prose-strong:font-semibold' : 'mr-4 bg-gray-300 text-black self-start max-w-md'}`}>
+                                {message.sender === 'user' ? (
+                                    message.text
+                                ) : (
+                                    <ReactMarkdown className="prose prose-sm prose-headings:mt-2 prose-p:mb-0 prose-ul:ml-3 prose-li:mb-2 prose-strong:font-semibold">
+                                        {message.text}
+                                    </ReactMarkdown>                                )}
                             </div>
                         </div>
                     ))}
                 </div>
                 <div className="">
                     {error && <div className="text-red-500 mb-2">{error}</div>}
-
                 </div>
                 <div className="input-area flex items-center">
                     <input
                         type="text"
-                        ref={inputRef} // Attach the ref to the input element
+                        ref={inputRef}
                         placeholder="Ask a question!"
                         value={input}
                         onChange={handleUserMessageChange}
@@ -158,7 +163,6 @@ function ChatbotModal({ isOpen, setIsOpen }: ChatbotProps) {
                     )}
                     <span className="text-light text-sm ml-1">{input.length}/150</span>
                 </div>
-
             </div>
         </div>
     );

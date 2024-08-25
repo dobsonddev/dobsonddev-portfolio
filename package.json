@@ -31,6 +31,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.12.0",
+    "react-markdown": "^9.0.1",
     "tailwind-merge": "^2.3.0",
     "three": "^0.158.0",
     "typed.js": "^2.1.0",
