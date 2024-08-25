@@ -50,14 +50,16 @@ function BlogCard({ post }: BlogCardProps) {
 
             {isModalOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4 z-30">
-                    <div
-                        className="relative bg-neutral-100 bg-opacity-70 backdrop-blur-2xl p-10 rounded-md border-2 border-black max-h-[80vh] max-w-3xl overflow-y-auto">
-                        <button
-                            onClick={toggleModal}
-                            className="fixed top-1 right-1 overflow-visible z-50 bg-red-500 hover:text-light px-3 py-1 rounded text-black text-2xl">
-                            X
-                        </button>
-                        <article className="px-4">
+                    <div className="relative bg-neutral-50 p-2 rounded-md border-2 border-black max-h-[80vh] max-w-3xl overflow-y-auto">
+                        <div className="flex justify-end sticky top-0 z-50">
+                            <button
+                                onClick={toggleModal}
+                                className="bg-red-500 hover:text-light ml-4 px-2 py-0.5 rounded text-black text-lg"
+                            >
+                                X
+                            </button>
+                        </div>
+                        <article className="px-4 lg:px-8 max-w-3xl">
                             <figure className="w-full border-black border-b-2 mb-4">
                                 <div>{post.publicationDate}</div>
                             </figure>
@@ -73,6 +75,9 @@ function BlogCard({ post }: BlogCardProps) {
                     </div>
                 </div>
             )}
+
+
+
         </div>
     );
 }
