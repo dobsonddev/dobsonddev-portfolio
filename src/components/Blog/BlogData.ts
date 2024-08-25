@@ -8,11 +8,11 @@ export interface BlogPost {
 
 const blogData: BlogPost[] = [
     {
-        title: "How did I navigate my early experiences in tech?",
-        Introduction: "Some anecdotes on my first experiences in tech, and how I navigated them.",
+        title: "Imposter Syndrome and Navigating Early Experiences in Tech",
+        Introduction: "Starting a career in tech can feel overwhelming, especially when Imposter Syndrome rears its head. In this post, I offer some anecdotal insights with hopes they might help someone facing similar challenges.",
         imageUrl: "https://yourimageurl.com/react-hooks.jpg",
-        publicationDate: "Updated: 2024-05-04",
-        slug: "how-i-navigated-early-tech"
+        publicationDate: "2023-05-04",
+        slug: "imposter-syndrome-and-early-experiences"
     },
     {
         title: "The Value of Sequence Diagrams for Early Software Engineers",

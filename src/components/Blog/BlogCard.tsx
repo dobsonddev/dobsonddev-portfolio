@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { BlogPost } from './BlogData';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 
@@ -41,7 +41,7 @@ function BlogCard({ post }: BlogCardProps) {
                     </figure>
                     <div className="py-5 text-left flex-grow">
                         <h2 className="text-lg md:text-xl lg:text-2xl rounded end-auto mb-4">{post.title}</h2>
-                        <p className="text-sm mb-2 line-clamp-4 p-2 pl-4 lg:text-lg">
+                        <p className="text-sm mb-2 line-clamp-4 p-2 pl-4 lg:text-lg rounded-md backdrop-blur-2xl bg-neutral-100/10 bg-opacity-70 ">
                             {post.Introduction}
                         </p>
                     </div>
@@ -50,21 +50,26 @@ function BlogCard({ post }: BlogCardProps) {
 
             {isModalOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4 z-30">
-                    <button
-                        onClick={toggleModal}
-                        className="absolute top-28 right-[22%] z-50 bg-red-500 hover:text-dark px-3 py-1.5 rounded text-black text-2xl">
-                        X
-                    </button>
                     <div
-                        className="relative bg-light p-5 rounded-md border-2 border-black max-h-[75vh] max-w-[75%] overflow-y-auto">
-                        <h2 className="text-xl md:text-2xl font-bold mb-3">{post.title}</h2>
-                        {mdxContent ? (
-                            <div className="prose prose-lg p-4 mt-10">
-                                <MDXRemote {...mdxContent} />
-                            </div>
-                        ) : (
-                            <p>Coming Soon...</p>
-                        )}
+                        className="relative bg-neutral-100 bg-opacity-70 backdrop-blur-2xl p-10 rounded-md border-2 border-black max-h-[80vh] max-w-3xl overflow-y-auto">
+                        <button
+                            onClick={toggleModal}
+                            className="fixed top-1 right-1 overflow-visible z-50 bg-red-500 hover:text-light px-3 py-1 rounded text-black text-2xl">
+                            X
+                        </button>
+                        <article className="px-4">
+                            <figure className="w-full border-black border-b-2 mb-4">
+                                <div>{post.publicationDate}</div>
+                            </figure>
+                            <h2 className="text-xl md:text-2xl font-bold mb-4">{post.title}</h2>
+                            {mdxContent ? (
+                                <div className="prose prose-lg p-2">
+                                    <MDXRemote {...mdxContent} />
+                                </div>
+                            ) : (
+                                <p>Loading...</p>
+                            )}
+                        </article>
                     </div>
                 </div>
             )}

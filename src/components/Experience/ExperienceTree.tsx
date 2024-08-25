@@ -69,9 +69,9 @@ const ExperienceTree = () => {
     const bgClass = theme === 'vector' ? 'bg-light' : 'bg-dark';
 
     return (
-        <div ref={containerRef} className="container mx-auto h-auto pt-6 px-4 md:px-8 mb-36 lg:pb-64">
+        <div ref={containerRef} className="container mx-auto h-auto pt-6 px-4 md:px-8 xl:mb-36">
             {/* Desktop Version */}
-            <div className="hidden lg:block relative pt-36 md:pt-52 md:mb-60 lg:mb-20" style={{ height: `${experiences.length * verticalSpacing}px` }}>
+            <div className="hidden xl:block relative pt-36 md:pt-52 md:mb-60 lg:mb-20" style={{ height: `${experiences.length * verticalSpacing}px` }}>
                 <div className={`absolute left-1/2 h-[84%] border-r-4 ${borderClass} rounded transform -translate-x-1/2`}></div>
 
                 {experiences.map((exp, index) => (
@@ -84,10 +84,10 @@ const ExperienceTree = () => {
                         style={{ top: `${index * verticalSpacing}px` }}
                         transition={{ duration: 1 }}
                     >
-                        <div className={`w-6 h-6 ${borderClass} ${bgClass} rounded-full`}></div>
+                        <div className={`w-6 h-6 ${borderClass} ${bgClass}  rounded-full`}></div>
 
                         <div
-                            className={`absolute w-1/2 p-8 text-box-style shadow-lg bg-gray-900 rounded ${index % 2 === 0 ? 'right-1/2 md:mr-4 lg:mr-6 xl:mr-8 2xl:mr-14' : 'left-1/2 md:ml-4 lg:ml-6 xl:ml-8 2xl:ml-14'}`}>
+                            className={`absolute w-1/2 p-8 text-box-style shadow-lg bg-gray-900 rounded border border-light ${index % 2 === 0 ? 'right-1/2 md:mr-4 lg:mr-6 xl:mr-8 2xl:mr-14' : 'left-1/2 md:ml-4 lg:ml-6 xl:ml-8 2xl:ml-14'}`}>
                             <div className="flex justify-between items-center">
                                 <h3 className="font-bold text-xl text-light pb-1">{exp.title}</h3>
                                 <span className="text-sm text-gray-400 pl-2">{exp.date}</span>
@@ -130,7 +130,7 @@ const ExperienceTree = () => {
             </div>
 
             {/* Mobile and Tablet Version */}
-            <div className="lg:hidden">
+            <div className="xl:hidden">
                 {experiences.map((exp, index) => (
                     <motion.div
                         key={index}
