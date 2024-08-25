@@ -13,9 +13,9 @@ export interface Experience {
 const experiences: Experience[] = [
     {
         title: "Full-Stack Software Engineer",
-        date: "June 2024 - present",
+        date: "May 2024 - present",
         company: "Savvas Learning Company (EdTech)",
-        location: "Boston, MA (remote)",
+        location: "Phoenix, AZ (remote)",
         details: [
             "Developing full-stack solutions for Outlier.org, an industry-leading dual-enrollment ed-tech platform, using React, Node.js, PostgreSQL, Jest, and AWS within an Agile workflow",
             "Leading WCAG2.2AA accessibility audit across each of the 5 React frontends, ensuring the platform is accessible to all users, regardless of disability.",

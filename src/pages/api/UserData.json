@@ -1,7 +1,7 @@
 {
-  "Name": "Dobson Dunavant",
+  "Name": "Dobson",
   "PersonalInformation": {
-    "CurrentLocation": "Charleston, SC",
+    "CurrentLocation": "Somewhere on the east coast!",
     "Birthplace": "Memphis, TN",
     "Fan": "Grizzlies, Memphis Tigers, Liverpool FC, Borussia Dortmund",
     "Phone": "(901) 356-4309",
@@ -77,6 +77,18 @@
     ]
   },
   "Experiences": [
+    {
+      "Role": "Software Engineer",
+      "Company": "Savvas Learning Company",
+      "Location": "Phoenix, AZ (remote)",
+      "Period": "May 2024 – Present",
+      "Details": [
+        "Developing full-stack solutions for Outlier.org, an industry-leading dual-enrollment ed-tech platform, using React, Node.js, PostgreSQL, Jest, and AWS within an Agile workflow",
+        "Leading WCAG2.2AA accessibility audit across each of the 5 React frontends, ensuring the platform is accessible to all users, regardless of disability.",
+        "Containerizing development environments, allowing devs to run a single command to handle end-to-end environment setup, thereby improving developer and onboarding efficiency",
+        "Contributing towards planning for various upcoming Google Cloud to AWS infrastructure migrations"
+      ]
+    },
     {
       "Role": "Machine Learning and Robotics Co-Op",
       "Company": "Mercedes-Benz, IFA Group",
