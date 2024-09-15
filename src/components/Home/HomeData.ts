@@ -12,11 +12,14 @@ const homeData: HomeData = {
         'full-stack software developer <span class="icon-placeholder" data-icon="/icons/dev.svg"></span>',
         'persistent problem solver <span class="icon-placeholder" data-icon="/icons/problemsolve.svg"></span>',
         'tater tot connoisseur <span class="icon-placeholder" data-icon="/icons/tatertot.svg"></span>',
+        'interest: cloud computing <span class="icon-placeholder" data-icon="/icons/cloudcomputing.png"></span>',
+        'interest: cybersecurity <span class="icon-placeholder" data-icon="/icons/cybersecurity.png"></span>',
+        'interest: devops <span class="icon-placeholder" data-icon="/icons/devops.png"></span>',
+        'interest: data engineering <span class="icon-placeholder" data-icon="/icons/dataengineering.png"></span>',
         'hobby: music <span class="icon-placeholder" data-icon="/icons/music.svg"></span>',
         'hobby: soccer <span class="icon-placeholder" data-icon="/icons/soccer.svg"></span>',
         'hobby: drumming <span class="icon-placeholder" data-icon="/icons/drummer.svg"></span>',
         'hobby: backpacking <span class="icon-placeholder" data-icon="/icons/outdoors.svg"></span>',
-        'hobby: building stuff <span class="icon-placeholder" data-icon="/icons/project.svg"></span>',
         'hobby: gaming <span class="icon-placeholder" data-icon="/icons/gaming.svg"></span>',
     ],
     iconAlts: [
@@ -31,7 +34,7 @@ const homeData: HomeData = {
         'Tater tot icon',
     ],
     missionStatementTop:
-        "Welcome! I'm a full-stack software engineer with a passion for tackling real-world problems with generalized, long-term solutions.",
+        "Welcome! \n I'm a tech enthusiast with interests ranging from full-stack web development to cybersecurity and cloud computing. I love to learn on-the-go while tackling real-world problems with long-term solutions.",
     missionStatementBottom:
         "I'm driven by curiosity, collaboration, and building awesome things with awesome people.",
 };
