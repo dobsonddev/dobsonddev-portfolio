@@ -108,22 +108,22 @@ const Navbar: React.FC<NavbarProps> = ({toggleChatModal}) => {
                                className="block hover:text-dark hover:rounded hover:bg-light p-4">Experiences</a>
                             <a href="#resume"
                                className="block hover:text-dark hover:rounded hover:bg-light p-4">Resume</a>
-                            <a href="#blog" className="block hover:text-dark hover:rounded hover:bg-light p-4">Blog</a>
+                            <a href="/blog" className="block hover:text-dark hover:rounded hover:bg-light p-4">Blog</a>
                             <a href="#contact"
                                className="block hover:text-dark hover:rounded hover:bg-light p-4">Contact</a>
                         </div>
                     )}
                     <div className="hidden md:flex flex-1 items-center justify-end">
-                        <a href="#home"
+                        <a href="/"
                            className="hover:text-dark hover:bg-light px-4 py-2 hover:rounded transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Home</a>
                         <a href="#experiences"
                            className="hover:text-dark hover:bg-light px-4 py-2 hover:rounded transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Experiences</a>
                         <a href="#resume"
                            className="hover:text-dark hover:bg-light px-4 py-2 hover:rounded transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Resume</a>
-                        <a href="#blog"
+                        <a href="/blog"
                            className="hover:text-dark hover:bg-light px-4 py-2 hover:rounded transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Blog</a>
                         <div>
-                            <ThemeSwitch openComponent={openComponent} setOpenComponent={setOpenComponent}/>
+                ç            <ThemeSwitch openComponent={openComponent} setOpenComponent={setOpenComponent}/>
                         </div>
                         <SpotifyPlayer openComponent={openComponent} setOpenComponent={setOpenComponent}/>
                     </div>
