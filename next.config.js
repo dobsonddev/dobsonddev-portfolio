@@ -1,3 +1,4 @@
+const withTM = require('next-transpile-modules')(['got', 'notion-client']);
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
 });
@@ -14,4 +15,4 @@ const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
 };
 
-module.exports = withMDX(nextConfig);
+module.exports = withTM(withMDX(nextConfig));

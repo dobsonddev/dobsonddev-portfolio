@@ -17,7 +17,7 @@ const experiences: Experience[] = [
         company: "Savvas Learning Company (EdTech)",
         location: "Phoenix, AZ (remote)",
         details: [
-            "Developing full-stack solutions for Outlier.org, an industry-leading dual-enrollment ed-tech platform, using React, Node.js, PostgreSQL, Jest, and AWS within an Agile workflow",
+            "Developing full-stack solutions for Outlier.org, an industry-leading dual-enrollment ed-tech platform, using React, Node.js, PostgreSQL, Jest, and Google Cloud within an Agile workflow",
             "Leading WCAG2.2AA accessibility audit across each of the 5 React frontends, ensuring the platform is accessible to all users, regardless of disability.",
             "Containerizing development environments, allowing devs to run a single command to handle end-to-end environment setup, thereby improving developer and onboarding efficiency",
             "Contributing towards planning for various upcoming Google Cloud to AWS infrastructure migrations"
@@ -77,8 +77,8 @@ const experiences: Experience[] = [
         company: "Ceterus (FinTech startup)",
         location: "Charleston, SC",
         details: [
-            "Engineered technical solutions for over 125 clients by translating complex technical features into tangible business benefits, leading to increased sales and enhanced customer engagement",
-            "Achieved a domain-high 23% year-over-year increase in customer retention by conducting regular feedback sessions and personalized follow-ups, leading to stronger client relationships and improved service satisfaction",
+            "Engineered technical solutions for over 125 clients by delivering solutions that directly fit client needs, creating real business value while increasing client happiness/retention.",
+            "Achieved a domain-high 23% year-over-year increase in customer retention by delivering client-aligned solutions, conducting regular feedback sessions, and consistent, personalized follow-ups, leading to stronger client relationships and improved satisfaction",
             "Achieved a 21% reduction in time blocked within six months by addressing common blockers while facilitating knowledge-sharing between interdependent teams for more efficient sprint planning and execution"
         ],
         logo: '/ceteruslogo.png',

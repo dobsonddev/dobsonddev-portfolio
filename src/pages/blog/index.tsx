@@ -1,19 +1,16 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { GetStaticProps } from 'next';
+import React, { useRef, useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
-import Home from '@/components/Home/Home';
-import Resume from '@/components/Resume/Resume';
 import Blog from '@/components/Blog/Blog';
 import Footer from '@/components/Footer/Footer';
-import Experiences from "@/components/Experience/Experiences";
 import Navbar from "@/components/Navbar/Navbar";
 import SiteHead from "@/components/SEO/Head/SiteHead";
 import { siteConfig } from '@/components/SEO/SiteConfig';
 import { themeClassNames } from '@/utils/themeClassNames';
 import { applyVantaEffect } from '@/utils/vantaEffects';
 import Birds from "@/components/Birds/Birds";
+import { getAllBlogPosts } from '@/utils/notion';
 import { BlogPost } from '@/utils/types';
-import {getAllBlogPosts} from "@/utils/notion";
-import {GetStaticProps} from "next";
 
 interface BlogHomeProps {
     posts: BlogPost[];
@@ -28,7 +25,7 @@ export const getStaticProps: GetStaticProps = async () => {
     };
 };
 
-const IndexPage = ({ posts }: BlogHomeProps) => {
+const BlogHome = ({ posts }: BlogHomeProps) => {
     const [isChatModalOpen, setIsChatModalOpen] = useState(false);
     const { theme, setTheme, resolvedTheme } = useTheme();
     const vantaRef = useRef(null);
@@ -71,20 +68,8 @@ const IndexPage = ({ posts }: BlogHomeProps) => {
             />
             <Navbar toggleChatModal={toggleChatModal} />
 
-            <div className="relative z-10 space-y-24 bg-none">
-                <section id="home" className={`w-full min-h-screen`}>
-                    <Home />
-                </section>
-
-                <section id="experiences" className={`w-full min-h-screen`}>
-                    <Experiences />
-                </section>
-
-                <section id="resume" className={`w-full`}>
-                    <Resume />
-                </section>
-
-                <section id="blog" className={`w-full text-dark`}>
+            <div className="relative z-10 pt-36 space-y-24 bg-none">
+                <section id="blog" className={`w-full min-h-screen text-dark`}>
                     <Blog posts={posts} />
                 </section>
 
@@ -96,4 +81,4 @@ const IndexPage = ({ posts }: BlogHomeProps) => {
     );
 };
 
-export default IndexPage;
+export default BlogHome;

@@ -96,7 +96,7 @@ function Home() {
     return (
         <div className="flex flex-col">
             <div className="flex-grow flex flex-col items-center justify-center mx-4">
-                <div className="text-center mt-52 mx-auto">
+                <div className="text-center mt-36 mx-auto">
                     <h1 className={`${heroTextBackgroundClassNew} rounded p-4 text-6xl lg:text-8xl font-extrabold tracking-wider leading-loose`}
                         style={{lineHeight: '1.4'}}>
                         {/* eslint-disable-next-line react/no-unescaped-entities */}
@@ -104,7 +104,7 @@ function Home() {
                     </h1>
                 </div>
                 <div
-                    className={`${heroTextBackgroundClassNew} backdrop-blur-lg text-2xl lg:text-4xl mt-28 md:px-4 p-2 md:py-6 rounded mx-auto`}>
+                    className={`${heroTextBackgroundClassNew} backdrop-blur-lg text-xl bg-light bg-opacity-45 lg:text-3xl mt-12 lg:mt-28 md:px-4 p-2 md:py-6 rounded mx-auto`}>
                     <span ref={typedRef} className="p-2"></span>
                 </div>
 
@@ -118,14 +118,6 @@ function Home() {
                 )}
             </div>
 
-            <div className="custom-shape-divider-bottom-1719604383">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                     preserveAspectRatio="none">
-                    <path
-                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                        className="shape-fill"></path>
-                </svg>
-            </div>
             <div className="py-2 mt-96 grid grid-flow-row auto-rows-auto items-center justify-items-center px-4">
                 <motion.div
                     id="mission"
