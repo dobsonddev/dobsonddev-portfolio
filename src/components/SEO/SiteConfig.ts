@@ -1,10 +1,10 @@
 import structuredData from './Head/structuredData.json';
 
 export const siteConfig = {
-    title: 'Dobson Dunavant - Full-Stack Software Engineer',
-    description: 'Portfolio showcasing Dobson Dunavant’s full-stack development skills and experiences.',
+    title: 'Dobson Dunavant - Full-Stack Software Developer',
+    description: 'Portfolio showcasing Dobson Dunavant’s skills, experiences, and character as a full-stack software developer.',
     author: 'Dobson Dunavant',
-    keywords: 'Full-Stack Developer, Software Engineer, React, Angular, AWS, Spring, PostgreSQL, Python, Machine Learning, AI, DevOps, Data Engineering, CI/CD, Cloud, Web Development',
+    keywords: 'full-stack developer, software engineer, cloud computing, cybersecurity, react, angular, aws, azure, spring, postgresql, python, machine learning, ai, devops, data engineering, ci/cd, web development, docker, kubernetes, node.js, security, penetration testing, ethical hacking',
     siteUrl: 'https://www.dobsond.dev/',
     imageUrl: 'https://www.dobsond.dev/DDlogo.png',
     structuredData: structuredData,

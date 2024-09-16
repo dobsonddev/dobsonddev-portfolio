@@ -121,6 +121,7 @@ export default function BlogPost({ recordMap, postTitle, postDescription }: Blog
                         <NotionRenderer
                             recordMap={recordMap}
                             fullPage={true}
+                            darkMode={theme === 'forest' || theme === 'vector'}
                             disableHeader={true}
                             showTableOfContents={false}
                             minTableOfContentsItems={0}
