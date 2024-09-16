@@ -123,7 +123,7 @@ const Navbar: React.FC<NavbarProps> = ({toggleChatModal}) => {
                         <a href="/blog"
                            className="hover:text-dark hover:bg-light px-4 py-2 hover:rounded transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Blog</a>
                         <div>
-                ç            <ThemeSwitch openComponent={openComponent} setOpenComponent={setOpenComponent}/>
+                           <ThemeSwitch openComponent={openComponent} setOpenComponent={setOpenComponent}/>
                         </div>
                         <SpotifyPlayer openComponent={openComponent} setOpenComponent={setOpenComponent}/>
                     </div>

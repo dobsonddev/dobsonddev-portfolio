@@ -44,11 +44,36 @@ interface BlogPostProps {
     postDescription: string;
 }
 
+const CustomPageHeader: React.FC<any> = () => {
+    // Return null or a custom header if you want
+    return null
+}
+
 export default function BlogPost({ recordMap, postTitle, postDescription }: BlogPostProps) {
     const [isChatModalOpen, setIsChatModalOpen] = useState(false);
     const { theme, setTheme, resolvedTheme } = useTheme();
     const vantaRef = useRef(null);
     let vantaEffect = useRef<{ destroy: () => void } | null>(null);
+
+    useEffect(() => {
+        // Add custom CSS to hide specific metadata
+        const style = document.createElement('style')
+        style.textContent = `
+      .notion-collection-row-body .notion-collection-row-property {
+        display: flex !important;
+      }
+      .notion-collection-row-body .notion-collection-row-property:nth-child(1),
+      .notion-collection-row-body .notion-collection-row-property:nth-child(4) {
+        display: none !important;
+      }
+    `
+        document.head.append(style)
+
+        // Cleanup function to remove the style when the component unmounts
+        return () => {
+            document.head.removeChild(style)
+        }
+    }, [])
 
     useEffect(() => {
         if (resolvedTheme) {
@@ -69,8 +94,8 @@ export default function BlogPost({ recordMap, postTitle, postDescription }: Blog
 
     const themeClass = theme ? themeClassNames[theme] : themeClassNames['light'];
 
-    // Filter out slug and published fields
-    const filteredRecordMap = filterRecordMap(recordMap);
+    // Filter out metadata
+    const filteredRecordMap = removeMetadata(recordMap);
 
     return (
         <div className={themeClass}>
@@ -92,14 +117,12 @@ export default function BlogPost({ recordMap, postTitle, postDescription }: Blog
 
             <div className="relative z-10 pt-36 space-y-24">
                 <section id="blog-post" className="w-full min-h-screen px-6">
-                    <div className="max-w-4xl mx-auto rounded p-12">
+                    <div className="max-w-6xl mx-auto rounded">
                         <NotionRenderer
-                            className="text-green-500"
+                            recordMap={recordMap}
                             fullPage={true}
-                            isShowingSearch={true}
-                            recordMap={filteredRecordMap}
-                            darkMode={theme === 'forest' || theme === 'dots'}
-                            showTableOfContents={true}
+                            disableHeader={true}
+                            showTableOfContents={false}
                             minTableOfContentsItems={0}
                             showCollectionViewDropdown={false}
                             components={{
@@ -120,47 +143,28 @@ export default function BlogPost({ recordMap, postTitle, postDescription }: Blog
     );
 }
 
-const filterRecordMap = (recordMap: ExtendedRecordMap): ExtendedRecordMap => {
-    const filteredRecordMap: ExtendedRecordMap = {
-        block: {},
-        collection: {},
-        collection_view: {},
-        notion_user: {},
-        collection_query: {},
-        signed_urls: {}
-    };
+const removeMetadata = (recordMap: ExtendedRecordMap): ExtendedRecordMap => {
+    const newRecordMap = JSON.parse(JSON.stringify(recordMap)); // Deep clone
 
-    // Function to filter out specific fields
-    const filterObjectFields = (obj: any) => {
-        for (const key in obj) {
-            if (obj[key]?.properties) {
-                delete obj[key].properties['slug'];
-                delete obj[key].properties['published'];
+    if (newRecordMap.block) {
+        Object.values(newRecordMap.block).forEach((block: any) => {
+            if (block.value && block.value.properties) {
+                // Remove specific properties entirely
+                delete block.value.properties.TbC_; // Slug
+                delete block.value.properties['V~XC']; // Description
+                delete block.value.properties.olvG; // Date
+                delete block.value.properties['sS@j']; // Published
             }
-        }
-    };
+            // Remove the entire content array if it exists
+            if (block.value && block.value.content && block.value.content.length > 0) {
+                // Keep only the title block (usually the first one) and remove the rest
+                block.value.content = [block.value.content[0]];
+            }
+        });
+    }
 
-    // Filter blocks
-    Object.keys(recordMap.block).forEach((blockId) => {
-        filteredRecordMap.block[blockId] = recordMap.block[blockId];
-    });
-
-    // Filter collections
-    Object.keys(recordMap.collection).forEach((collectionId) => {
-        filteredRecordMap.collection[collectionId] = recordMap.collection[collectionId];
-    });
-
-    // Filter collection views
-    Object.keys(recordMap.collection_view).forEach((viewId) => {
-        filteredRecordMap.collection_view[viewId] = recordMap.collection_view[viewId];
-    });
-
-    filterObjectFields(filteredRecordMap.block);
-    filterObjectFields(filteredRecordMap.collection_view);
-
-    return filteredRecordMap;
+    return newRecordMap;
 };
-
 export const getStaticProps: GetStaticProps = async ({ params }) => {
     const slug = params?.slug as string;
 
