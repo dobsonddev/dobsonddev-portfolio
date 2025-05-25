@@ -12,20 +12,27 @@ export interface Experience {
 
 const experiences: Experience[] = [
     {
-        title: "Full-Stack Software Engineer",
+        title: "Full-Stack/DevOps Engineer",
         date: "May 2024 - present",
         company: "Savvas Learning Company (EdTech)",
         location: "Phoenix, AZ (remote)",
         details: [
-            "Developing full-stack solutions for Outlier.org, an industry-leading dual-enrollment ed-tech platform, using React, Node.js, PostgreSQL, Jest, and Google Cloud within an Agile workflow",
-            "Leading WCAG2.2AA accessibility audit across each of the 5 React frontends, ensuring the platform is accessible to all users, regardless of disability.",
-            "Containerizing development environments, allowing devs to run a single command to handle end-to-end environment setup, thereby improving developer and onboarding efficiency",
-            "Contributing towards planning for various upcoming Google Cloud to AWS infrastructure migrations"
-
+            "Developed full-stack solutions for Outlier.org using React, Node.js, PostgreSQL, Jest, Google Cloud Platform, and AWS in an Agile environment",
+            "Architected and executed complete, 0-downtime GCP to AWS cloud migrations, including App Engine to ECS Fargate, Cloud Storage to S3, and BigQuery to Redshift",
+            "Built and maintained FERPA-compliant cross-cloud networking architecture with Site-to-Site VPN for secure student data transfers",
+            "Orchestrated blue-green deployments across multiple ECS services using AWS CodePipeline/CodeDeploy with automated rollback capabilities",
+            "Led 3 major cloud infrastructure epics including 0-downtime PostgreSQL to Aurora migrations and greenfield AWS CDK infrastructure-as-code projects",
+            "Established comprehensive Datadog monitoring systems for critical API endpoints, improving incident detection and response times",
+            "Implemented PII data scrambling solutions for non-production environments, enhancing security while maintaining testing capabilities",
+            "Created and delivered technical knowledge-sharing sessions on AWS architecture, web accessibility (WCAG 2.1), and database migrations",
+            "Implemented multi-region Redis caching layers with automated failover, reducing API latency during peak educational enrollment periods",
+            "Authored comprehensive technical documentation and overhauled repository READMEs to improve developer onboarding",
+            "Strengthened application security by resolving DAST scan vulnerabilities and implementing Auth0-based system lockdown protocols",
+            "Redesigned database architecture by unifying disparate data sources and optimizing schema relationships for educational content",
+            "Created performance monitoring dashboards with custom Datadog monitors for actionable system health insights"
         ],
         logo: '/savvaslogo.png',
-        technologies: ['React', 'Node_js', 'PostgreSQL', 'AWS', 'Google_Cloud','Docker'],
-
+        technologies: ['React', 'Node_js', 'PostgreSQL', 'AWS', 'Google_Cloud', 'Docker'],
     },
     {
         title: "Full-Stack Software Engineering Co-Op",
@@ -37,7 +44,7 @@ const experiences: Experience[] = [
             "Authored Software Requirements & Design Specification documents (SRS and SDS), gathering then defining functional and non-functional requirements which were then used in system design.",
             "Designed and implemented restful HTTPS communications via AWS API Gateway to SAP APIs, enabling real-time, scalable inventory transactions",
             "Achieved 98% inventory accuracy and SAP integration, delivering a fully end-to-end solution, significantly surpassing the existing accuracy and efficiency benchmarks"
-    ],
+        ],
         logo: '/mblogo.png',
         technologies: ['React', 'Flask', 'PostgreSQL', 'AWS', 'OpenCV'],
     },
@@ -52,7 +59,7 @@ const experiences: Experience[] = [
             "Resolved 11 high-priority Jira tickets, contributing to sprint goals within an Agile team",
             "Designed API sequence diagrams, illustrating the end-to-end lifecycle across Angular micro-frontends, Apollo GraphQL, Spring services, and PostgreSQL, for use in understanding and optimizing within a module federation architecture",
             "Built a comprehensive, all-in-one Confluence knowledge hub, covering content from day 1 new-dev onboarding guides to custom micro-frontend build steps, reducing redundant knowledge-sharing and improving developer autonomy/efficiency."
-],
+        ],
         logo: '/savvaslogo.png',
         technologies: ['Angular', 'GraphQL', 'Spring', 'PostgreSQL', 'Jest', 'StoryBook'],
 
