@@ -1,4 +1,3 @@
-// src/components/Blog/BlogCard.tsx
 import React from 'react';
 import Link from 'next/link';
 import { BlogPost } from '@/utils/types';

@@ -24,7 +24,7 @@ const Navbar: React.FC<NavbarProps> = ({toggleChatModal}) => {
             const currentScrollPos = window.pageYOffset;
             // Only consider it scrolling if the difference is greater than a threshold
             const scrollDifference = Math.abs(currentScrollPos - lastScrollTop);
-            const SCROLL_THRESHOLD = 5; // Adjust this value as needed
+            const SCROLL_THRESHOLD = 5;
 
             if (scrollDifference > SCROLL_THRESHOLD) {
                 const isScrollingDown = currentScrollPos > lastScrollTop;

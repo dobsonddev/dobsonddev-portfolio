@@ -53,14 +53,15 @@ const config: Config = {
     },
   },
   plugins: [
-    addVariablesForColors, // Added this line for the new component
-    require('@tailwindcss/typography'), // Add this line to include the Typography plugin
+    addVariablesForColors,
+    require('@tailwindcss/typography'),
   ],
 };
 
 export default config;
 
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
+// Feedback: This been really nice to have.
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme("colors"));
   let newVars = Object.fromEntries(

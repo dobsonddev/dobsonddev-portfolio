@@ -1,4 +1,3 @@
-// src/pages/blog/[slug].tsx
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { useRef, useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
@@ -14,12 +13,11 @@ import { applyVantaEffect } from '@/utils/vantaEffects';
 import Birds from "@/components/Birds/Birds";
 import dynamic from 'next/dynamic';
 
-// Importing styles
 import 'react-notion-x/src/styles.css';
 import 'prismjs/themes/prism-tomorrow.css';
 import 'katex/dist/katex.min.css';
 
-// Dynamically load heavy components
+// Dynamically load heavy stuff
 const Code = dynamic(() =>
     import('react-notion-x/build/third-party/code').then((m) => m.Code)
 );
@@ -45,7 +43,7 @@ interface BlogPostProps {
 }
 
 const CustomPageHeader: React.FC<any> = () => {
-    // Return null or a custom header if you want
+    // Return null or a custom header if we want
     return null
 }
 
@@ -69,7 +67,7 @@ export default function BlogPost({ recordMap, postTitle, postDescription }: Blog
     `
         document.head.append(style)
 
-        // Cleanup function to remove the style when the component unmounts
+        // Cleanup func to remove the style when the component unmounts
         return () => {
             document.head.removeChild(style)
         }
@@ -145,7 +143,7 @@ export default function BlogPost({ recordMap, postTitle, postDescription }: Blog
 }
 
 const removeMetadata = (recordMap: ExtendedRecordMap): ExtendedRecordMap => {
-    const newRecordMap = JSON.parse(JSON.stringify(recordMap)); // Deep clone
+    const newRecordMap = JSON.parse(JSON.stringify(recordMap));
 
     if (newRecordMap.block) {
         Object.values(newRecordMap.block).forEach((block: any) => {

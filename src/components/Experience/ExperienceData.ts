@@ -1,5 +1,3 @@
-// ExperienceData.ts
-
 export interface Experience {
     title: string;
     date: string;

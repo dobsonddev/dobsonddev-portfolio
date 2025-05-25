@@ -3,7 +3,7 @@ import { MutableRefObject } from 'react';
 export const applyVantaEffect = (theme: string, vantaRef: MutableRefObject<HTMLDivElement | null>, vantaEffect: MutableRefObject<{ destroy: () => void } | null>) => {
     if (typeof window !== 'undefined') {
         const THREE = require('three');
-        window.THREE = THREE; // Ensure THREE is available for Vanta.js
+        window.THREE = THREE; // Ensure THREE is available
         const NET = require('vanta/dist/vanta.net.min.js').default;
         const DOTS = require('vanta/dist/vanta.dots.min.js').default;
 

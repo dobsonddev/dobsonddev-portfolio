@@ -7,14 +7,15 @@ const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
 });
 
-// Create a new cache instance
-const requestCache = new NodeCache({ stdTTL: 3600, checkperiod: 600 }); // Cache TTL of 1 hour
+// create a new cache instance
+const requestCache = new NodeCache({ stdTTL: 3600, checkperiod: 600 }); //  1 hour TTL Cache
 
 // Set the rate limit
 const MAX_REQUESTS_PER_HOUR = 16;
 
+// ToDo: Revist this at some point. Research a more robust way to solve this problem.
 const isAppropriateContent = (text: string): boolean => {
-    const inappropriateWords = ["badword1", "badword2", "badword3"]; // Example inappropriate words
+    const inappropriateWords = ["badword1", "badword2", "badword3"];
     return !inappropriateWords.some(word => text.includes(word));
 };
 
@@ -22,7 +23,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (req.method === 'POST') {
         const userIp = (req.headers['x-forwarded-for'] || req.connection.remoteAddress) as string;
 
-        // Get the current request count for the IP
+        // Handle request spam
         const requestCount = requestCache.get(userIp) as number | undefined || 0;
 
         if (requestCount >= MAX_REQUESTS_PER_HOUR) {

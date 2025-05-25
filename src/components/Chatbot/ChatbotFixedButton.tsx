@@ -1,5 +1,3 @@
-///Users/dobsond/Documents/GitHub/old-dobsonddev-portfolio2/src/components/Chatbot/ChatbotFixedButton.tsx
-
 import React from 'react';
 
 interface ChatbotProps {

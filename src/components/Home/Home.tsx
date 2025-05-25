@@ -37,7 +37,7 @@ function Home() {
             if (iconPath) {
                 const img = document.createElement('img');
                 img.src = iconPath;
-                img.alt = homeData.iconAlts[index] || 'Icon'; // Use alt text from homeData
+                img.alt = homeData.iconAlts[index] || 'Icon'; // using alt text from homeData
                 img.className = 'inline-block align-middle ml-1 -mt-2 w-6 h-6 md:w-10 md:h-10';
                 placeholder.replaceWith(img);
             }
@@ -52,7 +52,7 @@ function Home() {
             const position = missionElement.getBoundingClientRect();
             const elementCenter = position.top + (position.height / 2);
 
-            // Check if the center of the element is within the viewport
+            // check if the center of the element is within the viewport
             if (elementCenter < window.innerHeight && elementCenter >= 0) {
                 setIsVisible(true);
             } else {
@@ -72,7 +72,7 @@ function Home() {
         // Show the scroll prompt after a few seconds
         const timer = setTimeout(() => {
             setShowScrollPrompt(true);
-        }, 3000); // Adjust the time as needed
+        }, 3000);
 
         // Listen for scroll events
         const handleScroll = () => {

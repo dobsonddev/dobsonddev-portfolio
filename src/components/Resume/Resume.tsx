@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
-import Image from "next/legacy/image"; // Import Next.js Image component
-import { FaDownload } from 'react-icons/fa'; // Import the download icon
+import Image from "next/legacy/image";
+import { FaDownload } from 'react-icons/fa';
 
 function Resume() {
     const resumePDFPath = '/Dobson_Dunavant_Resume.pdf';

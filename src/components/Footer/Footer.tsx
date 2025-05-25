@@ -1,7 +1,5 @@
-// Footer.tsx
 import React from 'react';
 import {FaEnvelope, FaGithub, FaLinkedin} from "react-icons/fa";
-import ChatbotNavbarButton from "@/components/Chatbot/ChatbotNavbarButton";
 
 function Footer() {
     return (
