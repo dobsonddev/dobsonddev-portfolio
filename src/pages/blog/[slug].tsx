@@ -40,6 +40,8 @@ interface BlogPostProps {
     recordMap: ExtendedRecordMap;
     postTitle: string;
     postDescription: string;
+    postDate: string;
+    postSlug: string;
 }
 
 const CustomPageHeader: React.FC<any> = () => {
@@ -47,11 +49,39 @@ const CustomPageHeader: React.FC<any> = () => {
     return null
 }
 
-export default function BlogPost({ recordMap, postTitle, postDescription }: BlogPostProps) {
+export default function BlogPost({ recordMap, postTitle, postDescription, postDate, postSlug }: BlogPostProps) {
     const [isChatModalOpen, setIsChatModalOpen] = useState(false);
     const { theme, setTheme, resolvedTheme } = useTheme();
     const vantaRef = useRef(null);
     let vantaEffect = useRef<{ destroy: () => void } | null>(null);
+
+    // Create article structured data
+    const articleStructuredData = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": postTitle,
+        "description": postDescription || siteConfig.description,
+        "datePublished": postDate,
+        "dateModified": postDate,
+        "author": {
+            "@type": "Person",
+            "name": siteConfig.author,
+            "url": siteConfig.siteUrl
+        },
+        "publisher": {
+            "@type": "Person",
+            "name": siteConfig.author,
+            "logo": {
+                "@type": "ImageObject",
+                "url": siteConfig.imageUrl
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": `${siteConfig.siteUrl}/blog/${postSlug}`
+        },
+        "image": siteConfig.imageUrl
+    };
 
     useEffect(() => {
         // Add custom CSS to hide specific metadata
@@ -107,9 +137,17 @@ export default function BlogPost({ recordMap, postTitle, postDescription }: Blog
                 description={postDescription || siteConfig.description}
                 author={siteConfig.author}
                 keywords={`${postTitle}, ${siteConfig.keywords}`}
-                siteUrl={`${siteConfig.siteUrl}/blog/${postTitle}`}
+                siteUrl={`${siteConfig.siteUrl}/blog/${postSlug}`}
                 imageUrl={siteConfig.imageUrl}
-                structuredData={siteConfig.structuredData}
+                structuredData={articleStructuredData}
+                isArticle={true}
+                publishedTime={postDate}
+                modifiedTime={postDate}
+                breadcrumbs={[
+                    { name: 'Home', url: siteConfig.siteUrl },
+                    { name: 'Blog', url: `${siteConfig.siteUrl}/blog` },
+                    { name: postTitle, url: `${siteConfig.siteUrl}/blog/${postSlug}` }
+                ]}
             />
             <Navbar toggleChatModal={toggleChatModal} />
 
@@ -182,6 +220,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
                 recordMap,
                 postTitle: post.title,
                 postDescription: post.description,
+                postDate: post.date || new Date().toISOString(),
+                postSlug: post.slug,
             },
             revalidate: 10,
         };

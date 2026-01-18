@@ -1,5 +1,10 @@
 import Head from 'next/head';
 
+interface BreadcrumbItem {
+    name: string;
+    url: string;
+}
+
 interface SiteHeadProps {
     title: string;
     description: string;
@@ -8,15 +13,50 @@ interface SiteHeadProps {
     siteUrl: string;
     imageUrl: string;
     structuredData: any;
+    isArticle?: boolean;
+    publishedTime?: string;
+    modifiedTime?: string;
+    articleSection?: string;
+    breadcrumbs?: BreadcrumbItem[];
 }
 
-const SiteHead: React.FC<SiteHeadProps> = ({ title, description, author, keywords, siteUrl, imageUrl, structuredData }) => {
+const SiteHead: React.FC<SiteHeadProps> = ({
+    title,
+    description,
+    author,
+    keywords,
+    siteUrl,
+    imageUrl,
+    structuredData,
+    isArticle = false,
+    publishedTime,
+    modifiedTime,
+    articleSection = 'Technology',
+    breadcrumbs
+}) => {
+    const breadcrumbStructuredData = breadcrumbs ? {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": breadcrumbs.map((item, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "name": item.name,
+            "item": item.url
+        }))
+    } : null;
+
     return (
         <Head>
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{__html: JSON.stringify(structuredData)}}
             />
+            {breadcrumbStructuredData && (
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{__html: JSON.stringify(breadcrumbStructuredData)}}
+                />
+            )}
 
             <title>{title}</title>
             <meta name="description" content={description}/>
@@ -36,14 +76,26 @@ const SiteHead: React.FC<SiteHeadProps> = ({ title, description, author, keyword
             <meta name="geo.region" content="US"/>
             <meta property="og:title" content={title}/>
             <meta property="og:description" content={description}/>
-            <meta property="og:type" content="website"/>
+            <meta property="og:type" content={isArticle ? 'article' : 'website'}/>
             <meta property="og:url" content={siteUrl}/>
             <meta property="og:image" content={imageUrl}/>
+            <meta property="og:site_name" content="Dobson Dunavant"/>
+
+            {isArticle && publishedTime && (
+                <>
+                    <meta property="article:published_time" content={publishedTime}/>
+                    {modifiedTime && <meta property="article:modified_time" content={modifiedTime}/>}
+                    <meta property="article:author" content={author}/>
+                    <meta property="article:section" content={articleSection}/>
+                </>
+            )}
+
             <link rel="canonical" href={siteUrl}/>
             <meta name="twitter:card" content="summary_large_image"/>
             <meta name="twitter:title" content={title}/>
             <meta name="twitter:description" content={description}/>
             <meta name="twitter:image" content={imageUrl}/>
+            <meta name="twitter:creator" content="@dobsonddev"/>
         </Head>
     );
 };

@@ -58,13 +58,17 @@ const BlogHome = ({ posts }: BlogHomeProps) => {
             <div ref={vantaRef} className="fixed top-0 left-0 w-full h-full -z-10"></div>
             {theme === 'forest' && <Birds />}
             <SiteHead
-                title={siteConfig.title}
+                title={`Blog | ${siteConfig.title}`}
                 description={siteConfig.description}
                 author={siteConfig.author}
                 keywords={siteConfig.keywords}
-                siteUrl={siteConfig.siteUrl}
+                siteUrl={`${siteConfig.siteUrl}/blog`}
                 imageUrl={siteConfig.imageUrl}
                 structuredData={siteConfig.structuredData}
+                breadcrumbs={[
+                    { name: 'Home', url: siteConfig.siteUrl },
+                    { name: 'Blog', url: `${siteConfig.siteUrl}/blog` }
+                ]}
             />
             <Navbar toggleChatModal={toggleChatModal} />
 
