@@ -1,10 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react';
-import Image from "next/legacy/image";
 import { FaDownload } from 'react-icons/fa';
 
 function Resume() {
     const resumePDFPath = '/Dobson_Dunavant_Resume.pdf';
-    const resumeIMGPath = '/Dobson_Dunavant_Resume.webp';
     const sectionRef = useRef<HTMLDivElement>(null);
     const [isSticky, setIsSticky] = useState(false);
 
@@ -49,9 +47,13 @@ function Resume() {
                 </button>
             </div>
             <div className="w-full flex justify-center">
-                <div className="relative max-w-4xl w-full rounded-full">
-                    <Image src={resumeIMGPath} alt="Dobson's Resume" aria-label="Dobson's Resume" layout="responsive"
-                           width={700} height={900} objectFit="contain"/>
+                <div className="relative max-w-4xl w-full">
+                    <iframe
+                        src={resumePDFPath}
+                        className="w-full h-[1100px] md:h-[1400px] border-2 border-gray-300 rounded-lg shadow-lg"
+                        title="Dobson's Resume"
+                        aria-label="Dobson's Resume PDF"
+                    />
                 </div>
             </div>
         </div>
