@@ -51,9 +51,14 @@ const CustomPageHeader: React.FC<any> = () => {
 
 export default function BlogPost({ recordMap, postTitle, postDescription, postDate, postSlug }: BlogPostProps) {
     const [isChatModalOpen, setIsChatModalOpen] = useState(false);
+    const [mounted, setMounted] = useState(false);
     const { theme, setTheme, resolvedTheme } = useTheme();
     const vantaRef = useRef(null);
     let vantaEffect = useRef<{ destroy: () => void } | null>(null);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     // Create article structured data
     const articleStructuredData = {
@@ -124,6 +129,11 @@ export default function BlogPost({ recordMap, postTitle, postDescription, postDa
 
     // Filter out metadata
     const filteredRecordMap = removeMetadata(recordMap);
+
+    // Prevent hydration mismatch by not rendering theme-dependent content until mounted
+    if (!mounted) {
+        return null;
+    }
 
     return (
         <div className={themeClass}>

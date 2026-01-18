@@ -30,9 +30,14 @@ export const getStaticProps: GetStaticProps = async () => {
 
 const IndexPage = ({ posts }: BlogHomeProps) => {
     const [isChatModalOpen, setIsChatModalOpen] = useState(false);
+    const [mounted, setMounted] = useState(false);
     const { theme, setTheme, resolvedTheme } = useTheme();
     const vantaRef = useRef(null);
     let vantaEffect = useRef<{ destroy: () => void } | null>(null);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     useEffect(() => {
         if (resolvedTheme) {
@@ -52,6 +57,11 @@ const IndexPage = ({ posts }: BlogHomeProps) => {
     };
 
     const themeClass = theme ? themeClassNames[theme] : themeClassNames['light'];
+
+    // Prevent hydration mismatch by not rendering theme-dependent content until mounted
+    if (!mounted) {
+        return null;
+    }
 
     return (
         <div className={themeClass}>
