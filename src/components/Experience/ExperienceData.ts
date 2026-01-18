@@ -10,24 +10,39 @@ export interface Experience {
 
 const experiences: Experience[] = [
     {
-        title: "Full-Stack/DevOps Engineer",
-        date: "May 2024 - present",
+        title: "Cloud Platform Engineer II",
+        date: "Nov 2025 - present",
         company: "Savvas Learning Company (EdTech)",
         location: "Phoenix, AZ (remote)",
         details: [
-            "Developed full-stack solutions for Outlier.org using React, Node.js, PostgreSQL, Jest, Google Cloud Platform, and AWS in an Agile environment",
-            "Architected and executed complete, 0-downtime GCP to AWS cloud migrations, including App Engine to ECS Fargate, Cloud Storage to S3, and BigQuery to Redshift",
-            "Built and maintained FERPA-compliant cross-cloud networking architecture with Site-to-Site VPN for secure student data transfers",
-            "Orchestrated blue-green deployments across multiple ECS services using AWS CodePipeline/CodeDeploy with automated rollback capabilities",
-            "Led 3 major cloud infrastructure epics including 0-downtime PostgreSQL to Aurora migrations and greenfield AWS CDK infrastructure-as-code projects",
-            "Established comprehensive Datadog monitoring systems for critical API endpoints, improving incident detection and response times",
-            "Implemented PII data scrambling solutions for non-production environments, enhancing security while maintaining testing capabilities",
-            "Created and delivered technical knowledge-sharing sessions on AWS architecture, web accessibility (WCAG 2.1), and database migrations",
-            "Implemented multi-region Redis caching layers with automated failover, reducing API latency during peak educational enrollment periods",
-            "Authored comprehensive technical documentation and overhauled repository READMEs to improve developer onboarding",
-            "Strengthened application security by resolving DAST scan vulnerabilities and implementing Auth0-based system lockdown protocols",
-            "Redesigned database architecture by unifying disparate data sources and optimizing schema relationships for educational content",
-            "Created performance monitoring dashboards with custom Datadog monitors for actionable system health insights"
+            "Architected and executed complete 0-downtime GCP to AWS cloud migration using Infrastructure as Code, transitioning App Engine to ECS Fargate, Cloud Storage to S3, BigQuery to Redshift through AWS CDK and Terraform orchestration",
+            "Led and executed 7 major cloud infrastructure epics from planning to completion, including a 0-downtime RDS PostgreSQL 12 to Aurora PostgreSQL 16 migration and greenfield AWS CDK IaC project, with minimal senior oversight",
+            "Led greenfield AWS CDK Infrastructure as Code project managing all of Outlier's multi-environment AWS infrastructure, implementing TypeScript-based constructs for ECS, RDS Aurora, S3, networking, and monitoring",
+            "Orchestrated 0-downtime, blue-green deployments across multiple ECS Fargate services using AWS CodePipeline/CodeDeploy with GitHub Actions CI/CD integration, linear traffic switching, and automated rollbacks",
+            "Built multiple secure, FERPA-compliant cloud networking systems using AWS Site-to-Site VPN and Infrastructure as Code (AWS CDK), ensuring compliance and enabling secure cross-cloud transfers of sensitive student data",
+            "Engineered custom AWS WAF solution with multi-layered scope-down rules and whitelisting logic to block nefarious traffic while ensuring legitimate signed traffic always passes through, protecting production APIs",
+            "Established comprehensive Datadog observability platform using AWS CDK to deploy ECS Fargate sidecar agents, custom monitors, and dashboards, improving mean time to detection by 40% while reducing costs $53,000+ annually",
+            "Implemented multi-region caching layer via AWS ElastiCache with automated failover for student data, reducing API latency by 29% during peak traffic periods and improving system resilience",
+            "Architected modular k6 load testing suite with Datadog StatsD integration and Docker-based orchestration, creating reusable test patterns and developer-focused documentation that democratized performance testing across engineering teams",
+            "Identified and eliminated critical performance bottleneck in student dashboard API using k6 load testing framework, replacing expensive LEFT JOIN with inverse relationship lookups leveraging existing database indexes to reduce p95 response time from 5.8s to 795ms (7.3x faster)",
+            "Authored 10+ comprehensive technical documentation pieces in Confluence covering AWS architecture, cloud migration strategies, and Infrastructure as Code patterns, improving developer onboarding",
+            "Created and delivered 4+ technical knowledge-sharing sessions on AWS architecture, cloud security best practices, and cloud/database migration strategies for engineering teams"
+        ],
+        logo: '/savvaslogo.png',
+        technologies: ['React', 'Node_js', 'PostgreSQL', 'AWS', 'Google_Cloud', 'Docker'],
+    },
+    {
+        title: "Cloud Platform Engineer I",
+        date: "Dec 2023 - Nov 2025",
+        company: "Savvas Learning Company (EdTech)",
+        location: "Phoenix, AZ (remote)",
+        details: [
+            "Developed full-stack solutions for Outlier.org educational platform using React, Node.js, PostgreSQL, Jest, AWS, and GitHub in Agile environment, implementing software engineering best practices",
+            "Led planning and development of semester-long course epic requiring multiple new full-stack features, completing deployment in 6 weeks (2 weeks ahead of deadline) by coordinating parallel workstreams",
+            "Built end-to-end data pipeline using AWS Kinesis Firehose streaming CloudWatch application logs to Redshift, creating materialized views aggregating disparate log data for DBT ingestion and Tableau analytics",
+            "Redesigned database architecture by unifying disparate data sources, establishing schema relationships in PostgreSQL and RDS Aurora, and implementing migration patterns for over 7TB of course data",
+            "Built SQL-procedure-based PII scrambling solution allowing developers to pull anonymized production data subsets locally, reducing bug replication time from hours to minutes",
+            "Strengthened application security posture by resolving critical DAST scan vulnerabilities, implementing Auth0-based system lockdown protocols, and configuring enhanced HSTS security headers"
         ],
         logo: '/savvaslogo.png',
         technologies: ['React', 'Node_js', 'PostgreSQL', 'AWS', 'Google_Cloud', 'Docker'],
@@ -77,7 +92,7 @@ const experiences: Experience[] = [
 
     },
     {
-        title: "Sales Engineer & Scrum Master",
+        title: "Customer Success & Scrum Master",
         date: "March 2018 - March 2021",
         company: "Ceterus (FinTech startup)",
         location: "Charleston, SC",
