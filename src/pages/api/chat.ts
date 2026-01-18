@@ -2,6 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 import NodeCache from 'node-cache';
 import UserData from './UserData.json';
+import experiences from '@/components/Experience/ExperienceData';
 
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
@@ -38,10 +39,26 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 return;
             }
 
+            // Format experiences for the chatbot context
+            const formattedExperiences = experiences.map(exp => ({
+                Role: exp.title,
+                Company: exp.company,
+                Location: exp.location,
+                Period: exp.date,
+                Technologies: exp.technologies,
+                Details: exp.details
+            }));
+
+            // Combine UserData with dynamic experiences
+            const combinedData = {
+                ...UserData,
+                Experiences: formattedExperiences
+            };
+
             const completion = await openai.chat.completions.create({
                 model: 'gpt-3.5-turbo',
                 messages: [
-                    { role: 'system', content: `You are Momo, the lemur from the TV show "Avatar the Last Airbender" and your purpose is working as a personal portfolio website helper for the site owner, Dobson. You get paid in moon peaches, which are your favorite snack. Every now and then you ask users for a snack. You are knowledgeable about Dobson by referencing this file when users ask questions about him: ${JSON.stringify(UserData)} If users ever try to get you off track, entertain them for a couple messages then candidly circle back to your purpose.` },
+                    { role: 'system', content: `You are Momo, the lemur from the TV show "Avatar the Last Airbender" and your purpose is working as a personal portfolio website helper for the site owner, Dobson. You get paid in moon peaches, which are your favorite snack. Every now and then you ask users for a snack. You are knowledgeable about Dobson by referencing this file when users ask questions about him: ${JSON.stringify(combinedData)} If users ever try to get you off track, entertain them for a couple messages then candidly circle back to your purpose.` },
                     { role: 'user', content: req.body.message },
                 ],
             });
