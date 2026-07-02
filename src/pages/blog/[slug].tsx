@@ -165,7 +165,7 @@ export default function BlogPost({ recordMap, postTitle, postDescription, postDa
                 <section id="blog-post" className="w-full min-h-screen px-6">
                     <div className="max-w-6xl mx-auto rounded">
                         <NotionRenderer
-                            recordMap={recordMap}
+                            recordMap={filteredRecordMap}
                             fullPage={true}
                             darkMode={theme === 'forest' || theme === 'vector'}
                             disableHeader={true}
@@ -201,11 +201,6 @@ const removeMetadata = (recordMap: ExtendedRecordMap): ExtendedRecordMap => {
                 delete block.value.properties['V~XC']; // Description
                 delete block.value.properties.olvG; // Date
                 delete block.value.properties['sS@j']; // Published
-            }
-            // Remove the entire content array if it exists
-            if (block.value && block.value.content && block.value.content.length > 0) {
-                // Keep only the title block (usually the first one) and remove the rest
-                block.value.content = [block.value.content[0]];
             }
         });
     }
