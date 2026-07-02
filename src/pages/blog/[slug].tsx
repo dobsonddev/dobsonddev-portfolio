@@ -190,19 +190,41 @@ export default function BlogPost({ recordMap, postTitle, postDescription, postDa
     );
 }
 
+// notion-client now returns { spaceId, value: { value: {...} } } but react-notion-x
+// expects { role: 'reader', value: {...} }. Unwrap the extra nesting server-side.
+const normalizeRecordMap = (recordMap: ExtendedRecordMap): ExtendedRecordMap => {
+    const newRecordMap = JSON.parse(JSON.stringify(recordMap));
+    if (newRecordMap.block) {
+        for (const key of Object.keys(newRecordMap.block)) {
+            const block = newRecordMap.block[key];
+            if (block && block.value && block.value.value !== undefined) {
+                block.role = block.role ?? 'reader';
+                block.value = block.value.value;
+            }
+        }
+    }
+    return newRecordMap;
+};
+
 const removeMetadata = (recordMap: ExtendedRecordMap): ExtendedRecordMap => {
     const newRecordMap = JSON.parse(JSON.stringify(recordMap));
 
     if (newRecordMap.block) {
-        Object.values(newRecordMap.block).forEach((block: any) => {
-            if (block.value && block.value.properties) {
-                // Remove specific properties entirely
-                delete block.value.properties.TbC_; // Slug
+        // Drop any block entries whose value is missing or has no id — react-notion-x
+        // calls uuidToId(block.id) unconditionally and crashes on undefined.
+        for (const key of Object.keys(newRecordMap.block)) {
+            const block = newRecordMap.block[key];
+            if (!block?.value?.id) {
+                delete newRecordMap.block[key];
+                continue;
+            }
+            if (block.value.properties) {
+                delete block.value.properties.TbC_;    // Slug
                 delete block.value.properties['V~XC']; // Description
-                delete block.value.properties.olvG; // Date
+                delete block.value.properties.olvG;    // Date
                 delete block.value.properties['sS@j']; // Published
             }
-        });
+        }
     }
 
     return newRecordMap;
@@ -218,7 +240,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
             return { notFound: true };
         }
 
-        const recordMap = await getNotionPage(post.id);
+        const rawRecordMap = await getNotionPage(post.id);
+        const recordMap = normalizeRecordMap(rawRecordMap);
 
         return {
             props: {
