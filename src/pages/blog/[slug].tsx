@@ -253,7 +253,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
             },
             revalidate: 10,
         };
-    } catch (error) {
+    } catch (error: any) {
+        // Log only the message; the error object can include request headers (Notion token).
+        console.error(`Failed to build blog post "${slug}": ${error?.message ?? error}`);
         return { notFound: true };
     }
 };

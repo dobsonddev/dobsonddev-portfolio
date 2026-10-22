@@ -1,4 +1,4 @@
-const withTM = require('next-transpile-modules')(['got', 'notion-client']);
+const withTM = require('next-transpile-modules')(['notion-client']);
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
 });

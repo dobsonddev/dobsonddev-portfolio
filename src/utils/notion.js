@@ -44,7 +44,7 @@ export async function getAllBlogPosts(databaseId) {
             };
         });
     } catch (error) {
-        console.error('Error querying Notion database', error);
+        console.error(`Error querying Notion database: ${error?.message ?? error}`);
         return [];
     }
 }
@@ -59,7 +59,8 @@ export async function getNotionPage(pageId) {
         console.log(`Successfully fetched Notion page with ID: ${cleanedPageId}`);
         return page;
     } catch (error) {
-        console.error(`Error fetching Notion page with cleaned ID: ${cleanedPageId}`, error);
+        // Log only the message; the error object can include request headers (Notion token).
+        console.error(`Error fetching Notion page with cleaned ID: ${cleanedPageId}: ${error?.message ?? error}`);
         throw error;
     }
 }
