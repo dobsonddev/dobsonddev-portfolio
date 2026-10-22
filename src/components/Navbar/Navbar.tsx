@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import Link from 'next/link';
 import {FaLinkedin, FaGithub, FaEnvelope} from 'react-icons/fa';
 import ThemeSwitch from './ThemeSwitch/ThemeSwitch';
 import ChatbotFixedButton from '@/components/Chatbot/ChatbotFixedButton';
@@ -108,25 +109,25 @@ const Navbar: React.FC<NavbarProps> = ({toggleChatModal}) => {
 
                     {isMobileMenuOpen && (
                         <div className="absolute top-full bg-light text-dark right-0 w-full md:hidden">
-                            <a href="/#home" className="block hover:text-dark hover:rounded hover:bg-light p-4">Home</a>
-                            <a href="/#experiences"
-                               className="block hover:text-dark hover:rounded hover:bg-light p-4">Experiences</a>
-                            <a href="/#resume"
-                               className="block hover:text-dark hover:rounded hover:bg-light p-4">Resume</a>
-                            <a href="/blog" className="block hover:text-dark hover:rounded hover:bg-light p-4">Blog</a>
+                            <Link href="/#home" className="block hover:text-dark hover:rounded hover:bg-light p-4">Home</Link>
+                            <Link href="/#experiences"
+                               className="block hover:text-dark hover:rounded hover:bg-light p-4">Experiences</Link>
+                            <Link href="/#resume"
+                               className="block hover:text-dark hover:rounded hover:bg-light p-4">Resume</Link>
+                            <Link href="/blog" className="block hover:text-dark hover:rounded hover:bg-light p-4">Blog</Link>
                             <a href="#contact"
                                className="block hover:text-dark hover:rounded hover:bg-light p-4">Contact</a>
                         </div>
                     )}
                     <div className="hidden md:flex flex-1 items-center justify-end">
-                        <a href="/"
-                           className="hover:text-dark hover:bg-light px-4 py-2 hover:rounded transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Home</a>
-                        <a href="/#experiences"
-                           className="hover:text-dark hover:bg-light px-4 py-2 hover:rounded transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Experiences</a>
-                        <a href="/#resume"
-                           className="hover:text-dark hover:bg-light px-4 py-2 hover:rounded transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Resume</a>
-                        <a href="/blog"
-                           className="hover:text-dark hover:bg-light px-4 py-2 hover:rounded transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Blog</a>
+                        <Link href="/"
+                           className="hover:text-dark hover:bg-light px-4 py-2 hover:rounded transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Home</Link>
+                        <Link href="/#experiences"
+                           className="hover:text-dark hover:bg-light px-4 py-2 hover:rounded transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Experiences</Link>
+                        <Link href="/#resume"
+                           className="hover:text-dark hover:bg-light px-4 py-2 hover:rounded transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Resume</Link>
+                        <Link href="/blog"
+                           className="hover:text-dark hover:bg-light px-4 py-2 hover:rounded transition-all duration-500 transform hover:-translate-y-1 hover:animate-wiggle">Blog</Link>
                         <div>
                            <ThemeSwitch openComponent={openComponent} setOpenComponent={setOpenComponent}/>
                         </div>
